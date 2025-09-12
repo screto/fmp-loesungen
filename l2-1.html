@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aufgabe 2.1</title>
+
   <!-- MathJax für Formeldarstellung -->
   <script>
     window.MathJax = {
@@ -12,7 +13,8 @@
     };
   </script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-  <!-- Einfache Gestaltung -->
+
+  <!-- Gestaltung -->
   <style>
     body {
       font-family: sans-serif;
@@ -40,38 +42,28 @@
       text-align: left;
       vertical-align: top;
     }
-    th {
-      background: #e0e0e0;
-    }
-    tr:nth-child(even) td {
-      background: #f7f7f7;
-    }
-          .hidden-solution {
-        background: #ddd;
-        color: transparent;
-        user-select: none;
-        border-radius: 3px;
-        padding: 0.2rem 0.4rem;
-        transition: all 0.3s ease;
-        display: inline-block;
-      }
-      
-          .hidden-solution.revealed {
-        background: none;        /* Hintergrund entfernen */
-        color: black;             /* Textfarbe sichtbar */
-        user-select: text;        /* Text kann markiert werden */
-      }
-          .show-button {
+    th { background: #e0e0e0; }
+    tr:nth-child(even) td { background: #f7f7f7; }
+    .toggle {
       display: inline-block;
       margin-top: 0.3rem;
-      padding: 0.2rem 0.5rem;
+      padding: 0.25rem 0.6rem;
       background: #4caf50;
-      color: white;
+      color: #fff;
       border: none;
       border-radius: 4px;
       cursor: pointer;
-      font-size: 0.8rem;
+      font-size: 0.85rem;
     }
+    .solution {
+      margin-top: 0.4rem;
+      padding: 0.4rem 0.6rem;
+      background: #f7f7f7;
+      border-left: 4px solid #4caf50;
+      border-radius: 4px;
+    }
+    .is-hidden { display: none; }
+    strong { display: inline-block; width: 2rem; }
   </style>
 </head>
 <body>
@@ -91,121 +83,129 @@
       <tr>
         <td><strong>a)</strong> $5 \cdot (2x + 3)$</td>
         <td>
-          <span class="hidden-solution">$10x + 15$</span><br>
-          <button class="show-button" onclick="reveal(this)">Lösung anzeigen</button>
+          <button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
+          <div class="solution is-hidden">$10x + 15$</div>
         </td>
       </tr>
       <tr>
         <td><strong>b)</strong> $5 \cdot (2x - 3)$</td>
         <td>
-          <span class="hidden-solution">$10x - 15$</span><br>
-          <button class="show-button" onclick="reveal(this)">Lösung anzeigen</button>
+          <button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
+          <div class="solution is-hidden">$10x - 15$</div>
         </td>
       </tr>
       <tr>
         <td><strong>c)</strong> $5 \cdot (-2x + 3)$</td>
         <td>
-          <span class="hidden-solution">$-10x + 15$</span><br>
-          <button class="show-button" onclick="reveal(this)">Lösung anzeigen</button>
+          <button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
+          <div class="solution is-hidden">$-10x + 15$</div>
         </td>
       </tr>
       <tr>
         <td><strong>d)</strong> $5 \cdot (-2x - 3)$</td>
         <td>
-          <span class="hidden-solution">$-10x - 15$</span><br>
-          <button class="show-button" onclick="reveal(this)">Lösung anzeigen</button>
+          <button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
+          <div class="solution is-hidden">$-10x - 15$</div>
         </td>
       </tr>
       <tr>
         <td><strong>e)</strong> $-5 \cdot (2x + 3)$</td>
         <td>
-          <span class="hidden-solution">$-10x - 15$</span><br>
-          <button class="show-button" onclick="reveal(this)">Lösung anzeigen</button>
+          <button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
+          <div class="solution is-hidden">$-10x - 15$</div>
         </td>
       </tr>
       <tr>
         <td><strong>f)</strong> $-5 \cdot (2x - 3)$</td>
         <td>
-          <span class="hidden-solution">$-10x + 15$</span><br>
-          <button class="show-button" onclick="reveal(this)">Lösung anzeigen</button>
+          <button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
+          <div class="solution is-hidden">$-10x + 15$</div>
         </td>
       </tr>
       <tr>
         <td><strong>g)</strong> $-5 \cdot (-2x + 3)$</td>
         <td>
-          <span class="hidden-solution">$10x - 15$</span><br>
-          <button class="show-button" onclick="reveal(this)">Lösung anzeigen</button>
+          <button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
+          <div class="solution is-hidden">$10x - 15$</div>
         </td>
       </tr>
       <tr>
         <td><strong>h)</strong> $-5 \cdot (-2x - 3)$</td>
         <td>
-          <span class="hidden-solution">$10x + 15$</span><br>
-          <button class="show-button" onclick="reveal(this)">Lösung anzeigen</button>
+          <button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
+          <div class="solution is-hidden">$10x + 15$</div>
         </td>
       </tr>
       <tr>
         <td><strong>i)</strong> $(2x + 4) \cdot (3x + 5)$</td>
         <td>
-          <span class="hidden-solution">$6x^2 + 22x + 20$</span><br>
-          <button class="show-button" onclick="reveal(this)">Lösung anzeigen</button>
+          <button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
+          <div class="solution is-hidden">$6x^2 + 22x + 20$</div>
         </td>
       </tr>
       <tr>
         <td><strong>j)</strong> $(2x + 4) \cdot (3x - 5)$</td>
         <td>
-          <span class="hidden-solution">$6x^2 + 2x - 20$</span><br>
-          <button class="show-button" onclick="reveal(this)">Lösung anzeigen</button>
+          <button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
+          <div class="solution is-hidden">$6x^2 + 2x - 20$</div>
         </td>
       </tr>
       <tr>
         <td><strong>k)</strong> $(2x - 4) \cdot (3x + 5)$</td>
         <td>
-          <span class="hidden-solution">$6x^2 - 2x - 20$</span><br>
-          <button class="show-button" onclick="reveal(this)">Lösung anzeigen</button>
+          <button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
+          <div class="solution is-hidden">$6x^2 - 2x - 20$</div>
         </td>
       </tr>
       <tr>
         <td><strong>l)</strong> $(2x - 4) \cdot (3x - 5)$</td>
         <td>
-          <span class="hidden-solution">$6x^2 - 22x + 20$</span><br>
-          <button class="show-button" onclick="reveal(this)">Lösung anzeigen</button>
+          <button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
+          <div class="solution is-hidden">$6x^2 - 22x + 20$</div>
         </td>
       </tr>
       <tr>
         <td><strong>m)</strong> $(-2x + 4) \cdot (-3x - 5)$</td>
         <td>
-          <span class="hidden-solution">$6x^2 - 2x - 20$</span><br>
-          <button class="show-button" onclick="reveal(this)">Lösung anzeigen</button>
+          <button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
+          <div class="solution is-hidden">$6x^2 - 2x - 20$</div>
         </td>
       </tr>
       <tr>
         <td><strong>n)</strong> $(-2x - 4) \cdot (-3x - 5)$</td>
         <td>
-          <span class="hidden-solution">$6x^2 + 22x + 20$</span><br>
-          <button class="show-button" onclick="reveal(this)">Lösung anzeigen</button>
+          <button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
+          <div class="solution is-hidden">$6x^2 + 22x + 20$</div>
         </td>
       </tr>
       <tr>
         <td><strong>o)</strong> $[2a + (3a + b) - 2b]$</td>
         <td>
-          <span class="hidden-solution">$5a - b$</span><br>
-          <button class="show-button" onclick="reveal(this)">Lösung anzeigen</button>
+          <button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
+          <div class="solution is-hidden">$5a - b$</div>
         </td>
       </tr>
     </tbody>
   </table>
 
   <script>
-    function reveal(button) {
-      const span = button.previousElementSibling;
-      span.classList.add('revealed');
-      button.remove();
-      MathJax.typeset(); // Damit MathJax neu rendert, falls nötig
+    function toggleSolution(btn) {
+      const sol = btn.nextElementSibling;
+      const hidden = sol.classList.contains('is-hidden');
+      if (hidden) {
+        sol.classList.remove('is-hidden');
+        btn.textContent = 'Lösung verstecken';
+        if (window.MathJax && MathJax.typesetPromise) {
+          MathJax.typesetPromise([sol]).catch(() => {});
+        } else if (window.MathJax && MathJax.typeset) {
+          MathJax.typeset([sol]);
+        }
+      } else {
+        sol.classList.add('is-hidden');
+        btn.textContent = 'Lösung anzeigen';
+      }
     }
   </script>
 
 </body>
 </html>
-
-
