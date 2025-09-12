@@ -46,18 +46,22 @@
     tr:nth-child(even) td {
       background: #f7f7f7;
     }
-    .hidden-solution {
-      background: #ddd;
-      color: transparent;
-      user-select: none;
-      transition: color 0.3s ease;
-    }
-    .hidden-solution.revealed {
-      background: #f7f7f7;
-      color: black;
-      user-select: text;
-    }
-    .show-button {
+          .hidden-solution {
+        background: #ddd;
+        color: transparent;
+        user-select: none;
+        border-radius: 3px;
+        padding: 0.2rem 0.4rem;
+        transition: all 0.3s ease;
+        display: inline-block;
+      }
+      
+          .hidden-solution.revealed {
+        background: none;        /* Hintergrund entfernen */
+        color: black;             /* Textfarbe sichtbar */
+        user-select: text;        /* Text kann markiert werden */
+      }
+          .show-button {
       display: inline-block;
       margin-top: 0.3rem;
       padding: 0.2rem 0.5rem;
@@ -203,4 +207,5 @@
 
 </body>
 </html>
+
 
