@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aufgabe 2.2</title>
+
+  <!-- MathJax für Formeldarstellung -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <!-- Gestaltung -->
+  <style>
+    body {
+      font-family: sans-serif;
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: #fafafa;
+      line-height: 1.6;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 0.5rem;
+    }
+    ol {
+      background: #fff;
+      padding: 1rem 1.2rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+    li {
+      margin: 0.8rem 0 1.2rem 0.6rem;
+    }
+    .expr {
+      display: block;
+      font-weight: 600;
+    }
+    .toggle {
+      display: inline-block;
+      margin-top: 0.4rem;
+      padding: 0.25rem 0.6rem;
+      background: #4caf50;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.85rem;
+    }
+    .solution {
+      margin-top: 0.5rem;
+      padding: 0.5rem 0.7rem;
+      background: #f7f7f7;
+      border-left: 4px solid #4caf50;
+      border-radius: 4px;
+    }
+    .is-hidden { display: none; }
+  </style>
+</head>
+<body>
+
+  <h1>Aufgabe 2.2</h1>
+  <p>Lösen Sie die Klammern vollständig auf und fassen Sie Terme zusammen. Klicken Sie auf „Lösung anzeigen“, um die vereinfachte Form zu sehen.</p>
+
+  <ol>
+    <li>
+      <span class="expr">$[2a - (3a + b) - 2b]$</span>
+      <button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
+      <div class="solution is-hidden">$-a - 3b$</div>
+    </li>
+    <li>
+      <span class="expr">$[2a - (3a - b) - 2b]$</span>
+      <button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
+      <div class="solution is-hidden">$-a - b$</div>
+    </li>
+    <li>
+      <span class="expr">$[2a + 5 \cdot (3a + b) - 2b]$</span>
+      <button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
+      <div class="solution is-hidden">$17a + 3b$</div>
+    </li>
+    <li>
+      <span class="expr">$[2a + 5 \cdot (3a - b) + 2b]$</span>
+      <button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
+      <div class="solution is-hidden">$17a - 3b$</div>
+    </li>
+    <li>
+      <span class="expr">$[2a - 5 \cdot (3a - b) - 2b]$</span>
+      <button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
+      <div class="solution is-hidden">$-13a + 3b$</div>
+    </li>
+    <li>
+      <span class="expr">$[2a + 5 \cdot (3a + b) - 2 \cdot (2a - 5b) + a]$</span>
+      <button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
+      <div class="solution is-hidden">$14a + 15b$</div>
+    </li>
+    <li>
+      <span class="expr">$[2a - 5 \cdot (3a - b) - 2 \cdot (2a + 5b) + a]$</span>
+      <button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
+      <div class="solution is-hidden">$-16a - 5b$</div>
+    </li>
+    <li>
+      <span class="expr">$[-2a - 5 \cdot (-3a - b) - 2 \cdot (-2a - 5b) - a]$</span>
+      <button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
+      <div class="solution is-hidden">$16a + 15b$</div>
+    </li>
+    <li>
+      <span class="expr">$[2a + 5 \cdot (3a + b) - 2 \cdot (2a - (a + 7b)) + a]$</span>
+      <button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
+      <div class="solution is-hidden">$16a + 19b$</div>
+    </li>
+    <li>
+      <span class="expr">$[2a - 5 \cdot (3a + b) - 2 \cdot (-2a - (a - 7b)) + a]$</span>
+      <button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
+      <div class="solution is-hidden">$-6a - 19b$</div>
+    </li>
+    <li>
+      <span class="expr">$[-2a + 5 \cdot (-3a + b) - 2 \cdot (2a - (a - 7b)) - a]$</span>
+      <button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
+      <div class="solution is-hidden">$-20a - 9b$</div>
+    </li>
+    <li>
+      <span class="expr">$[2a - 3 + 5 \cdot (7 - 4a) - (6a - (9 + 7a))]$</span>
+      <button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
+      <div class="solution is-hidden">$41 - 17a$</div>
+    </li>
+    <li>
+      <span class="expr">$[2a - [3a + 5 \cdot (7 - 8a) - (5a - (6 + 7a))]]$</span>
+      <button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
+      <div class="solution is-hidden">$37a - 41$</div>
+    </li>
+    <li>
+      <span class="expr">$5 \cdot (3 \cdot [3a + b - 5 \cdot \{7b - a\}] - 2a)$</span>
+      <button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
+      <div class="solution is-hidden">$110a - 510b$</div>
+    </li>
+    <li>
+      <span class="expr">$2a - 3 \cdot (3a - 2 \cdot [5a - 7b] + 3 - [3a + b])$</span>
+      <button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
+      <div class="solution is-hidden">$32a - 39b - 9$</div>
+    </li>
+  </ol>
+
+  <script>
+    function toggleSolution(btn) {
+      const sol = btn.nextElementSibling;
+      const hidden = sol.classList.contains('is-hidden');
+      if (hidden) {
+        sol.classList.remove('is-hidden');
+        btn.textContent = 'Lösung verstecken';
+        if (window.MathJax && MathJax.typesetPromise) {
+          MathJax.typesetPromise([sol]).catch(() => {});
+        } else if (window.MathJax && MathJax.typeset) {
+          MathJax.typeset([sol]);
+        }
+      } else {
+        sol.classList.add('is-hidden');
+        btn.textContent = 'Lösung anzeigen';
+      }
+    }
+  </script>
+
+</body>
+</html>
