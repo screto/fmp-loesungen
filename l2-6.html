@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aufgabe 2.6</title>
 
-  <!-- (optional) MathJax, falls du die Herleitung in Formeln sehen willst -->
+  <!-- MathJax -->
   <script>
     window.MathJax = {
       tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
@@ -32,16 +32,24 @@
       Wie viel kostet jeder Kaugummi einzeln?
     </p>
 
+    <!-- Lösung -->
     <button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
     <div class="solution is-hidden">
       <p><strong>Antwort:</strong><br>
         Grüner Kaugummi: <strong>CHF&nbsp;1.25</strong><br>
         Roter Kaugummi: <strong>CHF&nbsp;0.75</strong>
       </p>
-      <p><em>Herleitung (optional):</em><br>
+    </div>
+
+    <!-- Herleitung -->
+    <button class="toggle" onclick="toggleSolution(this)">Herleitung anzeigen</button>
+    <div class="solution is-hidden">
+      <p>
         Sei $r$ der Preis des roten, $g$ der des grünen Kaugummis (in CHF).<br>
-        $g = r + 0.50$, &nbsp; $r + g = 2.00$ &rarr; $r + (r + 0.50) = 2.00$<br>
-        $2r + 0.50 = 2.00 \Rightarrow 2r = 1.50 \Rightarrow r = 0.75$, &nbsp; $g = 1.25$.
+        $g = r + 0.50$, &nbsp; $r + g = 2.00$<br>
+        $r + (r + 0.50) = 2.00$<br>
+        $2r + 0.50 = 2.00 \;\;\Rightarrow\;\; 2r = 1.50 \;\;\Rightarrow\;\; r = 0.75$<br>
+        Damit $g = 1.25$.
       </p>
     </div>
   </div>
@@ -52,13 +60,13 @@
       const hidden = sol.classList.contains('is-hidden');
       if (hidden) {
         sol.classList.remove('is-hidden');
-        btn.textContent = 'Lösung verstecken';
+        btn.textContent = btn.textContent.replace('anzeigen','verstecken');
         if (window.MathJax && MathJax.typesetPromise) {
           MathJax.typesetPromise([sol]).catch(() => {});
         }
       } else {
         sol.classList.add('is-hidden');
-        btn.textContent = 'Lösung anzeigen';
+        btn.textContent = btn.textContent.replace('verstecken','anzeigen');
       }
     }
   </script>
