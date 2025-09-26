@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aufgabe 2.5</title>
+  <title>Aufgabe 2.7</title>
 
   <!-- MathJax -->
   <script>
@@ -14,15 +14,15 @@
   </script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-  <!-- gemeinsames CSS -->
+  <!-- zentrales CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <div class="header-nav">
-    <a href="l2-4.html">&laquo; Vorige Aufgabe</a>
-    <h1>Aufgabe 2.5</h1>
-    <a href="l2-6.html">Nächste Aufgabe &raquo;</a>
+    <a href="l2-6.html">&laquo; Vorige Aufgabe</a>
+    <h1>Aufgabe 2.7</h1>
+    <a href="l2-8.html">Nächste Aufgabe &raquo;</a>
   </div>
 
   <p>Lösen Sie nach der jeweils angegebenen Variablen auf:</p>
@@ -36,49 +36,54 @@
     </thead>
     <tbody>
       <tr>
-        <td><strong>1)</strong> $\dfrac{a}{b} = \dfrac{c}{d} \;\Rightarrow\; a = \ ?$</td>
+        <td><strong>1)</strong> $\dfrac{a + b}{c} = \dfrac{d + e}{f} \;\Rightarrow\; a = \ ?$</td>
         <td><button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
-            <div class="solution is-hidden">$a = \dfrac{b c}{d}$</div></td>
+            <div class="solution is-hidden">$a = \dfrac{c(d+e)}{f} - b$</div></td>
       </tr>
       <tr>
-        <td><strong>2)</strong> $\dfrac{a}{b} = \dfrac{c}{d} \;\Rightarrow\; b = \ ?$</td>
+        <td><strong>2)</strong> $\dfrac{a + b}{c} = \dfrac{d + e}{f} \;\Rightarrow\; b = \ ?$</td>
         <td><button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
-            <div class="solution is-hidden">$b = \dfrac{a d}{c}$</div></td>
+            <div class="solution is-hidden">$b = \dfrac{c(d+e)}{f} - a$</div></td>
       </tr>
       <tr>
-        <td><strong>3)</strong> $\dfrac{a}{b} = \dfrac{c}{d} \;\Rightarrow\; c = \ ?$</td>
+        <td><strong>3)</strong> $\dfrac{a + b}{c} = \dfrac{d + e}{f} \;\Rightarrow\; c = \ ?$</td>
         <td><button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
-            <div class="solution is-hidden">$c = \dfrac{a d}{b}$</div></td>
+            <div class="solution is-hidden">$c = \dfrac{f(a+b)}{d+e}$</div></td>
       </tr>
       <tr>
-        <td><strong>4)</strong> $\dfrac{a}{b} = \dfrac{c}{d} \;\Rightarrow\; d = \ ?$</td>
+        <td><strong>4)</strong> $\dfrac{a + b}{c} = \dfrac{d + e}{f} \;\Rightarrow\; d = \ ?$</td>
         <td><button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
-            <div class="solution is-hidden">$d = \dfrac{b c}{a}$</div></td>
+            <div class="solution is-hidden">$d = \dfrac{f(a+b)}{c} - e$</div></td>
       </tr>
       <tr>
-        <td><strong>5)</strong> $\dfrac{a + b}{c} = \dfrac{d}{e} \;\Rightarrow\; a = \ ?$</td>
+        <td><strong>5)</strong> $\dfrac{a + b}{c} = \dfrac{d + e}{f} \;\Rightarrow\; e = \ ?$</td>
         <td><button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
-            <div class="solution is-hidden">$a = \dfrac{c d}{e} - b$</div></td>
+            <div class="solution is-hidden">$e = \dfrac{f(a+b)}{c} - d$</div></td>
       </tr>
       <tr>
-        <td><strong>6)</strong> $\dfrac{a + b}{c} = \dfrac{d}{e} \;\Rightarrow\; b = \ ?$</td>
+        <td><strong>6)</strong> $\dfrac{a + b}{c} = \dfrac{d + e}{f} \;\Rightarrow\; f = \ ?$</td>
         <td><button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
-            <div class="solution is-hidden">$b = \dfrac{c d}{e} - a$</div></td>
+            <div class="solution is-hidden">$f = \dfrac{c(d+e)}{a+b}$</div></td>
       </tr>
       <tr>
-        <td><strong>7)</strong> $\dfrac{a + b}{c} = \dfrac{d}{e} \;\Rightarrow\; c = \ ?$</td>
+        <td><strong>7)</strong> $\dfrac{a + b}{c} = \dfrac{d - e}{f} \;\Rightarrow\; a = \ ?$</td>
         <td><button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
-            <div class="solution is-hidden">$c = \dfrac{e (a+b)}{d}$</div></td>
+            <div class="solution is-hidden">$a = \dfrac{c(d-e)}{f} - b$</div></td>
       </tr>
       <tr>
-        <td><strong>8)</strong> $\dfrac{a + b}{c} = \dfrac{d}{e} \;\Rightarrow\; d = \ ?$</td>
+        <td><strong>8)</strong> $\dfrac{a + b}{c} = \dfrac{d - e}{f} \;\Rightarrow\; d = \ ?$</td>
         <td><button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
-            <div class="solution is-hidden">$d = \dfrac{e (a+b)}{c}$</div></td>
+            <div class="solution is-hidden">$d = \dfrac{f(a+b)}{c} + e$</div></td>
       </tr>
       <tr>
-        <td><strong>9)</strong> $\dfrac{a + b}{c} = \dfrac{d}{e} \;\Rightarrow\; e = \ ?$</td>
+        <td><strong>9)</strong> $\dfrac{a + b}{c} = \dfrac{d - e}{f} \;\Rightarrow\; e = \ ?$</td>
         <td><button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
-            <div class="solution is-hidden">$e = \dfrac{c d}{a+b}$</div></td>
+            <div class="solution is-hidden">$e = d - \dfrac{f(a+b)}{c}$</div></td>
+      </tr>
+      <tr>
+        <td><strong>10)</strong> $\dfrac{a + b}{c} = \dfrac{d}{\,e - f\,} \;\Rightarrow\; a = \ ?$</td>
+        <td><button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
+            <div class="solution is-hidden">$a = \dfrac{c d}{e-f} - b$</div></td>
       </tr>
     </tbody>
   </table>

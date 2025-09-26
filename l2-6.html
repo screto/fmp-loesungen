@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aufgabe 2.6</title>
+
+  <!-- (optional) MathJax, falls du die Herleitung in Formeln sehen willst -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <!-- zentrales CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="header-nav">
+    <a href="l2-5.html">&laquo; Vorige Aufgabe</a>
+    <h1>Aufgabe 2.6</h1>
+    <a href="l2-7.html">Nächste Aufgabe &raquo;</a>
+  </div>
+
+  <div class="aufgabe">
+    <p>
+      Ein grüner Kaugummi kostet 50&nbsp;Rappen mehr als ein roter Kaugummi.
+      Zusammen kosten sie CHF&nbsp;2.–.<br>
+      Wie viel kostet jeder Kaugummi einzeln?
+    </p>
+
+    <button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
+    <div class="solution is-hidden">
+      <p><strong>Antwort:</strong><br>
+        Grüner Kaugummi: <strong>CHF&nbsp;1.25</strong><br>
+        Roter Kaugummi: <strong>CHF&nbsp;0.75</strong>
+      </p>
+      <p><em>Herleitung (optional):</em><br>
+        Sei $r$ der Preis des roten, $g$ der des grünen Kaugummis (in CHF).<br>
+        $g = r + 0.50$, &nbsp; $r + g = 2.00$ &rarr; $r + (r + 0.50) = 2.00$<br>
+        $2r + 0.50 = 2.00 \Rightarrow 2r = 1.50 \Rightarrow r = 0.75$, &nbsp; $g = 1.25$.
+      </p>
+    </div>
+  </div>
+
+  <script>
+    function toggleSolution(btn) {
+      const sol = btn.nextElementSibling;
+      const hidden = sol.classList.contains('is-hidden');
+      if (hidden) {
+        sol.classList.remove('is-hidden');
+        btn.textContent = 'Lösung verstecken';
+        if (window.MathJax && MathJax.typesetPromise) {
+          MathJax.typesetPromise([sol]).catch(() => {});
+        }
+      } else {
+        sol.classList.add('is-hidden');
+        btn.textContent = 'Lösung anzeigen';
+      }
+    }
+  </script>
+
+</body>
+</html>
