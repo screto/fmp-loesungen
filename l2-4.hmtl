@@ -3,16 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aufgabe 2.2</title>
-
-  <!-- MathJax -->
-  <script>
-    window.MathJax = {
-      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
-      svg: { fontCache: 'global' }
-    };
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <title>Aufgabe 3.2</title>
 
   <!-- Gestaltung -->
   <style>
@@ -54,26 +45,26 @@
       background: #f7f7f7;
       border-left: 4px solid #4caf50;
       border-radius: 6px;
-      white-space: pre-line; /* behält Zeilenumbrüche */
     }
     .is-hidden { display: none; }
   </style>
 </head>
 <body>
 
-  <h1>Aufgabe 2.2</h1>
+  <h1>Aufgabe 3.2</h1>
 
   <div class="aufgabe">
-    <p>Sie haben mehrere 1-Franken-Münzen und mehrere 2-Franken-Münzen.<br>
-    Auf wie viele Arten können Sie den Betrag von CHF&nbsp;6.– zusammensetzen?</p>
+    <p>
+      Petra Muster kauft 12 Äpfel, 11 Birnen, 10 Aprikosen, 9 Zwetschgen,  
+      8 Bananen, 7 Kiwi, 6 Brote, 5 Käse, 4 Joghurt,  
+      3 Bratwürste, 2 Bleistifte und 1 Kaugummi.<br><br>
+      Wie viele Artikel hat sie insgesamt eingekauft?<br>
+      (Berechnung ohne Taschenrechner)
+    </p>
 
     <button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
     <div class="solution is-hidden">
-      <strong>4 Arten:</strong><br>
-      111111<br>
-      11112<br>
-      1122<br>
-      222
+      <strong>Lösung:</strong> 78&nbsp;Artikel
     </div>
   </div>
 
@@ -84,9 +75,6 @@
       if (hidden) {
         sol.classList.remove('is-hidden');
         btn.textContent = 'Lösung verstecken';
-        if (window.MathJax && MathJax.typesetPromise) {
-          MathJax.typesetPromise([sol]).catch(() => {});
-        }
       } else {
         sol.classList.add('is-hidden');
         btn.textContent = 'Lösung anzeigen';
@@ -96,8 +84,3 @@
 
 </body>
 </html>
-
-<div class="nav">
-  <a href="aufgabe3_1.html">&laquo; Vorige Aufgabe</a>
-  <a href="aufgabe3_3.html">Nächste Aufgabe &raquo;</a>
-</div>
