@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aufgabe 2.8</title>
+
+  <!-- optional MathJax, falls du die Herleitung mit Formeln zeigen willst -->
+  <script>
+    window.MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] }, svg: { fontCache: 'global' } };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <!-- zentrales CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="header-nav">
+    <a href="l2-7.html">&laquo; Vorige Aufgabe</a>
+    <h1>Aufgabe 2.8</h1>
+    <a href="l2-9.html">Nächste Aufgabe &raquo;</a>
+  </div>
+
+  <div class="aufgabe">
+    <p>
+      Donald Duck startet um 10&nbsp;Uhr morgens vom La-Guardia-Flughafen in New York.
+      In Anchorage, Alaska, ist es jetzt genau 5&nbsp;Uhr morgens.
+      Der Flug dauert sieben Stunden.<br>
+      Um welche Zeit (Ortszeit von Anchorage) landet er wieder?
+    </p>
+
+    <button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
+    <div class="solution is-hidden">
+      <p><strong>Antwort:</strong> 12&nbsp;Uhr (Mittag) Ortszeit in Anchorage.</p>
+      <p><em>Herleitung:</em> Startzeit in Anchorage-Zeit: 5&nbsp;Uhr. Flugzeit 7&nbsp;h → 5&nbsp;+&nbsp;7&nbsp;=&nbsp;12&nbsp;Uhr.</p>
+    </div>
+  </div>
+
+  <script>
+    function toggleSolution(btn) {
+      const sol = btn.nextElementSibling;
+      const hidden = sol.classList.contains('is-hidden');
+      if (hidden) {
+        sol.classList.remove('is-hidden');
+        btn.textContent = 'Lösung verstecken';
+        if (window.MathJax && MathJax.typesetPromise) {
+          MathJax.typesetPromise([sol]).catch(() => {});
+        }
+      } else {
+        sol.classList.add('is-hidden');
+        btn.textContent = 'Lösung anzeigen';
+      }
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aufgabe 2.10</title>
+
+  <!-- zentrales CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="header-nav">
+    <a href="l2-9.html">&laquo; Vorige Aufgabe</a>
+    <h1>Aufgabe 2.10</h1>
+    <span style="opacity:.6; background:#ddd; color:#555; padding:.3rem .6rem; border-radius:4px;">Kapitelende</span>
+  </div>
+
+  <div class="aufgabe">
+    <p>
+      Schreiben Sie sechs Einsen (&bdquo;1&ldquo;) und drei Pluszeichen (&bdquo;+&ldquo;)
+      so nebeneinander, dass sie sich zu 24 addieren.
+    </p>
+
+    <button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
+    <div class="solution is-hidden">
+      <p><strong>Lösung:</strong> <code>11+11+1+1=24</code></p>
+      <p><em>Erklärung:</em> Die sechs Einsen werden zu zwei &bdquo;11&ldquo; zusammengefasst und zwei einzelne 1 addiert.</p>
+    </div>
+  </div>
+
+  <script>
+    function toggleSolution(btn) {
+      const sol = btn.nextElementSibling;
+      const hidden = sol.classList.contains('is-hidden');
+      if (hidden) {
+        sol.classList.remove('is-hidden');
+        btn.textContent = 'Lösung verstecken';
+      } else {
+        sol.classList.add('is-hidden');
+        btn.textContent = 'Lösung anzeigen';
+      }
+    }
+  </script>
+
+</body>
+</html>

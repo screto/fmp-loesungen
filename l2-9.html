@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aufgabe 2.9</title>
+
+  <!-- MathJax -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <!-- gemeinsames CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="header-nav">
+    <a href="l2-8.html">&laquo; Vorige Aufgabe</a>
+    <h1>Aufgabe 2.9</h1>
+    <a href="l2-10.html">Nächste Aufgabe &raquo;</a>
+  </div>
+
+  <p>Lösen Sie nach der jeweils angegebenen Variablen auf:</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Aufgabe</th>
+        <th>Lösung</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>1)</strong> $\dfrac{a + b}{c} = \dfrac{d}{e - f} \;\Rightarrow\; b = \ ?$</td>
+        <td>
+          <button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
+          <div class="solution is-hidden">$b = \dfrac{c\,d}{\,e - f\,} - a$</div>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>2)</strong> $\dfrac{a + b}{c} = \dfrac{d}{e - f} \;\Rightarrow\; e = \ ?$</td>
+        <td>
+          <button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
+          <div class="solution is-hidden">$e = f + \dfrac{c\,d}{\,a + b\,}$</div>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>3)</strong> $\dfrac{a + b}{c} = \dfrac{d}{e - f} \;\Rightarrow\; f = \ ?$</td>
+        <td>
+          <button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
+          <div class="solution is-hidden">$f = e - \dfrac{c\,d}{\,a + b\,}$</div>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>4)</strong> $\dfrac{1}{a} = \dfrac{1}{b} + \dfrac{1}{c} \;\Rightarrow\; a = \ ?$</td>
+        <td>
+          <button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
+          <div class="solution is-hidden">$a = \dfrac{b\,c}{\,b + c\,}$</div>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>5)</strong> $\dfrac{1}{a} = \dfrac{1}{b} + \dfrac{1}{c} \;\Rightarrow\; b = \ ?$</td>
+        <td>
+          <button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
+          <div class="solution is-hidden">$b = \dfrac{a\,c}{\,c - a\,}$</div>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>6)</strong> $\dfrac{1}{a} = \dfrac{1}{b} + \dfrac{1}{c} \;\Rightarrow\; c = \ ?$</td>
+        <td>
+          <button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
+          <div class="solution is-hidden">$c = \dfrac{a\,b}{\,b - a\,}$</div>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>7)</strong> $\dfrac{1}{a} = \dfrac{1}{b - c} + \dfrac{1}{d} \;\Rightarrow\; a = \ ?$</td>
+        <td>
+          <button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
+          <div class="solution is-hidden">$a = \dfrac{d\,(b - c)}{\,b - c + d\,}$</div>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>8)</strong> $\dfrac{1}{a} = \dfrac{1}{b - c} + \dfrac{1}{d} \;\Rightarrow\; c = \ ?$</td>
+        <td>
+          <button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
+          <div class="solution is-hidden">
+            $c = b + \dfrac{a\,d}{\,a - d\,}$
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>9)</strong> $\dfrac{1}{a} = \dfrac{1}{b - c} + \dfrac{1}{d} \;\Rightarrow\; d = \ ?$</td>
+        <td>
+          <button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
+          <div class="solution is-hidden">$d = \dfrac{a\,(b - c)}{\,b - c - a\,}$</div>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>10)</strong> $\dfrac{a}{b + c} = \dfrac{d - e}{f} \;\Rightarrow\; e = \ ?$</td>
+        <td>
+          <button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
+          <div class="solution is-hidden">$e = d - \dfrac{f\,a}{\,b + c\,}$</div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script>
+    function toggleSolution(btn) {
+      const sol = btn.nextElementSibling;
+      const hidden = sol.classList.contains('is-hidden');
+      if (hidden) {
+        sol.classList.remove('is-hidden');
+        btn.textContent = 'Lösung verstecken';
+        if (window.MathJax && MathJax.typesetPromise) {
+          MathJax.typesetPromise([sol]).catch(() => {});
+        } else if (window.MathJax && MathJax.typeset) {
+          MathJax.typeset([sol]);
+        }
+      } else {
+        sol.classList.add('is-hidden');
+        btn.textContent = 'Lösung anzeigen';
+      }
+    }
+  </script>
+
+</body>
+</html>
