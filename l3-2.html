@@ -7,6 +7,15 @@
 
   <link rel="stylesheet" href="style.css">
 
+  <!-- MathJax für schöne Mengenzeichen -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
   <style>
     table {
       border-collapse: collapse;
@@ -23,7 +32,7 @@
       background: #e0e0e0;
     }
     tr:nth-child(even) td {
-      background: #f7f7f7;
+      background: #f9f9f9;
     }
     .num {
       text-align: left;
@@ -41,14 +50,13 @@
 
   <div class="aufgabe">
     <p>
-      Geben Sie bei den nachfolgenden Zahlen jeweils an (ankreuzen), zu welchen Zahlenmengen sie gehören 
-      (mehrere Antworten möglich).
+      Geben Sie bei den nachfolgenden Zahlen jeweils an (ankreuzen), 
+      zu welchen Zahlenmengen sie gehören (mehrere Antworten möglich).
     </p>
 
-    <button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
-
-    <div class="solution is-hidden" style="overflow-x:auto;">
-      <table>
+    <!-- Tabelle ist immer sichtbar -->
+    <div style="overflow-x:auto;">
+      <table id="loesungstabelle">
         <thead>
           <tr>
             <th></th>
@@ -61,40 +69,66 @@
           </tr>
         </thead>
         <tbody>
-          <tr><td class="num">a) 5</td>              <td>✅</td><td>✅</td><td>✅</td><td>✅</td><td></td><td>✅</td></tr>
-          <tr><td class="num">b) −7</td>             <td></td><td></td><td>✅</td><td>✅</td><td></td><td>✅</td></tr>
-          <tr><td class="num">c) 0</td>              <td></td><td>✅</td><td>✅</td><td>✅</td><td></td><td>✅</td></tr>
-          <tr><td class="num">d) 3/5</td>            <td></td><td></td><td></td><td>✅</td><td></td><td>✅</td></tr>
-          <tr><td class="num">e) −3/5</td>           <td></td><td></td><td></td><td>✅</td><td></td><td>✅</td></tr>
-          <tr><td class="num">f) 20/4 = 5</td>       <td>✅</td><td>✅</td><td>✅</td><td>✅</td><td></td><td>✅</td></tr>
-          <tr><td class="num">g) −20/4 = −5</td>     <td></td><td></td><td>✅</td><td>✅</td><td></td><td>✅</td></tr>
-          <tr><td class="num">h) 7/1 = 7</td>        <td>✅</td><td>✅</td><td>✅</td><td>✅</td><td></td><td>✅</td></tr>
-          <tr><td class="num">i) −7/1 = −7</td>      <td></td><td></td><td>✅</td><td>✅</td><td></td><td>✅</td></tr>
-          <tr><td class="num">j) √2</td>             <td></td><td></td><td></td><td></td><td>✅</td><td>✅</td></tr>
-          <tr><td class="num">k) −√2</td>            <td></td><td></td><td></td><td></td><td>✅</td><td>✅</td></tr>
-          <tr><td class="num">l) √9 = 3</td>         <td>✅</td><td>✅</td><td>✅</td><td>✅</td><td></td><td>✅</td></tr>
-          <tr><td class="num">m) −√9 = −3</td>       <td></td><td></td><td>✅</td><td>✅</td><td></td><td>✅</td></tr>
-          <tr><td class="num">n) π</td>              <td></td><td></td><td></td><td></td><td>✅</td><td>✅</td></tr>
-          <tr><td class="num">o) −π</td>             <td></td><td></td><td></td><td></td><td>✅</td><td>✅</td></tr>
+          <tr><td class="num">a) 5</td>              <td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="num">b) −7</td>             <td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="num">c) 0</td>              <td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="num">d) 3/5</td>            <td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="num">e) −3/5</td>           <td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="num">f) 20/4 = 5</td>       <td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="num">g) −20/4 = −5</td>     <td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="num">h) 7/1 = 7</td>        <td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="num">i) −7/1 = −7</td>      <td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="num">j) √2</td>             <td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="num">k) −√2</td>            <td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="num">l) √9 = 3</td>         <td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="num">m) −√9 = −3</td>       <td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="num">n) π</td>              <td></td><td></td><td></td><td></td><td></td><td></td></tr>
+          <tr><td class="num">o) −π</td>             <td></td><td></td><td></td><td></td><td></td><td></td></tr>
         </tbody>
       </table>
     </div>
+
+    <button class="toggle" onclick="zeigeLoesung(this)">Lösung anzeigen</button>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
   <script>
-    function toggleSolution(btn) {
-      const sol = btn.nextElementSibling;
-      const hidden = sol.classList.contains('is-hidden');
-      if (hidden) {
-        sol.classList.remove('is-hidden');
-        btn.textContent = 'Lösung verstecken';
-        if (window.MathJax && MathJax.typesetPromise) MathJax.typesetPromise([sol]).catch(() => {});
-      } else {
-        sol.classList.add('is-hidden');
-        btn.textContent = 'Lösung anzeigen';
-      }
+    const loesungsdaten = [
+      ['✅','✅','✅','✅','','✅'],
+      ['','','✅','✅','','✅'],
+      ['','✅','✅','✅','','✅'],
+      ['','','','✅','','✅'],
+      ['','','','✅','','✅'],
+      ['✅','✅','✅','✅','','✅'],
+      ['','','✅','✅','','✅'],
+      ['✅','✅','✅','✅','','✅'],
+      ['','','✅','✅','','✅'],
+      ['','','','','✅','✅'],
+      ['','','','','✅','✅'],
+      ['✅','✅','✅','✅','','✅'],
+      ['','','✅','✅','','✅'],
+      ['','','','','✅','✅'],
+      ['','','','','✅','✅']
+    ];
+
+    function zeigeLoesung(btn) {
+      const rows = document.querySelectorAll("#loesungstabelle tbody tr");
+      const hidden = btn.textContent.includes("anzeigen");
+
+      rows.forEach((row, i) => {
+        const cells = row.querySelectorAll("td");
+        if (hidden) {
+          for (let j = 1; j < cells.length; j++) {
+            cells[j].textContent = loesungsdaten[i][j-1] || '';
+          }
+        } else {
+          for (let j = 1; j < cells.length; j++) {
+            cells[j].textContent = '';
+          }
+        }
+      });
+
+      btn.textContent = hidden ? "Lösung verstecken" : "Lösung anzeigen";
+      if (window.MathJax && MathJax.typesetPromise) MathJax.typesetPromise();
     }
   </script>
 
