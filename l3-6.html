@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aufgabe 3.6</title>
+
+  <!-- MathJax -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .aufgabe ul {
+      columns: 3;
+      -webkit-columns: 3;
+      -moz-columns: 3;
+      list-style: none;
+      padding-left: 0;
+    }
+    .aufgabe li {
+      margin-bottom: 0.8rem;
+    }
+    .solution {
+      margin-top: 0.3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header-nav">
+    <a href="l3-5.html">&laquo; Vorige Aufgabe</a>
+    <h1>Aufgabe 3.6</h1>
+    <a href="l3-7.html">Nächste Aufgabe &raquo;</a>
+  </div>
+
+  <div class="aufgabe">
+    <p>
+      Gegeben sind die drei Mengen:<br>
+      $A = \{2; 5; 6; 7; 8; 15\}$<br>
+      $B = \{1; 2; 6; 8\}$<br>
+      $C = \{0; 6; 15; 17\}$
+    </p>
+
+    <ul>
+      <li>
+        a) $A \cup B \cup C$<br>
+        <button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
+        <div class="solution is-hidden">
+          $A \cup B \cup C = \{0; 1; 2; 5; 6; 7; 8; 15; 17\}$
+        </div>
+      </li>
+
+      <li>
+        b) $(A \cap B) \cup C$<br>
+        <button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
+        <div class="solution is-hidden">
+          $(A \cap B) \cup C = \{0; 2; 6; 8; 15; 17\}$
+        </div>
+      </li>
+
+      <li>
+        c) $C \setminus A$<br>
+        <button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
+        <div class="solution is-hidden">
+          $C \setminus A = \{0; 17\}$
+        </div>
+      </li>
+
+      <li>
+        d) $A \cap B \cap C$<br>
+        <button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
+        <div class="solution is-hidden">
+          $A \cap B \cap C = \{6\}$
+        </div>
+      </li>
+
+      <li>
+        e) $(A \cap B) \cup (B \cap C)$<br>
+        <button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
+        <div class="solution is-hidden">
+          $(A \cap B) \cup (B \cap C) = \{2; 6; 8\}$
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <script>
+    function toggleSolution(btn) {
+      const sol = btn.nextElementSibling;
+      const hidden = sol.classList.contains('is-hidden');
+      if (hidden) {
+        sol.classList.remove('is-hidden');
+        btn.textContent = 'Lösung verstecken';
+        if (window.MathJax && MathJax.typesetPromise) {
+          MathJax.typesetPromise([sol]).catch(() => {});
+        }
+      } else {
+        sol.classList.add('is-hidden');
+        btn.textContent = 'Lösung anzeigen';
+      }
+    }
+  </script>
+
+</body>
+</html>
