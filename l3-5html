@@ -100,7 +100,7 @@
         <div class="solution is-hidden">$(A \cup B) \setminus C = \{1; 2; 3; 7; 8\}$</div>
       </li>
     </ul>
-  </div>
+  </div> 
 
   <script>
     function toggleSolution(btn) {
