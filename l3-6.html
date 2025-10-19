@@ -17,19 +17,36 @@
   <link rel="stylesheet" href="style.css">
 
   <style>
+    /* eine Spalte */
     .aufgabe ul {
-      columns: 1;
-      -webkit-columns: 1;
-      -moz-columns: 1;
       list-style: none;
       padding-left: 0;
+      margin: 0;
     }
     .aufgabe li {
-      margin-bottom: 0.8rem;
+      margin: .6rem 0;
     }
-    .solution {
-      margin-top: 0.3rem;
+
+    /* zeilenweise Darstellung */
+    .row {
+      display: flex;
+      align-items: baseline;
+      gap: .6rem;
+      flex-wrap: wrap;
     }
+    .label { font-weight: 700; margin-right: .2rem; }
+    .expr { white-space: nowrap; }
+    .toggle { margin-left: .4rem; }
+
+    /* inline-lösung */
+    .solution-inline {
+      background: #f6f6f6;
+      border-left: 4px solid #4caf50;
+      padding: .1rem .5rem;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+    .is-hidden { display: none; }
   </style>
 </head>
 <body>
@@ -50,57 +67,60 @@
 
     <ul>
       <li>
-        a) $A \cup B \cup C$<br>
-        <button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
-        <div class="solution is-hidden">
-          $A \cup B \cup C = \{0; 1; 2; 5; 6; 7; 8; 15; 17\}$
+        <div class="row">
+          <span class="label">a)</span>
+          <span class="expr">$A \cup B \cup C$</span>
+          <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+          <span class="solution-inline is-hidden">$A \cup B \cup C = \{0; 1; 2; 5; 6; 7; 8; 15; 17\}$</span>
         </div>
       </li>
 
       <li>
-        b) $(A \cap B) \cup C$<br>
-        <button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
-        <div class="solution is-hidden">
-          $(A \cap B) \cup C = \{0; 2; 6; 8; 15; 17\}$
+        <div class="row">
+          <span class="label">b)</span>
+          <span class="expr">$(A \cap B) \cup C$</span>
+          <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+          <span class="solution-inline is-hidden">$(A \cap B) \cup C = \{0; 2; 6; 8; 15; 17\}$</span>
         </div>
       </li>
 
       <li>
-        c) $C \setminus A$<br>
-        <button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
-        <div class="solution is-hidden">
-          $C \setminus A = \{0; 17\}$
+        <div class="row">
+          <span class="label">c)</span>
+          <span class="expr">$C \setminus A$</span>
+          <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+          <span class="solution-inline is-hidden">$C \setminus A = \{0; 17\}$</span>
         </div>
       </li>
 
       <li>
-        d) $A \cap B \cap C$<br>
-        <button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
-        <div class="solution is-hidden">
-          $A \cap B \cap C = \{6\}$
+        <div class="row">
+          <span class="label">d)</span>
+          <span class="expr">$A \cap B \cap C$</span>
+          <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+          <span class="solution-inline is-hidden">$A \cap B \cap C = \{6\}$</span>
         </div>
       </li>
 
       <li>
-        e) $(A \cap B) \cup (B \cap C)$<br>
-        <button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
-        <div class="solution is-hidden">
-          $(A \cap B) \cup (B \cap C) = \{2; 6; 8\}$
+        <div class="row">
+          <span class="label">e)</span>
+          <span class="expr">$(A \cap B) \cup (B \cap C)$</span>
+          <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+          <span class="solution-inline is-hidden">$(A \cap B) \cup (B \cap C) = \{2; 6; 8\}$</span>
         </div>
       </li>
     </ul>
   </div>
 
   <script>
-    function toggleSolution(btn) {
+    function toggleInline(btn) {
       const sol = btn.nextElementSibling;
       const hidden = sol.classList.contains('is-hidden');
       if (hidden) {
         sol.classList.remove('is-hidden');
         btn.textContent = 'Lösung verstecken';
-        if (window.MathJax && MathJax.typesetPromise) {
-          MathJax.typesetPromise([sol]).catch(() => {});
-        }
+        if (window.MathJax && MathJax.typesetPromise) MathJax.typesetPromise([sol]).catch(() => {});
       } else {
         sol.classList.add('is-hidden');
         btn.textContent = 'Lösung anzeigen';
