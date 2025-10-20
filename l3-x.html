@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aufgabe 3.x – Primfaktorzerlegung</title>
+
+  <!-- MathJax -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .aufgabe ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+    .aufgabe li {
+      margin: .6rem 0;
+    }
+
+    .row {
+      display: flex;
+      align-items: baseline;
+      gap: .6rem;
+      flex-wrap: wrap;
+    }
+
+    .label { font-weight: 700; margin-right: .2rem; }
+    .expr { white-space: nowrap; }
+    .toggle { margin-left: .4rem; }
+
+    .solution-inline {
+      background: #f6f6f6;
+      border-left: 4px solid #4caf50;
+      padding: .1rem .5rem;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+    .is-hidden { display: none; }
+  </style>
+</head>
+<body>
+
+  <div class="header-nav">
+    <a href="l3-7.html">&laquo; Vorige Aufgabe</a>
+    <h1>Aufgabe 3.x – Primfaktorzerlegung</h1>
+    <a href="l3-y.html">Nächste Aufgabe &raquo;</a>
+  </div>
+
+  <div class="aufgabe">
+    <p>
+      Führen Sie bei jeder Zahl die <strong>Primfaktorzerlegung</strong> durch und fassen Sie gleiche Faktoren zusammen.
+    </p>
+
+    <ul>
+      <li>
+        <div class="row">
+          <span class="label">1)</span>
+          <span class="expr">$17$</span>
+          <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+          <span class="solution-inline is-hidden">$17 = 17^1$</span>
+        </div>
+      </li>
+
+      <li>
+        <div class="row">
+          <span class="label">2)</span>
+          <span class="expr">$36$</span>
+          <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+          <span class="solution-inline is-hidden">$36 = 2^2 \cdot 3^2$</span>
+        </div>
+      </li>
+
+      <li>
+        <div class="row">
+          <span class="label">3)</span>
+          <span class="expr">$48$</span>
+          <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+          <span class="solution-inline is-hidden">$48 = 2^4 \cdot 3$</span>
+        </div>
+      </li>
+
+      <li>
+        <div class="row">
+          <span class="label">4)</span>
+          <span class="expr">$72$</span>
+          <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+          <span class="solution-inline is-hidden">$72 = 2^3 \cdot 3^2$</span>
+        </div>
+      </li>
+
+      <li>
+        <div class="row">
+          <span class="label">5)</span>
+          <span class="expr">$90$</span>
+          <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+          <span class="solution-inline is-hidden">$90 = 2 \cdot 3^2 \cdot 5$</span>
+        </div>
+      </li>
+
+      <li>
+        <div class="row">
+          <span class="label">6)</span>
+          <span class="expr">$120$</span>
+          <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+          <span class="solution-inline is-hidden">$120 = 2^3 \cdot 3 \cdot 5$</span>
+        </div>
+      </li>
+
+      <li>
+        <div class="row">
+          <span class="label">7)</span>
+          <span class="expr">$150$</span>
+          <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+          <span class="solution-inline is-hidden">$150 = 2 \cdot 3 \cdot 5^2$</span>
+        </div>
+      </li>
+
+      <li>
+        <div class="row">
+          <span class="label">8)</span>
+          <span class="expr">$180$</span>
+          <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+          <span class="solution-inline is-hidden">$180 = 2^2 \cdot 3^2 \cdot 5$</span>
+        </div>
+      </li>
+
+      <li>
+        <div class="row">
+          <span class="label">9)</span>
+          <span class="expr">$210$</span>
+          <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+          <span class="solution-inline is-hidden">$210 = 2 \cdot 3 \cdot 5 \cdot 7$</span>
+        </div>
+      </li>
+
+      <li>
+        <div class="row">
+          <span class="label">10)</span>
+          <span class="expr">$225$</span>
+          <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+          <span class="solution-inline is-hidden">$225 = 3^2 \cdot 5^2$</span>
+        </div>
+      </li>
+
+      <li>
+        <div class="row">
+          <span class="label">11)</span>
+          <span class="expr">$360$</span>
+          <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+          <span class="solution-inline is-hidden">$360 = 2^3 \cdot 3^2 \cdot 5$</span>
+        </div>
+      </li>
+
+      <li>
+        <div class="row">
+          <span class="label">12)</span>
+          <span class="expr">$5040$</span>
+          <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+          <span class="solution-inline is-hidden">$5040 = 2^4 \cdot 3^2 \cdot 5 \cdot 7$</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <script>
+    function toggleInline(btn) {
+      const sol = btn.nextElementSibling;
+      const hidden = sol.classList.contains('is-hidden');
+      if (hidden) {
+        sol.classList.remove('is-hidden');
+        btn.textContent = 'Lösung verstecken';
+        if (window.MathJax && MathJax.typesetPromise)
+          MathJax.typesetPromise([sol]).catch(() => {});
+      } else {
+        sol.classList.add('is-hidden');
+        btn.textContent = 'Lösung anzeigen';
+      }
+    }
+  </script>
+
+</body>
+</html>
