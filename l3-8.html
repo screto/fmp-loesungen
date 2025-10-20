@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aufgabe 3.8 – Aussagen</title>
+
+  <!-- MathJax -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .aufgabe ul, .aufgabe ol {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+    .aufgabe li {
+      margin: .6rem 0;
+    }
+
+    .row {
+      display: flex;
+      align-items: baseline;
+      gap: .6rem;
+      flex-wrap: wrap;
+    }
+
+    .label { font-weight: 700; margin-right: .2rem; }
+    .expr { flex: 1; }
+    .toggle { margin-left: .4rem; }
+
+    .solution-inline {
+      background: #f6f6f6;
+      border-left: 4px solid #4caf50;
+      padding: .1rem .5rem;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+
+    .is-hidden { display: none; }
+  </style>
+</head>
+<body>
+
+  <div class="header-nav">
+    <a href="l3-7.html">&laquo; Vorige Aufgabe</a>
+    <h1>Aufgabe 3.8 – Aussagen</h1>
+    <a href="l3-9.html">Nächste Aufgabe &raquo;</a>
+  </div>
+
+  <div class="aufgabe">
+    <p>
+      Untersuchen Sie, ob es sich um Aussagen handelt. Wenn ja, ob sie wahr (w) oder falsch (f) sind:
+    </p>
+
+    <ol>
+      <li>
+        <div class="row">
+          <span class="label">1)</span>
+          <span class="expr">5 ist eine gerade Zahl.</span>
+          <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+          <span class="solution-inline is-hidden">Aussage (f) – 5 ist ungerade.</span>
+        </div>
+      </li>
+
+      <li>
+        <div class="row">
+          <span class="label">2)</span>
+          <span class="expr">7 ist nicht eine gerade Zahl.</span>
+          <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+          <span class="solution-inline is-hidden">Aussage (w) – 7 ist ungerade.</span>
+        </div>
+      </li>
+
+      <li>
+        <div class="row">
+          <span class="label">3)</span>
+          <span class="expr">25 ist eine Quadratzahl.</span>
+          <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+          <span class="solution-inline is-hidden">Aussage (w) – $25 = 5^2$.</span>
+        </div>
+      </li>
+
+      <li>
+        <div class="row">
+          <span class="label">4)</span>
+          <span class="expr">Muttenz im Kanton Basellandschaft hat die Postleitzahl 4132.</span>
+          <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+          <span class="solution-inline is-hidden">Aussage (w) – korrekt, PLZ 4132.</span>
+        </div>
+      </li>
+
+      <li>
+        <div class="row">
+          <span class="label">5)</span>
+          <span class="expr">Bern hat eine schöne Altstadt.</span>
+          <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+          <span class="solution-inline is-hidden">Keine Aussage – subjektiv (Werturteil).</span>
+        </div>
+      </li>
+    </ol>
+  </div>
+
+  <script>
+    function toggleInline(btn) {
+      const sol = btn.nextElementSibling;
+      const hidden = sol.classList.contains('is-hidden');
+      if (hidden) {
+        sol.classList.remove('is-hidden');
+        btn.textContent = 'Lösung verstecken';
+        if (window.MathJax && MathJax.typesetPromise)
+          MathJax.typesetPromise([sol]).catch(() => {});
+      } else {
+        sol.classList.add('is-hidden');
+        btn.textContent = 'Lösung anzeigen';
+      }
+    }
+  </script>
+
+</body>
+</html>

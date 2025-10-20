@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aufgabe 3.11 – Lösungsmenge</title>
+
+  <!-- MathJax -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .aufgabe ol {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+    .aufgabe li { margin: .6rem 0; }
+
+    .row {
+      display: flex;
+      align-items: baseline;
+      gap: .6rem;
+      flex-wrap: wrap;
+    }
+
+    .label { font-weight: 700; margin-right: .2rem; }
+    .expr { flex: 1; }
+    .toggle { margin-left: .4rem; }
+
+    .solution-inline {
+      background: #f6f6f6;
+      border-left: 4px solid #4caf50;
+      padding: .1rem .5rem;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+
+    .is-hidden { display: none; }
+  </style>
+</head>
+<body>
+
+  <div class="header-nav">
+    <a href="l3-10.html">&laquo; Vorige Aufgabe</a>
+    <h1>Aufgabe 3.11 – Lösungsmenge</h1>
+    <a href="l3-12.html">Nächste Aufgabe &raquo;</a>
+  </div>
+
+  <div class="aufgabe">
+    <p>
+      Bestimmen Sie bei den nachfolgenden Aussageformen jeweils die Lösungsmenge $\mathbb{L}$:
+    </p>
+
+    <ol>
+      <li>
+        <div class="row">
+          <span class="label">1)</span>
+          <span class="expr">$x > 7 \quad \mathbb{G}=\mathbb{Z}$</span>
+          <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+          <span class="solution-inline is-hidden">$\mathbb{L} = \{8,9,10,\dots\}$</span>
+        </div>
+      </li>
+
+      <li>
+        <div class="row">
+          <span class="label">2)</span>
+          <span class="expr">$x = 7.8 \quad \mathbb{G}=\mathbb{R}$</span>
+          <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+          <span class="solution-inline is-hidden">$\mathbb{L} = \{7.8\}$</span>
+        </div>
+      </li>
+
+      <li>
+        <div class="row">
+          <span class="label">3)</span>
+          <span class="expr">$x^2 \le 0 \quad \mathbb{G}=\mathbb{R}$</span>
+          <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+          <span class="solution-inline is-hidden">$\mathbb{L} = \{0\}$</span>
+        </div>
+      </li>
+
+      <li>
+        <div class="row">
+          <span class="label">4)</span>
+          <span class="expr">$x^2 - x = 6 \quad \mathbb{G}=\mathbb{R}$</span>
+          <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+          <span class="solution-inline is-hidden">$\mathbb{L} = \{-2,\,3\}$</span>
+        </div>
+      </li>
+
+      <li>
+        <div class="row">
+          <span class="label">5)</span>
+          <span class="expr">$x$ hat die Postleitzahl 4132 $\quad \mathbb{G}=$ Menge aller Ortschaften der Schweiz</span>
+          <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+          <span class="solution-inline is-hidden">$\mathbb{L} = \{\text{Muttenz}\}$</span>
+        </div>
+      </li>
+
+      <li>
+        <div class="row">
+          <span class="label">6)</span>
+          <span class="expr">$x + 2 = 9 \quad \mathbb{G}=\mathbb{R}$</span>
+          <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+          <span class="solution-inline is-hidden">$\mathbb{L} = \{7\}$</span>
+        </div>
+      </li>
+
+      <li>
+        <div class="row">
+          <span class="label">7)</span>
+          <span class="expr">$x$ ist die Hauptstadt Kaliforniens $\quad \mathbb{G}=$ Menge aller Städte der Welt</span>
+          <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+          <span class="solution-inline is-hidden">$\mathbb{L} = \{\text{Sacramento}\}$</span>
+        </div>
+      </li>
+
+      <li>
+        <div class="row">
+          <span class="label">8)</span>
+          <span class="expr">$x^2 = 1 \quad \mathbb{G}=\mathbb{R}$</span>
+          <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+          <span class="solution-inline is-hidden">$\mathbb{L} = \{-1,\,1\}$</span>
+        </div>
+      </li>
+
+      <li>
+        <div class="row">
+          <span class="label">9)</span>
+          <span class="expr">$x^2 = 16 \quad \mathbb{G}=\mathbb{N}$</span>
+          <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+          <span class="solution-inline is-hidden">$\mathbb{L} = \{4\}$</span>
+        </div>
+      </li>
+
+      <li>
+        <div class="row">
+          <span class="label">10)</span>
+          <span class="expr">$x^2 = 8 \quad \mathbb{G}=\mathbb{R}$</span>
+          <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+          <span class="solution-inline is-hidden">$\mathbb{L} = \{-\sqrt{8},\,\sqrt{8}\}$</span>
+        </div>
+      </li>
+
+      <li>
+        <div class="row">
+          <span class="label">11)</span>
+          <span class="expr">$x$ ist eine ungerade Zahl $\quad \mathbb{G}=$ Menge aller ungeraden Zahlen</span>
+          <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+          <span class="solution-inline is-hidden">$\mathbb{L} = \mathbb{G}$</span>
+        </div>
+      </li>
+
+      <li>
+        <div class="row">
+          <span class="label">12)</span>
+          <span class="expr">$x = 7 \quad \mathbb{G}=\mathbb{R}$</span>
+          <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+          <span class="solution-inline is-hidden">$\mathbb{L} = \{7\}$</span>
+        </div>
+      </li>
+
+      <li>
+        <div class="row">
+          <span class="label">13)</span>
+          <span class="expr">$x = 7 \quad \mathbb{G}=$ Menge aller geraden Zahlen</span>
+          <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+          <span class="solution-inline is-hidden">$\mathbb{L} = \{\}$ (da 7 nicht gerade ist)</span>
+        </div>
+      </li>
+
+      <li>
+        <div class="row">
+          <span class="label">14)</span>
+          <span class="expr">$x$ geht in die Klasse P1a $\quad \mathbb{G}=$ Alle Schüler/-innen der Klasse P1a</span>
+          <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+          <span class="solution-inline is-hidden">$\mathbb{L} = \mathbb{G}$</span>
+        </div>
+      </li>
+
+      <li>
+        <div class="row">
+          <span class="label">15)</span>
+          <span class="expr">$x$ ist ein Säugetier $\quad \mathbb{G} = \{\text{Pferd, Katze, Wal, Adler}\}$</span>
+          <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+          <span class="solution-inline is-hidden">$\mathbb{L} = \{\text{Pferd, Katze, Wal}\}$</span>
+        </div>
+      </li>
+
+      <li>
+        <div class="row">
+          <span class="label">16)</span>
+          <span class="expr">Las Vegas liegt im Staate $x$ $\quad \mathbb{G}=$ Menge aller Staaten der USA</span>
+          <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+          <span class="solution-inline is-hidden">$\mathbb{L} = \{\text{Nevada}\}$</span>
+        </div>
+      </li>
+    </ol>
+  </div>
+
+  <script>
+    function toggleInline(btn) {
+      const sol = btn.nextElementSibling;
+      const hidden = sol.classList.contains('is-hidden');
+      if (hidden) {
+        sol.classList.remove('is-hidden');
+        btn.textContent = 'Lösung verstecken';
+        if (window.MathJax && MathJax.typesetPromise)
+          MathJax.typesetPromise([sol]).catch(() => {});
+      } else {
+        sol.classList.add('is-hidden');
+        btn.textContent = 'Lösung anzeigen';
+      }
+    }
+  </script>
+
+</body>
+</html>
