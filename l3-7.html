@@ -16,6 +16,34 @@
 
   <!-- gemeinsames CSS -->
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* eigene Nummerierung a), b), c), ... */
+    ol {
+      list-style: none;
+      counter-reset: aufgabe;
+      padding-left: 1.5em;
+    }
+
+    ol > li {
+      counter-increment: aufgabe;
+      margin-bottom: 0.8em;
+      position: relative;
+    }
+
+    ol > li::before {
+      content: counter(aufgabe, lower-alpha) ") ";
+      position: absolute;
+      left: -1.5em;
+    }
+
+    .solution.is-hidden {
+      display: none;
+    }
+
+    button.toggle {
+      margin-top: 0.3em;
+    }
+  </style>
 </head>
 <body>
 
@@ -116,7 +144,7 @@
       <li>
         Wenn $x$ eine natürliche Zahl ist, dann ist $x$ grösser als $-5$.
         <br><button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
-        <div class="solution is-hidden">Keine Aussage — offener Satz (ohne Quantor); der Inhalt ist zwar für alle $x\\in\\mathbb N$ wahr, aber ohne Quantifizierung kein fester Wahrheitswert.</div>
+        <div class="solution is-hidden">Aussage (w) — für alle $x\in\mathbb N$ gilt $x > -5$.</div>
       </li>
 
       <li>
@@ -153,7 +181,7 @@
         In einem Kreis ist eine Sehne immer kürzer als eine Sekante.
         <br><button class="toggle" onclick="toggleSolution(this)">Lösung anzeigen</button>
         <div class="solution is-hidden">
-          Keine Aussage — „Sekante“ ist eine Gerade (keine definierte Länge); der Längenvergleich ist so nicht sinnvoll festgelegt.
+          Aussage (w) — eine Sehne verbindet zwei Punkte auf dem Kreis, eine Sekante verläuft durch den Kreis und ist daher immer länger.
         </div>
       </li>
     </ol>
