@@ -18,12 +18,12 @@
   <link rel="stylesheet" href="style.css">
 
   <style>
-    .aufgabe ul { list-style: none; padding-left: 0; margin: 0; }
+    .aufgabe ol { list-style: none; padding-left: 0; margin: 0; }
     .aufgabe li { margin: .5rem 0; }
 
     .row { display: flex; align-items: baseline; gap: .6rem; flex-wrap: wrap; }
     .label { font-weight: 700; margin-right: .2rem; }
-    .expr { white-space: nowrap; }
+    .expr { flex: 1; }
     .toggle { margin-left: .4rem; }
 
     .solution-inline {
@@ -47,41 +47,41 @@
   <div class="aufgabe">
     <p>Berechnen Sie im Kopf (also <strong>ohne Taschenrechner</strong>):</p>
 
-    <ul>
-      <li><div class="row"><span class="label">a)</span><span class="expr">$5^3$</span>
+    <ol>
+      <li><div class="row"><span class="label">a)</span><span class="expr">$5^3 =\ ?$</span>
         <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
         <span class="solution-inline is-hidden">$5^3 = 125$</span></div></li>
 
-      <li><div class="row"><span class="label">b)</span><span class="expr">$2^5$</span>
+      <li><div class="row"><span class="label">b)</span><span class="expr">$2^5 =\ ?$</span>
         <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
         <span class="solution-inline is-hidden">$2^5 = 32$</span></div></li>
 
-      <li><div class="row"><span class="label">c)</span><span class="expr">$1^7$</span>
+      <li><div class="row"><span class="label">c)</span><span class="expr">$1^7 =\ ?$</span>
         <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
         <span class="solution-inline is-hidden">$1^7 = 1$</span></div></li>
 
-      <li><div class="row"><span class="label">d)</span><span class="expr">$3^2$</span>
+      <li><div class="row"><span class="label">d)</span><span class="expr">$3^2 =\ ?$</span>
         <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
         <span class="solution-inline is-hidden">$3^2 = 9$</span></div></li>
 
-      <li><div class="row"><span class="label">e)</span><span class="expr">$5^4$</span>
+      <li><div class="row"><span class="label">e)</span><span class="expr">$5^4 =\ ?$</span>
         <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
         <span class="solution-inline is-hidden">$5^4 = 625$</span></div></li>
 
-      <li><div class="row"><span class="label">f)</span><span class="expr">$(-2)^4$</span>
+      <li><div class="row"><span class="label">f)</span><span class="expr">$(-2)^4 =\ ?$</span>
         <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
         <span class="solution-inline is-hidden">$(-2)^4 = 16$</span></div></li>
 
-      <li><div class="row"><span class="label">g)</span><span class="expr">$-9^2$</span>
+      <li><div class="row"><span class="label">g)</span><span class="expr">$-9^2 =\ ?$</span>
         <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
         <span class="solution-inline is-hidden">$-9^2 = -(9^2) = -81$</span></div></li>
 
-      <li><div class="row"><span class="label">h)</span><span class="expr">$(-3)^3$</span>
+      <li><div class="row"><span class="label">h)</span><span class="expr">$(-3)^3 =\ ?$</span>
         <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
         <span class="solution-inline is-hidden">$(-3)^3 = -27$</span></div></li>
 
-      <li><div class="row"><span class="label">i)</span><span class="expr">$(-3)^4$</span>
-        <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+      <li><div class="row"><span class="label">i)</span><span class="expr">$(-3)^4 =\ ?$</span>
+        <li><div class="row"><span class="label">j)</span><span class="expr">$(-1)^{50} =\ ?$</span>
         <span class="solution-inline is-hidden">$(-3)^4 = 81$</span></div></li>
 
       <li><div class="row"><span class="label">j)</span><span class="expr">$(-1)^{50}$</span>
@@ -119,7 +119,7 @@
       <li><div class="row"><span class="label">r)</span><span class="expr">$(-9)^2$</span>
         <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
         <span class="solution-inline is-hidden">$(-9)^2 = 81$</span></div></li>
-    </ul>
+    </ol>
   </div>
 
   <script>

@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="style.css">
 
   <style>
-    .aufgabe ul {
+    .aufgabe ol {
       list-style: none;
       padding-left: 0;
       margin: 0;
@@ -34,7 +34,7 @@
     }
 
     .label { font-weight: 700; margin-right: .2rem; }
-    .expr { white-space: nowrap; }
+    .expr { flex: 1; }
     .toggle { margin-left: .4rem; }
 
     .solution-inline {
@@ -60,11 +60,11 @@
       Führen Sie bei jeder Zahl die <strong>Primfaktorzerlegung</strong> durch und fassen Sie gleiche Faktoren zusammen.
     </p>
 
-    <ul>
+    <ol>
       <li>
         <div class="row">
           <span class="label">a)</span>
-          <span class="expr">$17$</span>
+          <span class="expr">$17 =\ ?$</span>
           <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
           <span class="solution-inline is-hidden">$17 = 17$</span>
         </div>
@@ -73,102 +73,102 @@
       <li>
         <div class="row">
           <span class="label">b)</span>
-          <span class="expr">$36$</span>
+          <span class="expr">$36 =\ ?$</span>
           <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
-          <span class="solution-inline is-hidden">$36 = 2^2 \cdot 3^2$</span>
+          <span class="solution-inline is-hidden">$2^2 \cdot 3^2$</span>
         </div>
       </li>
 
       <li>
         <div class="row">
           <span class="label">c)</span>
-          <span class="expr">$48$</span>
+          <span class="expr">$48 =\ ?$</span>
           <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
-          <span class="solution-inline is-hidden">$48 = 2^4 \cdot 3$</span>
+          <span class="solution-inline is-hidden">$2^4 \cdot 3$</span>
         </div>
       </li>
 
       <li>
         <div class="row">
           <span class="label">d)</span>
-          <span class="expr">$72$</span>
+          <span class="expr">$72 =\ ?$</span>
           <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
-          <span class="solution-inline is-hidden">$72 = 2^3 \cdot 3^2$</span>
+          <span class="solution-inline is-hidden">$2^3 \cdot 3^2$</span>
         </div>
       </li>
 
       <li>
         <div class="row">
           <span class="label">e)</span>
-          <span class="expr">$90$</span>
+          <span class="expr">$90 =\ ?$</span>
           <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
-          <span class="solution-inline is-hidden">$90 = 2 \cdot 3^2 \cdot 5$</span>
+          <span class="solution-inline is-hidden">$2 \cdot 3^2 \cdot 5$</span>
         </div>
       </li>
 
       <li>
         <div class="row">
           <span class="label">f)</span>
-          <span class="expr">$120$</span>
+          <span class="expr">$120 =\ ?$</span>
           <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
-          <span class="solution-inline is-hidden">$120 = 2^3 \cdot 3 \cdot 5$</span>
+          <span class="solution-inline is-hidden">$2^3 \cdot 3 \cdot 5$</span>
         </div>
       </li>
 
       <li>
         <div class="row">
           <span class="label">g)</span>
-          <span class="expr">$150$</span>
+          <span class="expr">$150 =\ ?$</span>
           <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
-          <span class="solution-inline is-hidden">$150 = 2 \cdot 3 \cdot 5^2$</span>
+          <span class="solution-inline is-hidden">$2 \cdot 3 \cdot 5^2$</span>
         </div>
       </li>
 
       <li>
         <div class="row">
           <span class="label">h)</span>
-          <span class="expr">$180$</span>
+          <span class="expr">$180 =\ ?$</span>
           <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
-          <span class="solution-inline is-hidden">$180 = 2^2 \cdot 3^2 \cdot 5$</span>
+          <span class="solution-inline is-hidden">$2^2 \cdot 3^2 \cdot 5$</span>
         </div>
       </li>
 
       <li>
         <div class="row">
           <span class="label">i)</span>
-          <span class="expr">$210$</span>
+          <span class="expr">$210 =\ ?$</span>
           <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
-          <span class="solution-inline is-hidden">$210 = 2 \cdot 3 \cdot 5 \cdot 7$</span>
+          <span class="solution-inline is-hidden">$2 \cdot 3 \cdot 5 \cdot 7$</span>
         </div>
       </li>
 
       <li>
         <div class="row">
           <span class="label">j)</span>
-          <span class="expr">$225$</span>
+          <span class="expr">$225 =\ ?$</span>
           <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
-          <span class="solution-inline is-hidden">$225 = 3^2 \cdot 5^2$</span>
+          <span class="solution-inline is-hidden">$3^2 \cdot 5^2$</span>
         </div>
       </li>
 
       <li>
         <div class="row">
           <span class="label">k)</span>
-          <span class="expr">$360$</span>
+          <span class="expr">$360 =\ ?$</span>
           <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
-          <span class="solution-inline is-hidden">$360 = 2^3 \cdot 3^2 \cdot 5$</span>
+          <span class="solution-inline is-hidden">$2^3 \cdot 3^2 \cdot 5$</span>
         </div>
       </li>
 
       <li>
         <div class="row">
           <span class="label">l)</span>
-          <span class="expr">$5040$</span>
+          <span class="expr">$5040 =\ ?$</span>
           <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
-          <span class="solution-inline is-hidden">$5040 = 2^4 \cdot 3^2 \cdot 5 \cdot 7$</span>
+          <span class="solution-inline is-hidden">$2^4 \cdot 3^2 \cdot 5 \cdot 7$</span>
         </div>
       </li>
-    </ul>
+    </ol>
   </div>
 
   <script>

@@ -18,16 +18,21 @@
   <link rel="stylesheet" href="style.css">
 
   <style>
-    .aufgabe ul {
-      list-style: none; padding-left: 0; margin: 0;
+    .aufgabe ol {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
     }
     .aufgabe li { margin: .6rem 0; }
 
     .row {
-      display: flex; align-items: baseline; gap: .6rem; flex-wrap: wrap;
+      display: flex;
+      align-items: baseline;
+      gap: .6rem;
+      flex-wrap: wrap;
     }
     .label { font-weight: 700; margin-right: .2rem; }
-    .expr { white-space: nowrap; }
+    .expr { flex: 1; }
     .toggle { margin-left: .4rem; }
 
     .solution-inline {
@@ -48,11 +53,11 @@
   <div class="aufgabe">
     <p>Bestimmen Sie jeweils das $\operatorname{kgV}$:</p>
 
-    <ul>
+    <ol>
       <li>
         <div class="row">
           <span class="label">a)</span>
-          <span class="expr">$20;\ 88$</span>
+          <span class="expr">$20;\ 88 =\ ?$</span>
           <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
           <span class="solution-inline is-hidden">
             $20=2^2\cdot5,\ 88=2^3\cdot11 \;\Rightarrow\; \operatorname{kgV}=2^3\cdot5\cdot11=\boxed{440}$
@@ -63,7 +68,7 @@
       <li>
         <div class="row">
           <span class="label">b)</span>
-          <span class="expr">$42;\ 122$</span>
+          <span class="expr">$42;\ 122 =\ ?$</span>
           <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
           <span class="solution-inline is-hidden">
             $42=2\cdot3\cdot7,\ 122=2\cdot61 \;\Rightarrow\; \operatorname{kgV}=2\cdot3\cdot7\cdot61=\boxed{2562}$
@@ -74,7 +79,7 @@
       <li>
         <div class="row">
           <span class="label">c)</span>
-          <span class="expr">$5;\ 20;\ 60$</span>
+          <span class="expr">$5;\ 20;\ 60 =\ ?$</span>
           <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
           <span class="solution-inline is-hidden">
             $5=5,\ 20=2^2\cdot5,\ 60=2^2\cdot3\cdot5 \;\Rightarrow\; \operatorname{kgV}=2^2\cdot3\cdot5=\boxed{60}$
@@ -85,7 +90,7 @@
       <li>
         <div class="row">
           <span class="label">d)</span>
-          <span class="expr">$6;\ 14;\ 36$</span>
+          <span class="expr">$6;\ 14;\ 36 =\ ?$</span>
           <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
           <span class="solution-inline is-hidden">
             $6=2\cdot3,\ 14=2\cdot7,\ 36=2^2\cdot3^2 \;\Rightarrow\; \operatorname{kgV}=2^2\cdot3^2\cdot7=\boxed{252}$
@@ -140,7 +145,7 @@
           </span>
         </div>
       </li>
-    </ul>
+    </ol>
   </div>
 
   <script>
