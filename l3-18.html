@@ -18,12 +18,22 @@
   <link rel="stylesheet" href="style.css">
 
   <style>
-    .aufgabe ul { list-style: none; padding-left: 0; margin: 0; }
-    .aufgabe li { margin: .5rem 0; }
+    .aufgabe ol {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+    .aufgabe li { margin: .6rem 0; }
 
-    .row { display: flex; align-items: baseline; gap: .6rem; flex-wrap: wrap; }
+    .row {
+      display: flex;
+      align-items: baseline;
+      gap: .6rem;
+      flex-wrap: wrap;
+    }
+
     .label { font-weight: 700; margin-right: .2rem; }
-    .expr { white-space: nowrap; }
+    .expr { flex: 1; }
     .toggle { margin-left: .4rem; }
 
     .solution-inline {
@@ -47,82 +57,81 @@
   <div class="aufgabe">
     <p>
       Berechnen Sie mit dem Taschenrechner:
-      <img src="https://api.qrserver.com/v1/create-qr-code/?size=80x80&data=https://screto.github.io/fmp-loesungen/l3-18.html" alt="QR" style="height:0.5in; vertical-align: middle; margin-left: .6rem">
     </p>
 
-    <ul>
-      <li><div class="row"><span class="label">a)</span><span class="expr">$17^3$</span>
+    <ol>
+      <li><div class="row"><span class="label">a)</span><span class="expr">$17^3 =\ ?$</span>
         <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
         <span class="solution-inline is-hidden">$17^3 = 4913$</span></div></li>
 
-      <li><div class="row"><span class="label">b)</span><span class="expr">$35^8$</span>
+      <li><div class="row"><span class="label">b)</span><span class="expr">$35^8 =\ ?$</span>
         <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
-        <span class="solution-inline is-hidden">$35^8 = 2\,251\,875\,390\,625$</span></div></li>
+        <span class="solution-inline is-hidden">$2\,251\,875\,390\,625$</span></div></li>
 
-      <li><div class="row"><span class="label">c)</span><span class="expr">$129^5$</span>
+      <li><div class="row"><span class="label">c)</span><span class="expr">$129^5 =\ ?$</span>
         <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
-        <span class="solution-inline is-hidden">$129^5 = 35\,723\,051\,649$</span></div></li>
+        <span class="solution-inline is-hidden">$35\,723\,051\,649$</span></div></li>
 
-      <li><div class="row"><span class="label">d)</span><span class="expr">$18^0$</span>
+      <li><div class="row"><span class="label">d)</span><span class="expr">$18^0 =\ ?$</span>
         <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
-        <span class="solution-inline is-hidden">$18^0 = 1$</span></div></li>
+        <span class="solution-inline is-hidden">$1$</span></div></li>
 
-      <li><div class="row"><span class="label">e)</span><span class="expr">$0^{27}$</span>
+      <li><div class="row"><span class="label">e)</span><span class="expr">$0^{27} =\ ?$</span>
         <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
-        <span class="solution-inline is-hidden">$0^{27} = 0$</span></div></li>
+        <span class="solution-inline is-hidden">$0$</span></div></li>
 
-      <li><div class="row"><span class="label">f)</span><span class="expr">$(-3)^8$</span>
+      <li><div class="row"><span class="label">f)</span><span class="expr">$(-3)^8 =\ ?$</span>
         <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
-        <span class="solution-inline is-hidden">$(-3)^8 = 6\,561$</span></div></li>
+        <span class="solution-inline is-hidden">$6\,561$</span></div></li>
 
-      <li><div class="row"><span class="label">g)</span><span class="expr">$(-3)^7$</span>
+      <li><div class="row"><span class="label">g)</span><span class="expr">$(-3)^7 =\ ?$</span>
         <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
-        <span class="solution-inline is-hidden">$(-3)^7 = -2\,187$</span></div></li>
+        <span class="solution-inline is-hidden">$-2\,187$</span></div></li>
 
-      <li><div class="row"><span class="label">h)</span><span class="expr">$-3^5$</span>
+      <li><div class="row"><span class="label">h)</span><span class="expr">$-3^5 =\ ?$</span>
         <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
-        <span class="solution-inline is-hidden">$-3^5 = -(3^5) = -243$</span></div></li>
+        <span class="solution-inline is-hidden">$-243$</span></div></li>
 
-      <li><div class="row"><span class="label">i)</span><span class="expr">$(-3)^5$</span>
+      <li><div class="row"><span class="label">i)</span><span class="expr">$(-3)^5 =\ ?$</span>
         <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
-        <span class="solution-inline is-hidden">$(-3)^5 = -243$</span></div></li>
+        <span class="solution-inline is-hidden">$-243$</span></div></li>
 
-      <li><div class="row"><span class="label">j)</span><span class="expr">$-3^{12}$</span>
+      <li><div class="row"><span class="label">j)</span><span class="expr">$-3^{12} =\ ?$</span>
         <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
-        <span class="solution-inline is-hidden">$-3^{12} = -(3^{12}) = -531\,441$</span></div></li>
+        <span class="solution-inline is-hidden">$-531\,441$</span></div></li>
 
-      <li><div class="row"><span class="label">k)</span><span class="expr">$5 \cdot 7 + 3 \cdot 4^2 - 8$</span>
+      <li><div class="row"><span class="label">k)</span><span class="expr">$5 \cdot 7 + 3 \cdot 4^2 - 8 =\ ?$</span>
         <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
-        <span class="solution-inline is-hidden">$5\cdot7 + 3\cdot4^2 - 8 = 75$</span></div></li>
+        <span class="solution-inline is-hidden">$75$</span></div></li>
 
-      <li><div class="row"><span class="label">l)</span><span class="expr">$3^2 \cdot 4 + 8^2 \cdot 7$</span>
+      <li><div class="row"><span class="label">l)</span><span class="expr">$3^2 \cdot 4 + 8^2 \cdot 7 =\ ?$</span>
         <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
-        <span class="solution-inline is-hidden">$3^2\cdot4 + 8^2\cdot7 = 484$</span></div></li>
+        <span class="solution-inline is-hidden">$484$</span></div></li>
 
-      <li><div class="row"><span class="label">m)</span><span class="expr">$5^4 \cdot 2^3 - 5^3 \cdot 7^2 - 117$</span>
+      <li><div class="row"><span class="label">m)</span><span class="expr">$5^4 \cdot 2^3 - 5^3 \cdot 7^2 - 117 =\ ?$</span>
         <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
-        <span class="solution-inline is-hidden">$5^4\cdot2^3 - 5^3\cdot7^2 -117 = -1242$</span></div></li>
+        <span class="solution-inline is-hidden">$-1242$</span></div></li>
 
-      <li><div class="row"><span class="label">n)</span><span class="expr">$3^8 \cdot 2^7 - 5 \cdot 3^9 + 4 \cdot 7^4$</span>
+      <li><div class="row"><span class="label">n)</span><span class="expr">$3^8 \cdot 2^7 - 5 \cdot 3^9 + 4 \cdot 7^4 =\ ?$</span>
         <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
-        <span class="solution-inline is-hidden">$3^8\cdot2^7 - 5\cdot3^9 + 4\cdot7^4 = 750\,997$</span></div></li>
+        <span class="solution-inline is-hidden">$750\,997$</span></div></li>
 
-      <li><div class="row"><span class="label">o)</span><span class="expr">$5^{(2+3)} - 4 \cdot 7^{(8-3)}$</span>
+      <li><div class="row"><span class="label">o)</span><span class="expr">$5^{(2+3)} - 4 \cdot 7^{(8-3)} =\ ?$</span>
         <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
-        <span class="solution-inline is-hidden">$5^{2+3} - 4\cdot7^{8-3} = 5^5 - 4\cdot7^5 = 3125 - 67\,228 = -64\,103$</span></div></li>
+        <span class="solution-inline is-hidden">$-64\,103$</span></div></li>
 
-      <li><div class="row"><span class="label">p)</span><span class="expr">$7^{(4-1)} \cdot 5 + 4 \cdot 3^{(5+2)}$</span>
+      <li><div class="row"><span class="label">p)</span><span class="expr">$7^{(4-1)} \cdot 5 + 4 \cdot 3^{(5+2)} =\ ?$</span>
         <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
-        <span class="solution-inline is-hidden">$7^{4-1}\cdot5 + 4\cdot3^{5+2} = 343\cdot5 + 4\cdot2187 = 1715 + 8748 = 10\,463$</span></div></li>
+        <span class="solution-inline is-hidden">$10\,463$</span></div></li>
 
-      <li><div class="row"><span class="label">q)</span><span class="expr">$3 \cdot 6^7 - 2 \cdot 9^3$</span>
+      <li><div class="row"><span class="label">q)</span><span class="expr">$3 \cdot 6^7 - 2 \cdot 9^3 =\ ?$</span>
         <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
-        <span class="solution-inline is-hidden">$3\cdot6^7 - 2\cdot9^3 = 839\,808 - 1\,458 = 838\,350$</span></div></li>
+        <span class="solution-inline is-hidden">$838\,350$</span></div></li>
 
-      <li><div class="row"><span class="label">r)</span><span class="expr">$\dfrac{4^3-5^2+8^7}{5^7 - 4^6 + 3^8}$</span>
+      <li><div class="row"><span class="label">r)</span><span class="expr">$\dfrac{4^3-5^2+8^7}{5^7 - 4^6 + 3^8} =\ ?$</span>
         <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
-        <span class="solution-inline is-hidden">$\dfrac{4^3-5^2+8^7}{5^7 - 4^6 + 3^8} = \dfrac{2\,097\,191}{80\,590}$ (kürzbar: 1)</span></div></li>
-    </ul>
+        <span class="solution-inline is-hidden">$\dfrac{2\,097\,191}{80\,590}$ (kürzbar: 1)</span></div></li>
+    </ol>
   </div>
 
   <script>
