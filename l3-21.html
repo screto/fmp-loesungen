@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aufgabe 3.21 – Potenzgesetze</title>
+
+  <!-- MathJax -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <!-- zentrales CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <script>
+    function toggleInline(btn) {
+      const solution = btn.nextElementSibling;
+      const isHidden = solution.classList.contains('is-hidden');
+      solution.classList.toggle('is-hidden');
+      btn.textContent = isHidden ? 'Lösung verbergen' : 'Lösung anzeigen';
+    }
+  </script>
+
+  <style>
+    .aufgabe ol {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+      columns: 3;
+      column-gap: 2rem;
+    }
+    .aufgabe li { margin: .6rem 0; break-inside: avoid; }
+
+    .row {
+      display: flex;
+      align-items: baseline;
+      gap: .6rem;
+      flex-wrap: wrap;
+    }
+
+    .label { font-weight: 700; margin-right: .2rem; }
+    .expr { flex: 1; }
+    .toggle { margin-left: .4rem; }
+
+    .solution-inline {
+      background: #f6f6f6;
+      border-left: 4px solid #4caf50;
+      padding: .1rem .5rem;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+    .is-hidden { display: none; }
+  </style>
+</head>
+<body>
+  <div class="header-nav">
+    <a href="l3-20.html">&laquo; Vorige Aufgabe</a>
+    <h1>Aufgabe 3.21 – Potenzgesetze</h1>
+    <a href="l3-22.html">Nächste Aufgabe &raquo;</a>
+  </div>
+
+  <div class="aufgabe">
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:1rem;">
+      <div style="flex:1">
+        <p>Vereinfachen Sie:</p>
+      </div>
+      <div style="width:5rem;flex:0 0 auto;text-align:center">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://screto.github.io/fmp-loesungen/l3-21.html" alt="QR" style="max-width:100%;height:auto;">
+      </div>
+    </div>
+
+    <ol>
+      <li><div class="row"><span class="label">a)</span><span class="expr">$2^6 \cdot 5^6 =\ ?$</span>
+        <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+        <span class="solution-inline is-hidden">$2^6 \cdot 5^6 = (2 \cdot 5)^6 = 10^6 = 1\,000\,000$</span></div></li>
+
+      <li><div class="row"><span class="label">b)</span><span class="expr">$8^3 \cdot 125^3 =\ ?$</span>
+        <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+        <span class="solution-inline is-hidden">$8^3 \cdot 125^3 = (8 \cdot 125)^3 = 1000^3 = 1\,000\,000\,000$</span></div></li>
+
+      <li><div class="row"><span class="label">c)</span><span class="expr">$6^4 \cdot 0.5^4 =\ ?$</span>
+        <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+        <span class="solution-inline is-hidden">$6^4 \cdot 0.5^4 = (6 \cdot 0.5)^4 = 3^4 = 81$</span></div></li>
+
+      <li><div class="row"><span class="label">d)</span><span class="expr">$3.5^2 \cdot 0.2^2 =\ ?$</span>
+        <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+        <span class="solution-inline is-hidden">$3.5^2 \cdot 0.2^2 = (3.5 \cdot 0.2)^2 = 0.7^2 = 0.49$</span></div></li>
+
+      <li><div class="row"><span class="label">e)</span><span class="expr">$\left(\frac{1}{4}\right)^5 \cdot 8^5 =\ ?$</span>
+        <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+        <span class="solution-inline is-hidden">$\left(\frac{1}{4}\right)^5 \cdot 8^5 = \left(\frac{1}{4} \cdot 8\right)^5 = 2^5 = 32$</span></div></li>
+
+      <li><div class="row"><span class="label">f)</span><span class="expr">$\left(\frac{1}{2}\right)^3 \cdot \left(\frac{4}{5}\right)^3 =\ ?$</span>
+        <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+        <span class="solution-inline is-hidden">$\left(\frac{1}{2}\right)^3 \cdot \left(\frac{4}{5}\right)^3 = \left(\frac{1}{2} \cdot \frac{4}{5}\right)^3 = \left(\frac{4}{10}\right)^3 = \left(\frac{2}{5}\right)^3 = \frac{8}{125}$</span></div></li>
+
+      <li><div class="row"><span class="label">g)</span><span class="expr">$2^4 \cdot 3^4 \cdot 4^4 =\ ?$</span>
+        <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+        <span class="solution-inline is-hidden">$2^4 \cdot 3^4 \cdot 4^4 = (2 \cdot 3 \cdot 4)^4 = 24^4$</span></div></li>
+
+      <li><div class="row"><span class="label">h)</span><span class="expr">$3^5 \cdot \left(\frac{2}{3}\right)^5 \cdot \left(\frac{1}{3}\right)^5 =\ ?$</span>
+        <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+        <span class="solution-inline is-hidden">$3^5 \cdot \left(\frac{2}{3}\right)^5 \cdot \left(\frac{1}{3}\right)^5 = \left(3 \cdot \frac{2}{3} \cdot \frac{1}{3}\right)^5 = \left(\frac{2}{3}\right)^5$</span></div></li>
+
+      <li><div class="row"><span class="label">i)</span><span class="expr">$3^n \cdot 4^n =\ ?$</span>
+        <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+        <span class="solution-inline is-hidden">$3^n \cdot 4^n = (3 \cdot 4)^n = 12^n$</span></div></li>
+
+      <li><div class="row"><span class="label">j)</span><span class="expr">$8^{(2x+1)} \cdot 125^{(2x+1)} =\ ?$</span>
+        <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+        <span class="solution-inline is-hidden">$8^{(2x+1)} \cdot 125^{(2x+1)} = (8 \cdot 125)^{(2x+1)} = 1000^{(2x+1)}$</span></div></li>
+
+      <li><div class="row"><span class="label">k)</span><span class="expr">$15^{(p-1)} \cdot \left(\frac{2}{3}\right)^{(p-1)} =\ ?$</span>
+        <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+        <span class="solution-inline is-hidden">$15^{(p-1)} \cdot \left(\frac{2}{3}\right)^{(p-1)} = \left(15 \cdot \frac{2}{3}\right)^{(p-1)} = 10^{(p-1)}$</span></div></li>
+
+      <li><div class="row"><span class="label">l)</span><span class="expr">$(-2.5)^n \cdot (-0.6)^n =\ ?$</span>
+        <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+        <span class="solution-inline is-hidden">$(-2.5)^n \cdot (-0.6)^n = (-2.5 \cdot -0.6)^n = 1.5^n$</span></div></li>
+
+      <li><div class="row"><span class="label">m)</span><span class="expr">$x^6 \cdot y^6 =\ ?$</span>
+        <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+        <span class="solution-inline is-hidden">$x^6 \cdot y^6 = (x \cdot y)^6 = (xy)^6$</span></div></li>
+
+      <li><div class="row"><span class="label">n)</span><span class="expr">$(a+b)^4 \cdot (a-b)^4 =\ ?$</span>
+        <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+        <span class="solution-inline is-hidden">$(a+b)^4 \cdot (a-b)^4 = ((a+b)(a-b))^4 = (a^2-b^2)^4$</span></div></li>
+
+      <li><div class="row"><span class="label">o)</span><span class="expr">$(-x)^{(2p)} \cdot y^{(2p)} =\ ?$</span>
+        <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+        <span class="solution-inline is-hidden">$(-x)^{(2p)} \cdot y^{(2p)} = ((-x)y)^{(2p)} = (-xy)^{(2p)}$</span></div></li>
+
+      <li><div class="row"><span class="label">p)</span><span class="expr">$3^n \cdot \left(\frac{x}{3}\right)^n =\ ?$</span>
+        <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+        <span class="solution-inline is-hidden">$3^n \cdot \left(\frac{x}{3}\right)^n = \left(3 \cdot \frac{x}{3}\right)^n = x^n$</span></div></li>
+
+      <li><div class="row"><span class="label">q)</span><span class="expr">$\left(\frac{x}{y}\right)^m \cdot \left(\frac{y}{x}\right)^m =\ ?$</span>
+        <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+        <span class="solution-inline is-hidden">$\left(\frac{x}{y}\right)^m \cdot \left(\frac{y}{x}\right)^m = \left(\frac{x}{y} \cdot \frac{y}{x}\right)^m = 1^m = 1$</span></div></li>
+
+      <li><div class="row"><span class="label">r)</span><span class="expr">$\left(\frac{3a}{4}\right)^m \cdot \left(\frac{2}{9a}\right)^m =\ ?$</span>
+        <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+        <span class="solution-inline is-hidden">$\left(\frac{3a}{4}\right)^m \cdot \left(\frac{2}{9a}\right)^m = \left(\frac{3a}{4} \cdot \frac{2}{9a}\right)^m = \left(\frac{2}{6}\right)^m = \left(\frac{1}{3}\right)^m$</span></div></li>
+    </ol>
+  </div>
+
+</body>
+</html>
