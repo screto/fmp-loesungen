@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 3.20 - Potenzgesetze</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\$', '\$']],
+                displayMath: [['$$', '$$'], ['\$$', '\$$']]
+            }
+        };
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .navigation {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .navigation a {
+            text-decoration: none;
+            color: #0066cc;
+            margin: 0 10px;
+        }
+        .navigation a:hover {
+            text-decoration: underline;
+        }
+        .exercise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .exercise-item {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #0066cc;
+        }
+        .solution {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #e8f5e8;
+            border-radius: 3px;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        h2 {
+            color: #0066cc;
+        }
+    </style>
+</head>
+<body>
+    <div class="navigation">
+        <a href="l3-19.html">← Vorherige Aufgabe</a>
+        <a href="l3-21.html">Nächste Aufgabe →</a>
+    </div>
+
+    <h1>Aufgabe 3.20 – Potenzgesetze</h1>
+    
+    <h2>Aufgabenstellung</h2>
+    <p>Vereinfachen und berechnen Sie:</p>
+
+    <div class="exercise-grid">
+        <div class="exercise-item">
+            <strong>a)</strong> $\frac{8^{45}}{8^{34}}$
+            <div class="solution">
+                <strong>Lösung:</strong><br>
+                $\frac{8^{45}}{8^{34}} = 8^{45-34} = 8^{11}$
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <strong>b)</strong> $\frac{7^8}{7^3}$
+            <div class="solution">
+                <strong>Lösung:</strong><br>
+                $\frac{7^8}{7^3} = 7^{8-3} = 7^5 = 16807$
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <strong>c)</strong> $\frac{56^7}{56^6}$
+            <div class="solution">
+                <strong>Lösung:</strong><br>
+                $\frac{56^7}{56^6} = 56^{7-6} = 56^1 = 56$
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <strong>d)</strong> $\frac{a^{56}}{a^{45}}$
+            <div class="solution">
+                <strong>Lösung:</strong><br>
+                $\frac{a^{56}}{a^{45}} = a^{56-45} = a^{11}$
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <strong>e)</strong> $\frac{b^{687}}{b^{238}}$
+            <div class="solution">
+                <strong>Lösung:</strong><br>
+                $\frac{b^{687}}{b^{238}} = b^{687-238} = b^{449}$
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <strong>f)</strong> $\frac{x^{23}}{x^{15}}$
+            <div class="solution">
+                <strong>Lösung:</strong><br>
+                $\frac{x^{23}}{x^{15}} = x^{23-15} = x^8$
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <strong>g)</strong> $\frac{a^4 \cdot b^7}{b^4 \cdot a^2}$
+            <div class="solution">
+                <strong>Lösung:</strong><br>
+                $\frac{a^4 \cdot b^7}{b^4 \cdot a^2} = \frac{a^4}{a^2} \cdot \frac{b^7}{b^4} = a^{4-2} \cdot b^{7-4} = a^2 \cdot b^3$
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <strong>h)</strong> $\frac{x^5 \cdot y^3 \cdot z^7}{x^3 \cdot z^3 \cdot y^2}$
+            <div class="solution">
+                <strong>Lösung:</strong><br>
+                $\frac{x^5 \cdot y^3 \cdot z^7}{x^3 \cdot z^3 \cdot y^2} = x^{5-3} \cdot y^{3-2} \cdot z^{7-3} = x^2 \cdot y^1 \cdot z^4 = x^2yz^4$
+            </div>
+        </div>
+
+        <div class="exercise-item">
+            <strong>i)</strong> $\frac{3^4 \cdot x^4 \cdot y^6 \cdot z^8 \cdot w^{45}}{3^3 \cdot y^5 \cdot x^2 \cdot w^{34} \cdot z^7}$
+            <div class="solution">
+                <strong>Lösung:</strong><br>
+                $\frac{3^4 \cdot x^4 \cdot y^6 \cdot z^8 \cdot w^{45}}{3^3 \cdot y^5 \cdot x^2 \cdot w^{34} \cdot z^7}$<br>
+                $= 3^{4-3} \cdot x^{4-2} \cdot y^{6-5} \cdot z^{8-7} \cdot w^{45-34}$<br>
+                $= 3^1 \cdot x^2 \cdot y^1 \cdot z^1 \cdot w^{11}$<br>
+                $= 3x^2yzw^{11}$
+            </div>
+        </div>
+    </div>
+
+    <h2>Verwendete Potenzgesetze</h2>
+    <p>Bei dieser Aufgabe wird hauptsächlich das <strong>Quotientengesetz</strong> für Potenzen angewendet:</p>
+    <p>$$\frac{a^m}{a^n} = a^{m-n} \quad \text{(für } a \neq 0 \text{)}$$</p>
+    
+    <p>Bei Termen mit mehreren Variablen werden die Exponenten für jede Variable einzeln behandelt.</p>
+
+    <div class="navigation">
+        <a href="l3-19.html">← Vorherige Aufgabe</a>
+        <a href="l3-21.html">Nächste Aufgabe →</a>
+    </div>
+</body>
+</html>
