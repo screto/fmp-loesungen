@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 3.24 – Potenzgesetze</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\$', '\$']],
+                displayMath: [['$$', '$$'], ['\$$', '\$$']]
+            }
+        };
+    </script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l3-23.html">← Vorherige Seite</a>
+        <h1>Aufgabe 3.24 – Potenzgesetze</h1>
+        <a href="l3-25.html">Nächste Seite →</a>
+    </div>
+
+    <div class="aufgabe">
+        <p><strong>Vereinfachen Sie:</strong></p>
+        
+        <p><strong>a)</strong> $(x \cdot y)^3$</p>
+        <button class="toggle" onclick="toggleSolution('sol-a')">Lösung anzeigen</button>
+        <div id="sol-a" class="solution is-hidden">
+            $(x \cdot y)^3 = x^3 \cdot y^3$
+        </div>
+
+        <p><strong>b)</strong> $(4a)^2$</p>
+        <button class="toggle" onclick="toggleSolution('sol-b')">Lösung anzeigen</button>
+        <div id="sol-b" class="solution is-hidden">
+            $(4a)^2 = 4^2 \cdot a^2 = 16a^2$
+        </div>
+
+        <p><strong>c)</strong> $(3b)^2$</p>
+        <button class="toggle" onclick="toggleSolution('sol-c')">Lösung anzeigen</button>
+        <div id="sol-c" class="solution is-hidden">
+            $(3b)^2 = 3^2 \cdot b^2 = 9b^2$
+        </div>
+
+        <p><strong>d)</strong> $(-2a)^4$</p>
+        <button class="toggle" onclick="toggleSolution('sol-d')">Lösung anzeigen</button>
+        <div id="sol-d" class="solution is-hidden">
+            $(-2a)^4 = (-2)^4 \cdot a^4 = 16a^4$
+        </div>
+
+        <p><strong>e)</strong> $(-3b)^3$</p>
+        <button class="toggle" onclick="toggleSolution('sol-e')">Lösung anzeigen</button>
+        <div id="sol-e" class="solution is-hidden">
+            $(-3b)^3 = (-3)^3 \cdot b^3 = -27b^3$
+        </div>
+
+        <p><strong>f)</strong> $(-3ab^2)^4$</p>
+        <button class="toggle" onclick="toggleSolution('sol-f')">Lösung anzeigen</button>
+        <div id="sol-f" class="solution is-hidden">
+            $(-3ab^2)^4 = (-3)^4 \cdot a^4 \cdot (b^2)^4 = 81a^4b^8$
+        </div>
+    </div>
+
+    <script>
+        function toggleSolution(id) {
+            const element = document.getElementById(id);
+            element.classList.toggle('is-hidden');
+        }
+    </script>
+</body>
+</html>
