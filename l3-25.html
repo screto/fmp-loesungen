@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 3.25 - Potenzen von Brüchen vereinfachen</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\$', '\$']],
+                displayMath: [['$$', '$$'], ['\$$', '\$$']]
+            }
+        };
+    </script>
+    <style>
+        .task-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 1rem 0;
+            padding: 0.5rem 0;
+        }
+        .task-left {
+            flex: 1;
+        }
+        .task-right {
+            margin-left: 2rem;
+        }
+        .solution {
+            display: none;
+            background-color: #f0f8ff;
+            padding: 1rem;
+            border-radius: 5px;
+            border-left: 4px solid #007acc;
+        }
+        .show-solution {
+            background-color: #007acc;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .show-solution:hover {
+            background-color: #005999;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="navigation">
+            <a href="l3-24.html" class="nav-link">← Vorherige Aufgabe</a>
+            <a href="l3-26.html" class="nav-link">Nächste Aufgabe →</a>
+        </nav>
+
+        <h1>Aufgabe 3.25 – Potenzen von Brüchen vereinfachen</h1>
+        <p><strong>Vereinfachen Sie:</strong></p>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>a)</strong> $\left(\frac{a}{b}\right)^4$
+            </div>
+            <div class="task-right">
+                <button class="show-solution" onclick="toggleSolution('sol-a')">Lösung anzeigen</button>
+                <div id="sol-a" class="solution">
+                    $\left(\frac{a}{b}\right)^4 = \frac{a^4}{b^4}$
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>b)</strong> $\left(\frac{x}{3}\right)^2$
+            </div>
+            <div class="task-right">
+                <button class="show-solution" onclick="toggleSolution('sol-b')">Lösung anzeigen</button>
+                <div id="sol-b" class="solution">
+                    $\left(\frac{x}{3}\right)^2 = \frac{x^2}{3^2} = \frac{x^2}{9}$
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>c)</strong> $\left(\frac{3}{2}\right)^3$
+            </div>
+            <div class="task-right">
+                <button class="show-solution" onclick="toggleSolution('sol-c')">Lösung anzeigen</button>
+                <div id="sol-c" class="solution">
+                    $\left(\frac{3}{2}\right)^3 = \frac{3^3}{2^3} = \frac{27}{8}$
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>d)</strong> $\left(\frac{4}{x}\right)^2$
+            </div>
+            <div class="task-right">
+                <button class="show-solution" onclick="toggleSolution('sol-d')">Lösung anzeigen</button>
+                <div id="sol-d" class="solution">
+                    $\left(\frac{4}{x}\right)^2 = \frac{4^2}{x^2} = \frac{16}{x^2}$
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>e)</strong> $\left(\frac{-1}{w}\right)^3$
+            </div>
+            <div class="task-right">
+                <button class="show-solution" onclick="toggleSolution('sol-e')">Lösung anzeigen</button>
+                <div id="sol-e" class="solution">
+                    $\left(\frac{-1}{w}\right)^3 = \frac{(-1)^3}{w^3} = \frac{-1}{w^3} = -\frac{1}{w^3}$
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>f)</strong> $\left(-\frac{x \cdot a}{b \cdot w}\right)^3$
+            </div>
+            <div class="task-right">
+                <button class="show-solution" onclick="toggleSolution('sol-f')">Lösung anzeigen</button>
+                <div id="sol-f" class="solution">
+                    $\left(-\frac{x \cdot a}{b \cdot w}\right)^3 = (-1)^3 \cdot \left(\frac{x \cdot a}{b \cdot w}\right)^3 = -\frac{(x \cdot a)^3}{(b \cdot w)^3} = -\frac{x^3 \cdot a^3}{b^3 \cdot w^3}$
+                </div>
+            </div>
+        </div>
+
+        <nav class="navigation">
+            <a href="l3-24.html" class="nav-link">← Vorherige Aufgabe</a>
+            <a href="l3-26.html" class="nav-link">Nächste Aufgabe →</a>
+        </nav>
+    </div>
+
+    <script>
+        function toggleSolution(id) {
+            var solution = document.getElementById(id);
+            if (solution.style.display === "none" || solution.style.display === "") {
+                solution.style.display = "block";
+            } else {
+                solution.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
