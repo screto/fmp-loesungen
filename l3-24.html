@@ -15,6 +15,21 @@
             }
         };
     </script>
+    <style>
+        .task-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 1rem 0;
+            padding: 0.5rem 0;
+        }
+        .task-left {
+            flex: 1;
+        }
+        .task-right {
+            margin-left: 2rem;
+        }
+    </style>
 </head>
 <body>
     <div class="header-nav">
@@ -26,40 +41,52 @@
     <div class="aufgabe">
         <p><strong>Vereinfachen Sie:</strong></p>
         
-        <p><strong>a)</strong> $(x \cdot y)^3$</p>
-        <button class="toggle" onclick="toggleSolution('sol-a')">Lösung anzeigen</button>
-        <div id="sol-a" class="solution is-hidden">
-            $(x \cdot y)^3 = x^3 \cdot y^3$
+        <div class="task-row">
+            <div class="task-left">a) $(x \cdot y)^3$</div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-a')">Lösung anzeigen</button>
+                <div id="sol-a" class="solution is-hidden">$x^3 \cdot y^3$</div>
+            </div>
         </div>
 
-        <p><strong>b)</strong> $(4a)^2$</p>
-        <button class="toggle" onclick="toggleSolution('sol-b')">Lösung anzeigen</button>
-        <div id="sol-b" class="solution is-hidden">
-            $(4a)^2 = 4^2 \cdot a^2 = 16a^2$
+        <div class="task-row">
+            <div class="task-left">b) $(4a)^2$</div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-b')">Lösung anzeigen</button>
+                <div id="sol-b" class="solution is-hidden">$16a^2$</div>
+            </div>
         </div>
 
-        <p><strong>c)</strong> $(3b)^2$</p>
-        <button class="toggle" onclick="toggleSolution('sol-c')">Lösung anzeigen</button>
-        <div id="sol-c" class="solution is-hidden">
-            $(3b)^2 = 3^2 \cdot b^2 = 9b^2$
+        <div class="task-row">
+            <div class="task-left">c) $(3b)^2$</div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-c')">Lösung anzeigen</button>
+                <div id="sol-c" class="solution is-hidden">$9b^2$</div>
+            </div>
         </div>
 
-        <p><strong>d)</strong> $(-2a)^4$</p>
-        <button class="toggle" onclick="toggleSolution('sol-d')">Lösung anzeigen</button>
-        <div id="sol-d" class="solution is-hidden">
-            $(-2a)^4 = (-2)^4 \cdot a^4 = 16a^4$
+        <div class="task-row">
+            <div class="task-left">d) $(-2a)^4$</div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-d')">Lösung anzeigen</button>
+                <div id="sol-d" class="solution is-hidden">$16a^4$</div>
+            </div>
         </div>
 
-        <p><strong>e)</strong> $(-3b)^3$</p>
-        <button class="toggle" onclick="toggleSolution('sol-e')">Lösung anzeigen</button>
-        <div id="sol-e" class="solution is-hidden">
-            $(-3b)^3 = (-3)^3 \cdot b^3 = -27b^3$
+        <div class="task-row">
+            <div class="task-left">e) $(-3b)^3$</div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-e')">Lösung anzeigen</button>
+                <div id="sol-e" class="solution is-hidden">$-27b^3$</div>
+            </div>
         </div>
 
-        <p><strong>f)</strong> $(-3ab^2)^4$</p>
-        <button class="toggle" onclick="toggleSolution('sol-f')">Lösung anzeigen</button>
-        <div id="sol-f" class="solution is-hidden">
-            $(-3ab^2)^4 = (-3)^4 \cdot a^4 \cdot (b^2)^4 = 81a^4b^8$
+        <div class="task-row">
+            <div class="task-left">f) $(-3ab^2)^4$</div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-f')">Lösung anzeigen</button>
+                <div id="sol-f" class="solution is-hidden">$81a^4b^8$</div>
+            </div>
         </div>
     </div>
 
