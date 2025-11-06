@@ -111,3 +111,16 @@ tr:nth-child(even) td { background: #f7f7f7; }
 .index-list a:hover {
     background: #1976d2;
 }
+.task-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 1rem 0;
+            padding: 0.5rem 0;
+}
+.task-left {
+            flex: 1;
+}
+.task-right {
+            margin-left: 2rem;
+}
