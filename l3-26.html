@@ -15,41 +15,25 @@
             }
         };
     </script>
-    <style>
-        .task-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin: 1rem 0;
-            padding: 0.5rem 0;
-        }
-        .task-left {
-            flex: 1;
-        }
-        .task-right {
-            margin-left: 2rem;
-        }
-    </style>
 </head>
 <body>
-    <div class="container">
-        <nav>
-            <a href="l3-25.html">← Vorherige Aufgabe</a>
-            <a href="l3-27.html">Nächste Aufgabe →</a>
-        </nav>
-
+    <div class="header-nav">
+        <a href="l3-25.html">← Vorherige</a>
         <h1>Aufgabe 3.26 - Potenzgesetze vereinfachen</h1>
-        
-        <p><strong>Vereinfachen Sie:</strong></p>
+        <a href="l3-27.html">Nächste →</a>
+    </div>
+
+    <div class="aufgabe">
+        <strong>Vereinfachen Sie:</strong>
 
         <div class="task-row">
             <div class="task-left">
                 <strong>a)</strong> $(x \cdot y^2)^3$
             </div>
             <div class="task-right">
-                <button onclick="toggleSolution('sol-a')">Lösung anzeigen</button>
-                <div id="sol-a" class="solution" style="display: none;">
-                    $x^3 \cdot y^6$
+                <button class="toggle" onclick="toggleSolution('sol-a')">Lösung anzeigen</button>
+                <div id="sol-a" class="solution is-hidden">
+                    $(x \cdot y^2)^3 = x^3 \cdot (y^2)^3 = x^3 \cdot y^6$
                 </div>
             </div>
         </div>
@@ -59,9 +43,9 @@
                 <strong>b)</strong> $(x^2 \cdot y^3)^4$
             </div>
             <div class="task-right">
-                <button onclick="toggleSolution('sol-b')">Lösung anzeigen</button>
-                <div id="sol-b" class="solution" style="display: none;">
-                    $x^8 \cdot y^{12}$
+                <button class="toggle" onclick="toggleSolution('sol-b')">Lösung anzeigen</button>
+                <div id="sol-b" class="solution is-hidden">
+                    $(x^2 \cdot y^3)^4 = (x^2)^4 \cdot (y^3)^4 = x^8 \cdot y^{12}$
                 </div>
             </div>
         </div>
@@ -71,9 +55,9 @@
                 <strong>c)</strong> $(2 \cdot x^3)^3$
             </div>
             <div class="task-right">
-                <button onclick="toggleSolution('sol-c')">Lösung anzeigen</button>
-                <div id="sol-c" class="solution" style="display: none;">
-                    $8x^9$
+                <button class="toggle" onclick="toggleSolution('sol-c')">Lösung anzeigen</button>
+                <div id="sol-c" class="solution is-hidden">
+                    $(2 \cdot x^3)^3 = 2^3 \cdot (x^3)^3 = 8 \cdot x^9 = 8x^9$
                 </div>
             </div>
         </div>
@@ -83,9 +67,9 @@
                 <strong>d)</strong> $(3 \cdot x^2 \cdot y)^2$
             </div>
             <div class="task-right">
-                <button onclick="toggleSolution('sol-d')">Lösung anzeigen</button>
-                <div id="sol-d" class="solution" style="display: none;">
-                    $9x^4y^2$
+                <button class="toggle" onclick="toggleSolution('sol-d')">Lösung anzeigen</button>
+                <div id="sol-d" class="solution is-hidden">
+                    $(3 \cdot x^2 \cdot y)^2 = 3^2 \cdot (x^2)^2 \cdot y^2 = 9 \cdot x^4 \cdot y^2 = 9x^4y^2$
                 </div>
             </div>
         </div>
@@ -95,9 +79,9 @@
                 <strong>e)</strong> $\left(\frac{2x^2}{3y^3}\right)^4$
             </div>
             <div class="task-right">
-                <button onclick="toggleSolution('sol-e')">Lösung anzeigen</button>
-                <div id="sol-e" class="solution" style="display: none;">
-                    $\frac{16x^8}{81y^{12}}$
+                <button class="toggle" onclick="toggleSolution('sol-e')">Lösung anzeigen</button>
+                <div id="sol-e" class="solution is-hidden">
+                    $\left(\frac{2x^2}{3y^3}\right)^4 = \frac{(2x^2)^4}{(3y^3)^4} = \frac{2^4 \cdot (x^2)^4}{3^4 \cdot (y^3)^4} = \frac{16x^8}{81y^{12}}$
                 </div>
             </div>
         </div>
@@ -107,26 +91,28 @@
                 <strong>f)</strong> $\left(\frac{4x^3a}{5xa^2}\right)^3$
             </div>
             <div class="task-right">
-                <button onclick="toggleSolution('sol-f')">Lösung anzeigen</button>
-                <div id="sol-f" class="solution" style="display: none;">
-                    $\frac{64x^6}{125a^3}$
+                <button class="toggle" onclick="toggleSolution('sol-f')">Lösung anzeigen</button>
+                <div id="sol-f" class="solution is-hidden">
+                    Zuerst vereinfachen wir den Bruch:<br>
+                    $\frac{4x^3a}{5xa^2} = \frac{4x^3a}{5xa^2} = \frac{4x^2}{5a}$<br><br>
+                    Dann potenzieren:<br>
+                    $\left(\frac{4x^2}{5a}\right)^3 = \frac{(4x^2)^3}{(5a)^3} = \frac{4^3 \cdot (x^2)^3}{5^3 \cdot a^3} = \frac{64x^6}{125a^3}$
                 </div>
             </div>
         </div>
-
-        <nav>
-            <a href="l3-25.html">← Vorherige Aufgabe</a>
-            <a href="l3-27.html">Nächste Aufgabe →</a>
-        </nav>
     </div>
 
     <script>
         function toggleSolution(id) {
             const solution = document.getElementById(id);
-            if (solution.style.display === 'none') {
-                solution.style.display = 'block';
+            const button = solution.previousElementSibling;
+            
+            if (solution.classList.contains('is-hidden')) {
+                solution.classList.remove('is-hidden');
+                button.textContent = 'Lösung verbergen';
             } else {
-                solution.style.display = 'none';
+                solution.classList.add('is-hidden');
+                button.textContent = 'Lösung anzeigen';
             }
         }
     </script>
