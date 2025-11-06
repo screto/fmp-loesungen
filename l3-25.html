@@ -106,12 +106,8 @@
 
     <script>
         function toggleSolution(id) {
-            var solution = document.getElementById(id);
-            if (solution.style.display === "none" || solution.style.display === "") {
-                solution.style.display = "block";
-            } else {
-                solution.style.display = "none";
-            }
+            const element = document.getElementById(id);
+            element.classList.toggle('is-hidden');
         }
     </script>
 </body>
