@@ -25,7 +25,7 @@
 
     <div class="aufgabe">
         <strong>Aufgabe:</strong> Fassen Sie zusammen und vereinfachen Sie:
-    </div>
+    
 
     <div class="task-row">
         <div class="task-left">
@@ -239,3 +239,25 @@
             <button class="toggle" onclick="toggleSolution('sol-r')">Lösung anzeigen</button>
             <div id="sol-r" class="solution is-hidden">
                 $\left(\frac{a}{4}\right)^{-1} :
+    \left(\frac{a}{6}\right)^2 = \left(\frac{4}{a}\right) : \left(\frac{a^2}{36}\right) = \frac{4}{a} \cdot \frac{36}{a^2} = \frac{144}{a^3}$
+            </div>
+        </div> 
+    </div>
+    </div>
+
+ <script>
+        function toggleSolution(id) {
+            const solution = document.getElementById(id);
+            const button = solution.previousElementSibling;
+            
+            if (solution.classList.contains('is-hidden')) {
+                solution.classList.remove('is-hidden');
+                button.textContent = 'Lösung verbergen';
+            } else {
+                solution.classList.add('is-hidden');
+                button.textContent = 'Lösung anzeigen';
+            }
+        }
+    </script>
+</body>
+</html>
