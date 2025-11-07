@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 3.38 - Gleichungen mit verschiedenen Grundmengen</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\$', '\$']],
+                displayMath: [['$$', '$$'], ['\$$', '\$$']]
+            }
+        };
+    </script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l3-37.html">&laquo; Aufgabe 3.37</a>
+        <h1>Aufgabe 3.38 - Gleichungen mit verschiedenen Grundmengen</h1>
+        <a href="l3-39.html">Aufgabe 3.39 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        <strong>Aufgabe:</strong> Lösen Sie die nachfolgenden Gleichungen. Beachten Sie die jeweilige Grundmenge:
+    </div>
+
+    <div class="task-row">
+        <div class="task-left">
+            <strong>a)</strong> $x - 4a - (x + 2b - (x - 6c)) = x - (5a - (x - 4b) + 9c)$ <br>
+            $\mathbb{G}=\mathbb{R}$
+        </div>
+        <div class="task-right">
+            <button class="toggle" onclick="toggleSolution('sol-a')">Lösung anzeigen</button>
+            <div id="sol-a" class="solution is-hidden">
+                <strong>Linke Seite vereinfachen:</strong><br>
+                $x - 4a - (x + 2b - (x - 6c))$<br>
+                $= x - 4a - (x + 2b - x + 6c)$<br>
+                $= x - 4a - (2b + 6c)$<br>
+                $= x - 4a - 2b - 6c$<br><br>
+                
+                <strong>Rechte Seite vereinfachen:</strong><br>
+                $x - (5a - (x - 4b) + 9c)$<br>
+                $= x - (5a - x + 4b + 9c)$<br>
+                $= x - 5a + x - 4b - 9c$<br>
+                $= 2x - 5a - 4b - 9c$<br><br>
+                
+                <strong>Gleichung lösen:</strong><br>
+                $x - 4a - 2b - 6c = 2x - 5a - 4b - 9c$<br>
+                $-4a - 2b - 6c + 5a + 4b + 9c = 2x - x$<br>
+                $a + 2b + 3c = x$<br><br>
+                
+                <strong>Lösungsmenge:</strong> $\mathbb{L} = \{a + 2b + 3c\}$
+            </div>
+        </div>
+    </div>
+
+    <div class="task-row">
+        <div class="task-left">
+            <strong>b)</strong> $(5x + 1)^2 - (3x - 2)^2 = (4x + 3)^2 - 3 \cdot (x + 5)$ <br>
+            $\mathbb{G}=\mathbb{N}$
+        </div>
+        <div class="task-right">
+            <button class="toggle" onclick="toggleSolution('sol-b')">Lösung anzeigen</button>
+            <div id="sol-b" class="solution is-hidden">
+                <strong>Linke Seite ausmultiplizieren:</strong><br>
+                $(5x + 1)^2 - (3x - 2)^2$<br>
+                $= 25x^2 + 10x + 1 - (9x^2 - 12x + 4)$<br>
+                $= 25x^2 + 10x + 1 - 9x^2 + 12x - 4$<br>
+                $= 16x^2 + 22x - 3$<br><br>
+                
+                <strong>Rechte Seite ausmultiplizieren:</strong><br>
+                $(4x + 3)^2 - 3(x + 5)$<br>
+                $= 16x^2 + 24x + 9 - 3x - 15$<br>
+                $= 16x^2 + 21x - 6$<br><br>
+                
+                <strong>Gleichung lösen:</strong><br>
+                $16x^2 + 22x - 3 = 16x^2 + 21x - 6$<br>
+                $22x - 3 = 21x - 6$<br>
+                $x = -3$<br><br>
+                
+                Da $-3 \notin \mathbb{N}$: <strong>Lösungsmenge:</strong> $\mathbb{L} = \emptyset$
+            </div>
+        </div>
+    </div>
+
+    <div class="task-row">
+        <div class="task-left">
+            <strong>c)</strong> $(x + 2)^2 + 8 - (x + 2) \cdot (x - 4) = (x - 6)^2 - (x - 4)^2$ <br>
+            $\mathbb{G}=\mathbb{Q}$
+        </div>
+        <div class="task-right">
+            <button class="toggle" onclick="toggleSolution('sol-c')">Lösung anzeigen</button>
+            <div id="sol-c" class="solution is-hidden">
+                <strong>Linke Seite ausmultiplizieren:</strong><br>
+                $(x + 2)^2 + 8 - (x + 2)(x - 4)$<br>
+                $= x^2 + 4x + 4 + 8 - (x^2 - 4x + 2x - 8)$<br>
+                $= x^2 + 4x + 12 - x^2 + 2x + 8$<br>
+                $= 6x + 20$<br><br>
+                
+                <strong>Rechte Seite ausmultiplizieren:</strong><br>
+                $(x - 6)^2 - (x - 4)^2$<br>
+                $= x^2 - 12x + 36 - (x^2 - 8x + 16)$<br>
+                $= x^2 - 12x + 36 - x^2 + 8x - 16$<br>
+                $= -4x + 20$<br><br>
+                
+                <strong>Gleichung lösen:</strong><br>
+                $6x + 20 = -4x + 20$<br>
+                $10x = 0$<br>
+                $x = 0$<br><br>
+                
+                Da $0 \in \mathbb{Q}$: <strong>Lösungsmenge:</strong> $\mathbb{L} = \{0\}$
+            </div>
+        </div>
+    </div>
+
+    <div class="task-row">
+        <div class="task-left">
+            <strong>d)</strong> $x^2 + (2a - x)(2a + x) - (x - b)^2 = 2a(a - x) - 4ab - (x + b)^2$ <br>
+            $\mathbb{G}=\mathbb{Q}$
+        </div>
+        <div class="task-right">
+            <button class="toggle" onclick="toggleSolution('sol-d')">Lösung anzeigen</button>
+            <div id="sol-d" class="solution is-hidden">
+                <strong>Linke Seite vereinfachen:</strong><br>
+                $x^2 + (2a - x)(2a + x) - (x - b)^2$<br>
+                $= x^2 + (4a^2 - x^2) - (x^2 - 2bx + b^2)$<br>
+                $= x^2 + 4a^2 - x^2 - x^2 + 2bx - b^2$<br>
+                $= 4a^2 - x^2 + 2bx - b^2$<br><br>
+                
+                <strong>Rechte Seite vereinfachen:</strong><br>
+                $2a(a - x) - 4ab - (x + b)^2$<br>
+                $= 2a^2 - 2ax - 4ab - (x^2 + 2bx + b^2)$<br>
+                $= 2a^2 - 2ax - 4ab - x^2 - 2bx - b^2$<br><br>
+                
+                <strong>Gleichung lösen:</strong><br>
+                $4a^2 - x^2 + 2bx - b^2 = 2a^2 - 2ax - 4ab - x^2 - 2bx - b^2$<br>
+                $4a^2 + 2bx = 2a^2 - 2ax - 4ab - 2bx$<br>
+                $2a^2 + 4bx + 2ax + 4ab = 0$<br>
+                $2a^2 + 2ax + 4bx + 4ab = 0$<br>
+                $2a(a + x) + 4b(x + a) = 0$<br>
+                $(a + x)(2a + 4b) = 0$<br>
+                $2(a + x)(a + 2b) = 0$<br><br>
+                
+                Da $a, b$ Parameter sind: $x = -a$<br><br>
+                
+                <strong>Lösungsmenge:</strong> $\mathbb{L} = \{-a\}$
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleSolution(id) {
+            const solution = document.getElementById(id);
+            solution.classList.toggle('is-hidden');
+        }
+    </script>
+</body>
+</html>
