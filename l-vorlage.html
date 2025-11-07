@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe </title> % Hier bitte die Aufgabennummer und den Titel einfügen z.B. Aufgabe 3.26 - Potenzgesetze vereinfachen %
+    <link rel="stylesheet" href="style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\$', '\$']],
+                displayMath: [['$$', '$$'], ['\$$', '\$$']]
+            }
+        };
+    </script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="lx-y.html">&laquo; Vorige Aufgabe</a> % Hier bitte die vorherige Aufgabennummer einfügen z.B. l3-25.html %
+        <h1>Aufgabe </h1> % Hier bitte die Aufgabennummer und den Titel einfügen z.B. Aufgabe 3.26 - Potenzgesetze vereinfachen %
+        <a href="lx-z.html">Nächste Aufgabe &raquo;</a> % Hier bitte die nächste Aufgabennummer einfügen z.B. l3-27.html %
+    </div>
+
+    <div class="aufgabe">
+        <strong>Auftrag</strong> % Hier bitte den Auftrag einfügen z.B. Vereinfachen Sie: %
+        % Hier bitte den Aufgabeninhalt einfügen z.B. %
+        <div class="task-row">
+            <div class="task-left">
+                <strong>a)</strong> $(x \cdot y^2)^3$
+            </div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-a')">Lösung anzeigen</button>
+                <div id="sol-a" class="solution is-hidden">
+                    $(x \cdot y^2)^3 = x^3 \cdot (y^2)^3 = x^3 \cdot y^6$
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script>
+        function toggleSolution(id) {
+            const element = document.getElementById(id);
+            element.classList.toggle('is-hidden');
+        }
+    </script>
+</body>
+</html>
