@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 3.36 - Wohnungsgrundriss</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\$', '\$']],
+                displayMath: [['$$', '$$'], ['\$$', '\$$']]
+            }
+        };
+    </script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l3-35.html">&laquo; Aufgabe 3.35</a>
+        <h1>Aufgabe 3.36 - Wohnungsgrundriss</h1>
+        <a href="l3-37.html">Aufgabe 3.37 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        <strong>Aufgabe:</strong> Der Grundriss einer Wohnung sieht vereinfacht wie folgt aus:<br><br>
+        <em>Die Wohnung ist ein Rechteck mit den Dimensionen $f \times g$, wobei $a+b+c=f$ und $d+e=g$.</em><br><br>
+        
+        <strong>Raumaufteilung:</strong><br>
+        - Bad: $a \times d$ (links oben)<br>
+        - Küche: $b \times d$ (mitte oben)<br>
+        - Terrasse: $c \times d$ (rechts oben)<br>
+        - Wohnzimmer: $(a+b) \times e$ (links unten)<br>
+        - Schlafzimmer: $c \times e$ (rechts unten)
+    </div>
+
+    <div class="task-row">
+        <div class="task-left">
+            <strong>a)</strong> Geben Sie die Grundfläche aller Räume einzeln an.
+        </div>
+        <div class="task-right">
+            <button class="toggle" onclick="toggleSolution('sol-a')">Lösung anzeigen</button>
+            <div id="sol-a" class="solution is-hidden">
+                <strong>Bad:</strong> $a \cdot d$<br>
+                <strong>Küche:</strong> $b \cdot d$<br>
+                <strong>Terrasse:</strong> $c \cdot d$<br>
+                <strong>Wohnzimmer:</strong> $(a+b) \cdot e$<br>
+                <strong>Schlafzimmer:</strong> $c \cdot e$
+            </div>
+        </div>
+    </div>
+
+    <div class="task-row">
+        <div class="task-left">
+            <strong>b)</strong> Geben Sie die Grundfläche der ganzen Wohnung mit Terrasse an.
+        </div>
+        <div class="task-right">
+            <button class="toggle" onclick="toggleSolution('sol-b')">Lösung anzeigen</button>
+            <div id="sol-b" class="solution is-hidden">
+                Die gesamte Grundfläche mit Terrasse ist das Rechteck:<br><br>
+                <strong>Grundfläche mit Terrasse:</strong> $f \cdot g$<br><br>
+                Da $a+b+c=f$ und $d+e=g$, kann man auch schreiben:<br>
+                $(a+b+c) \cdot (d+e)$
+            </div>
+        </div>
+    </div>
+
+    <div class="task-row">
+        <div class="task-left">
+            <strong>c)</strong> Geben Sie die Grundfläche der ganzen Wohnung ohne Terrasse an.
+        </div>
+        <div class="task-right">
+            <button class="toggle" onclick="toggleSolution('sol-c')">Lösung anzeigen</button>
+            <div id="sol-c" class="solution is-hidden">
+                Die Wohnung ohne Terrasse besteht aus:<br>
+                Bad + Küche + Wohnzimmer + Schlafzimmer<br><br>
+                $= a \cdot d + b \cdot d + (a+b) \cdot e + c \cdot e$<br>
+                $= d(a + b) + e(a + b + c)$<br>
+                $= d(a + b) + e \cdot f$<br>
+                $= (a + b) \cdot d + c \cdot e + (a + b) \cdot e$<br>
+                $= (a + b)(d + e) + c \cdot e$<br>
+                $= (a + b) \cdot g + c \cdot e$<br><br>
+                Oder einfacher: $f \cdot g - c \cdot d$
+            </div>
+        </div>
+    </div>
+
+    <div class="task-row">
+        <div class="task-left">
+            <strong>d)</strong> Welcher Raum hat die Grundfläche $(f - c) \cdot e$?
+        </div>
+        <div class="task-right">
+            <button class="toggle" onclick="toggleSolution('sol-d')">Lösung anzeigen</button>
+            <div id="sol-d" class="solution is-hidden">
+                Da $a+b+c=f$, ist $f-c = a+b$.<br><br>
+                $(f - c) \cdot e = (a+b) \cdot e$<br><br>
+                <strong>Das Wohnzimmer</strong> hat die Grundfläche $(f - c) \cdot e$.
+            </div>
+        </div>
+    </div>
+
+    <div class="task-row">
+        <div class="task-left">
+            <strong>e)</strong> Welcher Raum hat die Grundfläche $(f - (a+b)) \cdot (g -d)$?
+        </div>
+        <div class="task-right">
+            <button class="toggle" onclick="toggleSolution('sol-e')">Lösung anzeigen</button>
+            <div id="sol-e" class="solution is-hidden">
+                Da $a+b+c=f$, ist $f-(a+b) = c$.<br>
+                Da $d+e=g$, ist $g-d = e$.<br><br>
+                $(f - (a+b)) \cdot (g -d) = c \cdot e$<br><br>
+                <strong>Das Schlafzimmer</strong> hat die Grundfläche $(f - (a+b)) \cdot (g -d)$.
+            </div>
+        </div>
+    </div>
+
+    <div class="task-row">
+        <div class="task-left">
+            <strong>f)</strong> Welcher Raum hat die Grundfläche $(f - b - c) \cdot d$?
+        </div>
+        <div class="task-right">
+            <button class="toggle" onclick="toggleSolution('sol-f')">Lösung anzeigen</button>
+            <div id="sol-f" class="solution is-hidden">
+                Da $a+b+c=f$, ist $f-b-c = a$.<br><br>
+                $(f - b - c) \cdot d = a \cdot d$<br><br>
+                <strong>Das Bad</strong> hat die Grundfläche $(f - b - c) \cdot d$.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleSolution(id) {
+            const solution = document.getElementById(id);
+            solution.classList.toggle('is-hidden');
+        }
+    </script>
+</body>
+</html>
