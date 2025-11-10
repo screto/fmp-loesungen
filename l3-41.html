@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aufgabe 3.41 - Äquivalenz von Gleichungen</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\$', '\$']],
+                displayMath: [['$$', '$$'], ['\$$', '\$$']]
+            }
+        };
+    </script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
@@ -25,23 +33,29 @@
                 $$3(x - 4) + 7(x - 4) = 11$$
                 und
                 $$3x - 12 + 7x - 28 = 11$$
-                <li>☐ Ja, wegen dem Assoziativgesetz</li>
-                <li>☐ Ja, wegen dem Kommutativgesetz</li>
-                <li>☐ Ja, wegen dem Distributivgesetz</li>
-                <li>☐ Nein, nicht äquivalent</li>  
+                <ul> 
+                    <li>☐ Ja, wegen dem Assoziativgesetz</li>
+                    <li>☐ Ja, wegen dem Kommutativgesetz</li>
+                    <li>☐ Ja, wegen dem Distributivgesetz</li>
+                    <li>☐ Nein, nicht äquivalent</li>  
+                </ul>
             </div>
-            <div class="task-right"></div><button class="toggle" onclick="toggleSolution('sol-a')">Lösung anzeigen</button>
-            <div class="solution is-hidden" id="sol-a">
-                <p><strong>Lösung:</strong></p>
-                <li>☐ Ja, wegen dem Assoziativgesetz</li>
-                <li>☐ Ja, wegen dem Kommutativgesetz</li>
-                <li>☒ Ja, wegen dem Distributivgesetz</li>
-                <li>☐ Nein, nicht äquivalent</li>
-                <p>Ja, die Gleichungen sind äquivalent wegen dem <strong>Distributivgesetz</strong>.</p>
-                <p>In der ersten Gleichung wurde das Distributivgesetz auf beide Terme angewendet:
-                    $$3(x-4) = 3x - 12$$
-                    $$7(x-4) = 7x - 28$$
-                </p>
+            <div class="task-right">
+            <button class="toggle" onclick="toggleSolution('sol-a')">Lösung anzeigen</button>
+                <div class="solution is-hidden" id="sol-a">
+                    <p><strong>Lösung:</strong></p>
+                    <ul>
+                        <li>☐ Ja, wegen dem Assoziativgesetz</li>
+                        <li>☐ Ja, wegen dem Kommutativgesetz</li>
+                        <li>☒ Ja, wegen dem Distributivgesetz</li>
+                        <li>☐ Nein, nicht äquivalent</li>
+                    </ul>
+                    <p>Ja, die Gleichungen sind äquivalent wegen dem <strong>Distributivgesetz</strong>.</p>
+                    <p>In der ersten Gleichung wurde das Distributivgesetz auf beide Terme angewendet:
+                        $$3(x-4) = 3x - 12$$
+                        $$7(x-4) = 7x - 28$$
+                    </p>
+                </div>
             </div>
         </div>
         
@@ -50,18 +64,22 @@
             <div class="task-left">
                 <strong>b)</strong> Welcher Ausdruck ist äquivalent zu
                 $$x \cdot (x + 5) + 4 \cdot (x + 5)$$?
-                <li>☐ $11x + 20$</li>
-                <li>☐ $(4 + x) \cdot (x + 5)$</li>
-                <li>☐ $5x + 10$</li>
-                <li>☐ keiner der obigen Terme</li> 
-            </div>
-                <div class="task-right"></div>
-                    <button class="toggle" onclick="toggleSolution('sol-b')">Lösung anzeigen</button>
-                <div class="solution is-hidden" id="sol-b">
+                <ul>
                     <li>☐ $11x + 20$</li>
                     <li>☐ $(4 + x) \cdot (x + 5)$</li>
                     <li>☐ $5x + 10$</li>
-                    <li>☒ keiner der obigen Terme</li>
+                    <li>☐ keiner der obigen Terme</li>
+                </ul>
+            </div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-b')">Lösung anzeigen</button>
+                <div class="solution is-hidden" id="sol-b">
+                    <ul>
+                        <li>☐ $11x + 20$</li>
+                        <li>☐ $(4 + x) \cdot (x + 5)$</li>
+                        <li>☐ $5x + 10$</li>
+                        <li>☒ keiner der obigen Terme</li>
+                    </ul>
                     <p><strong>Lösung:</strong></p>
                     <p>Keiner der obigen Terme ist äquivalent. Der korrekte Ausdruck wäre:
                         $$(x + 4)(x + 5)$$
@@ -77,20 +95,25 @@
                 $$13 = 9(2x - 5) - 6(2x - 5)$$
                 $$13 = 3(2x - 5)$$
                 <p>Entscheiden Sie, ohne die Gleichungen zu lösen, ob sie dieselbe Lösung haben.</p>
+                <ul>
+                    <li>☐ Ja, dieselbe Lösung</li>
+                    <li>☐ Nein, verschiedene Lösungen</li>
+                    <li>☐ Kann erst nach dem Lösen gesagt werden</li> 
+                </ul>
+            </div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-c')">Lösung anzeigen</button>
                 <div class="solution is-hidden" id="sol-c">
+                    <ul>
+                        <li>☒ Ja, dieselbe Lösung</li>
+                        <li>☐ Nein, verschiedene Lösungen</li>
+                        <li>☐ Kann erst nach dem Lösen gesagt werden</li>
+                    </ul>
                     <p><strong>Lösung:</strong></p>
                     <p>Ja, sie haben dieselbe Lösung. Die erste Gleichung wurde durch Ausklammern von $(2x-5)$ vereinfacht:
                         $$9(2x-5) - 6(2x-5) = (9-6)(2x-5) = 3(2x-5)$$
                     </p>
                 </div>
-                <button class="toggle" onclick="toggleSolution('sol-c')">Lösung anzeigen</button>
-            </div>
-            <div class="task-right">
-                <ul>
-                    <li>☒ Ja, dieselbe Lösung</li>
-                    <li>☐ Nein, verschiedene Lösungen</li>
-                    <li>☐ Kann erst nach dem Lösen gesagt werden</li>
-                </ul>
             </div>
         </div>
         
@@ -101,20 +124,25 @@
                 $$133 - 6(15x - 8) = 12x - 6(15x - 8)$$
                 $$133 = 12x$$
                 <p>Entscheiden Sie, ohne die Gleichungen zu lösen, ob sie dieselbe Lösung haben.</p>
+                <ul>
+                    <li>☐ Ja, dieselbe Lösung</li>
+                    <li>☐ Nein, verschiedene Lösungen</li>
+                    <li>☐ Kann erst nach dem Lösen gesagt werden</li>
+                </ul>
+            </div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-d')">Lösung anzeigen</button>
                 <div class="solution is-hidden" id="sol-d">
+                    <ul>
+                        <li>☒ Ja, dieselbe Lösung</li>
+                        <li>☐ Nein, verschiedene Lösungen</li>
+                        <li>☐ Kann erst nach dem Lösen gesagt werden</li>
+                    </ul>
                     <p><strong>Lösung:</strong></p>
                     <p>Ja, sie haben dieselbe Lösung. Die erste Gleichung wurde durch Addition von $6(15x-8)$ auf beiden Seiten vereinfacht:
                         $$133 = 12x$$
                     </p>
                 </div>
-                <button class="toggle" onclick="toggleSolution('sol-d')">Lösung anzeigen</button>
-            </div>
-            <div class="task-right">
-                <ul>
-                    <li>☒ Ja, dieselbe Lösung</li>
-                    <li>☐ Nein, verschiedene Lösungen</li>
-                    <li>☐ Kann erst nach dem Lösen gesagt werden</li>
-                </ul>
             </div>
         </div>
         
@@ -123,47 +151,58 @@
             <div class="task-left">
                 <strong>e)</strong> Wie viele Lösungen hat die nachfolgende Gleichung:
                 $$x^2 - 6x = 0$$
+                <ul>
+                    <li>☐ Genau eine Lösung</li>
+                    <li>☐ Keine Lösung</li>
+                    <li>☐ Genau zwei Lösungen</li>
+                    <li>☐ Kann erst nach dem Lösen gesagt werden</li>
+                </ul>
+            </div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-e')">Lösung anzeigen</button>
                 <div class="solution is-hidden" id="sol-e">
-                    <p><strong>Lösung:</strong></p>
-                    <p>Genau zwei Lösungen, weil entweder $x = 0$ oder $x - 6 = 0$ sein muss.
-                        <p>Die korrekten Lösungen sind:
-                            $$x_1 = 0$$
-                            $$x_2 = 6$$
-                        </p>
-                    </div>
-                    <button class="toggle" onclick="toggleSolution('sol-e')">Lösung anzeigen</button>
-                </div>
-                <div class="task-right">
                     <ul>
                         <li>☐ Genau eine Lösung</li>
                         <li>☐ Keine Lösung</li>
                         <li>☒ Genau zwei Lösungen</li>
                         <li>☐ Kann erst nach dem Lösen gesagt werden</li>
                     </ul>
+                <p><strong>Lösung:</strong></p>
+                <p>Genau zwei Lösungen, weil entweder $x = 0$ oder $x - 6 = 0$ sein muss.
+                    <p>Die korrekten Lösungen sind:
+                        $$x_1 = 0$$
+                        $$x_2 = 6$$
+                    </p>
                 </div>
             </div>
+        </div>
             
-            <!-- Aufgabe f -->
-            <div class="task-row">
-                <div class="task-left">
-                    <strong>f)</strong> Gibt es eine Zahl $a$ so, dass die nachfolgende Gleichung genau zwei Lösungen hat:
-                    $$x^2 = a$$
-                    <div class="solution is-hidden" id="sol-f">
-                        <p><strong>Lösung:</strong></p>
-                        <p>Ja, für jede <strong>positive</strong> Zahl $a$ hat die Gleichung genau zwei Lösungen:
-                            $$x_1 = \sqrt{a}$$
-                            $$x_2 = -\sqrt{a}$$
-                        </p>
-                    </div>
-                    <button class="toggle" onclick="toggleSolution('sol-f')">Lösung anzeigen</button>
-                </div>
-                <div class="task-right">
+        <!-- Aufgabe f -->
+        <div class="task-row">
+            <div class="task-left">
+                <strong>f)</strong> Gibt es eine Zahl $a$ so, dass die nachfolgende Gleichung genau zwei Lösungen hat:
+                $$x^2 = a$$
+                <ul>
+                    <li>☐ Nein, weil $a$ immer positiv sein muss</li>
+                    <li>☐ Ja, für jede positive Zahl $a$</li>
+                    <li>☐ Nein, denn $x^2$ ist immer positiv</li>
+                    <li>☐ Kann erst bei konkretem $a$ gesagt werden</li>
+                </ul>
+            </div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-f')">Lösung anzeigen</button>
+                <div class="solution is-hidden" id="sol-f">
                     <ul>
                         <li>☐ Nein, weil $a$ immer positiv sein muss</li>
                         <li>☒ Ja, für jede positive Zahl $a$</li>
                         <li>☐ Nein, denn $x^2$ ist immer positiv</li>
                         <li>☐ Kann erst bei konkretem $a$ gesagt werden</li>
                     </ul>
+                    <p><strong>Lösung:</strong></p>
+                    <p>Ja, für jede <strong>positive</strong> Zahl $a$ hat die Gleichung genau zwei Lösungen:
+                        $$x_1 = \sqrt{a}$$
+                        $$x_2 = -\sqrt{a}$$
+                    </p>
                 </div>
             </div>
         </div>
