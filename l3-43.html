@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 3.43 - Quadratische Gleichung mit Dezimalkoeffizienten</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l3-42.html">&laquo; vorherige</a>
+        <h1>Aufgabe 3.43 - Quadratische Gleichung lösen</h1>
+        <a href="l3-44.html">nächste &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        <p>Wir betrachten die folgende Gleichung:</p>
+        $$x^2 - 4.5x + 2 = 0$$
+    </div>
+
+    <!-- Aufgabe a -->
+    <div class="task-row">
+        <div class="task-left">
+            <strong>a)</strong> Berechne die Lösungen, wenn die Grundmenge $\mathbb{Q}$ ist.
+            <div class="solution is-hidden" id="sol-a">
+                <p><strong>Lösung:</strong></p>
+                <p>Die Gleichung $x^2 - 4.5x + 2 = 0$ lösen wir mit der Mitternachtsformel:</p>
+                $$x_{1,2} = \frac{4.5 \pm \sqrt{(-4.5)^2 - 4 \cdot 1 \cdot 2}}{2 \cdot 1}$$
+                $$x_{1,2} = \frac{4.5 \pm \sqrt{20.25 - 8}}{2}$$
+                $$x_{1,2} = \frac{4.5 \pm \sqrt{12.25}}{2}$$
+                $$x_{1,2} = \frac{4.5 \pm 3.5}{2}$$
+
+                <p>Daraus ergeben sich die Lösungen:</p>
+                $$x_1 = \frac{4.5 + 3.5}{2} = \frac{8}{2} = 4$$
+                $$x_2 = \frac{4.5 - 3.5}{2} = \frac{1}{2} = 0.5$$
+
+                <p>Beide Lösungen sind rationale Zahlen (4 und 0.5 können als Brüche dargestellt werden: 4 = 4/1, 0.5 = 1/2), also gehören sie zur Grundmenge $\mathbb{Q}$.</p>
+            </div>
+            <button class="toggle" onclick="toggleSolution('sol-a')">Lösung anzeigen</button>
+        </div>
+        <div class="task-right">
+            <!-- Leer, da es keine Antwortmöglichkeiten gibt -->
+        </div>
+    </div>
+
+    <!-- Aufgabe b -->
+    <div class="task-row">
+        <div class="task-left">
+            <strong>b)</strong> Berechne die Lösungen, wenn die Grundmenge $\mathbb{N}$ ist.
+            <div class="solution is-hidden" id="sol-b">
+                <p><strong>Lösung:</strong></p>
+                <p>Aus Teilaufgabe a) wissen wir, dass die Lösungen der Gleichung $x_1 = 4$ und $x_2 = 0.5$ sind.</p>
+                <p>Betrachten wir die Grundmenge $\mathbb{N}$ (natürliche Zahlen):</p>
+                <ul>
+                    <li>$x_1 = 4$ ist eine natürliche Zahl, gehört also zu $\mathbb{N}$.</li>
+                    <li>$x_2 = 0.5$ ist keine natürliche Zahl, gehört also nicht zu $\mathbb{N}$.</li>
+                </ul>
+                <p>Die Lösungsmenge in $\mathbb{N}$ ist somit: $L = \{4\}$.</p>
+            </div>
+            <button class="toggle" onclick="toggleSolution('sol-b')">Lösung anzeigen</button>
+        </div>
+        <div class="task-right">
+            <!-- Leer, da es keine Antwortmöglichkeiten gibt -->
+        </div>
+    </div>
+
+    <script>
+        function toggleSolution(id) {
+            const solution = document.getElementById(id);
+            const button = event.target;
+
+            if (solution.classList.contains('is-hidden')) {
+                solution.classList.remove('is-hidden');
+                button.textContent = 'Lösung verstecken';
+            } else {
+                solution.classList.add('is-hidden');
+                button.textContent = 'Lösung anzeigen';
+            }
+        }
+    </script>
+</body>
+</html>
