@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aufgabe 3.20 – Potenzgesetze</title>
+
+  <!-- MathJax -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <!-- zentrales CSS -->
+  <link rel="stylesheet" href="../style.css">
+
+  <script>
+    function toggleInline(btn) {
+      const solution = btn.nextElementSibling;
+      const isHidden = solution.classList.contains('is-hidden');
+      solution.classList.toggle('is-hidden');
+      btn.textContent = isHidden ? 'Lösung verbergen' : 'Lösung anzeigen';
+    }
+  </script>
+
+  <style>
+    .aufgabe ol {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+    .aufgabe li { margin: .6rem 0; }
+
+    .row {
+      display: flex;
+      align-items: baseline;
+      gap: .6rem;
+      flex-wrap: wrap;
+    }
+
+    .label { font-weight: 700; margin-right: .2rem; }
+    .expr { flex: 1; }
+    .toggle { margin-left: .4rem; }
+
+    .solution-inline {
+      background: #f6f6f6;
+      border-left: 4px solid #4caf50;
+      padding: .1rem .5rem;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+    .is-hidden { display: none; }
+  </style>
+</head>
+<body>
+  <div class="header-nav">
+    <a href="l3-19.html">&laquo; Aufgabe 3.19</a>
+    <h1>Aufgabe 3.20 – Potenzgesetze</h1>
+    <a href="l3-21.html">Aufgabe 3.21 &raquo;</a>
+  </div>
+
+  <div class="aufgabe">
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:1rem;">
+      <div style="flex:1">
+        <p>Vereinfachen und berechnen Sie:</p>
+      </div>
+    </div>
+
+    <ol>
+      <li><div class="row"><span class="label">a)</span><span class="expr">$\frac{8^{45}}{8^{34}} =\ ?$</span>
+        <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+        <span class="solution-inline is-hidden">$\frac{8^{45}}{8^{34}} = 8^{45-34} = 8^{11}$</span></div></li>
+
+      <li><div class="row"><span class="label">b)</span><span class="expr">$\frac{7^8}{7^3} =\ ?$</span>
+        <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+        <span class="solution-inline is-hidden">$\frac{7^8}{7^3} = 7^{8-3} = 7^5 = 16807$</span></div></li>
+
+      <li><div class="row"><span class="label">c)</span><span class="expr">$\frac{56^7}{56^6} =\ ?$</span>
+        <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+        <span class="solution-inline is-hidden">$\frac{56^7}{56^6} = 56^{7-6} = 56^1 = 56$</span></div></li>
+
+      <li><div class="row"><span class="label">d)</span><span class="expr">$\frac{82^{35}}{82^{20}} =\ ?$</span>
+        <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+        <span class="solution-inline is-hidden">$\frac{82^{35}}{82^{20}} = 82^{35-20} = 82^{15}$</span></div></li>
+
+      <li><div class="row"><span class="label">e)</span><span class="expr">$\frac{b^{687}}{b^{238}} =\ ?$</span>
+        <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+        <span class="solution-inline is-hidden">$\frac{b^{687}}{b^{238}} = b^{687-238} = b^{449}$</span></div></li>
+
+      <li><div class="row"><span class="label">f)</span><span class="expr">$\frac{x^{23}}{x^{15}} =\ ?$</span>
+        <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+        <span class="solution-inline is-hidden">$\frac{x^{23}}{x^{15}} = x^{23-15} = x^8$</span></div></li>
+
+      <li><div class="row"><span class="label">g)</span><span class="expr">$\frac{a^4 \cdot b^7}{b^4 \cdot a^2} =\ ?$</span>
+        <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+        <span class="solution-inline is-hidden">$\frac{a^4 \cdot b^7}{b^4 \cdot a^2} = \frac{a^4}{a^2} \cdot \frac{b^7}{b^4} = a^{4-2} \cdot b^{7-4} = a^2 \cdot b^3$</span></div></li>
+
+      <li><div class="row"><span class="label">h)</span><span class="expr">$\frac{x^5 \cdot y^3 \cdot z^7}{x^3 \cdot z^3 \cdot y^2} =\ ?$</span>
+        <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+        <span class="solution-inline is-hidden">$\frac{x^5 \cdot y^3 \cdot z^7}{x^3 \cdot z^3 \cdot y^2} = x^{5-3} \cdot y^{3-2} \cdot z^{7-3} = x^2 \cdot y^1 \cdot z^4 = x^2yz^4$</span></div></li>
+
+      <li><div class="row"><span class="label">i)</span><span class="expr">$\frac{3^4 \cdot x^4 \cdot y^6 \cdot z^8 \cdot w^{45}}{3^3 \cdot y^5 \cdot x^2 \cdot w^{34} \cdot z^7} =\ ?$</span>
+        <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+        <span class="solution-inline is-hidden">$\frac{3^4 \cdot x^4 \cdot y^6 \cdot z^8 \cdot w^{45}}{3^3 \cdot y^5 \cdot x^2 \cdot w^{34} \cdot z^7} = 3^{4-3} \cdot x^{4-2} \cdot y^{6-5} \cdot z^{8-7} \cdot w^{45-34} = 3^1 \cdot x^2 \cdot y^1 \cdot z^1 \cdot w^{11} = 3x^2yzw^{11}$</span></div></li>
+    </ol>
+
+    
+  </div>
+
+</body>
+

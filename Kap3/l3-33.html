@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 3.33 - Wurzeln vereinfachen</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\$', '\$']],
+                displayMath: [['$$', '$$'], ['\$$', '\$$']]
+            }
+        };
+    </script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l3-32.html">&laquo; Aufgabe 3.32</a>
+        <h1>Aufgabe 3.33 - Wurzeln vereinfachen</h1>
+        <a href="l3-34.html">Aufgabe 3.34 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        <strong>Aufgabe:</strong> Vereinfachen Sie:
+    
+
+    <div class="task-row">
+        <div class="task-left">
+            <strong>a)</strong> $\sqrt[3]{27}$
+        </div>
+        <div class="task-right">
+            <button class="toggle" onclick="toggleSolution('sol-a')">Lösung anzeigen</button>
+            <div id="sol-a" class="solution is-hidden">
+                $\sqrt[3]{27} = \sqrt[3]{3^3} = 3$
+            </div>
+        </div>
+    </div>
+
+    <div class="task-row">
+        <div class="task-left">
+            <strong>b)</strong> $\sqrt[6]{11}$
+        </div>
+        <div class="task-right">
+            <button class="toggle" onclick="toggleSolution('sol-b')">Lösung anzeigen</button>
+            <div id="sol-b" class="solution is-hidden">
+                $\sqrt[6]{11} = 11^{\frac{1}{6}}$<br>
+                (Kann nicht weiter vereinfacht werden)
+            </div>
+        </div>
+    </div>
+
+    <div class="task-row">
+        <div class="task-left">
+            <strong>c)</strong> $\sqrt[23]{8\,388\,608}$
+        </div>
+        <div class="task-right">
+            <button class="toggle" onclick="toggleSolution('sol-c')">Lösung anzeigen</button>
+            <div id="sol-c" class="solution is-hidden">
+                $8\,388\,608 = 2^{23}$<br>
+                $\sqrt[23]{8\,388\,608} = \sqrt[23]{2^{23}} = 2$
+            </div>
+        </div>
+    </div>
+
+    <div class="task-row">
+        <div class="task-left">
+            <strong>d)</strong> $\sqrt[14]{4\,782\,969}$
+        </div>
+        <div class="task-right">
+            <button class="toggle" onclick="toggleSolution('sol-d')">Lösung anzeigen</button>
+            <div id="sol-d" class="solution is-hidden">
+                $4\,782\,969 = 7^{14}$<br>
+                $\sqrt[14]{4\,782\,969} = \sqrt[14]{7^{14}} = 7$
+            </div>
+        </div>
+    </div>
+
+    <div class="task-row">
+        <div class="task-left">
+            <strong>e)</strong> $\sqrt[3]{\sqrt{64}}$
+        </div>
+        <div class="task-right">
+            <button class="toggle" onclick="toggleSolution('sol-e')">Lösung anzeigen</button>
+            <div id="sol-e" class="solution is-hidden">
+                $\sqrt{64} = 8$<br>
+                $\sqrt[3]{\sqrt{64}} = \sqrt[3]{8} = \sqrt[3]{2^3} = 2$<br><br>
+                Alternativ: $\sqrt[3]{\sqrt{64}} = (64)^{\frac{1}{2} \cdot \frac{1}{3}} = 64^{\frac{1}{6}} = (2^6)^{\frac{1}{6}} = 2$
+            </div>
+        </div>
+    </div>
+
+    <div class="task-row">
+        <div class="task-left">
+            <strong>f)</strong> $\sqrt[5]{\sqrt[7]{5\,783}}$
+        </div>
+        <div class="task-right">
+            <button class="toggle" onclick="toggleSolution('sol-f')">Lösung anzeigen</button>
+            <div id="sol-f" class="solution is-hidden">
+                $\sqrt[5]{\sqrt[7]{5\,783}} = (5\,783)^{\frac{1}{7} \cdot \frac{1}{5}} = (5\,783)^{\frac{1}{35}} = \sqrt[35]{5\,783}$<br><br>
+                Da $5\,783$ keine 35. Potenz einer ganzen Zahl ist, kann dies nicht weiter vereinfacht werden.
+            </div>
+        </div>
+    </div>
+
+    <div class="task-row">
+        <div class="task-left">
+            <strong>g)</strong> $\sqrt[21]{\sqrt[5]{3\,180}}$
+        </div>
+        <div class="task-right">
+            <button class="toggle" onclick="toggleSolution('sol-g')">Lösung anzeigen</button>
+            <div id="sol-g" class="solution is-hidden">
+                $\sqrt[21]{\sqrt[5]{3\,180}} = (3\,180)^{\frac{1}{5} \cdot \frac{1}{21}} = (3\,180)^{\frac{1}{105}} = \sqrt[105]{3\,180}$<br><br>
+                Da $3\,180$ keine 105. Potenz einer ganzen Zahl ist, kann dies nicht weiter vereinfacht werden.
+            </div>
+        </div>
+    </div>
+
+    <div class="task-row">
+        <div class="task-left">
+            <strong>h)</strong> $\sqrt[3]{\sqrt[2]{\sqrt[4]{16\,777\,216}}}$
+        </div>
+        <div class="task-right">
+            <button class="toggle" onclick="toggleSolution('sol-h')">Lösung anzeigen</button>
+            <div id="sol-h" class="solution is-hidden">
+                $16\,777\,216 = 2^{24}$<br><br>
+                $\sqrt[4]{16\,777\,216} = \sqrt[4]{2^{24}} = 2^{\frac{24}{4}} = 2^6 = 64$<br><br>
+                $\sqrt[2]{\sqrt[4]{16\,777\,216}} = \sqrt{64} = 8$<br><br>
+                $\sqrt[3]{\sqrt[2]{\sqrt[4]{16\,777\,216}}} = \sqrt[3]{8} = 2$<br><br>
+                Alternativ: $(16\,777\,216)^{\frac{1}{4} \cdot \frac{1}{2} \cdot \frac{1}{3}} = (2^{24})^{\frac{1}{24}} = 2$
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script>
+        function toggleSolution(id) {
+            const solution = document.getElementById(id);
+            solution.classList.toggle('is-hidden');
+        }
+    </script>
+</body>
+</html>

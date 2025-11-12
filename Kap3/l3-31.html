@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 3.31 - Urururururururururururururururgrosseltern</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\$', '\$']],
+                displayMath: [['$$', '$$'], ['\$$', '\$$']]
+            }
+        };
+    </script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l3-30.html">&laquo; Aufgabe 3.30</a>
+        <h1>Aufgabe 3.31 - Urururururururururururururururgrosseltern</h1>
+        <a href="l3-32.html">Aufgabe 3.32 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        <strong>Aufgabe:</strong> Wie viele Urururururururururururururururgrosseltern hat jeder Mensch?
+    </div>
+
+    <div class="task-row">
+        <div class="task-right">
+            <button class="toggle" onclick="toggleSolution('sol-main')">Lösung anzeigen</button>
+            <div id="sol-main" class="solution is-hidden">
+                <strong>Analyse der Generationen:</strong><br><br>
+
+                Zuerst zählen wir die «Ur»-Silben:<br>
+                «Urururururururururururururururgrosseltern»<br><br>
+
+                Die «Ur»-Silben: Ur-ur-ur-ur-ur-ur-ur-ur-ur-ur-ur-ur-ur-ur-ur-ur<br>
+                Das sind <strong>16 «Ur»-Silben</strong><br><br>
+
+                <strong>Generationsschema:</strong><br>
+                - Eltern: $2^1 = 2$<br>
+                - Grosseltern: $2^2 = 4$<br>
+                - Urgrosseltern: $2^3 = 8$<br>
+                - Ururgrosseltern: $2^4 = 16$<br>
+                - ...<br>
+                - Urururururururururururururururgrosseltern: $2^{17}$<br><br>
+
+                <strong>Berechnung:</strong><br>
+                16 «Ur»-Silben + 1 «Gross» = 17. Generation zurück<br>
+                Anzahl Vorfahren: $2^{17} = 131\,072$<br><br>
+
+                <strong>Antwort:</strong> Jeder Mensch hat <strong>131'072 Urururururururururururururururgrosseltern</strong>.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleSolution(id) {
+            const solution = document.getElementById(id);
+            solution.classList.toggle('is-hidden');
+        }
+    </script>
+</body>
+</html>

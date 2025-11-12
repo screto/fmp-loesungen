@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aufgabe 3.12 – Wahre oder falsche Aussagen</title>
+
+  <!-- MathJax -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <link rel="stylesheet" href="../style.css">
+
+  <style>
+    .aufgabe ol {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+    .aufgabe li { margin: .6rem 0; }
+
+    .row {
+      display: flex;
+      align-items: baseline;
+      gap: .6rem;
+      flex-wrap: wrap;
+    }
+
+    .label { font-weight: 700; margin-right: .2rem; }
+    .expr { flex: 1; }
+    .toggle { margin-left: .4rem; }
+
+    .solution-inline {
+      background: #f6f6f6;
+      border-left: 4px solid #4caf50;
+      padding: .1rem .5rem;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+
+    .is-hidden { display: none; }
+  </style>
+</head>
+<body>
+
+  <div class="header-nav">
+    <a href="l3-11.html">&laquo; Aufgabe 3.11</a>
+    <h1>Aufgabe 3.12 – Wahre oder falsche Aussagen</h1>
+    <a href="l3-13.html">Aufgabe 3.13 &raquo;</a>
+  </div>
+
+  <div class="aufgabe">
+    <p>
+      Welche der folgenden Aussagen sind <em>wahr</em> und welche <em>falsch</em>?
+    </p>
+
+    <ol>
+      <li>
+        <div class="row">
+          <span class="label">a)</span>
+          <span class="expr">$2a + 3b \stackrel{?}{=} 3b + 2a$</span>
+          <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+          <span class="solution-inline is-hidden">wahr (Kommutativgesetz der Addition)</span>
+        </div>
+      </li>
+
+      <li>
+        <div class="row">
+          <span class="label">b)</span>
+          <span class="expr">$2x + 3y \stackrel{?}{=} 3x + 2y$</span>
+          <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+          <span class="solution-inline is-hidden">falsch</span>
+        </div>
+      </li>
+
+      <li>
+        <div class="row">
+          <span class="label">c)</span>
+          <span class="expr">$3a \cdot 5b \stackrel{?}{=} 5b \cdot 3a$</span>
+          <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+          <span class="solution-inline is-hidden">wahr (Kommutativgesetz der Multiplikation)</span>
+        </div>
+      </li>
+
+      <li>
+        <div class="row">
+          <span class="label">d)</span>
+          <span class="expr">$2a \cdot 7b \stackrel{?}{=} 7a \cdot 2b$</span>
+          <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+          <span class="solution-inline is-hidden">wahr (Umordnung der Faktoren)</span>
+        </div>
+      </li>
+
+      <li>
+        <div class="row">
+          <span class="label">e)</span>
+          <span class="expr">$(3a + 4b) + 7c \stackrel{?}{=} 3a + (4b + 7c)$</span>
+          <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+          <span class="solution-inline is-hidden">wahr (Assoziativgesetz der Addition)</span>
+        </div>
+      </li>
+
+      <li>
+        <div class="row">
+          <span class="label">f)</span>
+          <span class="expr">$(3a - 4b) + 7c \stackrel{?}{=} 3a - (4b + 7c)$</span>
+          <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+          <span class="solution-inline is-hidden">falsch (wegen der Klammerveränderung)</span>
+        </div>
+      </li>
+
+      <li>
+        <div class="row">
+          <span class="label">g)</span>
+          <span class="expr">$(4a \cdot 5b) \cdot 7c \stackrel{?}{=} 4a \cdot (5b \cdot 7c)$</span>
+          <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+          <span class="solution-inline is-hidden">wahr (Assoziativgesetz der Multiplikation)</span>
+        </div>
+      </li>
+
+      <li>
+        <div class="row">
+          <span class="label">h)</span>
+          <span class="expr">$(3a \cdot 4b) \cdot 5c \stackrel{?}{=} 5a \cdot (3b \cdot 4c)$</span>
+          <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+          <span class="solution-inline is-hidden">wahr (Umordnung der Faktoren)</span>
+        </div>
+      </li>
+
+      <li>
+        <div class="row">
+          <span class="label">i)</span>
+          <span class="expr">$7 \cdot (2a + 3b) \stackrel{?}{=} 14a + 21b$</span>
+          <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+          <span class="solution-inline is-hidden">wahr (Distributivgesetz)</span>
+        </div>
+      </li>
+
+      <li>
+        <div class="row">
+          <span class="label">j)</span>
+          <span class="expr">$-7 \cdot (2a + 3b) \stackrel{?}{=} -14a + 21b$</span>
+          <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+          <span class="solution-inline is-hidden">falsch (zweiter Term müsste $-21b$ sein)</span>
+        </div>
+      </li>
+
+      <li>
+        <div class="row">
+          <span class="label">k)</span>
+          <span class="expr">$(2a + 3b) \cdot (4a - 5b) \stackrel{?}{=} (2a - 5b) \cdot (4a + 3b)$</span>
+          <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+          <span class="solution-inline is-hidden">falsch (Multiplikation nicht kommutativ für ganze Summen)</span>
+        </div>
+      </li>
+    </ol>
+  </div>
+
+  <script>
+    function toggleInline(btn) {
+      const sol = btn.nextElementSibling;
+      const hidden = sol.classList.contains('is-hidden');
+      if (hidden) {
+        sol.classList.remove('is-hidden');
+        btn.textContent = 'Lösung verstecken';
+        if (window.MathJax && MathJax.typesetPromise)
+          MathJax.typesetPromise([sol]).catch(() => {});
+      } else {
+        sol.classList.add('is-hidden');
+        btn.textContent = 'Lösung anzeigen';
+      }
+    }
+  </script>
+
+</body>
+</html>

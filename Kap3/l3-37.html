@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 3.37 - Gleichungen lösen</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\$', '\$']],
+                displayMath: [['$$', '$$'], ['\$$', '\$$']]
+            }
+        };
+    </script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l3-36.html">&laquo; Aufgabe 3.36</a>
+        <h1>Aufgabe 3.37 - Gleichungen lösen</h1>
+        <a href="l3-38.html">Aufgabe 3.38 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        <strong>Aufgabe:</strong> Lösen Sie die nachfolgenden Gleichungen für $\mathbb{G}=\mathbb{R}$:
+
+
+    <div class="task-row">
+        <div class="task-left">
+            <strong>a)</strong> $5x + 6 - 2x = 2x - 45$
+        </div>
+        <div class="task-right">
+            <button class="toggle" onclick="toggleSolution('sol-a')">Lösung anzeigen</button>
+            <div id="sol-a" class="solution is-hidden">
+                $5x + 6 - 2x = 2x - 45$<br>
+                $3x + 6 = 2x - 45$<br>
+                $3x - 2x = -45 - 6$<br>
+                $x = -51$<br><br>
+                <strong>Probe:</strong> $5(-51) + 6 - 2(-51) = -255 + 6 + 102 = -147$<br>
+                $2(-51) - 45 = -102 - 45 = -147$ ✓<br><br>
+                <strong>Lösungsmenge:</strong> $\mathbb{L} = \{-51\}$
+            </div>
+        </div>
+    </div>
+
+    <div class="task-row">
+        <div class="task-left">
+            <strong>b)</strong> $5.5x - 4.3x + 2.9x + 2.5 - 3.3x = 6.7x - 1.2x - 4.9$
+        </div>
+        <div class="task-right">
+            <button class="toggle" onclick="toggleSolution('sol-b')">Lösung anzeigen</button>
+            <div id="sol-b" class="solution is-hidden">
+                Linke Seite zusammenfassen:<br>
+                $(5.5 - 4.3 + 2.9 - 3.3)x + 2.5 = 0.8x + 2.5$<br><br>
+                Rechte Seite zusammenfassen:<br>
+                $(6.7 - 1.2)x - 4.9 = 5.5x - 4.9$<br><br>
+                Gleichung:<br>
+                $0.8x + 2.5 = 5.5x - 4.9$<br>
+                $2.5 + 4.9 = 5.5x - 0.8x$<br>
+                $7.4 = 4.7x$<br>
+                $x = \frac{7.4}{4.7} = \frac{74}{47}$<br><br>
+                <strong>Lösungsmenge:</strong> $\mathbb{L} = \left\{\frac{74}{47}\right\}$
+            </div>
+        </div>
+    </div>
+
+    <div class="task-row">
+        <div class="task-left">
+            <strong>c)</strong> $\frac{1}{6}x - \left(\frac{x}{4} - \frac{x}{3}\right) - \left(\frac{1}{2} - \frac{x}{3}\right) = 0$
+        </div>
+        <div class="task-right">
+            <button class="toggle" onclick="toggleSolution('sol-c')">Lösung anzeigen</button>
+            <div id="sol-c" class="solution is-hidden">
+                Klammern auflösen:<br>
+                $\frac{1}{6}x - \frac{x}{4} + \frac{x}{3} - \frac{1}{2} + \frac{x}{3} = 0$<br><br>
+                x-Terme zusammenfassen (Hauptnenner 12):<br>
+                $\frac{2x}{12} - \frac{3x}{12} + \frac{4x}{12} + \frac{4x}{12} - \frac{1}{2} = 0$<br>
+                $\frac{7x}{12} - \frac{1}{2} = 0$<br>
+                $\frac{7x}{12} = \frac{1}{2}$<br>
+                $7x = 6$<br>
+                $x = \frac{6}{7}$<br><br>
+                <strong>Lösungsmenge:</strong> $\mathbb{L} = \left\{\frac{6}{7}\right\}$
+            </div>
+        </div>
+    </div>
+
+    <div class="task-row">
+        <div class="task-left">
+            <strong>d)</strong> $3x - (-(3 - 36x) - 36) = 15 - (3 \cdot (6 - x) - 17)$
+        </div>
+        <div class="task-right">
+            <button class="toggle" onclick="toggleSolution('sol-d')">Lösung anzeigen</button>
+            <div id="sol-d" class="solution is-hidden">
+                <strong>Linke Seite vereinfachen:</strong><br>
+                $3x - (-(3 - 36x) - 36)$<br>
+                $= 3x - (-3 + 36x - 36)$<br>
+                $= 3x - (36x - 39)$<br>
+                $= 3x - 36x + 39$<br>
+                $= -33x + 39$<br><br>
+                
+                <strong>Rechte Seite vereinfachen:</strong><br>
+                $15 - (3 \cdot (6 - x) - 17)$<br>
+                $= 15 - (18 - 3x - 17)$<br>
+                $= 15 - (1 - 3x)$<br>
+                $= 15 - 1 + 3x$<br>
+                $= 14 + 3x$<br><br>
+                
+                <strong>Gleichung lösen:</strong><br>
+                $-33x + 39 = 14 + 3x$<br>
+                $39 - 14 = 3x + 33x$<br>
+                $25 = 36x$<br>
+                $x = \frac{25}{36}$<br><br>
+                
+                <strong>Lösungsmenge:</strong> $\mathbb{L} = \left\{\frac{25}{36}\right\}$
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script>
+        function toggleSolution(id) {
+            const solution = document.getElementById(id);
+            solution.classList.toggle('is-hidden');
+        }
+    </script>
+</body>
+</html>
