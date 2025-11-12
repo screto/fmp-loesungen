@@ -6,15 +6,9 @@
     <title>Aufgabe 3.27 - Potenzgesetze berechnen</title>
     <link rel="stylesheet" href="../style.css">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>
-        MathJax = {
-            tex: {
-                inlineMath: [['$', '$'], ['\$', '\$']],
-                displayMath: [['$$', '$$'], ['\$$', '\$$']]
-            }
-        };
-    </script>
+    <script src="../script-math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
 </head>
 <body>
     <div class="header-nav">
@@ -97,19 +91,5 @@
         </div>
     </div>
 
-    <script>
-        function toggleSolution(id) {
-            const solution = document.getElementById(id);
-            const button = solution.previousElementSibling;
-            
-            if (solution.classList.contains('is-hidden')) {
-                solution.classList.remove('is-hidden');
-                button.textContent = 'Lösung verbergen';
-            } else {
-                solution.classList.add('is-hidden');
-                button.textContent = 'Lösung anzeigen';
-            }
-        }
-    </script>
 </body>
 </html>

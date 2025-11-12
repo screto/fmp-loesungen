@@ -6,48 +6,11 @@
   <title>Aufgabe 3.6</title>
 
   <!-- MathJax -->
-  <script>
-    window.MathJax = {
-      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
-      svg: { fontCache: 'global' }
-    };
-  </script>
+  <script src="../script-math.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="../script-sol.js"></script>
 
   <link rel="stylesheet" href="../style.css">
-
-  <style>
-    /* eine Spalte */
-    .aufgabe ul {
-      list-style: none;
-      padding-left: 0;
-      margin: 0;
-    }
-    .aufgabe li {
-      margin: .6rem 0;
-    }
-
-    /* zeilenweise Darstellung */
-    .row {
-      display: flex;
-      align-items: baseline;
-      gap: .6rem;
-      flex-wrap: wrap;
-    }
-    .label { font-weight: 700; margin-right: .2rem; }
-    .expr { white-space: nowrap; }
-    .toggle { margin-left: .4rem; }
-
-    /* inline-lösung */
-    .solution-inline {
-      background: #f6f6f6;
-      border-left: 4px solid #4caf50;
-      padding: .1rem .5rem;
-      border-radius: 4px;
-      white-space: nowrap;
-    }
-    .is-hidden { display: none; }
-  </style>
 </head>
 <body>
 
@@ -65,68 +28,57 @@
       $C = \{0; 6; 15; 17\}$
     </p>
 
-    <ul>
-      <li>
-        <div class="row">
-          <span class="label">a)</span>
-          <span class="expr">$A \cup B \cup C$</span>
-          <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
-          <span class="solution-inline is-hidden">$A \cup B \cup C = \{0; 1; 2; 5; 6; 7; 8; 15; 17\}$</span>
-        </div>
-      </li>
+    <div class="task-row">
+      <div class="task-left">
+        <strong>a)</strong> $A \cup B \cup C$
+      </div>
+      <div class="task-right">
+        <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+        <div class="solution-inline is-hidden">$A \cup B \cup C = \{0; 1; 2; 5; 6; 7; 8; 15; 17\}$</div>
+      </div>
+    </div>
 
-      <li>
-        <div class="row">
-          <span class="label">b)</span>
-          <span class="expr">$(A \cap B) \cup C$</span>
-          <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
-          <span class="solution-inline is-hidden">$(A \cap B) \cup C = \{0; 2; 6; 8; 15; 17\}$</span>
-        </div>
-      </li>
+    <div class="task-row">
+      <div class="task-left">
+        <strong>b)</strong> $(A \cap B) \cup C$
+      </div>
+      <div class="task-right">
+        <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+        <div class="solution-inline is-hidden">$(A \cap B) \cup C = \{0; 2; 6; 8; 15; 17\}$</div>
+      </div>
+    </div>
 
-      <li>
-        <div class="row">
-          <span class="label">c)</span>
-          <span class="expr">$C \setminus A$</span>
-          <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
-          <span class="solution-inline is-hidden">$C \setminus A = \{0; 17\}$</span>
-        </div>
-      </li>
+    <div class="task-row">
+      <div class="task-left">
+        <strong>c)</strong> $C \setminus A$
+      </div>
+      <div class="task-right">
+        <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+        <div class="solution-inline is-hidden">$C \setminus A = \{0; 17\}$</div>
+      </div>
+    </div>
 
-      <li>
-        <div class="row">
-          <span class="label">d)</span>
-          <span class="expr">$A \cap B \cap C$</span>
-          <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
-          <span class="solution-inline is-hidden">$A \cap B \cap C = \{6\}$</span>
-        </div>
-      </li>
+    <div class="task-row">
+      <div class="task-left">
+        <strong>d)</strong> $A \cap B \cap C$
+      </div>
+      <div class="task-right">
+        <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+        <div class="solution-inline is-hidden">$A \cap B \cap C = \{6\}$</div>
+      </div>
+    </div>
 
-      <li>
-        <div class="row">
-          <span class="label">e)</span>
-          <span class="expr">$(A \cap B) \cup (B \cap C)$</span>
-          <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
-          <span class="solution-inline is-hidden">$(A \cap B) \cup (B \cap C) = \{2; 6; 8\}$</span>
-        </div>
-      </li>
-    </ul>
+    <div class="task-row">
+      <div class="task-left">
+        <strong>e)</strong> $(A \cap B) \cup (B \cap C)$
+      </div>
+      <div class="task-right">
+        <button class="toggle" onclick="toggleInline(this)">Lösung anzeigen</button>
+        <div class="solution-inline is-hidden">$(A \cap B) \cup (B \cap C) = \{2; 6; 8\}$</div>
+      </div>
+    </div>
+
   </div>
-
-  <script>
-    function toggleInline(btn) {
-      const sol = btn.nextElementSibling;
-      const hidden = sol.classList.contains('is-hidden');
-      if (hidden) {
-        sol.classList.remove('is-hidden');
-        btn.textContent = 'Lösung verstecken';
-        if (window.MathJax && MathJax.typesetPromise) MathJax.typesetPromise([sol]).catch(() => {});
-      } else {
-        sol.classList.add('is-hidden');
-        btn.textContent = 'Lösung anzeigen';
-      }
-    }
-  </script>
 
 </body>
 </html>

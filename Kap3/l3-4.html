@@ -6,35 +6,12 @@
   <title>Aufgabe 3.4</title>
 
   <!-- MathJax -->
-  <script>
-    window.MathJax = {
-      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
-      svg: { fontCache: 'global' }
-    };
-  </script>
+  <script src="../script-math.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
 
   <link rel="stylesheet" href="../style.css">
 
-  <style>
-    table {
-      border-collapse: collapse;
-      width: 100%;
-      margin-top: 1rem;
-      background: #fff;
-    }
-    th, td {
-      border: 1px solid #ccc;
-      padding: 0.6rem;
-      vertical-align: top;
-    }
-    th {
-      background: #e0e0e0;
-    }
-    .toggle {
-      margin-top: 0.3rem;
-    }
-  </style>
 </head>
 <body>
 
@@ -104,21 +81,5 @@
       </tbody>
     </table>
   </div>
-
-  <script>
-    function toggleSolution(btn) {
-      const sol = btn.nextElementSibling;
-      const hidden = sol.classList.contains('is-hidden');
-      if (hidden) {
-        sol.classList.remove('is-hidden');
-        btn.textContent = 'Lösung verstecken';
-        if (window.MathJax && MathJax.typesetPromise) MathJax.typesetPromise([sol]).catch(() => {});
-      } else {
-        sol.classList.add('is-hidden');
-        btn.textContent = 'Lösung anzeigen';
-      }
-    }
-  </script>
-
 </body>
 </html>
