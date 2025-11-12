@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <script>
+      const path = window.location.pathname;
+      // Beispiel: /fmp-loesungen/l3-2.html → /fmp-loesungen/Kap3/l3-2.html
+      if (/^\/fmp-loesungen\/l\d+-\d+\.html$/.test(path)) {
+        const newUrl = path.replace('/fmp-loesungen/', '/fmp-loesungen/Kap3/');
+        window.location.replace(newUrl);
+      } else {
+        document.write("<h1>Seite nicht gefunden</h1>");
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
