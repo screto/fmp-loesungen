@@ -5,8 +5,11 @@
     <script>
       const path = window.location.pathname;
       // Beispiel: /fmp-loesungen/l3-2.html → /fmp-loesungen/Kap3/l3-2.html
-      if (/^\/fmp-loesungen\/l\d+-\d+\.html$/.test(path)) {
+      if (/^\/fmp-loesungen\/l3+-\d+\.html$/.test(path)) {
         const newUrl = path.replace('/fmp-loesungen/', '/fmp-loesungen/Kap3/');
+        window.location.replace(newUrl);
+      } else if (/^\/fmp-loesungen\/l2+-\d+\.html$/.test(path)) {
+        const newUrl = path.replace('/fmp-loesungen/', '/fmp-loesungen/Kap2/');
         window.location.replace(newUrl);
       } else {
         document.write("<h1>Seite nicht gefunden</h1>");
