@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 4.1 - Streichholz-Kette</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="../4index.html">&laquo; Übersicht</a>
+        <h1>Aufgabe 4.1 - Streichholz-Kette</h1>
+        <a href="l4-2.html">Aufgabe 4.2 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        <div class="task-row">
+            <div class="task-left">
+                <strong>a)</strong> Streichhölzer wurden nach folgendem Schema zu verschieden langen Ketten gelegt. Wie sieht die 5. Kette aus?
+                <div style="text-align: center; margin: 1rem 0;">
+                    <img src="../pics/streichholz1.png" alt="Streichholz-Ketten Schema" style="max-width: 60%;">
+                </div>
+           <!--  </div>
+            <div class="task-right">-->
+                <button onclick="toggleSolution('sol-a')" class="toggle">Lösung anzeigen</button>
+                <div id="sol-a" class="solution is-hidden">
+                    <p>Die 5. Kette besteht aus 5 Sechsecken in Reihe. Jedes zusätzliche Sechseck fügt 3 neue Streichhölzer hinzu (2 seitlich und 1 oben/unten abwechselnd).</p>
+                    <div style="text-align: center;">
+                        <img src="../pics/streichholz1-l.png" alt="5. Streichholz-Kette" style="max-width: 60%;">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>b)</strong> Zählen Sie jeweils die Anzahl benötigter Streichhölzer. Vervollständigen Sie die Tabelle:
+                <table>
+                    <tr>
+                        <th>Ketten-Nr. $ n $</th>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>3</th>
+                        <th>4</th>
+                        <th>5</th>
+                        <th>6</th>
+                        <th>7</th>
+                        <th>8</th>
+                        <th>10</th>
+                        <th>100</th>
+                    </tr>
+                    <tr>
+                        <td>Anzl. Streichhölzer $ a_n $</td>
+                        <td>4</td>
+                        <td>7</td>
+                        <td>10</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            <!-- </div>
+            <div class="task-right"> -->
+                <button onclick="toggleSolution('sol-b')" class="toggle">Lösung anzeigen</button>
+                <div id="sol-b" class="solution is-hidden">
+                    <p>Vollständige Tabelle:</p>
+                    <table>
+                        <tr>
+                            <th>Ketten-Nr. $ n $</th>
+                            <th>1</th>
+                            <th>2</th>
+                            <th>3</th>
+                            <th>4</th>
+                            <th>5</th>
+                            <th>6</th>
+                            <th>7</th>
+                            <th>8</th>
+                            <th>10</th>
+                            <th>100</th>
+                        </tr>
+                        <tr>
+                            <td>Anzl. Streichhölzer $ a_n $</td>
+                            <td>4</td>
+                            <td>7</td>
+                            <td>10</td>
+                            <td>13</td>
+                            <td>16</td>
+                            <td>19</td>
+                            <td>22</td>
+                            <td>25</td>
+                            <td>31</td>
+                            <td>301</td>
+                        </tr>
+                    </table>
+                    <p>Muster: Jede zusätzliche Kette benötigt 3 weitere Streichhölzer.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>c)</strong> Finden Sie einen Term (eine Formel), mit welcher Sie aus der Ketten-Nummer $ n $ die Anzahl benötigter Streichhölzer $ a_n $ berechnen können. Notieren Sie dabei Ihre Überlegungen.
+           <!-- </div>
+            <div class="task-right"> -->
+                <br>
+                <button onclick="toggleSolution('sol-c')" class="toggle">Lösung anzeigen</button>
+                <div id="sol-c" class="solution is-hidden">
+                    <p><strong>Überlegungen:</strong></p>
+                    <ol>
+                        <li>Die erste Kette ($ n = 1 $) benötigt 4 Streichhölzer.</li>
+                        <li>Jede weitere Kette ($ n \geq 2 $) benötigt 3 zusätzliche Streichhölzer.</li>
+                        <li>Dies entspricht einer arithmetischen Folge mit:
+                            <ul>
+                                <li>Startwert $ a_1 = 4 $</li>
+                                <li>Differenz $ d = 3 $</li>
+                            </ul>
+                        </li>
+                    </ol>
+
+                    <p><strong>Allgemeine Formel:</strong></p>
+                    $$ a_n = 4 + 3(n - 1) = 3n + 1 $$
+
+                    <p><strong>Überprüfung:</strong></p>
+                    <ul>
+                        <li>Für $ n = 1 $: $ 3 \cdot 1 + 1 = 4 $ ✓</li>
+                        <li>Für $ n = 2 $: $ 3 \cdot 2 + 1 = 7 $ ✓</li>
+                        <li>Für $ n = 100 $: $ 3 \cdot 100 + 1 = 301 $ ✓</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
