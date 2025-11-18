@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 4.6 - Streichholz-Ketten</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l4-5.html">&laquo; Aufgabe 4.5</a>
+        <h1>Aufgabe 4.6 - Streichholz-Ketten</h1>
+        <a href="l4-7.html">Aufgabe 4.7 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        <p>Zu einer unbekannten Streichholz-Kette gehört die folgende Tabelle:</p>
+
+        <div class="task-row">
+            <div class="task-left">
+                <table>
+                    <tr>
+                        <th>Ketten-Nr. $ n $</th>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>3</th>
+                        <th>4</th>
+                        <th>5</th>
+                        <th>6</th>
+                        <th>7</th>
+                        <th>8</th>
+                        <th>10</th>
+                        <th>100</th>
+                    </tr>
+                    <tr>
+                        <td>Anzl. Streichhölzer $ a_n $</td>
+                        <td>3</td>
+                        <td>8</td>
+                        <td>15</td>
+                        <td>24</td>
+                        <td>35</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <h3>a) Vervollständigen Sie die Tabelle.</h3>
+                <button class="toggle" onclick="toggleSolution('sol-a')">Lösung einblenden</button>
+
+                <div id="sol-a" class="solution is-hidden">
+                    <p>Die Tabelle wird wie folgt vervollständigt:</p>
+                    <table>
+                        <tr>
+                            <th>Ketten-Nr. $ n $</th>
+                            <th>1</th>
+                            <th>2</th>
+                            <th>3</th>
+                            <th>4</th>
+                            <th>5</th>
+                            <th>6</th>
+                            <th>7</th>
+                            <th>8</th>
+                            <th>10</th>
+                            <th>100</th>
+                        </tr>
+                        <tr>
+                            <td>Anzl. Streichhölzer $ a_n $</td>
+                            <td>3</td>
+                            <td>8</td>
+                            <td>15</td>
+                            <td>24</td>
+                            <td>35</td>
+                            <td>48</td>
+                            <td>63</td>
+                            <td>80</td>
+                            <td>120</td>
+                            <td>10200</td>
+                        </tr>
+                    </table>
+                    <p>Die Differenzen zwischen den Werten betragen $ 5, 7, 9, 11, \ldots $, was auf eine quadratische Beziehung hinweist.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <h3>b) Wie könnte eine passende Streichholz-Kette aussehen?</h3>
+                <button class="toggle" onclick="toggleSolution('sol-b')">Lösung einblenden</button>
+
+                <div id="sol-b" class="solution is-hidden">
+                    <div style="text-align: center; margin: 1rem 0;">
+                        <img src="../pics/streichholz5.png" alt="Rauten-Streichholzkette" style="max-width: 60%;">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <h3>c) Finden Sie einen Term für $ a_n $.</h3>
+                <button class="toggle" onclick="toggleSolution('sol-c')">Lösung einblenden</button>
+
+                <div id="sol-c" class="solution is-hidden">
+                    <p>Der Term für die Anzahl Streichhölzer $ a_n $ lautet:</p>
+                    <p>$$ a_n = n\cdot(n+1) +n = n^2 +2n $$</p>
+                    <p><strong>Herleitung:</strong></p>
+                    <p>Die Differenzen zwischen den Werten in der Tabelle sind $ 5, 7, 9, 11, \ldots $, was auf eine quadratische Beziehung hinweist. Durch das Lösen eines Gleichungssystems oder durch Mustererkennung ergibt sich der obige Term.</p>
+                    <p><strong>Überprüfung:</strong></p>
+                    <p>Für $ n = 1 $: $ 1\cdot(1+1) + 1 = 3 $</p>
+                    <p>Für $ n = 2 $: $ 2\cdot(2+1) + 2 = 8 $</p>
+                    <p>Für $ n = 3 $: $ 3\cdot(3+1) + 3 = 15 $</p>
+                    <p>Der Term stimmt mit den Werten in der Tabelle überein.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 4.8 – Streichholz-Ketten-Aufgabe erstellen</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l4-7.html">&laquo; Aufgabe 4.7</a>
+        <h1>Aufgabe 4.8 – Streichholz-Ketten-Aufgabe erstellen</h1>
+        <a href="l4-9.html">Aufgabe 4.9 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        <div class="task-row">
+            <div class="task-left">
+                <p><strong>Aufgabe:</strong></p>
+                <p>Erstellen Sie eine Aufgabe analog zu den obigen Streichholz-Ketten-Aufgaben. Tauschen Sie die erstellte Aufgabe mit derjenigen einer Kollegin oder eines Kollegen aus. Lösen Sie die erhaltene Aufgabe.</p>
+
+                <p><strong>Lösung:</strong></p>
+                <div class="solution is-hidden" id="sol-a">
+                    <p><strong>Beispielaufgabe:</strong></p>
+                    <p>Wie viele Streichhölzer werden für eine Kette mit 15 Rauten benötigt, wenn jede Raute aus 4 Streichhölzern besteht und benachbarte Rauten jeweils eine Seite (1 Streichholz) teilen?</p>
+
+                    <p><strong>Lösung der Beispielaufgabe:</strong></p>
+                    <p>Für die erste Raute werden 4 Streichhölzer benötigt. Jede weitere Raute benötigt nur 3 zusätzliche Streichhölzer, da eine Seite bereits vorhanden ist.</p>
+                    <p>Die Anzahl Streichhölzer $ S(n) $ für $ n $ Rauten ist also:</p>
+                    $$ S(n) = 4 + 3 \cdot (n - 1) $$
+                    <p>Für $ n = 15 $:</p>
+                    $$ S(15) = 4 + 3 \cdot 14 = 4 + 42 = 46 $$
+                    <p>Es werden also 46 Streichhölzer benötigt.</p>
+                </div>
+                <button class="toggle" onclick="toggleSolution('sol-a')">Lösung einblenden</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

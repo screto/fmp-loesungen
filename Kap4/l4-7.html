@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aufgabe 4.3 - Dreieck-Streichholz-Kette</title>
+    <title>Aufgabe 4.7 - Streichholz-Kette</title>
     <link rel="stylesheet" href="../style.css">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script src="../script-math.js"></script>
@@ -12,36 +12,36 @@
 </head>
 <body>
     <div class="header-nav">
-        <a href="l4-2.html">&laquo; Aufgabe 4.2</a>
-        <h1>Aufgabe 4.3 - Dreieck-Streichholz-Kette</h1>
-        <a href="l4-4.html">Aufgabe 4.4 &raquo;</a>
+        <a href="l4-6.html">&laquo; Aufgabe 4.6</a>
+        <h1>Aufgabe 4.7 - Streichholz-Kette</h1>
+        <a href="l4-8.html">Aufgabe 4.8 &raquo;</a>
     </div>
 
     <div class="aufgabe">
-        <p>Eine weitere Streichholz-Kette:</p>
-        <div style="text-align: center; margin: 1rem 0;">
-            <img src="../pics/streichholz3.png" alt="Dreieck-Streichholz-Kette" style="max-width: 80%;">
-        </div>
+        <p>Zu einer Streichholz-Kette wurde der Term $ a_n = 6n - 2 $ gefunden.</p>
+        
         <div class="task-row">
             <div class="task-left">
-                <strong>a)</strong> Füllen Sie die Tabelle aus:
+                <h3>Teilaufgabe a)</h3>
+                <p>Bestimmen Sie die jeweils nötige Anzahl Streichhölzer:</p>
+                
                 <table>
                     <tr>
                         <th>Ketten-Nr. $ n $</th>
+                        <th>$n$</th>
                         <th>1</th>
                         <th>2</th>
                         <th>3</th>
                         <th>4</th>
                         <th>5</th>
                         <th>6</th>
-                        <th>7</th>
                         <th>8</th>
                         <th>10</th>
                         <th>100</th>
                     </tr>
                     <tr>
                         <td>Anzl. Streichhölzer $ a_n $</td>
-                        <td></td>
+                        <td>$6n-2$</td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -54,63 +54,73 @@
                     </tr>
                 </table>
 
-                <button onclick="toggleSolution('sol-a')" class="toggle">Lösung anzeigen</button>
+                <button class="toggle" onclick="toggleSolution('sol-a')">Lösung einblenden</button>
                 <div id="sol-a" class="solution is-hidden">
-                    <p><strong>Vollständige Tabelle:</strong></p>
                     <table>
                         <tr>
                             <th>Ketten-Nr. $ n $</th>
+                            <th>$n$</th>
                             <th>1</th>
                             <th>2</th>
                             <th>3</th>
                             <th>4</th>
                             <th>5</th>
                             <th>6</th>
-                            <th>7</th>
                             <th>8</th>
                             <th>10</th>
                             <th>100</th>
                         </tr>
                         <tr>
                             <td>Anzl. Streichhölzer $ a_n $</td>
-                            <td>3</td>
-                            <td>6</td>
-                            <td>9</td>
-                            <td>12</td>
-                            <td>15</td>
-                            <td>18</td>
-                            <td>21</td>
-                            <td>24</td>
-                            <td>30</td>
-                            <td>300</td>
+                            <td>$6n-2$</td>
+                            <td>4</td>
+                            <td>10</td>
+                            <td>16</td>
+                            <td>22</td>
+                            <td>28</td>
+                            <td>34</td>
+                            <td>46</td>
+                            <td>58</td>
+                            <td>598</td>
                         </tr>
                     </table>
-                    <p><strong>Muster:</strong> Die Anzahl Streichhölzer entspricht dem 3-fachen der Dreieckszahlen.</p>
+                    <p><strong>Berechnung:</strong> $ a_n = 6n - 2 $</p>
                 </div>
             </div>
         </div>
-
+        
         <div class="task-row">
             <div class="task-left">
-                <strong>b)</strong> Finden Sie einen Term, wie Sie aus der Ketten-Nummer $ n $ die Anzahl benötigter Streichhölzer $ a_n $ berechnen können.
-
-                <button onclick="toggleSolution('sol-b')" class="toggle">Lösung anzeigen</button>
+                <h3>Teilaufgabe b)</h3>
+                <p>Überprüfen Sie:</p>
+                <p>$ a_{18} = 106 $ und $ a_{107} = 640 $</p>
+            </div>
+            
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-b')">Lösung einblenden</button>
                 <div id="sol-b" class="solution is-hidden">
-                    <p><strong>Überlegungen:</strong></p>
-                    <ol>
-                        <li>Die erste Kette ($ n = 1 $) hat 3 Streichhölzer (1 Dreieck)</li>
-                        <li>Die zweite Kette ($ n = 2 $) hat 6 Streichhölzer (3 Dreiecke)</li>
-                        <li>Die dritte Kette ($ n = 3 $) hat 9 Streichhölzer (6 Dreiecke)</li>
-                        <li>Die Anzahl Streichhölzer entspricht 3 × Dreieckszahl</li>
-                        <li>Die n-te Dreieckszahl ist $ T_n = n \cdot 3 $</li>
-                    </ol>
-
-                    <p><strong>Expliziter Term:</strong></p>
-                    $$ a_n = 3 \cdot n $$
-
+                    <p>Für $ a_{18} $:</p>
+                    $$ a_{18} = 6 \cdot 18 - 2 = 108 - 2 = 106 \quad \text{(korrekt)} $$
+                    
+                    <p>Für $ a_{107} $:</p>
+                    $$ a_{107} = 6 \cdot 107 - 2 = 642 - 2 = 640 \quad \text{(korrekt)} $$
                 </div>
             </div>
         </div>
+        
+        <div class="task-row">
+            <div class="task-left">
+                <h3>Teilaufgabe c)</h3>
+                <p>Wie könnte eine solche Streichholz-Kette aussehen?</p>
+                <button class="toggle" onclick="toggleSolution('sol-c')">Lösung einblenden</button>
+                <div id="sol-c" class="solution is-hidden">
+                    <p>Eine mögliche Streichholz-Kette könnte wie folgt aussehen:</p>
+                    <div style="text-align: center; margin: 1rem 0;">
+                        <img src="../pics/streichholz7.png" alt="Rauten-Streichholzkette" style="max-width: 60%;">
+                    </div>
+                </div>
+            </div>
+    </div>
     </div>
 </body>
 </html>
