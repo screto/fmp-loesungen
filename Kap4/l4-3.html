@@ -12,17 +12,16 @@
 </head>
 <body>
     <div class="header-nav">
-        <a href="l4-1.html">&laquo; Vorherige</a>
-        <h1>Aufgabe 4.2 - Streichholzkette</h1>
-        <a href="l4-3.html">Nächste &raquo;</a>
+        <a href="l4-2.html">&laquo; Vorherige</a>
+        <h1>Aufgabe 4.3 - Dreieck-Streichholzkette</h1>
+        <a href="l4-4.html">Nächste &raquo;</a>
     </div>
 
     <div class="aufgabe">
         <p>Eine weitere Streichholzkette:</p>
         <div style="text-align: center; margin: 1rem 0;">
-            <img src="../pics/streichholz2.png" alt="Streichholzkette Muster" style="max-width: 60%;">
+            <img src="../pics/streichholz3.png" alt="Dreieck-Streichholzkette" style="max-width: 80%;">
         </div>
-
         <div class="task-row">
             <div class="task-left">
                 <strong>a)</strong> Füllen Sie die Tabelle aus:
@@ -42,8 +41,8 @@
                     </tr>
                     <tr>
                         <td>Anzl. Streichhölzer $ a_n $</td>
-                        <td>4</td>
-                        <td>9</td>
+                        <td></td>
+                        <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -74,19 +73,19 @@
                         </tr>
                         <tr>
                             <td>Anzl. Streichhölzer $ a_n $</td>
-                            <td>4</td>
+                            <td>3</td>
+                            <td>6</td>
                             <td>9</td>
-                            <td>14</td>
-                            <td>19</td>
+                            <td>12</td>
+                            <td>15</td>
+                            <td>18</td>
+                            <td>21</td>
                             <td>24</td>
-                            <td>29</td>
-                            <td>34</td>
-                            <td>39</td>
-                            <td>49</td>
-                            <td>499</td>
+                            <td>30</td>
+                            <td>300</td>
                         </tr>
                     </table>
-                    <p><strong>Muster:</strong> Jede Kette hat $ (n+1)^2 $ Streichhölzer (Quadratzahlen der ungeraden Zahlen).</p>
+                    <p><strong>Muster:</strong> Die Anzahl Streichhölzer entspricht dem 3-fachen der Dreieckszahlen.</p>
                 </div>
             </div>
         </div>
@@ -99,14 +98,16 @@
                 <div id="sol-b" class="solution is-hidden">
                     <p><strong>Überlegungen:</strong></p>
                     <ol>
-                        <li>Die erste Kette ($ n = 1 $) hat 4 Streichhölzer (bildet ein Quadrat 2×2)</li>
-                        <li>Die zweite Kette ($ n = 2 $) hat 9 Streichhölzer (bildet ein Quadrat 3×3)</li>
-                        <li>Die dritte Kette ($ n = 3 $) hat 14 Streichhölzer (bildet ein Quadrat 4×4)</li>
-                        <li>Die Zahl der Streichhölzer nimmt immer um 5 zu</li>
+                        <li>Die erste Kette ($ n = 1 $) hat 3 Streichhölzer (1 Dreieck)</li>
+                        <li>Die zweite Kette ($ n = 2 $) hat 6 Streichhölzer (3 Dreiecke)</li>
+                        <li>Die dritte Kette ($ n = 3 $) hat 9 Streichhölzer (6 Dreiecke)</li>
+                        <li>Die Anzahl Streichhölzer entspricht 3 × Dreieckszahl</li>
+                        <li>Die n-te Dreieckszahl ist $ T_n = n \cdot 3 $</li>
                     </ol>
 
                     <p><strong>Expliziter Term:</strong></p>
-                    $$ a_n = 4+ 5(n-1) = 5n - 1 $$
+                    $$ a_n = 3 \cdot n $$
+
                 </div>
             </div>
         </div>
