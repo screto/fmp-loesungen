@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 4.1 - Streichholz-Kette</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l4-1.html">&laquo; Vorherige</a>
+        <h1>Aufgabe 4.2 - Streichholzkette</h1>
+        <a href="l4-3.html">Nächste &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        <p>Eine weitere Streichholzkette:</p>
+        <div style="text-align: center; margin: 1rem 0;">
+            <img src="../pics/streichholz2.png" alt="Streichholzkette Muster" style="max-width: 60%;">
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>a)</strong> Füllen Sie die Tabelle aus:
+                <table>
+                    <tr>
+                        <th>Ketten-Nr. $ n $</th>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>3</th>
+                        <th>4</th>
+                        <th>5</th>
+                        <th>6</th>
+                        <th>7</th>
+                        <th>8</th>
+                        <th>10</th>
+                        <th>100</th>
+                    </tr>
+                    <tr>
+                        <td>Anzl. Streichhölzer $ a_n $</td>
+                        <td>4</td>
+                        <td>9</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+
+                <button onclick="toggleSolution('sol-a')" class="toggle">Lösung anzeigen</button>
+                <div id="sol-a" class="solution is-hidden">
+                    <p><strong>Vollständige Tabelle:</strong></p>
+                    <table>
+                        <tr>
+                            <th>Ketten-Nr. $ n $</th>
+                            <th>1</th>
+                            <th>2</th>
+                            <th>3</th>
+                            <th>4</th>
+                            <th>5</th>
+                            <th>6</th>
+                            <th>7</th>
+                            <th>8</th>
+                            <th>10</th>
+                            <th>100</th>
+                        </tr>
+                        <tr>
+                            <td>Anzl. Streichhölzer $ a_n $</td>
+                            <td>4</td>
+                            <td>9</td>
+                            <td>16</td>
+                            <td>25</td>
+                            <td>36</td>
+                            <td>49</td>
+                            <td>64</td>
+                            <td>81</td>
+                            <td>121</td>
+                            <td>10'201</td>
+                        </tr>
+                    </table>
+                    <p><strong>Muster:</strong> Jede Kette hat $ (n+1)^2 $ Streichhölzer (Quadratzahlen der ungeraden Zahlen).</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>b)</strong> Finden Sie einen Term, wie Sie aus der Ketten-Nummer $ n $ die Anzahl benötigter Streichhölzer $ a_n $ berechnen können.
+
+                <button onclick="toggleSolution('sol-b')" class="toggle">Lösung anzeigen</button>
+                <div id="sol-b" class="solution is-hidden">
+                    <p><strong>Überlegungen:</strong></p>
+                    <ol>
+                        <li>Die erste Kette ($ n = 1 $) hat 4 Streichhölzer (bildet ein Quadrat 2×2)</li>
+                        <li>Die zweite Kette ($ n = 2 $) hat 9 Streichhölzer (bildet ein Quadrat 3×3)</li>
+                        <li>Die dritte Kette ($ n = 3 $) hat 16 Streichhölzer (bildet ein Quadrat 4×4)</li>
+                        <li>Es handelt sich um Quadratzahlen der Form $ (n+1)^2 $</li>
+                    </ol>
+
+                    <p><strong>Expliziter Term:</strong></p>
+                    $$ a_n = (n + 1)^2 $$
+
+                    <p><strong>Alternative Darstellung:</strong></p>
+                    $$ a_n = n^2 + 2n + 1 $$
+
+                    <p><strong>Überprüfung:</strong></p>
+                    <ul>
+                        <li>Für $ n = 1 $: $ (1+1)^2 = 4 $ ✓</li>
+                        <li>Für $ n = 2 $: $ (2+1)^2 = 9 $ ✓</li>
+                        <li>Für $ n = 5 $: $ (5+1)^2 = 36 $ ✓</li>
+                        <li>Für $ n = 10 $: $ (10+1)^2 = 121 $ ✓</li>
+                        <li>Für $ n = 100 $: $ (100+1)^2 = 10'201 $ ✓</li>
+                    </ul>
+
+                    <p><strong>Visuelle Erklärung:</strong></p>
+                    <p>Jede Kette bildet ein Quadrat, dessen Seitenlänge um 1 grösser ist als die Kettennummer:
+                    <ul>
+                        <li>Kette 1: 2×2-Quadrat (4 Streichhölzer)</li>
+                        <li>Kette 2: 3×3-Quadrat (9 Streichhölzer)</li>
+                        <li>Kette 3: 4×4-Quadrat (16 Streichhölzer)</li>
+                        <li>usw.</li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
