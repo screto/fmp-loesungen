@@ -4,22 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aufgabe 4.9 - Plättchenmuster</title>
-    <link rel="stylesheet" href="style.css">
+       <link rel="stylesheet" href="../style.css">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>
-        function toggleSolution(id) {
-            const solution = document.getElementById(id);
-            const button = solution.previousElementSibling.querySelector('button');
-            if (solution.classList.contains('is-hidden')) {
-                solution.classList.remove('is-hidden');
-                button.textContent = 'Lösung verstecken';
-            } else {
-                solution.classList.add('is-hidden');
-                button.textContent = 'Lösung anzeigen';
-            }
-        }
-    </script>
+    <script src="../script-math.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
 </head>
 <body>
     <div class="header-nav">
@@ -33,10 +22,9 @@
             <div class="task-left">
                 <p>Erstellen Sie eine Tabelle für die ersten 10 Figuren $ a_1, a_2, a_3, \ldots, a_{10} $ und finden Sie einen expliziten Term für $ a_n $.</p>
                 <div style="text-align: center; margin: 1rem 0;">
-                    <img src="pics/plaettchen2.png" alt="Plättchenmuster" style="max-width: 80%;">
+                    <img src="../pics/plaettchen2.png" alt="Plättchenmuster" style="max-width: 80%;">
                 </div>
-            </div>
-            <div class="task-right">
+
                 <button onclick="toggleSolution('sol-table')" class="toggle">Lösung anzeigen</button>
                 <div id="sol-table" class="solution is-hidden">
                     <p><strong>Tabelle der ersten 10 Figuren:</strong></p>
@@ -56,16 +44,16 @@
                         </tr>
                         <tr>
                             <td>Anzahl Plättchen $ a_n $</td>
-                            <td>1</td>
-                            <td>4</td>
-                            <td>9</td>
+                            <td>8</td>
+                            <td>12</td>
                             <td>16</td>
-                            <td>25</td>
+                            <td>20</td>
+                            <td>24</td>
+                            <td>28</td>
+                            <td>32</td>
                             <td>36</td>
-                            <td>49</td>
-                            <td>64</td>
-                            <td>81</td>
-                            <td>100</td>
+                            <td>40</td>
+                            <td>44</td>
                         </tr>
                     </table>
                 </div>
@@ -74,22 +62,22 @@
                 <div id="sol-formel" class="solution is-hidden">
                     <p><strong>Überlegungen:</strong></p>
                     <ol>
-                        <li>Die erste Figur ($ n = 1 $) besteht aus $ 1 \times 1 = 1 $ Plättchen</li>
-                        <li>Die zweite Figur ($ n = 2 $) besteht aus $ 2 \times 2 = 4 $ Plättchen</li>
-                        <li>Die dritte Figur ($ n = 3 $) besteht aus $ 3 \times 3 = 9 $ Plättchen</li>
-                        <li>Es handelt sich offensichtlich um Quadratzahlen</li>
+                        <li>Die erste Figur ($ n = 1 $) besteht aus $ 8 $ Plättchen</li>
+                        <li>Die zweite Figur ($ n = 2 $) besteht aus $ 12 $ Plättchen</li>
+                        <li>Die dritte Figur ($ n = 3 $) besteht aus $ 16 $ Plättchen</li>
+                        <li>Die Anzahl der Plättchen nimmt immer um 4 zu</li>
                     </ol>
 
                     <p><strong>Expliziter Term:</strong></p>
-                    $$ a_n = n^2 $$
+                    $$ a_n = 4n + 4 $$
 
                     <p><strong>Überprüfung:</strong></p>
                     <ul>
-                        <li>Für $ n = 1 $: $ 1^2 = 1 $ ✓</li>
-                        <li>Für $ n = 2 $: $ 2^2 = 4 $ ✓</li>
-                        <li>Für $ n = 5 $: $ 5^2 = 25 $ ✓</li>
-                        <li>Für $ n = 10 $: $ 10^2 = 100 $ ✓</li>
-                    </ul>
+                        <li>Für $ n = 1 $: $ 8 $ ✓</li>
+                        <li>Für $ n = 2 $: $ 12 $ ✓</li>
+                        <li>Für $ n = 5 $: $ 24 $ ✓</li>
+                        <li>Für $ n = 10 $: $ 44 $ ✓</li>
+                    </ul>       
                 </div>
             </div>
         </div>

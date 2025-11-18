@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 4.10 – Terme für Plättchenfiguren vergleichen</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l4-9.html">&laquo; Aufgabe 4.9</a>
+        <h1>Aufgabe 4.10 – Terme für Plättchenfiguren vergleichen</h1>
+        <a href="l4-11.html">Aufgabe 4.11 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        <p>Annika beschreibt die n-te Figur aus Aufgabe 4.9 mit dem Term $ a_n = (n+2)^2 - n^2 $. Boris hingegen beschreibt die n-te Figur mit dem Term $ a_n = 2(n+2) + 2n $.</p>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>a)</strong> Überprüfen Sie die beiden Terme auf ihre Richtigkeit, indem Sie jeweils Werte für $ n $ einsetzen und mit der Tabelle aus Aufgabe 4.9 vergleichen.
+                <br>
+                <div class="solution is-hidden" id="sol-a">
+                    <p>Wir setzen verschiedene Werte für $ n $ ein und vergleichen mit der Tabelle:</p>
+                    <table>
+                        <tr>
+                            <th>n</th>
+                            <th>Annikas Term $ (n+2)^2 - n^2 $</th>
+                            <th>Boriss Term $ 2(n+2) + 2n $</th>
+                            <th>Tatsächliche Anzahl (Tabelle)</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>$ (1+2)^2 - 1^2 = 9 - 1 = 8 $</td>
+                            <td>$ 2(1+2) + 2\cdot1 = 6 + 2 = 8 $</td>
+                            <td>8</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>$ (2+2)^2 - 2^2 = 16 - 4 = 12 $</td>
+                            <td>$ 2(2+2) + 2\cdot2 = 8 + 4 = 12 $</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>$ (3+2)^2 - 3^2 = 25 - 9 = 16 $</td>
+                            <td>$ 2(3+2) + 2\cdot3 = 10 + 6 = 16 $</td>
+                            <td>16</td>
+                        </tr>
+                    </table>
+                    <p>Beide Terme liefern die korrekten Werte aus der Tabelle.</p>
+                </div>
+                <button class="toggle" onclick="toggleSolution('sol-a')">Lösung einblenden</button>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>b)</strong> Erklären Sie, was sich die beiden wohl überlegt haben.
+                <br>
+                <div class="solution is-hidden" id="sol-b">
+                    <p><strong>Annikas Überlegung:</strong></p>
+                    <p>Annika betrachtet die Figur als grossen Quadrat mit Seitenlänge $ n+2 $, von dem ein kleineres Quadrat mit Seitenlänge $ n $ subtrahiert wird. Dies entspricht der geometrischen Darstellung der Figur.</p>
+
+                    <p><strong>Boriss Überlegung:</strong></p>
+                    <p>Boris zählt die Plättchen in den einzelnen Reihen:</p>
+                    <ul>
+                        <li>Die obere und untere Reihe haben jeweils $ n+2 $ Plättchen (2 mal)</li>
+                        <li>Die linke und rechte Seite haben jeweils $ n $ Plättchen (2 mal)</li>
+                    </ul>
+                    <p>Er addiert diese Anzahlen: $ 2(n+2) + 2n $.</p>
+                </div>
+                <button class="toggle" onclick="toggleSolution('sol-b')">Lösung einblenden</button>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>c)</strong> Zeigen Sie, dass die beiden Terme gleichwertig sind!
+                <br>
+                <div class="solution is-hidden" id="sol-c">
+                    <p>Wir vereinfachen beide Terme:</p>
+
+                    <p><strong>Annikas Term:</strong></p>
+                    $$
+                    \begin{align*}
+                    a_n &= (n+2)^2 - n^2 \\
+                    &= (n^2 + 4n + 4) - n^2 \\
+                    &= 4n + 4 \\
+                    &= 4(n + 1)
+                    \end{align*}
+                    $$
+
+                    <p><strong>Boriss Term:</strong></p>
+                    $$
+                    \begin{align*}
+                    a_n &= 2(n+2) + 2n \\
+                    &= 2n + 4 + 2n \\
+                    &= 4n + 4 \\
+                    &= 4(n + 1)
+                    \end{align*}
+                    $$
+
+                    <p>Beide Terme vereinfachen sich zu $ 4(n + 1) $ und sind somit gleichwertig.</p>
+                </div>
+                <button class="toggle" onclick="toggleSolution('sol-c')">Lösung einblenden</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
