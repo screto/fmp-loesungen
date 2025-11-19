@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 4.15 - Würfel-Folge mit Rekursionsformel</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l4-14.html">&laquo; Aufgabe 4.14</a>
+        <h1>Aufgabe 4.15 - Würfel-Folge mit Rekursionsformel</h1>
+        <a href="l4-16.html">Aufgabe 4.16 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        <p>Zu einer Würfel-Folge wurde der Term $ a_{n+1} = a_n + 3 $ gefunden und man weiss, dass $ a_1 = 4 $ ist. Skizzieren Sie die ersten 3 möglichen Figuren, die dazu passen.</p>
+    </div>
+
+    <button class="toggle" onclick="toggleSolution('sol-a')">Lösung anzeigen</button>
+    <div class="solution is-hidden" id="sol-a">
+        <p><strong>Lösung:</strong></p>
+            <p><strong>1. Gebäude ($ a_1 = 4 $ Würfel):</strong></p>
+            <p>Mögliche Anordnung: </p>
+            <pre>
+    □ □ □ □ 
+            </pre>
+
+            <p><strong>2. Gebäude ($ a_2 = 7 $ Würfel):</strong></p>
+            <p>Erweiterung der ersten Anordnung:</p>
+            <pre>
+    □ □ □
+    □ □ □ □ 
+            </pre>
+
+            <p><strong>3. Gebäude ($ a_3 = 10 $ Würfel):</strong></p>
+            <p>Weiterer Ausbau:</p>
+            <pre>
+    □ □ □
+    □ □ □
+    □ □ □ □ 
+            </pre>
+
+        
+    </div>
+</body>
+</html>

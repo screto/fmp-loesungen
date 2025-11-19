@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 4.17 - Würfel-Folge mit ungeraden Zahlen</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l4-16.html">&laquo; Aufgabe 4.16</a>
+        <h1>Aufgabe 4.17 - Würfel-Folge mit ungeraden Zahlen</h1>
+        <a href="l4-18.html">Aufgabe 4.18 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        <p>Erfinden Sie eine Würfel-Folge, die zu folgender Beschreibung passt:</p>
+        <p><em>Der erste Würfelbau besteht aus einem Würfel. Die Anzahl Würfel des zweiten Würfelbaus ist die Summe aus der zweitkleinsten und drittkleinsten ungeraden Zahl. Die Anzahl Würfel, die für den dritten Würfelbau benötigt werden, ist die Summe der nächsten drei ungeraden Zahlen. Der nächste Würfelbau benötigt so viele Würfel wie sich aus der Summe der nächsten vier ungeraden Zahlen ergibt. Etc.</em></p>
+    </div>
+    <button class="toggle" onclick="toggleSolution('sol-a')">Lösung anzeigen</button>
+    <div class="solution is-hidden" id="sol-a">
+        <p><strong>Lösung:</strong></p>
+        $1, 3+5=8, 7+9+11=27, 13+15+17+19=64, ...$
+        <p>Die ersten drei Gebäude könnten so aussehen:</p>
+          <div style="text-align: center; margin: 1rem 0;">
+                        <img src="../pics/wuerfel-4-17.png" alt="Würfel-Gebäude" style="max-width: 50%;">
+    </div>
+</body>
+</html>
