@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 4.11 – Plättchen-Folge zu Term konstruieren</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+    <style>
+        .plattchen-diagramm {
+            display: inline-block;
+            margin: 0.5rem;
+            background-color: #e3f2fd;
+            padding: 0.5rem;
+            border-radius: 4px;
+            font-family: monospace;
+            line-height: 1.2;
+        }
+        .plattchen-zeile {
+            display: block;
+            text-align: center;
+        }
+    </style>
+</body>
+</html>
+<body>
+    <div class="header-nav">
+        <a href="l4-10.html">&laquo; Aufgabe 4.10</a>
+        <h1>Aufgabe 4.11 – Plättchen-Folge zu Term konstruieren</h1>
+        <a href="l4-12.html"> Aufgabe 4.12 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        <p>Franziska hat für eine Plättchen-Folge den Term $ P_n = 2n + 8 $ gefunden.</p>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>a)</strong> Zeichnen Sie einige Figuren einer dazu passenden Plättchen-Folge.
+            <br>
+                <div class="solution is-hidden" id="sol-a">
+                    <p>Mögliche Plättchen-Folge für $ P_n = 2n + 8 $:</p>
+
+                    <div style="text-align: center; margin: 1rem 0;">
+                        <div class="plattchen-diagramm" style="width: 160px;">
+                            <div style="font-size: 0.8rem; margin-bottom: 0.3rem;">n = 1 (10 Plättchen)</div>
+                            <div class="plattchen-zeile">■ ■ ■ ■ ■</div>
+                            <div class="plattchen-zeile">■ ■ ■ ■ ■</div>
+                        </div>
+
+                        <div class="plattchen-diagramm" style="width: 160px;">
+                            <div style="font-size: 0.8rem; margin-bottom: 0.3rem;">n = 2 (12 Plättchen)</div>
+                            <div class="plattchen-zeile">■ ■ ■ ■ ■ ■</div>
+                            <div class="plattchen-zeile">■ ■ ■ ■ ■ ■</div>
+                        </div>
+
+                        <div class="plattchen-diagramm" style="width: 160px;">
+                            <div style="font-size: 0.8rem; margin-bottom: 0.3rem;">n = 3 (14 Plättchen)</div>
+                            <div class="plattchen-zeile">■ ■ ■ ■ ■ ■ ■</div>
+                            <div class="plattchen-zeile">■ ■ ■ ■ ■ ■ ■</div>
+                        </div>
+                    </div>
+
+                    <p>Wertetabelle für die ersten 5 Figuren:</p>
+                    <table>
+                        <tr>
+                            <th>n</th>
+                            <th>Term $ P_n = 2n + 8 $</th>
+                            <th>Anzahl Plättchen</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>$ 2(1) + 8 = 10 $</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>$ 2(2) + 8 = 12 $</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>$ 2(3) + 8 = 14 $</td>
+                            <td>14</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>$ 2(4) + 8 = 16 $</td>
+                            <td>16</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>$ 2(5) + 8 = 18 $</td>
+                            <td>18</td>
+                        </tr>
+                    </table>
+                </div>
+                <button class="toggle" onclick="toggleSolution('sol-a')">Lösung einblenden</button>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>b)</strong>
+                Beschreiben Sie Ihre Überlegungen zu a).
+                <br>
+                <div class="solution is-hidden" id="sol-b">
+                    <p><strong>Konstruktionsprinzip:</strong></p>
+                    <p>Der Term $ P_n = 2n + 8 $ lässt sich wie folgt geometrisch interpretieren:</p>
+
+                    <ol>
+                        <li><strong>Konstante Basis:</strong> Die 8 im Term repräsentiert eine feste Basis von 8 Plättchen, die in jeder Figur vorhanden sind. In unserem Beispiel sind dies die 2 Reihen mit je 4 Plättchen (insgesamt 8).</li>
+
+                        <li><strong>Variable Erweiterung:</strong> Der Teil $ 2n $ zeigt, dass pro Schritt n zwei zusätzliche Plättchen hinzukommen. In unserem Beispiel wird pro Schritt an jede der beiden Reihen ein zusätzliches Plättchen angefügt.</li>
+                    </ol>
+
+                    <p><strong>Alternative Interpretation:</strong></p>
+                    <p>Man könnte den Term auch als zwei separate Reihen interpretieren:</p>
+                    <ul>
+                        <li>Eine konstante Reihe mit 4 Plättchen</li>
+                        <li>Eine variable Reihe mit $ n + 4 $ Plättchen</li>
+                    </ul>
+                    <p>Dann wäre die Gesamtanzahl: $ 4 + (n + 4) = n + 8 $, was aber nicht zum gegebenen Term passt. Unsere erste Interpretation ist daher passender.</p>
+
+                    <p><strong>Allgemeine Regel:</strong></p>
+                    <p>Bei der Konstruktion von Plättchenfiguren zu einem gegebenen Term sollte man:</p>
+                    <ol>
+                        <li>Den konstanten Teil des Terms geometrisch darstellen</li>
+                        <li>Den variablen Teil durch regelmässige Erweiterungen umsetzen</li>
+                        <li>Sicherstellen, dass die Gesamtanzahl Plättchen mit dem Term übereinstimmt</li>
+                    </ol>
+                </div>
+                <button class="toggle" onclick="toggleSolution('sol-b')">Lösung einblenden</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

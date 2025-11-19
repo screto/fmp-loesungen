@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <!-- Standard-Head wie in vorherigen Aufgaben -->
+    <title>Aufgabe 4.13 – Würfelgebäudefolgen Lösung</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+    <style>
+        .wuerfel-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        .wuerfel-table th, .wuerfel-table td {
+            border: 1px solid #ddd;
+            padding: 0.7rem;
+            text-align: center;
+        }
+        .wuerfel-table th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        .wuerfel-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .building-img {
+            display: flex;
+            justify-content: center;
+            margin: 0.5rem 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l4-12.html">&laquo; Aufgabe 4.12</a>
+        <h1>Aufgabe 4.13 – Würfelgebäudefolgen Lösung</h1>
+        <a href="l4-14.html"> Aufgabe 4.14 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        <p>Dargestellt sind jeweils die ersten drei Würfel-Gebäude einer Folge. Geben Sie jeweils an, aus wie vielen Würfel das 10. Würfel-Gebäude besteht. Aus wie vielen Würfeln besteht das 100.? Finden Sie eine explizite Bildungsvorschrift.</p>
+        <div style="text-align: center; margin: 1rem 0;">
+            <img src="../pics/wuerfel.png" alt="Streichholz-Kette Muster" style="max-width: 60%;">
+        </div>
+        
+        <button onclick="toggleSolution('sol-table')" class="toggle">Lösung anzeigen</button>
+        <div id="sol-table" class="solution is-hidden">
+            <table class="wuerfel-table">
+                <thead>
+                    <tr>
+                        <th>Folge</th>
+                        <th>Explizite Formel</th>
+                        <th>10. Gebäude</th>
+                        <th>100. Gebäude</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- a) Einzelne Würfel in Reihe -->
+                    <tr>
+                        <td>a)</td>
+
+                        <td>$$W_n = n$$</td>
+                        <td>10</td>
+                        <td>100</td>
+                    </tr>
+
+                    <!-- b) Doppelte Würfelreihe -->
+                    <tr>
+                        <td>b)</td>
+
+                        <td>$$W_n = n$$</td>
+                        <td>10</td>
+                        <td>100</td>
+                    </tr>
+
+                    <!-- c) Quadratische Gebäude -->
+                    <tr>
+                        <td>c)</td>
+
+                        <td>$$W_n = 2n$$</td>
+                        <td>20 </td>
+                        <td>200</td>
+                    </tr>
+
+                    <!-- d) Treppenförmige Gebäude -->
+                    <tr>
+                        <td>d)</td>
+
+                        <td>$$W_n = n^2$$</td>
+                        <td>100</td>
+                        <td>10'000</td>
+                    </tr>
+
+                    <!-- e) Pyramidenförmige Gebäude -->
+                    <tr>
+                        <td>e)</td>
+
+                        <td>$$W_n = n^2$$</td>
+                        <td>100</td>
+                        <td>10'000</td>
+                    </tr>
+
+                    <!-- f) L-förmige Gebäude -->
+                    <tr>
+                        <td>f)</td>
+
+                        <td>$$W_n = 4n$$</td>
+                        <td>40</td>
+                        <td>400</td>
+                    </tr>
+
+                    <!-- g) Treppe mit Grundplatte -->
+                    <tr>
+                        <td>g)</td>
+
+                        <td>$$W_n = 0.5n(n+1)$$</td>
+                        <td>55</td>
+                        <td>5'050</td>
+                    </tr>
+
+                    <!-- h) Komplexe L-Form -->
+                    <tr>
+                        <td>h)</td>
+
+                        <td>$$W_n = 2n+2$$</td>
+                        <td>22</td>
+                        <td>202</td>
+                    </tr>
+
+                    <!-- i) 3D-Treppenstruktur -->
+                    <tr>
+                        <td>i)</td>
+
+                        <td>$$W_n = 3n-2$$</td>
+                        <td>28</td>
+                        <td>298</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="solution">
+                <h3>Erläuterungen zu den Formeln:</h3>
+                <ol>
+                    <li><strong>Lineare Folgen (a, b, c, f, h, i):</strong> Direkte proportionale Beziehung zwischen Gebäudenummer und Würfelanzahl</li>
+                    <li><strong>Quadratische Folgen (d, e, g):</strong> Flächenhaftes Wachstum</li>
+                </ol>
+                <p>Die Formeln wurden durch Mustererkennung in den ersten 3 Gebäuden abgeleitet und auf n=10/100 extrapoliert.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

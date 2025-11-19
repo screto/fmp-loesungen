@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 4.12 – Eigene Plättchen-Folge erfinden</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+    <style>
+        .figure-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin: 1.5rem 0;
+            background-color: #f5f5f5;
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+        .figure {
+            text-align: center;
+            min-width: 120px;
+        }
+        .figure-title {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+        .plattchen-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 20px);
+            gap: 2px;
+            justify-content: center;
+            margin: 0 auto;
+            background-color: #e3f2fd;
+            padding: 8px;
+            border-radius: 4px;
+            min-height: 40px;
+        }
+        .plattchen {
+            width: 20px;
+            height: 20px;
+            background-color: #1976d2;
+            border-radius: 2px;
+        }
+        .plattchen.empty {
+            background-color: #bbdefb;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l4-11.html">&laquo; Aufgabe 4.11</a>
+        <h1>Aufgabe 4.12 – Eigene Plättchen-Folge erfinden</h1>
+        <a href="l4-13.html"> Aufgabe 4.13 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        <p>Erfinden Sie eine Plättchen-Folge und finden Sie eine dazu passende explizite Bildungsvorschrift.</p>
+        <br>
+        <button onclick="toggleSolution('sol-table')" class="toggle">Lösung anzeigen</button>
+        <div id="sol-table" class="solution is-hidden">
+            <p> Hier gibt es ganz individuelle Lösungen.</p>
+        </div>
+        
+    </div>
+</body>
+</html>
