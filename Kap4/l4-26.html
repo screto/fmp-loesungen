@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 4.26 - Fibonacci Quotientenfolge</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l4-25.html">&laquo; Aufgabe 4.25</a>
+        <h1>Aufgabe 4.26 - Fibonacci Quotientenfolge</h1>
+        <a href="l4-27.html"> Aufgabe 4.27 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        Bilden Sie eine neue Zahlenfolge \( Q_n \), indem Sie ein Glied der Fibonacci-Folge durch das vorangehende Glied dividieren: 
+        $$ (Q_n)_{n\in\mathbb{N}} = \frac{F_{n+1}}{F_n} $$
+        <p>
+            Sie können sich die Glieder der neuen Folge auch mit Hilfe von Excel berechnen und darstellen lassen. Was stellen Sie fest? Formulieren Sie Ihre Beobachtungen aus.
+        </p>
+        <button class="toggle" onclick="toggleSolution('sol-4-26')">Lösung anzeigen</button>
+        <div id="sol-4-26" class="solution is-hidden">
+            <p><strong>Berechnung der ersten Glieder:</strong></p>
+            <ul>
+                <li>\( n=1: F_2 / F_1 = 1 / 1 = \mathbf{1} \)</li>
+                <li>\( n=2: F_3 / F_2 = 2 / 1 = \mathbf{2} \)</li>
+                <li>\( n=3: F_4 / F_3 = 3 / 2 = \mathbf{1.5} \)</li>
+                <li>\( n=4: F_5 / F_4 = 5 / 3 \approx \mathbf{1.667} \)</li>
+                <li>\( n=5: F_6 / F_5 = 8 / 5 = \mathbf{1.6} \)</li>
+                <li>\( n=6: F_7 / F_6 = 13 / 8 = \mathbf{1.625} \)</li>
+                <li>\( n=7: F_8 / F_7 = 21 / 13 \approx \mathbf{1.615} \)</li>
+            </ul>
+            <p><strong>Beobachtung:</strong></p>
+            <p>
+                Die Werte pendeln (alternieren) um einen bestimmten Wert und nähern sich diesem immer weiter an. Dieser Grenzwert ist der <strong>Goldene Schnitt</strong> \( \varphi \):
+            </p>
+            <p>
+                $$ \lim_{n \to \infty} \frac{F_{n+1}}{F_n} = \frac{1+\sqrt{5}}{2} \approx 1.61803... $$
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>

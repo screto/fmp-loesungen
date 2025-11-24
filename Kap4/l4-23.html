@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 4.23</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l4-22.html">&laquo; Aufgabe 4.22</a>
+        <h1>Aufgabe 4.23</h1>
+        <a href="l4-24.html"> Aufgabe 4.24 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        Berechnen Sie die ersten 5 Glieder der Zahlenfolgen und formulieren Sie jeweils einen expliziten Term.
+        <br><br>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>a)</strong> \( a_{n+1} = a_n + \frac{1}{n(n+1)}; \quad a_1 = 2 \)
+                <br>
+                <button class="toggle" onclick="toggleSolution('sol-a')">Lösung anzeigen</button>
+                <div id="sol-a" class="solution is-hidden">
+                    <p><strong>Die ersten 5 Glieder:</strong></p>
+                    <ul>
+                        <li>\( a_1 = 2 \)</li>
+                        <li>\( a_2 = 2 + \frac{1}{1 \cdot 2} = 2 + 0.5 = 2.5 \quad (\text{oder } \frac{5}{2}) \)</li>
+                        <li>\( a_3 = 2.5 + \frac{1}{2 \cdot 3} = \frac{5}{2} + \frac{1}{6} = \frac{15}{6} + \frac{1}{6} = \frac{16}{6} = \frac{8}{3} \quad (\approx 2.67) \)</li>
+                        <li>\( a_4 = \frac{8}{3} + \frac{1}{3 \cdot 4} = \frac{32}{12} + \frac{1}{12} = \frac{33}{12} = \frac{11}{4} = 2.75 \)</li>
+                        <li>\( a_5 = 2.75 + \frac{1}{4 \cdot 5} = \frac{55}{20} + \frac{1}{20} = \frac{56}{20} = \frac{14}{5} = 2.8 \)</li>
+                    </ul>
+                    <p><strong>Expliziter Term:</strong></p>
+                    <p>
+                        Die Folge lautet: \( \frac{2}{1}, \frac{5}{2}, \frac{8}{3}, \frac{11}{4}, \frac{14}{5} \dots \)
+                        <br>
+                        Zähler (arithmetisch, Differenz 3): \( 3n - 1 \)
+                        <br>
+                        Nenner: \( n \)
+                        <br><br>
+                        \( a_n = \frac{3n - 1}{n} \) &nbsp; oder &nbsp; \( a_n = 3 - \frac{1}{n} \)
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>b)</strong> \( a_{n+1} = a_n \cdot \frac{n+1}{n}; \quad a_1 = 1 \)
+                <br>
+                <button class="toggle" onclick="toggleSolution('sol-b')">Lösung anzeigen</button>
+                <div id="sol-b" class="solution is-hidden">
+                    <p><strong>Die ersten 5 Glieder:</strong></p>
+                    <ul>
+                        <li>\( a_1 = 1 \)</li>
+                        <li>\( a_2 = 1 \cdot \frac{2}{1} = 2 \)</li>
+                        <li>\( a_3 = 2 \cdot \frac{3}{2} = 3 \)</li>
+                        <li>\( a_4 = 3 \cdot \frac{4}{3} = 4 \)</li>
+                        <li>\( a_5 = 4 \cdot \frac{5}{4} = 5 \)</li>
+                    </ul>
+                    <p><strong>Expliziter Term:</strong></p>
+                    <p>
+                        \( a_n = n \)
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

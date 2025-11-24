@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 4.32 - Arithmetische Mittel</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l4-31.html">&laquo; Aufgabe 4.31</a>
+        <h1>Aufgabe 4.32</h1>
+        <a href="l4-33.html"> Aufgabe 4.33 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        Gegeben ist die arithmetische Folge 4, 10, 16, 22, 28, 34, 40, ...
+        <br><br>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>a)</strong> Bilden Sie das arithmetische Mittel des 1. und 3. Glieds.
+                <br>
+                <button class="toggle" onclick="toggleSolution('sol-a')">Lösung anzeigen</button>
+                <div id="sol-a" class="solution is-hidden">
+                    \( \frac{4 + 16}{2} = \frac{20}{2} = 10 \)
+                    <br>Das Ergebnis entspricht dem 2. Glied.
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>b)</strong> Bilden Sie das arithmetische Mittel des 2. und 4. Glieds.
+                <br>
+                <button class="toggle" onclick="toggleSolution('sol-b')">Lösung anzeigen</button>
+                <div id="sol-b" class="solution is-hidden">
+                    \( \frac{10 + 22}{2} = \frac{32}{2} = 16 \)
+                    <br>Das Ergebnis entspricht dem 3. Glied.
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>c)</strong> Bilden Sie das arithmetische Mittel des 12. und 14. Glieds.
+                <br>
+                <button class="toggle" onclick="toggleSolution('sol-c')">Lösung anzeigen</button>
+                <div id="sol-c" class="solution is-hidden">
+                    <p>Expliziter Term: \( a_n = 6n - 2 \)</p>
+                    <p>\( a_{12} = 70 \), \( a_{14} = 82 \)</p>
+                    <p>\( \frac{70 + 82}{2} = \frac{152}{2} = 76 \)</p>
+                    <p>Das Ergebnis entspricht dem 13. Glied (\( a_{13} = 76 \)).</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>d)</strong> Welche Gesetzmässigkeit erkennen Sie?
+                <br>
+                <button class="toggle" onclick="toggleSolution('sol-d')">Lösung anzeigen</button>
+                <div id="sol-d" class="solution is-hidden">
+                    <p>Jedes Glied ist das arithmetische Mittel seiner beiden Nachbarn.</p>
+                    <p>$$ a_n = \frac{a_{n-1} + a_{n+1}}{2} $$</p>
+                    <p>Daher stammt auch der Name "Arithmetische Folge".</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

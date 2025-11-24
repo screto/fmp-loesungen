@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 4.41 - Zahlenrätsel 5 Felder</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l4-40.html">&laquo; Aufgabe 4.40</a>
+        <h1>Aufgabe 4.41</h1>
+        <a href="l4-42.html"> Aufgabe 4.42 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        <strong>Auftrag:</strong>
+        <p>
+            Diese Aufgabe kann im 3./4. Schuljahr gestellt werden:
+        </p>
+        <p style="font-style: italic; border-left: 3px solid #ccc; padding-left: 1rem;">
+            Wählt eine Startzahl, die ihr in das erste Feld schreibt. Dann wählt eine Additionszahl und schreibt sie in den «Additions-Kreis». Die Additionszahl wird zu Startzahl addiert und das Ergebnis ins Feld rechts daneben geschrieben. Dazu wird wieder die Additionszahl addiert usw. Wenn alle fünf Felder ausgefüllt sind, werden alle Zahlen addiert und das Ergebnis wird im rechten Feld notiert. Könnt ihr Start- und Additionszahl so wählen, dass ihr 50 trefft?
+        </p>
+        <img src="../pics/additionszahl1.png" alt="5 Felder Schema" style="max-width: 60%; height: auto; margin: 1rem 0;">
+
+        <div class="task-row">
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-41')">Lösung anzeigen</button>
+                <div id="sol-41" class="solution is-hidden">
+                    <p><strong>Mathematischer Ansatz:</strong></p>
+                    <p>Sei \( x \) die Startzahl und \( d \) die Additionszahl.</p>
+                    <p>Die 5 Felder enthalten: \( x, (x+d), (x+2d), (x+3d), (x+4d) \).</p>
+                    <p>Die Summe ist:</p>
+                    $$ S = 5x + 10d = 50 $$
+                    <p>Teilen wir die Gleichung durch 5:</p>
+                    $$ x + 2d = 10 $$
+                    
+                    <p><strong>Mögliche Lösungen (für natürliche Zahlen):</strong></p>
+                    <ul>
+                        <li>\( d=0 \Rightarrow x=10 \) (Folge: 10, 10, 10, 10, 10)</li>
+                        <li>\( d=1 \Rightarrow x=8 \) (Folge: 8, 9, 10, 11, 12)</li>
+                        <li>\( d=2 \Rightarrow x=6 \) (Folge: 6, 8, 10, 12, 14)</li>
+                        <li>\( d=3 \Rightarrow x=4 \) (Folge: 4, 7, 10, 13, 16)</li>
+                        <li>\( d=4 \Rightarrow x=2 \) (Folge: 2, 6, 10, 14, 18)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

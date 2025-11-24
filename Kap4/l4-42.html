@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 4.42 - Zahlenrätsel 6 Felder</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l4-41.html">&laquo; Aufgabe 4.41</a>
+        <h1>Aufgabe 4.42</h1>
+        <a href="l4-43.html"> Aufgabe 4.43 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        <strong>Auftrag:</strong> 
+        Versucht dieselbe Aufgabe mit 6 Kästchen zu lösen. Die Zielzahl soll jetzt 60 sein.
+        <br>
+        <img src="../pics/additionszahl2.png" alt="6 Felder Schema" style="max-width: 70%; height: auto; margin: 1rem 0;">
+        
+        <div class="task-row">
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-42')">Lösung anzeigen</button>
+                <div id="sol-42" class="solution is-hidden">
+                    <p><strong>Mathematischer Ansatz:</strong></p>
+                    <p>Sei \( x \) die Startzahl und \( d \) die Additionszahl. Wir haben nun 6 Felder.</p>
+                    <p>Summenformel einer arithmetischen Reihe \( S_n = \frac{n}{2}(2a_1 + (n-1)d) \) mit \( n=6 \):</p>
+                    $$ S_6 = 3 \cdot (2x + 5d) = 6x + 15d = 60 $$
+                    <p>Teilen wir die Gleichung durch 3:</p>
+                    $$ 2x + 5d = 20 $$
+                    
+                    <p><strong>Mögliche Lösungen (für natürliche Zahlen):</strong></p>
+                    <ul>
+                        <li>
+                            Versuch \( d=2 \): \( 5 \cdot 2 = 10 \).<br>
+                            \( 2x + 10 = 20 \Rightarrow 2x = 10 \Rightarrow \mathbf{x=5} \)<br>
+                            Folge: 5, 7, 9, 11, 13, 15 (Summe = 60).
+                        </li>
+                        <li>
+                            Versuch \( d=4 \): \( 5 \cdot 4 = 20 \).<br>
+                            \( 2x + 20 = 20 \Rightarrow 2x = 0 \Rightarrow \mathbf{x=0} \)<br>
+                            Folge: 0, 4, 8, 12, 16, 20 (Summe = 60).
+                        </li>
+                        <li>
+                            Versuch \( d=0 \):<br>
+                            \( 2x = 20 \Rightarrow \mathbf{x=10} \)<br>
+                            Folge: 10, 10, 10, 10, 10, 10.
+                        </li>
+                    </ul>
+                    <p>Andere ganzzahlige Werte für \( d \) liefern keine ganzzahligen \( x \).</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

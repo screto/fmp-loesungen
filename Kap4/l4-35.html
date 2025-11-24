@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 4.35</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l4-34.html">&laquo; Aufgabe 4.34</a>
+        <h1>Aufgabe 4.35</h1>
+        <a href="l4-36.html"> Aufgabe 4.36 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        Gegeben ist die Folge 10, 17, 24, 31, ...
+        <br>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>a)</strong> Wie lautet das 11. Glied dieser Folge?
+                <br>
+                <button class="toggle" onclick="toggleSolution('sol-a')">Lösung anzeigen</button>
+                <div id="sol-a" class="solution is-hidden">
+                    \( a_{11} = 10+ (11-1) \cdot 7 = 10 + 70 = 80 \)
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>b)</strong> Ist die Zahl 514 ein Glied dieser Folge? Wenn ja, das wievielte?
+                <br>
+                <button class="toggle" onclick="toggleSolution('sol-b')">Lösung anzeigen</button>
+                <div id="sol-b" class="solution is-hidden">
+                    <p>Wir setzen \( a_n = 514 \) und lösen nach \( n \) auf:</p>
+                    $$ 514 = 10+ (n-1) \cdot 7 $$
+                    $$ 514 = 10 + 7n - 7 $$
+                    $$ 514 = 3 + 7n $$  
+                    $$ 511 = 7n $$
+                    $$ n = \frac{511}{7} = 73 $$
+                    <p>Ja, 514 ist das <strong>73. Glied</strong> der Folge.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

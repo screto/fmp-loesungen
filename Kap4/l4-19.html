@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 4.19 - Sichtbare und unsichtbare Würfelseiten</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l4-18.html">&laquo; Aufgabe 4.18</a>
+        <h1>Aufgabe 4.19 - Sichtbare und unsichtbare Würfelseiten</h1>
+        <a href="l4-20.html">Aufgabe 4.20 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        <p>Analysieren Sie die verschiedenen Würfel-Folgen aus Aufgabe 13 und tragen Sie die Anzahl sichtbarer und unsichtbarer Würfelseiten in die Tabellen ein.</p>
+    </div>
+
+    <div class="task-row">
+        <div class="task-left">
+            <strong>b)</strong>
+            Lineare Folge ($n$ Würfel in einer Reihe)
+            <br>
+            <button class="toggle" onclick="toggleSolution('sol-b')">Lösung anzeigen</button>
+            <div class="solution is-hidden" id="sol-b">
+                <table>
+                    <tr>
+                        <th>Figur</th>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>3</th>
+                        <th>4</th>
+                        <th>5</th>
+                        <th>6</th>
+                        <th>7</th>
+                        <th>8</th>
+                        <th>n</th>
+                    </tr>
+                    <tr>
+                        <td>Anzahl Würfel</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>n</td>
+                    </tr>
+                    <tr>
+                        <td>Anzahl Würfelseiten</td>
+                        <td>6</td>
+                        <td>12</td>
+                        <td>18</td>
+                        <td>24</td>
+                        <td>30</td>
+                        <td>36</td>
+                        <td>42</td>
+                        <td>48</td>
+                        <td>6n</td>
+                    </tr>
+                    <tr>
+                        <td>Anzahl sichtbare Würfelseiten</td>
+                        <td>5</td>
+                        <td>8</td>
+                        <td>11</td>
+                        <td>14</td>
+                        <td>17</td>
+                        <td>20</td>
+                        <td>23</td>
+                        <td>26</td>
+                        <td>3n + 2</td>
+                    </tr>
+                    <tr>
+                        <td>Anzahl unsichtbare Würfelseiten</td>
+                        <td>1</td>
+                        <td>4</td>
+                        <td>7</td>
+                        <td>10</td>
+                        <td>13</td>
+                        <td>16</td>
+                        <td>19</td>
+                        <td>22</td>
+                        <td>3n - 2</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="task-row">
+        <div class="task-left">
+            <strong>c)</strong>
+            Doppelte lineare Folge ($2n$ Würfel)
+            <br>
+            <button class="toggle" onclick="toggleSolution('sol-c')">Lösung anzeigen</button>
+            <div class="solution is-hidden" id="sol-c">
+                <table>
+                    <tr>
+                        <th>Figur</th>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>3</th>
+                        <th>4</th>
+                        <th>5</th>
+                        <th>6</th>
+                        <th>7</th>
+                        <th>8</th>
+                        <th>n</th>
+                    </tr>
+                    <tr>
+                        <td>Anzahl Würfel</td>
+                        <td>2</td>
+                        <td>4</td>
+                        <td>6</td>
+                        <td>8</td>
+                        <td>10</td>
+                        <td>12</td>
+                        <td>14</td>
+                        <td>16</td>
+                        <td>2n</td>
+                    </tr>
+                    <tr>
+                        <td>Anzahl Würfelseiten</td>
+                        <td>12</td>
+                        <td>24</td>
+                        <td>36</td>
+                        <td>48</td>
+                        <td>60</td>
+                        <td>72</td>
+                        <td>84</td>
+                        <td>96</td>
+                        <td>12n</td>
+                    </tr>
+                    <tr>
+                        <td>Anzahl sichtbare Würfelseiten</td>
+                        <td>9</td>
+                        <td>14</td>
+                        <td>19</td>
+                        <td>24</td>
+                        <td>29</td>
+                        <td>34</td>
+                        <td>39</td>
+                        <td>44</td>
+                        <td>5n + 4</td>
+                    </tr>
+                    <tr>
+                        <td>Anzahl unsichtbare Würfelseiten</td>
+                        <td>3</td>
+                        <td>10</td>
+                        <td>17</td>
+                        <td>24</td>
+                        <td>31</td>
+                        <td>38</td>
+                        <td>45</td>
+                        <td>52</td>
+                        <td>7n - 4</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="task-row">
+        <div class="task-left">
+            <strong>d)</strong>
+            Quadratische Folge ($n^2$ Würfel)
+            <br>
+            <button class="toggle" onclick="toggleSolution('sol-d')">Lösung anzeigen</button>
+            <div class="solution is-hidden" id="sol-d">
+                <table>
+                    <tr>
+                        <th>Figur</th>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>3</th>
+                        <th>4</th>
+                        <th>5</th>
+                        <th>6</th>
+                        <th>7</th>
+                        <th>8</th>
+                        <th>n</th>
+                    </tr>
+                    <tr>
+                        <td>Anzahl Würfel</td>
+                        <td>1</td>
+                        <td>4</td>
+                        <td>9</td>
+                        <td>16</td>
+                        <td>25</td>
+                        <td>36</td>
+                        <td>49</td>
+                        <td>64</td>
+                        <td>n²</td>
+                    </tr>
+                    <tr>
+                        <td>Anzahl Würfelseiten</td>
+                        <td>6</td>
+                        <td>24</td>
+                        <td>54</td>
+                        <td>96</td>
+                        <td>150</td>
+                        <td>216</td>
+                        <td>294</td>
+                        <td>384</td>
+                        <td>6n²</td>
+                    </tr>
+                    <tr>
+                        <td>Anzahl sichtbare Würfelseiten</td>
+                        <td>5</td>
+                        <td>12</td>
+                        <td>21</td>
+                        <td>32</td>
+                        <td>45</td>
+                        <td>60</td>
+                        <td>77</td>
+                        <td>96</td>
+                        <td>n² + 4n</td>
+                    </tr>
+                    <tr>
+                        <td>Anzahl unsichtbare Würfelseiten</td>
+                        <td>1</td>
+                        <td>12</td>
+                        <td>33</td>
+                        <td>64</td>
+                        <td>105</td>
+                        <td>156</td>
+                        <td>217</td>
+                        <td>288</td>
+                        <td>5n² - 4n</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="task-row">
+        <div class="task-left">
+            <strong>e)</strong>
+            Quadratische Ebene ($n^2$ Würfel in einer Ebene)
+            <br>
+            <button class="toggle" onclick="toggleSolution('sol-e')">Lösung anzeigen</button>
+            <div class="solution is-hidden" id="sol-e">
+                <table>
+                    <tr>
+                        <th>Figur</th>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>3</th>
+                        <th>4</th>
+                        <th>5</th>
+                        <th>6</th>
+                        <th>7</th>
+                        <th>8</th>
+                        <th>n</th>
+                    </tr>
+                    <tr>
+                        <td>Anzahl Würfel</td>
+                        <td>1</td>
+                        <td>4</td>
+                        <td>9</td>
+                        <td>16</td>
+                        <td>25</td>
+                        <td>36</td>
+                        <td>49</td>
+                        <td>64</td>
+                        <td>n²</td>
+                    </tr>
+                    <tr>
+                        <td>Anzahl Würfelseiten</td>
+                        <td>6</td>
+                        <td>24</td>
+                        <td>54</td>
+                        <td>96</td>
+                        <td>150</td>
+                        <td>216</td>
+                        <td>294</td>
+                        <td>384</td>
+                        <td>6n²</td>
+                    </tr>
+                    <tr>
+                        <td>Anzahl sichtbare Würfelseiten</td>
+                        <td>5</td>
+                        <td>15</td>
+                        <td>29</td>
+                        <td>47</td>
+                        <td>69</td>
+                        <td>95</td>
+                        <td>125</td>
+                        <td>159</td>
+                        <td>2n² + 4n - 1</td>
+                    </tr>
+                    <tr>
+                        <td>Anzahl unsichtbare Würfelseiten</td>
+                        <td>1</td>
+                        <td>9</td>
+                        <td>25</td>
+                        <td>49</td>
+                        <td>81</td>
+                        <td>121</td>
+                        <td>169</td>
+                        <td>225</td>
+                        <td>(2n - 1)²</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="task-row">
+        <div class="task-left">
+            <strong>f)</strong>
+            Vierer-Reihen ($4n$ Würfel)
+            <br>
+            <button class="toggle" onclick="toggleSolution('sol-f')">Lösung anzeigen</button>
+            <div class="solution is-hidden" id="sol-f">
+                <table>
+                    <tr>
+                        <th>Figur</th>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>3</th>
+                        <th>4</th>
+                        <th>5</th>
+                        <th>6</th>
+                        <th>7</th>
+                        <th>8</th>
+                        <th>n</th>
+                    </tr>
+                    <tr>
+                        <td>Anzahl Würfel</td>
+                        <td>4</td>
+                        <td>8</td>
+                        <td>12</td>
+                        <td>16</td>
+                        <td>20</td>
+                        <td>24</td>
+                        <td>28</td>
+                        <td>32</td>
+                        <td>4n</td>
+                    </tr>
+                    <tr>
+                        <td>Anzahl Würfelseiten</td>
+                        <td>24</td>
+                        <td>48</td>
+                        <td>72</td>
+                        <td>96</td>
+                        <td>120</td>
+                        <td>144</td>
+                        <td>168</td>
+                        <td>192</td>
+                        <td>24n</td>
+                    </tr>
+                    <tr>
+                        <td>Anzahl sichtbare Würfelseiten</td>
+                        <td>15</td>
+                        <td>28</td>
+                        <td>41</td>
+                        <td>54</td>
+                        <td>67</td>
+                        <td>80</td>
+                        <td>93</td>
+                        <td>106</td>
+                        <td>13n + 2</td>
+                    </tr>
+                    <tr>
+                        <td>Anzahl unsichtbare Würfelseiten</td>
+                        <td>9</td>
+                        <td>20</td>
+                        <td>31</td>
+                        <td>42</td>
+                        <td>53</td>
+                        <td>64</td>
+                        <td>75</td>
+                        <td>86</td>
+                        <td>11n - 2</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="task-row">
+        <div class="task-left">
+            <strong>g)</strong>
+            Dreieckszahlen-Folge ($0.5n(n+1)$ Würfel)
+            <br>
+            <button class="toggle" onclick="toggleSolution('sol-g')">Lösung anzeigen</button>
+            <div class="solution is-hidden" id="sol-g">
+                <table>
+                    <tr>
+                        <th>Figur</th>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>3</th>
+                        <th>4</th>
+                        <th>5</th>
+                        <th>6</th>
+                        <th>7</th>
+                        <th>8</th>
+                        <th>n</th>
+                    </tr>
+                    <tr>
+                        <td>Anzahl Würfel</td>
+                        <td>1</td>
+                        <td>3</td>
+                        <td>6</td>
+                        <td>10</td>
+                        <td>15</td>
+                        <td>21</td>
+                        <td>28</td>
+                        <td>36</td>
+                        <td>0.5n(n+1)</td>
+                    </tr>
+                    <tr>
+                        <td>Anzahl Würfelseiten</td>
+                        <td>6</td>
+                        <td>18</td>
+                        <td>36</td>
+                        <td>60</td>
+                        <td>90</td>
+                        <td>126</td>
+                        <td>168</td>
+                        <td>216</td>
+                        <td>3n(n+1)</td>
+                    </tr>
+                    <tr>
+                        <td>Anzahl sichtbare Würfelseiten</td>
+                        <td>5</td>
+                        <td>12</td>
+                        <td>21</td>
+                        <td>32</td>
+                        <td>45</td>
+                        <td>60</td>
+                        <td>77</td>
+                        <td>96</td>
+                        <td>n(n+4)</td>
+                    </tr>
+                    <tr>
+                        <td>Anzahl unsichtbare Würfelseiten</td>
+                        <td>1</td>
+                        <td>6</td>
+                        <td>15</td>
+                        <td>28</td>
+                        <td>45</td>
+                        <td>66</td>
+                        <td>91</td>
+                        <td>120</td>
+                        <td>n(2n-1)</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="task-row">
+        <div class="task-left">
+            <strong>h)</strong>
+            Doppelte Dreieckszahlen-Folge ($2(n+1)$ Würfel)
+            <br>
+            <button class="toggle" onclick="toggleSolution('sol-h')">Lösung anzeigen</button>
+            <div class="solution is-hidden" id="sol-h">
+                <table>
+                    <tr>
+                        <th>Figur</th>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>3</th>
+                        <th>4</th>
+                        <th>5</th>
+                        <th>6</th>
+                        <th>7</th>
+                        <th>8</th>
+                        <th>n</th>
+                    </tr>
+                    <tr>
+                        <td>Anzahl Würfel</td>
+                        <td>4</td>
+                        <td>6</td>
+                        <td>8</td>
+                        <td>10</td>
+                        <td>12</td>
+                        <td>14</td>
+                        <td>16</td>
+                        <td>18</td>
+                        <td>2(n+1)</td>
+                    </tr>
+                    <tr>
+                        <td>Anzahl Würfelseiten</td>
+                        <td>24</td>
+                        <td>36</td>
+                        <td>48</td>
+                        <td>60</td>
+                        <td>72</td>
+                        <td>84</td>
+                        <td>96</td>
+                        <td>108</td>
+                        <td>12(n+1)</td>
+                    </tr>
+                    <tr>
+                        <td>Anzahl sichtbare Würfelseiten</td>
+                        <td>14</td>
+                        <td>20</td>
+                        <td>26</td>
+                        <td>32</td>
+                        <td>38</td>
+                        <td>44</td>
+                        <td>50</td>
+                        <td>56</td>
+                        <td>6n + 8</td>
+                    </tr>
+                    <tr>
+                        <td>Anzahl unsichtbare Würfelseiten</td>
+                        <td>10</td>
+                        <td>16</td>
+                        <td>22</td>
+                        <td>28</td>
+                        <td>34</td>
+                        <td>40</td>
+                        <td>46</td>
+                        <td>52</td>
+                        <td>6n + 4</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="task-row">
+        <div class="task-left">
+            <strong> i)</strong>
+            Lineare Folge mit Lücken ($3n-2$ Würfel)
+            <br>
+            <button class="toggle" onclick="toggleSolution('sol-i')">Lösung anzeigen</button>
+            <div class="solution is-hidden" id="sol-i">
+                <table>
+                    <tr>
+                        <th>Figur</th>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>3</th>
+                        <th>4</th>
+                        <th>5</th>
+                        <th>6</th>
+                        <th>7</th>
+                        <th>8</th>
+                        <th>n</th>
+                    </tr>
+                    <tr>
+                        <td>Anzahl Würfel</td>
+                        <td>1</td>
+                        <td>4</td>
+                        <td>7</td>
+                        <td>10</td>
+                        <td>13</td>
+                        <td>16</td>
+                        <td>19</td>
+                        <td>22</td>
+                        <td>3n - 2</td>
+                    </tr>
+                    <tr>
+                        <td>Anzahl Würfelseiten</td>
+                        <td>6</td>
+                        <td>24</td>
+                        <td>42</td>
+                        <td>60</td>
+                        <td>78</td>
+                        <td>96</td>
+                        <td>114</td>
+                        <td>132</td>
+                        <td>18n - 12</td>
+                    </tr>
+                    <tr>
+                        <td>Anzahl sichtbare Würfelseiten</td>
+                        <td>5</td>
+                        <td>15</td>
+                        <td>25</td>
+                        <td>35</td>
+                        <td>45</td>
+                        <td>55</td>
+                        <td>65</td>
+                        <td>75</td>
+                        <td>10n - 5</td>
+                    </tr>
+                    <tr>
+                        <td>Anzahl unsichtbare Würfelseiten</td>
+                        <td>1</td>
+                        <td>9</td>
+                        <td>17</td>
+                        <td>25</td>
+                        <td>33</td>
+                        <td>41</td>
+                        <td>49</td>
+                        <td>57</td>
+                        <td>8n - 7</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

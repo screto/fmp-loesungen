@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 4.25 - Binet'sche Formel</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l4-24.html">&laquo; Aufgabe 4.24</a>
+        <h1>Aufgabe 4.25 - Binet'sche Formel</h1>
+        <a href="l4-26.html"> Aufgabe 4.26 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        <strong>Hintergrund:</strong>
+        <p>
+            Es dauerte recht lange, bis eine explizite Zuordnungsvorschrift für die Fibonacci-Folge entdeckt wurde! Obgleich sie schon A. de Moivre (1667 - 1754) und L. Euler (1707 - 1783) bekannt gewesen sein soll, wird sie heute als Binet'sche Formel nach J.P.M. Binet (1786 - 1856) bezeichnet (manchmal heisst sie auch Formel von Moivre-Binet).
+        </p>
+        
+        $$F_n = \frac{1}{\sqrt{5}} \left[ \left( \frac{1+\sqrt{5}}{2} \right)^n - \left( \frac{1-\sqrt{5}}{2} \right)^n \right]$$
+        
+        <div class="task-row">
+            <div class="task-left">
+                <p>Überprüfen Sie die Binet'sche Formel für \( n = 1, 2, 3, 4 \).</p>
+                <button class="toggle" onclick="toggleSolution('sol-4-25')">Lösung anzeigen</button>
+                <div id="sol-4-25" class="solution is-hidden">
+                    <p>Wir setzen die Werte für \( n \) ein (mit \( \sqrt{5} \approx 2.236 \)):</p>
+                    <hr>
+                    <p><strong>Für \( n=1 \):</strong></p>
+                    <p>
+                        \( F_1 = \frac{1}{\sqrt{5}} \left[ 1.618^1 - (-0.618)^1 \right] \)<br>
+                        \( F_1 = \frac{1}{\sqrt{5}} [ 2.236 ] = \mathbf{1} \)
+                    </p>
+                    <hr>
+                    <p><strong>Für \( n=2 \):</strong></p>
+                    <p>
+                        \( F_2 = \frac{1}{\sqrt{5}} \left[ \left(\frac{1+\sqrt{5}}{2}\right)^2 - \left(\frac{1-\sqrt{5}}{2}\right)^2 \right] \)<br>
+                        Das entspricht \( \frac{1}{\sqrt{5}} \cdot \sqrt{5} = \mathbf{1} \)
+                    </p>
+                    <hr>
+                    <p><strong>Für \( n=3 \):</strong></p>
+                    <p>
+                        \( F_3 = \frac{1}{\sqrt{5}} \left[ 1.618^3 - (-0.618)^3 \right] \)<br>
+                        \( F_3 \approx \frac{1}{2.236} [ 4.236 - (-0.236) ] = \frac{4.472}{2.236} = \mathbf{2} \)
+                    </p>
+                    <hr>
+                    <p><strong>Für \( n=4 \):</strong></p>
+                    <p>
+                        \( F_4 \approx \frac{1}{2.236} [ 6.854 - 0.146 ] = \frac{6.708}{2.236} = \mathbf{3} \)
+                    </p>
+                    <p><em>(Die Fibonacci-Folge lautet korrekt: 1, 1, 2, 3, 5, ...)</em></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 4.29 - Reihe vs Folge</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l4-27.html">&laquo; Aufgabe 4.27</a>
+        <h1>Aufgabe 4.29</h1>
+        <a href="l4-30.html"> Aufgabe 4.30 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        <p>
+            Eine der Einführungsaufgaben lautete «Führen Sie die Reihe 10, 17, 24, 31, 38, ... fort.»
+        </p>
+        
+        <p>Erklären Sie nun, warum der Begriff der «Reihe» hier nicht ganz richtig ist. Wenn es eine Reihe wäre, welches wäre die dazugehörige Folge?</p>
+
+        <button class="toggle" onclick="toggleSolution('sol-29')">Lösung anzeigen</button>
+        <div id="sol-29" class="solution is-hidden">
+            <p><strong>Erklärung:</strong></p>
+            <p>
+                Mathematisch gesehen ist eine <strong>Folge</strong> eine geordnete Liste von Zahlen durch Kommas getrennt (\( a_1, a_2, a_3, ... \)).<br>
+                Eine <strong>Reihe</strong> ist die Summe der Glieder einer Folge (\( s_n = a_1 + a_2 + ... + a_n \)).<br>
+                Die gezeigten Zahlen (10, 17, 24...) sind als Liste dargestellt, also handelt es sich eigentlich um eine Folge.
+            </p>
+            
+            <p><strong>Wenn es eine Reihe wäre (Partialsummen \( s_n \)):</strong></p>
+            <p>Gesucht sind die Glieder \( a_n \) der zugrundeliegenden Folge.</p>
+            <ul>
+                <li>\( s_1 = a_1 = 10 \quad \rightarrow \mathbf{a_1 = 10} \)</li>
+                <li>\( s_2 = a_1 + a_2 = 17 \quad \rightarrow 10 + a_2 = 17 \rightarrow \mathbf{a_2 = 7} \)</li>
+                <li>\( s_3 = s_2 + a_3 = 24 \quad \rightarrow 17 + a_3 = 24 \rightarrow \mathbf{a_3 = 7} \)</li>
+                <li>\( s_4 = s_3 + a_4 = 31 \quad \rightarrow 24 + a_4 = 31 \rightarrow \mathbf{a_4 = 7} \)</li>
+            </ul>
+            <p>
+                Die dazugehörige Folge wäre: <strong>10, 7, 7, 7, 7, ...</strong>
+            </p>
+        </div>
+
+    </div>
+
+</body>
+</html>

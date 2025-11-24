@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 4.36 - Parameter berechnen</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l4-35.html">&laquo; Aufgabe 4.35</a>
+        <h1>Aufgabe 4.36</h1>
+        <a href="l4-37.html"> Aufgabe 4.37 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        Es handelt sich hier um arithmetische Folgen. Berechnen Sie die gesuchten Werte.
+        <br>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>a)</strong> \( a_5 = 27.9 \) und \( a_{12} = 59.4 \). Berechnen Sie \( a_1 \).
+                <br>
+                <button class="toggle" onclick="toggleSolution('sol-a')">Lösung anzeigen</button>
+                <div id="sol-a" class="solution is-hidden">
+                    <p>Zuerst die Differenz \( d \) bestimmen:</p>
+                    $$ d = \frac{a_{12} - a_5}{12 - 5} = \frac{59.4 - 27.9}{7} = \frac{31.5}{7} = 4.5 $$
+                    <p>Nun \( a_1 \) berechnen (Rückwärts von \( a_5 \)):</p>
+                    $$ a_1 = a_5 - 4d = 27.9 - 4 \cdot 4.5 = 27.9 - 18 = 9.9 $$
+                    <p><strong>\( a_1 = 9.9 \)</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>b)</strong> \( a_{20} = 11.11 \) und \( d = -0.77 \). Berechnen Sie \( a_7 \).
+                <br>
+                <button class="toggle" onclick="toggleSolution('sol-b')">Lösung anzeigen</button>
+                <div id="sol-b" class="solution is-hidden">
+                    <p>Wir suchen \( a_7 \) ausgehend von \( a_{20} \):</p>
+                    $$ a_7 = a_{20} - (20 - 7) \cdot d $$
+                    $$ a_7 = 11.11 - 13 \cdot (-0.77) $$
+                    $$ a_7 = 11.11 - (-10.01) = 11.11 + 10.01 = 21.12 $$
+                    <p><strong>\( a_7 = 21.12 \)</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 4.18 - Sichtbare und unsichtbare Würfelseiten</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l4-17.html">&laquo; Aufgabe 4.17</a>
+        <h1>Aufgabe 4.18 - Sichtbare und unsichtbare Würfelseiten</h1>
+        <a href="l4-19.html">Aufgabe 4.19 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        <p>Beim ersten Glied der Würfelbauten liegt ein Würfel auf dem Tisch. Wenn man ihn von allen Seiten betrachtet, sind 5 Würfelseiten sichtbar und eine Würfelseite unsichtbar, da sie auf dem Tisch liegt. Beim zweiten Glied sind 10 Würfelseiten sichtbar und 2 unsichtbar.</p>
+        <div style="text-align: center; margin: 1rem 0;">
+            <img src="../pics/wuerfel2.png" alt="Wuerfel-Folge" style="max-width: 60%;">
+        </div>
+        <p>Füllen Sie die folgende Tabelle aus.  </p>
+        <table>
+            <tr>
+                <th></th>
+                <th>Figur 1</th>
+                <th>Figur 2</th>
+                <th>Figur 3</th>
+                <th>Figur 4</th>
+                <th>Figur 5</th>
+                <th>Figur 6</th>
+                <th>Figur 7</th>
+                <th>Figur 8</th>
+                <th>Figur n</th>
+            </tr>
+            <tr>
+                <td>Anzahl sichtbare Würfelseiten</td>
+                <td>5</td>
+                <td>10</td>
+                <td>15</td>
+                <td>20</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Anzahl unsichtbare Würfelseiten</td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+        <p>Formulieren Sie die Gesetzmässigkeiten in Worten und finden Sie jeweils einen passenden expliziten Term für die sichtbaren und unsichtbaren Seiten.</p>
+    </div>
+    <div class="task-row">
+        <button class="toggle" onclick="toggleSolution('sol-a')">Lösung anzeigen</button>
+            <div class="solution is-hidden" id="sol-a">
+            <table>
+                <tr>
+                    <th></th>
+                    <th>Figur 1</th>
+                    <th>Figur 2</th>
+                    <th>Figur 3</th>
+                    <th>Figur 4</th>
+                    <th>Figur 5</th>
+                    <th>Figur 6</th>
+                    <th>Figur 7</th>
+                    <th>Figur 8</th>
+                    <th>Figur n</th>
+                </tr>
+                <tr>
+                    <td>Anzahl sichtbare Würfelseiten</td>
+                    <td>5</td>
+                    <td>10</td>
+                    <td>15</td>
+                    <td>20</td>
+                    <td>25</td>
+                    <td>30</td>
+                    <td>35</td>
+                    <td>40</td>
+                    <td>5n</td>
+                </tr>
+                <tr>
+                    <td>Anzahl unsichtbare Würfelseiten</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>n</td>
+                </tr>
+            </table>
+            <p><strong>Gesetzmässigkeiten:</strong></p>
+                
+                <p><strong>1. Sichtbare Würfelseiten:</strong></p>
+                <ul>
+                    <li>Die Anzahl sichtbarer Würfelseiten nimmt um 5 zu, wenn ein neuer Würfel hinzugefügt wird.</li>
+                    <li>Jeder zusätzliche Würfel fügt 5 neue sichtbare Seiten hinzu (4 Seitenflächen + 1 Oberseite).</li>
+                    <li>Die Unterseite jedes neuen Würfels wird unsichtbar (liegt auf dem vorherigen Würfel oder Tisch).</li>
+                </ul>
+                
+                <p><strong>2. Unsichtbare Würfelseiten:</strong></p>
+                <ul>
+                    <li>Die Anzahl unsichtbarer Würfelseiten entspricht genau der Anzahl Würfel in der Figur.</li>
+                    <li>Jeder Würfel hat genau eine unsichtbare Seite (die Unterseite).</li>
+                    <li>Die unsichtbaren Seiten nehmen linear mit der Anzahl Würfel zu.</li>
+                </ul>
+                
+                <p><strong>3. Beziehung zwischen sichtbar und unsichtbar:</strong></p>
+                <ul>
+                    <li>Die sichtbaren Seiten sind immer genau 5-mal so viele wie die unsichtbaren Seiten.</li>
+                    <li>Dies liegt daran, dass jeder Würfel 5 sichtbare und 1 unsichtbare Seite hat.</li>
+                </ul>
+        </div>
+    </div>        
+</body>
+</html>

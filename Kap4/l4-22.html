@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 4.22 - Figurenfolgen und Pythagoras</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l4-21.html">&laquo; Aufgabe 4.21</a>
+        <h1>Aufgabe 4.22</h1>
+        <a href="l4-23.html"> Aufgabe 4.23 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        Betrachten Sie die Figuren-Folge:
+        <br>
+        <img src="../pics/quadkreise.png" alt="Figuren-Folge Quadrate und Kreise" style="max-width: 100%; height: auto; margin: 1rem 0;">
+        
+        <div class="task-row">
+            <div class="task-left">
+                <strong>a)</strong> Zeichnen Sie die nächste Figur.
+                <br>
+                <button class="toggle" onclick="toggleSolution('sol-a')">Lösung anzeigen</button>
+                <div id="sol-a" class="solution is-hidden">
+                    <p>
+                        Die nächste Figur entspricht \( n=5 \).<br>
+                        Sie besteht aus einem inneren Quadrat aus \( 4 \times 4 + 1 = 17 \) Quadraten, umrandet von \( 4 \cdot 16 = 64 \) Rondellen (Kreisen).<br>
+                        Die gesamte Figur bildet ein \( 9 \times 9 \) Raster.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="task-row">
+            <div class="task-left">
+                <strong>b)</strong> Erstellen Sie eine Tabelle der ersten 7 Glieder der Folgen der Anzahl Quadrate \( Q_n \), der Folge der Anzahl Rondellen \( R_n \) und der Folge der Summen der Rondellen und Quadrate innerhalb einer Figur \( S_n \).
+                <br><button class="toggle" onclick="toggleSolution('sol-b')">Lösung anzeigen</button>
+                <div id="sol-b" class="solution is-hidden">
+                    <table>
+                        <tr>
+                            <th>\( n \)</th>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                        </tr>
+                        <tr>
+                            <th>\( Q_n \) (Quadrate)</th>
+                            <td>1</td>
+                            <td>5</td>
+                            <td>9</td>
+                            <td>13</td>
+                            <td>17</td>
+                            <td>21</td>
+                            <td>25</td>
+                        </tr>
+                        <tr>
+                            <th>\( R_n \) (Rondellen)</th>
+                            <td>0</td>
+                            <td>4</td>
+                            <td>16</td>
+                            <td>36</td>
+                            <td>64</td>
+                            <td>100</td>
+                            <td>144</td>
+                        </tr>
+                        <tr>
+                            <th>\( S_n \) (Summe)</th>
+                            <td>1</td>
+                            <td>9</td>
+                            <td>25</td>
+                            <td>49</td>
+                            <td>81</td>
+                            <td>121</td>
+                            <td>169</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>c)</strong> Finden Sie jeweils einen rekursiven und expliziten Term für \( Q_n \), \( R_n \) und \( S_n \).
+                <br>
+                <button class="toggle" onclick="toggleSolution('sol-c')">Lösung anzeigen</button>
+                <div id="sol-c" class="solution is-hidden">
+                    <p><strong>Quadrate \( Q_n \):</strong></p>
+                    <ul>
+                        <li>Explizit: \( Q_n = 4n-3 \)</li>
+                        <li>Rekursiv: \( Q_{n+1} = Q_{n} + 4 \) </li>
+                    </ul>
+                    <p><strong>Rondellen \( R_n \):</strong></p>
+                    <ul>
+                        <li>Explizit: \( R_n = (2n-2)^2 = 4(n-1)^2 \)</li>
+                        <li>Rekursiv: \( R_{n+1} = R_{n} + 4(2n-1) \)</li>
+                    </ul>
+                    <p><strong>Summe \( S_n \):</strong></p>
+                    <ul>
+                        <li>Explizit: \( S_n = (2n-1)^2 \)</li>
+                        <li>Rekursiv: \( S_{n+1} = S_{n} + 8n \) </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>d)</strong> In der Tabelle aus b) finden Sie pythagoreische Zahlentripel (z.B.: 9, 16, 25). Finden Sie zwei weitere Tripel. Wie lauten diese?
+                <br>
+                <button class="toggle" onclick="toggleSolution('sol-d')">Lösung anzeigen</button>
+                <div id="sol-d" class="solution is-hidden">
+                    <p>
+                        Gesucht sind Stellen, an denen \( Q_n, R_n, S_n \) alle Quadratzahlen sind, sodass \( Q_n + R_n = S_n \) gilt (entspricht \( a^2 + b^2 = c^2 \)).
+                    </p>
+                    <ul>
+                        <li>Bereits gefunden bei \( n=3 \): <strong>9, 16, 25</strong></li>
+                        <li>Nächstes Quadrat für \( 4n-3 \) ist 25 (also \( n=7 \)):<br>
+                            \( Q_7 = 25 \), \( R_7 = 144 \), \( S_7 = 169 \)<br>
+                            <strong>Tripel: 25, 144, 169</strong> (entspricht \( 5^2 + 12^2 = 13^2 \))
+                        </li>
+                        <li>Nächstes Quadrat für \( 4n-3 \) ist 49 (also \( n=13 \)):<br>
+                            \( Q_{13} = 49 \), \( R_{13} = 576 \), \( S_{13} = 625 \)<br>
+                            <strong>Tripel: 49, 576, 625</strong> (entspricht \( 7^2 + 24^2 = 25^2 \))
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

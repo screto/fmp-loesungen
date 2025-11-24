@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 4.24 - Fibonacci-Folge</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l4-23.html">&laquo; Aufgabe 4.23</a>
+        <h1>Aufgabe 4.24 - Fibonacci-Folge</h1>
+        <a href="l4-25.html"> Aufgabe 4.25 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        <strong>Hintergrund:</strong>
+        <p>
+            Im Jahre 1202 n. Chr. erschien das Buch <em>Liber abaci</em> von Leonardo von Pisa, auch Fibonacci (Sohn des Bonacci) genannt. In diesem Buch findet man die berühmte Kaninchen-Aufgabe:
+        </p>
+        <p style="font-style: italic; margin-left: 1rem; border-left: 3px solid #ccc; padding-left: 1rem;">
+            Wie viele Kaninchenpaare hat es nach 12 Monaten, wenn zu Beobachtungsbeginn ein neugeborenes Kaninchenpaar vorhanden ist und wenn vorausgesetzt wird, dass jedes Kaninchenpaar monatlich ein neues Paar zur Welt bringt, und die Kaninchen vom zweiten Monat nach ihrer Geburt gebären können?
+        </p>
+        
+        <div class="task-row">
+            <div class="task-left">
+                <p>Erstellen Sie eine Tabelle und suchen Sie einen rekursiven Term dieser Folge.</p>
+            
+                <button class="toggle" onclick="toggleSolution('sol-fib')">Lösung anzeigen</button>
+                <div id="sol-fib" class="solution is-hidden">
+                    <p><strong>Tabelle der Kaninchenpaare:</strong></p>
+                    <div style="overflow-x: auto;">
+                        <table>
+                            <tr>
+                                <th>Monat \( n \)</th>
+                                <th>Anzahl Paare \( a_n \)</th>
+                                <th>Erklärung</th>
+                            </tr>
+                            <tr><td>0 (Start)</td><td>1</td><td>1 neugeborenes Paar</td></tr>
+                            <tr><td>1</td><td>1</td><td>Paar wird geschlechtsreif</td></tr>
+                            <tr><td>2</td><td>2</td><td>1 Altpaar + 1 Jungpaar</td></tr>
+                            <tr><td>3</td><td>3</td><td>1 Altpaar + 1 Jungpaar (vom Vormonat) + 1 neues Jungpaar</td></tr>
+                            <tr><td>4</td><td>5</td><td>2 zeugungsfähige Paare + 3 Jungpaare</td></tr>
+                            <tr><td>5</td><td>8</td><td></td></tr>
+                            <tr><td>6</td><td>13</td><td></td></tr>
+                            <tr><td>7</td><td>21</td><td></td></tr>
+                            <tr><td>8</td><td>34</td><td></td></tr>
+                            <tr><td>9</td><td>55</td><td></td></tr>
+                            <tr><td>10</td><td>89</td><td></td></tr>
+                            <tr><td>11</td><td>144</td><td></td></tr>
+                            <tr><td>12</td><td>233</td><td><strong>Anzahl nach 12 Monaten</strong></td></tr>
+                        </table>
+                    </div>
+                    
+                    <p style="margin-top: 1rem;"><strong>Rekursiver Term:</strong></p>
+                    <p>
+                        Die Anzahl der Paare in einem Monat ergibt sich aus der Summe der Paare des Vormonats (diese leben weiter) und der Paare des Vor-Vormonats (diese sind alt genug, um Nachwuchs zu zeugen).
+                    </p>
+                    <p>
+                        \( a_{n+2} = a_{n+1} + a_{n} \) &nbsp; für \( n \ge 1 \)
+                    </p>
+                    <p>
+                        Startwerte: \( a_1 = 1, a_2 = 1 \)
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

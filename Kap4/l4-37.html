@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 4.37 - Ungerade Zahlen</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l4-36.html">&laquo; Aufgabe 4.36</a>
+        <h1>Aufgabe 4.37</h1>
+        <a href="l4-38.html"> Aufgabe 4.38 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        Gegeben ist die arithmetische Folge 1, 3, 5, 7, 9, 11, 13, ...
+        <br>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>a)</strong> Beschreiben Sie die Folge in Worten.
+                <br>
+                <button class="toggle" onclick="toggleSolution('sol-a')">Lösung anzeigen</button>
+                <div id="sol-a" class="solution is-hidden">
+                    Die Folge der ungeraden natürlichen Zahlen.
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>b)</strong> Formulieren Sie einen expliziten und einen rekursiven Term.
+                <br>
+                <button class="toggle" onclick="toggleSolution('sol-b')">Lösung anzeigen</button>
+                <div id="sol-b" class="solution is-hidden">
+                    <p>Explizit: \( a_n = 2n - 1 \)</p>
+                    <p>Rekursiv: \( a_{n+1} = a_n + 2, \quad a_1 = 1 \)</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>c)</strong> Bilden Sie die Reihe dieser Folge (Partialsummen).
+                <br>
+                <button class="toggle" onclick="toggleSolution('sol-c')">Lösung anzeigen</button>
+                <div id="sol-c" class="solution is-hidden">
+                    <p>
+                    \( s_1 = 1 \)<br>
+                    \( s_2 = 1+3 = 4 \)<br>
+                    \( s_3 = 4+5 = 9 \)<br>
+                    \( s_4 = 9+7 = 16 \)<br>
+                    \( s_5 = 16+9 = 25 \)
+                    </p>
+                    <p>Reihe: 1, 4, 9, 16, 25, ...</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>d)</strong> Finden Sie einen expliziten Term für \( s_n \) der Reihe.
+                <br>
+                <button class="toggle" onclick="toggleSolution('sol-d')">Lösung anzeigen</button>
+                <div id="sol-d" class="solution is-hidden">
+                    Die Partialsummen bilden die Quadratzahlen:
+                    $$ s_n = n^2 $$
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

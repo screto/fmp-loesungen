@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 4.38 - Beweis</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l4-37.html">&laquo; Aufgabe 4.37</a>
+        <h1>Aufgabe 4.38</h1>
+        <a href="l4-39.html"> Aufgabe 4.39 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        Zeigen Sie: Wenn man die ersten \( n \) geraden Zahlen addiert, erhält man die Rechteckszahl \( n \cdot (n+1) \).
+        
+        <button class="toggle" onclick="toggleSolution('sol-38')">Lösung anzeigen</button>
+        <div id="sol-38" class="solution is-hidden">
+            <p>Die Summe der ersten \( n \) geraden Zahlen lautet:</p>
+            $$ s_n = 2 + 4 + 6 + \dots + 2n $$
+            <p>Wir können den Faktor 2 ausklammern:</p>
+            $$ s_n = 2 \cdot (1 + 2 + 3 + \dots + n) $$
+            <p>Der Term in der Klammer ist die Summe der natürlichen Zahlen (Gauss'sche Summenformel): \( \frac{n(n+1)}{2} \)</p>
+            <p>Eingesetzt ergibt das:</p>
+            $$ s_n = 2 \cdot \frac{n(n+1)}{2} $$
+            $$ s_n = n(n+1) $$
+            <p>q.e.d.</p>
+        </div>
+    </div>
+</body>
+</html>

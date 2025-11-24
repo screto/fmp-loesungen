@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 4.40 - Dachziegel</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l4-39.html">&laquo; Aufgabe 4.39</a>
+        <h1>Aufgabe 4.40</h1>
+        <a href="l4-41.html"> Aufgabe 4.41 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        Wie viele Ziegel hat das Dach?
+        <br>
+        <img src="../pics/dach.png" alt="Dachziegel Anordnung" style="max-width: 60%; height: auto; margin: 1rem 0;">
+        
+        <div class="task-row">
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-40')">Lösung anzeigen</button>
+                <div id="sol-40" class="solution is-hidden">
+                    <p>Da sich die Anzahl der Ziegel pro Reihe konstant ändert, handelt es sich um eine arithmetische Reihe.</p>
+                    <p><strong>Vorgehen:</strong></p>
+                    <ol>
+                        <li>Anzahl Ziegel in der obersten Reihe zählen (\( a_1 \)).</li>
+                        <li>Anzahl Ziegel in der untersten Reihe zählen (\( a_n \)).</li>
+                        <li>Anzahl der Reihen zählen (\( n \)).</li>
+                    </ol>
+                    <p><strong>Formel:</strong></p>
+                    $$ s_n = \frac{n}{2} \cdot (a_1 + a_n) $$
+                    <p>Somit: $$s_8 = \frac{8}{2} \cdot (25 + 32) = 4 \cdot 57 = 228$$</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

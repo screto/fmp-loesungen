@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 4.34</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l4-33.html">&laquo; Aufgabe 4.33</a>
+        <h1>Aufgabe 4.34</h1>
+        <a href="l4-35.html"> Aufgabe 4.35 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+
+        Gegeben ist die arithmetische Folge 3, 6, 9, 12, ...
+        <br>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>a)</strong> Beschreiben Sie die Folge in Worten.
+                <br>
+                <button class="toggle" onclick="toggleSolution('sol-a')">Lösung anzeigen</button>
+                <div id="sol-a" class="solution is-hidden">
+                    Es handelt sich um die Folge der positiven Vielfachen von 3 (oder die "Dreierreihe").
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>b)</strong> Formulieren Sie die dazu passenden rekursiven und expliziten Terme.
+                <br>
+                <button class="toggle" onclick="toggleSolution('sol-b')">Lösung anzeigen</button>
+                <div id="sol-b" class="solution is-hidden">
+                    <p>Explizit: \( a_n = 3n \)</p>
+                    <p>Rekursiv: \( a_{n+1} = a_n + 3, \quad a_1 = 3 \)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

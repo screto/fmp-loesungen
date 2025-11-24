@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 4.31 - Folgen berechnen</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l4-30.html">&laquo; Aufgabe 4.30</a>
+        <h1>Aufgabe 4.31</h1>
+        <a href="l4-32.html"> Aufgabe 4.32 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        Geben Sie die ersten 10 Glieder der Folge an und formulieren Sie einen rekursiven und einen expliziten Term.
+        <br><br>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>a)</strong> Folge der natürlichen Zahlen
+                <br>
+                <button class="toggle" onclick="toggleSolution('sol-a')">Lösung anzeigen</button>
+                <div id="sol-a" class="solution is-hidden">
+                    <p>1, 2, 3, 4, 5, 6, 7, 8, 9, 10</p>
+                    <p>Explizit: \( a_n = n \)</p>
+                    <p>Rekursiv: \( a_{n+1} = a_n + 1, \quad a_1 = 1 \)</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>b)</strong> Folge der geraden Zahlen
+                <br>
+                <button class="toggle" onclick="toggleSolution('sol-b')">Lösung anzeigen</button>
+                <div id="sol-b" class="solution is-hidden">
+                    <p>2, 4, 6, 8, 10, 12, 14, 16, 18, 20</p>
+                    <p>Explizit: \( a_n = 2n \)</p>
+                    <p>Rekursiv: \( a_{n+1} = a_n + 2, \quad a_1 = 2 \)</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>c)</strong> Folge der Vielfachen von 6
+                <br>
+                <button class="toggle" onclick="toggleSolution('sol-c')">Lösung anzeigen</button>
+                <div id="sol-c" class="solution is-hidden">
+                    <p>6, 12, 18, 24, 30, 36, 42, 48, 54, 60</p>
+                    <p>Explizit: \( a_n = 6n \)</p>
+                    <p>Rekursiv: \( a_{n+1} = a_n + 6, \quad a_1 = 6 \)</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>d)</strong> Folge der Zahlen, welche bei der Division durch 3 den Rest 1 haben
+                <br>
+                <button class="toggle" onclick="toggleSolution('sol-d')">Lösung anzeigen</button>
+                <div id="sol-d" class="solution is-hidden">
+                    <p> 4, 7, 10, 13, 16, 19, 22, 25, 28</p>
+                    <p>Explizit: \( a_n = 3n + 1 \) (oder \( 3(n-1)+1 \))</p>
+                    <p>Rekursiv: \( a_{n+1} = a_n + 3, \quad a_1 = 4 \)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
