@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 4.59 - Dreiecksturm</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l4-58.html">&laquo; Aufgabe 4.58</a>
+        <h1>Aufgabe 4.59</h1>
+        <a href="l4-60.html"> Aufgabe 4.60 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        Der Dreiecksturm besteht abwechselnd aus gleichschenklig-rechtwinkligen und gleichseitigen Dreiecken. Welchen Flächeninhalt hat der nach oben unbegrenzt fortgesetzte Turm, wenn das unterste dunkle Dreieck den Flächeninhalt \( A = 1 \) hat?
+        <br>
+        <img src="../pics/lim59.png" alt="Dreiecksturm" style="max-width: 40%; height: auto; margin: 1rem 0;">
+
+        <div class="task-row">
+            <div class="task-left">
+
+                <button class="toggle" onclick="toggleSolution('sol-59')">Lösung anzeigen</button>
+                <div id="sol-59" class="solution is-hidden">
+                    <p><strong>Analyse der Flächen:</strong></p>
+                    <p>
+                        1. <strong>Dunkles Dreieck (unten):</strong><br>
+                        Fläche \( A_{d1} = 1 \).<br>
+                        Da es gleichschenklig-rechtwinklig ist (\( A = s^2/2 \)), gilt für die Kathete \( s = \sqrt{2} \).
+                    </p>
+                    <p>
+                        2. <strong>Helles Dreieck (darüber):</strong><br>
+                        Es ist gleichseitig und sitzt auf einer Kathete des dunklen Dreiecks. Die Seitenlänge ist also ebenfalls \( s = \sqrt{2} \).<br>
+                        Fläche \( A_{h1} = \frac{\sqrt{3}}{4} s^2 = \frac{\sqrt{3}}{4} \cdot 2 = \frac{\sqrt{3}}{2} \).
+                    </p>
+                    <p>
+                        3. <strong>Nächstes dunkles Dreieck:</strong><br>
+                        Aufgrund der Selbstähnlichkeit solcher Fraktale verringern sich die Flächen typischerweise mit einem konstanten Faktor \( q \).<br>
+                        In dieser Anordnung halbiert sich die Fläche in jedem Schritt der gleichen Farbe (Seitenlänge reduziert sich um Faktor \( 1/\sqrt{2} \)).<br>
+                        \( q = 0.5 \).
+                    </p>
+                    
+                    <p><strong>Berechnung der unendlichen Reihen:</strong></p>
+                    <p>Wir haben zwei geometrische Reihen (dunkel und hell), beide mit \( q = 0.5 \).</p>
+                    <p>
+                        Summe Dunkel: \( S_d = \frac{A_{d1}}{1-0.5} = \frac{1}{0.5} = 2 \)
+                    </p>
+                    <p>
+                        Summe Hell: \( S_h = \frac{A_{h1}}{1-0.5} = \frac{\sqrt{3}/2}{0.5} = \sqrt{3} \)
+                    </p>
+                    
+                    <p><strong>Gesamtfläche:</strong></p>
+                    $$ A_{ges} = 2 + \sqrt{3} \approx 3.732 $$
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 4.47 - Musik und Frequenzen</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l4-46.html">&laquo; Aufgabe 4.46</a>
+        <h1>Aufgabe 4.47</h1>
+        <a href="l4-48.html"> Aufgabe 4.48 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        <p>
+            Wenn die Frequenz eines Tons verdoppelt wird, klingt er um eine Oktave höher. Bei der gleichschwebend-temperierten Stimmung von Musikinstrumenten wird eine Oktave in 12 Halbtöne eingeteilt, deren Frequenzen eine geometrische Folge bilden.
+        </p>
+        <p>
+            Berechnen Sie die Frequenzen aller Halbtöne zwischen \( a_1 \) (440 Hz) und \( a_{13} \) (880 Hz)!
+        </p>
+        
+        <div class="task-row">
+            <div class="task-left">
+                <button class="toggle" onclick="toggleSolution('sol-music')">Lösung anzeigen</button>
+                <div id="sol-music" class="solution is-hidden">
+                    <p><strong>Berechnung des Quotienten \( q \):</strong></p>
+                    <p>Da 12 Schritte eine Verdoppelung ergeben:</p>
+                    $$ q^{12} = 2 \quad \Rightarrow \quad q = \sqrt[12]{2} \approx 1.059463 $$
+                    
+                    <p><strong>Tabelle der Frequenzen (gerundet):</strong></p>
+                    <table style="width: auto;">
+                        <tr><th>Ton (Index)</th><th>Frequenz (Hz)</th></tr>
+                        <tr><td>\( a_1 \)</td><td>440.00</td></tr>
+                        <tr><td>\( a_2 \)</td><td>466.16</td></tr>
+                        <tr><td>\( a_3 \)</td><td>493.88</td></tr>
+                        <tr><td>\( a_4 \)</td><td>523.25</td></tr>
+                        <tr><td>\( a_5 \)</td><td>554.37</td></tr>
+                        <tr><td>\( a_6 \)</td><td>587.33</td></tr>
+                        <tr><td>\( a_7 \)</td><td>622.25</td></tr>
+                        <tr><td>\( a_8 \)</td><td>659.26</td></tr>
+                        <tr><td>\( a_9 \)</td><td>698.46</td></tr>
+                        <tr><td>\( a_{10} \)</td><td>739.99</td></tr>
+                        <tr><td>\( a_{11} \)</td><td>783.99</td></tr>
+                        <tr><td>\( a_{12} \)</td><td>830.61</td></tr>
+                        <tr><td>\( a_{13} \)</td><td>880.00</td></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

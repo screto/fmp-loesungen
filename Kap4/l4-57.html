@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 4.57 - Konvergenzkriterium</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l4-56.html">&laquo; Aufgabe 4.56</a>
+        <h1>Aufgabe 4.57</h1>
+        <a href="l4-58.html"> Aufgabe 4.58 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        Wählen Sie einige geometrische Reihen aus vorangegangenen Übungen. Sind sie konvergent oder divergent? Erkennen Sie dabei eine Gesetzmässigkeit?
+        <br>
+
+        <div class="task-row">
+            <div class="task-left">
+
+                <button class="toggle" onclick="toggleSolution('sol-57')">Lösung anzeigen</button>
+                <div id="sol-57" class="solution is-hidden">
+                    <p><strong>Gesetzmässigkeit:</strong></p>
+                    <p>
+                        Eine geometrische Reihe \( S_n \) mit dem Quotienten \( q \) ist:
+                    </p>
+                    <ul>
+                        <li><strong>Konvergent</strong> (hat einen Grenzwert), wenn \( |q| < 1 \) (also \( -1 < q < 1 \)).</li>
+                        <li><strong>Divergent</strong> (wächst über alle Grenzen oder oszilliert nicht abklingend), wenn \( |q| \ge 1 \).</li>
+                    </ul>
+                    <p>
+                        Beispiel Spirale (4.50): \( q = \frac{1}{\sqrt{2}} \approx 0.7 < 1 \) \(\rightarrow\) konvergent.<br>
+                        Beispiel Umfang (4.56): \( q = \frac{5}{3} > 1 \) \(\rightarrow\) divergent.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

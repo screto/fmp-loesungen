@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 4.46 - Folge fortsetzen</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l4-45.html">&laquo; Aufgabe 4.45</a>
+        <h1>Aufgabe 4.46</h1>
+        <a href="l4-47.html"> Aufgabe 4.47 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        Bestimmen Sie die nächsten drei Glieder, sodass eine geometrische Folge entsteht:
+        <br>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>a)</strong> 12, 6, ...
+                <br>
+                <button class="toggle" onclick="toggleSolution('sol-a')">Lösung anzeigen</button>
+                <div id="sol-a" class="solution is-hidden">
+                    <p>\( q = 0.5 \)</p>
+                    <p>3; 1.5; 0.75</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>b)</strong> 2, 1, ...
+                <br>
+                <button class="toggle" onclick="toggleSolution('sol-b')">Lösung anzeigen</button>
+                <div id="sol-b" class="solution is-hidden">
+                    <p>\( q = 0.5 \)</p>
+                    <p>0.5; 0.25; 0.125</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>c)</strong> \( \sqrt{2}, 2, ... \)
+                <br>
+                <button class="toggle" onclick="toggleSolution('sol-c')">Lösung anzeigen</button>
+                <div id="sol-c" class="solution is-hidden">
+                    <p>\( q = \frac{2}{\sqrt{2}} = \sqrt{2} \approx 1.414 \)</p>
+                    <p>\( 2\sqrt{2} \); 4; \( 4\sqrt{2} \)</p>
+                    <p><em>(als Dezimalzahlen ca.: 2.83; 4; 5.66)</em></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>d)</strong> \( a^2, ab, ... \)
+                <br>
+                <button class="toggle" onclick="toggleSolution('sol-d')">Lösung anzeigen</button>
+                <div id="sol-d" class="solution is-hidden">
+                    <p>\( q = \frac{ab}{a^2} = \frac{b}{a} \)</p>
+                    <p>\( b^2 \); \( \frac{b^3}{a} \); \( \frac{b^4}{a^2} \)</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

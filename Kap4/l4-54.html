@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 4.54 - Spirale</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l4-53.html">&laquo; Aufgabe 4.53</a>
+        <h1>Aufgabe 4.54 - Spirale</h1>
+        <a href="l4-55.html"> Aufgabe 4.55 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        Betrachten Sie die Abbildung der Spirale von A nach F. Die Strecke AB misst 8 cm.
+        <br>
+        <img src="../pics/geom54.png" alt="Spirale aus Halbkreisen" style="max-width: 50%; height: auto; margin: 1rem 0;">
+        <p><em>Annahme: Die Durchmesser der Halbkreise halbieren sich jeweils (AB=8, BC=4, CD=2, ...).</em></p>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>a)</strong> Bestimmen Sie die Länge der Spirale von A nach F.
+                <br>
+                <button class="toggle" onclick="toggleSolution('sol-a')">Lösung anzeigen</button>
+                <div id="sol-a" class="solution is-hidden">
+                    <p>Die Spirale von A bis F besteht aus 5 Halbkreisen (AB, BC, CD, DE, EF).</p>
+                    <p>Länge eines Halbkreises: \( L = \frac{1}{2} \pi \cdot d \).</p>
+                    <ul>
+                        <li>\( L_1 = 0.5 \pi \cdot 8 = 4\pi \)</li>
+                        <li>\( q = 0.5 \) (Durchmesser halbiert sich)</li>
+                    </ul>
+                    <p>Summe der ersten 5 Glieder:</p>
+                    $$ S_5 = 4\pi \cdot \frac{1 - 0.5^5}{1 - 0.5} $$
+                    $$ S_5 = 4\pi \cdot \frac{0.96875}{0.5} = 8\pi \cdot 0.96875 \approx 24.35 \, \text{cm} $$
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>b)</strong> Wie lange wird die Spirale, wenn sie um weitere 5 Halbkreise ergänzt wird?
+                <br>
+                <button class="toggle" onclick="toggleSolution('sol-b')">Lösung anzeigen</button>
+                <div id="sol-b" class="solution is-hidden">
+                    <p>Gesucht ist \( S_{10} \) (5 ursprüngliche + 5 weitere = 10 Glieder).</p>
+                    $$ S_{10} = 4\pi \cdot \frac{1 - 0.5^{10}}{0.5} $$
+                    $$ S_{10} = 8\pi \cdot (1 - \frac{1}{1024}) \approx 25.11 \, \text{cm} $$
+                    <p><em>(Maximale Länge bei unendlich vielen Kreisen wäre \( 8\pi \approx 25.13 \) cm).</em></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>c)</strong> Stellen Sie die Folge der Halbkreisflächen auf, die durch die Spirale gezeichnet werden.
+                <br>
+                <button class="toggle" onclick="toggleSolution('sol-c')">Lösung anzeigen</button>
+                <div id="sol-c" class="solution is-hidden">
+                    <p>Fläche Halbkreis: \( A = \frac{1}{2} \pi r^2 = \frac{1}{8} \pi d^2 \)</p>
+                    <ul>
+                        <li>\( A_1 \) (mit \( d=8 \)): \( \frac{1}{8} \pi \cdot 64 = 8\pi \)</li>
+                        <li>Da sich der Durchmesser halbiert (\( q_d = 0.5 \)), viertelt sich die Fläche (\( q_A = 0.5^2 = 0.25 \)).</li>
+                    </ul>
+                    <p><strong>Folge:</strong> \( 8\pi; 2\pi; 0.5\pi; 0.125\pi; \dots \)</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>d)</strong> Überlegen Sie sich eine eigene Fragestellung zu dieser Spirale mit einem Bezug zur geometrischen Folge/Reihe.
+                <br>
+                <button class="toggle" onclick="toggleSolution('sol-d')">Lösung anzeigen</button>
+                <div id="sol-d" class="solution is-hidden">
+                    <p><em>Mögliche Beispiele:</em></p>
+                    <ul>
+                        <li>Wo liegt der Mittelpunkt der Spirale (Grenzwert), wenn man Koordinaten einführt?</li>
+                        <li>Wie gross ist die Gesamtfläche aller unendlich vielen Halbkreise?</li>
+                        <li>Wie verhält sich das Verhältnis von Bogenlänge zu Durchmesser in der Folge?</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 4.49 - Flächeninhalte</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l4-48.html">&laquo; Aufgabe 4.48</a>
+        <h1>Aufgabe 4.49</h1>
+        <a href="l4-50.html"> Aufgabe 4.50 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+       
+        Untersuchen Sie, ob auch die Flächeninhalte der Quadrate aus Aufgabe 48 eine geometrische Folge bilden.
+        <br>
+
+        <div class="task-row">
+            <div class="task-left">
+                <button class="toggle" onclick="toggleSolution('sol-49')">Lösung anzeigen</button>
+                <div id="sol-49" class="solution is-hidden">
+                    <p>
+                        Die Seitenlängen bilden eine Folge mit \( q_s = \frac{1}{\sqrt{2}} \).
+                    </p>
+                    <p>
+                        Der Flächeninhalt ist \( A = s^2 \). Damit quadriert sich auch der Quotient:
+                        $$ q_A = (q_s)^2 = \left(\frac{1}{\sqrt{2}}\right)^2 = \frac{1}{2} = 0.5 $$
+                    </p>
+                    <p>
+                        <strong>Ja</strong>, die Flächeninhalte bilden eine geometrische Folge mit dem Quotienten <strong>0.5</strong>. Jedes innere Quadrat ist halb so gross wie das äussere.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

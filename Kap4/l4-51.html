@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 4.51 - Fläche der Spirale</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l4-50.html">&laquo; Aufgabe 4.50</a>
+        <h1>Aufgabe 4.51</h1>
+        <a href="l4-52.html"> Aufgabe 4.52 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        Wie gross ist die gesamte Fläche der Spirale (Summe der Flächeninhalte der Quadrate)?
+        <br>
+        <img src="../pics/geom51.png" alt="Flächen der Spirale" style="max-width: 40%; height: auto; margin: 1rem 0;">
+        <br><br>
+
+        <div class="task-row">
+            <div class="task-left">
+                <button class="toggle" onclick="toggleSolution('sol-51')">Lösung anzeigen</button>
+                <div id="sol-51" class="solution is-hidden">
+                    <p>Die Flächeninhalte bilden eine geometrische Folge mit \( A_1 = 1 \) und \( q = 0.5 \).</p>
+                    <p>
+                        Summenformel für unendliche geometrische Reihe:
+                        $$ S = \frac{A_1}{1 - q} $$
+                    </p>
+                    $$ S = \frac{1}{1 - 0.5} = \frac{1}{0.5} = 2 $$
+                    <p>Die Gesamtfläche beträgt <strong>2 Flächeneinheiten</strong>.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

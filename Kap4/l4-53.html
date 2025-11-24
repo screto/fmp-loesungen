@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 4.53 - Würfelturm</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l4-52.html">&laquo; Aufgabe 4.52</a>
+        <h1>Aufgabe 4.53 - Würfelturm</h1>
+        <a href="l4-54.html"> Aufgabe 4.54 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        Ein Kind baut einen Turm aus 8 Plastikwürfeln. Die Seitenlänge des ersten Würfels beträgt 12 cm; jeder weitere Würfel hat die 0.8-fache Seitenlänge des vorherigen.
+        <br>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>a)</strong> Welche Seitenlänge hat der 8. Würfel?
+                <br>
+                <button class="toggle" onclick="toggleSolution('sol-a')">Lösung anzeigen</button>
+                <div id="sol-a" class="solution is-hidden">
+                    <p>Formel: \( s_n = s_1 \cdot q^{n-1} \)</p>
+                    $$ s_8 = 12 \cdot 0.8^7 \approx 2.517 \, \text{cm} $$
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>b)</strong> Welches Volumen hat der 1. bzw. 8. Würfel?
+                <br>
+                <button class="toggle" onclick="toggleSolution('sol-b')">Lösung anzeigen</button>
+                <div id="sol-b" class="solution is-hidden">
+                    <p><strong>1. Würfel:</strong></p>
+                    $$ V_1 = (s_1)^3 = 12^3 = 1728 \, \text{cm}^3 $$
+                    <p><strong>8. Würfel:</strong></p>
+                    $$ V_8 = (s_8)^3 \approx 2.517^3 \approx 15.93 \, \text{cm}^3 $$
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>c)</strong> Wie hoch ist der vollständige Turm?
+                <br>
+                <button class="toggle" onclick="toggleSolution('sol-c')">Lösung anzeigen</button>
+                <div id="sol-c" class="solution is-hidden">
+                    <p>Gesucht ist die Summe der ersten 8 Seitenlängen (geometrische Reihe mit \( q=0.8 \)).</p>
+                    $$ H_8 = s_1 \cdot \frac{1-q^8}{1-q} $$
+                    $$ H_8 = 12 \cdot \frac{1-0.8^8}{0.2} = 60 \cdot (1 - 0.16777) \approx 49.93 \, \text{cm} $$
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>d)</strong> Welches Volumen hat der vollständige Turm?
+                <br>
+                <button class="toggle" onclick="toggleSolution('sol-d')">Lösung anzeigen</button>
+                <div id="sol-d" class="solution is-hidden">
+                    <p>Das Volumen verändert sich mit dem Faktor \( q_V = q^3 = 0.8^3 = 0.512 \).</p>
+                    <p>Gesucht ist die Reihe der Volumina:</p>
+                    $$ V_{ges} = V_1 \cdot \frac{1 - 0.512^8}{1 - 0.512} $$
+                    $$ V_{ges} = 1728 \cdot \frac{1 - 0.0047}{0.488} \approx 3523.5 \, \text{cm}^3 $$
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>e)</strong> Angenommen das Kind hat beliebig viele solcher Plastikwürfel, wie hoch kann der Turm dann werden?
+                <br>
+                <button class="toggle" onclick="toggleSolution('sol-e')">Lösung anzeigen</button>
+                <div id="sol-e" class="solution is-hidden">
+                    <p>Gesucht ist der Grenzwert der unendlichen geometrischen Reihe (\( |q| < 1 \)).</p>
+                    $$ H_{\infty} = \frac{s_1}{1 - q} $$
+                    $$ H_{\infty} = \frac{12}{1 - 0.8} = \frac{12}{0.2} = 60 \, \text{cm} $$
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 4.55 - Konvergenz einer Folge</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l4-54.html">&laquo; Aufgabe 4.54</a>
+        <h1>Aufgabe 4.55</h1>
+        <a href="l4-56.html"> Aufgabe 4.56 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        Ist die Zahlenfolge \( a_n = \frac{n + (-1)^n}{n} \) konvergent oder divergent? Erstellen Sie dazu eine Wertetabelle.
+        <br><br>
+
+        <div class="task-row">
+            <div class="task-left">
+
+                <button class="toggle" onclick="toggleSolution('sol-55')">Lösung anzeigen</button>
+                <div id="sol-55" class="solution is-hidden">
+                    <p><strong>Wertetabelle:</strong></p>
+                    <table style="width: auto; margin-top: 0;">
+                        <thead>
+                            <tr>
+                                <th>\( n \)</th>
+                                <th>Rechnung</th>
+                                <th>\( a_n \)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1</td><td>\( (1-1)/1 \)</td><td>0</td></tr>
+                            <tr><td>2</td><td>\( (2+1)/2 \)</td><td>1.5</td></tr>
+                            <tr><td>3</td><td>\( (3-1)/3 \)</td><td>0.66...</td></tr>
+                            <tr><td>4</td><td>\( (4+1)/4 \)</td><td>1.25</td></tr>
+                            <tr><td>5</td><td>\( (5-1)/5 \)</td><td>0.8</td></tr>
+                            <tr><td>10</td><td>\( (10+1)/10 \)</td><td>1.1</td></tr>
+                            <tr><td>100</td><td>\( (100+1)/100 \)</td><td>1.01</td></tr>
+                            <tr><td>101</td><td>\( (101-1)/101 \)</td><td>0.99...</td></tr>
+                        </tbody>
+                    </table>
+
+                    <p><strong>Entscheidung:</strong></p>
+                    <p>
+                        Wir können den Term umformen:
+                        $$ a_n = \frac{n}{n} + \frac{(-1)^n}{n} = 1 + \underbrace{\frac{(-1)^n}{n}}_{\to 0} $$
+                        Für \( n \to \infty \) nähert sich der zweite Summand der 0 an. Die Folge <strong>konvergiert</strong> gegen den Grenzwert <strong>1</strong>.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

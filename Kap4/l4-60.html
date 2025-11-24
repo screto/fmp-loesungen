@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 4.60 - Brüche und Dezimalzahlen</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l4-59.html">&laquo; Aufgabe 4.59</a>
+        <h1>Aufgabe 4.60</h1>
+        <a href="l4-61.html"> Aufgabe 4.61 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        Verwandeln Sie die Zahlen jeweils in die andere Form.
+        <br>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>a)</strong> Verwandeln Sie die Brüche in Dezimalbrüche.
+                <p>\( \frac{1}{5}, \frac{7}{10}, \frac{1}{6}, \frac{2}{9}, \frac{13}{99}, \frac{103}{999}, \frac{1}{90}, \frac{1}{7} \)</p>
+                <button class="toggle" onclick="toggleSolution('sol-a')">Lösung anzeigen</button>
+                <div id="sol-a" class="solution is-hidden">
+                    <ul>
+                        <li>\( \frac{1}{5} = 0.2 \)</li>
+                        <li>\( \frac{7}{10} = 0.7 \)</li>
+                        <li>\( \frac{1}{6} = 0.1\overline{6} \)</li>
+                        <li>\( \frac{2}{9} = 0.\overline{2} \)</li>
+                        <li>\( \frac{13}{99} = 0.\overline{13} \)</li>
+                        <li>\( \frac{103}{999} = 0.\overline{103} \)</li>
+                        <li>\( \frac{1}{90} = 0.0\overline{1} \)</li>
+                        <li>\( \frac{1}{7} = 0.\overline{142857} \)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>b)</strong> Verwandeln Sie die Dezimalbrüche in Brüche.
+                <p>\( 0.\overline{7}, 0.\overline{21}, 2.\overline{32}, 4.1\overline{7}, 2.87\overline{1}, 4.34\overline{45}, 0.2\overline{414} \)</p>
+
+                <button class="toggle" onclick="toggleSolution('sol-b')">Lösung anzeigen</button>
+                <div id="sol-b" class="solution is-hidden">
+                    <p><em>Berechnung jeweils über die Summenformel der geometrischen Reihe \( S = \frac{a_1}{1-q} \):</em></p>
+                    <hr>
+                    
+                    <p><strong>\( 0.\overline{7} \)</strong></p>
+                    <p>Reihe: \( 0.7 + 0.07 + \dots \) (\( a_1=0.7, q=0.1 \))</p>
+                    <p>\( \frac{0.7}{1-0.1} = \frac{0.7}{0.9} = \mathbf{\frac{7}{9}} \)</p>
+                    <hr>
+
+                    <p><strong>\( 0.\overline{21} \)</strong></p>
+                    <p>Reihe: \( 0.21 + 0.0021 + \dots \) (\( a_1=0.21, q=0.01 \))</p>
+                    <p>\( \frac{0.21}{1-0.01} = \frac{0.21}{0.99} = \frac{21}{99} = \mathbf{\frac{7}{33}} \)</p>
+                    <hr>
+
+                    <p><strong>\( 2.\overline{32} \)</strong></p>
+                    <p>Zerlegung: \( 2 + 0.\overline{32} \)</p>
+                    <p>Reihe für \( 0.\overline{32} \): \( a_1=0.32, q=0.01 \rightarrow \frac{0.32}{0.99} = \frac{32}{99} \)</p>
+                    <p>Gesamt: \( 2 + \frac{32}{99} = \mathbf{\frac{230}{99}} \)</p>
+                    <hr>
+
+                    <p><strong>\( 4.1\overline{7} \)</strong></p>
+                    <p>Zerlegung: \( 4.1 + 0.0\overline{7} \)</p>
+                    <p>Reihe für \( 0.0\overline{7} \): \( a_1=0.07, q=0.1 \rightarrow \frac{0.07}{0.9} = \frac{7}{90} \)</p>
+                    <p>Gesamt: \( \frac{41}{10} + \frac{7}{90} = \frac{369+7}{90} = \frac{376}{90} = \mathbf{\frac{188}{45}} \)</p>
+                    <hr>
+
+                    <p><strong>\( 2.87\overline{1} \)</strong></p>
+                    <p>Zerlegung: \( 2.87 + 0.00\overline{1} \)</p>
+                    <p>Reihe für \( 0.00\overline{1} \): \( a_1=0.001, q=0.1 \rightarrow \frac{0.001}{0.9} = \frac{1}{900} \)</p>
+                    <p>Gesamt: \( \frac{287}{100} + \frac{1}{900} = \frac{2583+1}{900} = \frac{2584}{900} = \mathbf{\frac{646}{225}} \)</p>
+                    <hr>
+
+                    <p><strong>\( 4.34\overline{45} \)</strong></p>
+                    <p>Zerlegung: \( 4.34 + 0.00\overline{45} \)</p>
+                    <p>Reihe für \( 0.00\overline{45} \): \( a_1=0.0045, q=0.01 \rightarrow \frac{0.0045}{0.99} = \frac{45}{9900} = \frac{1}{220} \)</p>
+                    <p>Gesamt: \( \frac{434}{100} + \frac{1}{220} = \frac{4774+5}{1100} = \frac{4779}{1100} \)</p>
+                    <hr>
+
+                    <p><strong>\( 0.2\overline{414} \)</strong></p>
+                    <p>Zerlegung: \( 0.2 + 0.0\overline{414} \)</p>
+                    <p>Reihe für \( 0.0\overline{414} \): \( a_1=0.0414, q=0.001 \rightarrow \frac{0.0414}{0.999} = \frac{414}{9990} \)</p>
+                    <p>Gesamt: \( \frac{2}{10} + \frac{414}{9990} = \frac{1998+414}{9990} = \frac{2412}{9990} = \mathbf{\frac{134}{555}} \)</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

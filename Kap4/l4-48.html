@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 4.48 - Ineinander verschachtelte Quadrate</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l4-47.html">&laquo; Aufgabe 4.47</a>
+        <h1>Aufgabe 4.48</h1>
+        <a href="l4-49.html"> Aufgabe 4.49 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        «Die Seitenlängen der ineinander verschachtelten Quadrate bilden eine geometrische Folge.»
+        <br>
+        <img src="../pics/geom48.png" alt="Verschachtelte Quadrate" style="max-width: 40%; height: auto; margin: 1rem 0;">
+        <br>
+        Das erste Quadrat hat eine Seitenlänge von 1.
+        <br><br>
+        
+        <div class="task-row">
+            <div class="task-left">
+                Überprüfen Sie diese Aussage, indem Sie den konstanten Quotienten berechnen.
+                <br>
+                <button class="toggle" onclick="toggleSolution('sol-48')">Lösung anzeigen</button>
+                <div id="sol-48" class="solution is-hidden">
+                    <p><strong>Berechnung:</strong></p>
+                    <p>
+                        Sei \( s_1 = 1 \). Das nächste Quadrat verbindet die Seitenmitten. Es entsteht ein rechtwinkliges Dreieck in den Ecken mit Katheten \( \frac{1}{2} \).
+                    </p>
+                    <p>
+                        Die Hypotenuse ist die neue Seitenlänge \( s_2 \):
+                        $$ s_2 = \sqrt{\left(\frac{1}{2}\right)^2 + \left(\frac{1}{2}\right)^2} = \sqrt{\frac{2}{4}} = \sqrt{\frac{1}{2}} = \frac{1}{\sqrt{2}} $$
+                    </p>
+                    <p>
+                        Für das nächste Quadrat gilt das Gleiche Prinzip mit Faktor \( \frac{1}{\sqrt{2}} \).
+                    </p>
+                    <p>
+                        <strong>Ergebnis:</strong> Ja, die Aussage stimmt. Der Quotient ist:
+                        $$ q = \frac{1}{\sqrt{2}} \approx 0.707 $$
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

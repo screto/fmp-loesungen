@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 4.52 - Geometrische Reihe</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l4-51.html">&laquo; Aufgabe 4.51</a>
+        <h1>Aufgabe 4.52</h1>
+        <a href="l4-53.html"> Aufgabe 4.53 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        Eine geometrische Reihe wird aus den Teilsummen der geometrischen Folge gebildet. Stellen Sie die geometrische Reihe der geometrischen Folge 1, 2, 4, 8, 16, 32 auf.
+        <br>
+
+        <div class="task-row">
+            <div class="task-left">
+
+                <button class="toggle" onclick="toggleSolution('sol-52')">Lösung anzeigen</button>
+                <div id="sol-52" class="solution is-hidden">
+                    <p>Die geometrische Folge lautet: \( a_k = 2^{k-1} \)</p>
+                    <p>Die Reihe \( s_n \) besteht aus den Partialsummen:</p>
+                    <ul>
+                        <li>\( s_1 = 1 \)</li>
+                        <li>\( s_2 = 1 + 2 = 3 \)</li>
+                        <li>\( s_3 = 1 + 2 + 4 = 7 \)</li>
+                        <li>\( s_4 = 1 + 2 + 4 + 8 = 15 \)</li>
+                        <li>\( s_5 = 1 + 2 + 4 + 8 + 16 = 31 \)</li>
+                        <li>\( s_6 = 1 + 2 + 4 + 8 + 16 + 32 = 63 \)</li>
+                    </ul>
+                    <p><strong>Reihe: 1, 3, 7, 15, 31, 63, ...</strong></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

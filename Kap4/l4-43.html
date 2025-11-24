@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 4.43 - Geometrische Folgen erkennen</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l4-42.html">&laquo; Aufgabe 4.42</a>
+        <h1>Aufgabe 4.43</h1>
+        <a href="l4-44.html"> Aufgabe 4.44 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+ 
+        Entscheiden Sie, ob es sich jeweils um eine geometrische Folge handelt.
+        <br>
+
+        <div class="task-row">
+            <div class="task-left"><strong>a)</strong> 1, 3, 9, 27, 81, 243, ...
+            <br>
+                <button class="toggle" onclick="toggleSolution('sol-a')">Lösung anzeigen</button>
+                <div id="sol-a" class="solution is-hidden">
+                    <strong>Ja</strong> (\( q = 3 \))
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left"><strong>b)</strong> 1, 2, 4, 8, 10, 20, ...
+            <br>
+                <button class="toggle" onclick="toggleSolution('sol-b')">Lösung anzeigen</button>
+                <div id="sol-b" class="solution is-hidden">
+                    <strong>Nein</strong><br>
+                    (Erst Verdoppelung, aber \( 8 \to 10 \) ist \( \cdot 1.25 \))
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left"><strong>c)</strong> \( \frac{1}{2}, \frac{1}{4}, \frac{1}{8}, \frac{1}{16}, \frac{1}{32}, ... \) 
+            <br>
+                <button class="toggle" onclick="toggleSolution('sol-c')">Lösung anzeigen</button>
+                <div id="sol-c" class="solution is-hidden">
+                    <strong>Ja</strong> (\( q = \frac{1}{2} \) oder \( 0.5 \))
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left"><strong>d)</strong> 10, -20, 40, -80, ...
+            <br>
+                <button class="toggle" onclick="toggleSolution('sol-d')">Lösung anzeigen</button>
+                <div id="sol-d" class="solution is-hidden">
+                    <strong>Ja</strong> (\( q = -2 \))
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left"><strong>e)</strong> 3, 4.5, 6.75, 10.125, ...
+            <br>
+                <button class="toggle" onclick="toggleSolution('sol-e')">Lösung anzeigen</button>
+                <div id="sol-e" class="solution is-hidden">
+                    <strong>Ja</strong> (\( q = 1.5 \))<br>
+                    \( 4.5 : 3 = 1.5 \); \( 6.75 : 4.5 = 1.5 \)
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left"><strong>f)</strong> 1, 0.5, 0.25, 0.125, 0.0625, ...
+            <br>
+                <button class="toggle" onclick="toggleSolution('sol-f')">Lösung anzeigen</button>
+                <div id="sol-f" class="solution is-hidden">
+                    <strong>Ja</strong> (\( q = 0.5 \))
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left"><strong>g)</strong> \( \frac{1}{625}, \frac{1}{125}, \frac{1}{25}, \frac{1}{5}, 1, 5, 25, ... \)
+            <br>
+                <button class="toggle" onclick="toggleSolution('sol-g')">Lösung anzeigen</button>
+                <div id="sol-g" class="solution is-hidden">
+                    <strong>Ja</strong> (\( q = 5 \))
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left"><strong>h)</strong> 0.3, 0.03, 0.003, 0.0003, ...
+            <br>
+                <button class="toggle" onclick="toggleSolution('sol-h')">Lösung anzeigen</button>
+                <div id="sol-h" class="solution is-hidden">
+                    <strong>Ja</strong> (\( q = 0.1 \))
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

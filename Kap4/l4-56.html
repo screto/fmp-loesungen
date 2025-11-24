@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 4.56 - Fraktale Geometrie</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l4-55.html">&laquo; Aufgabe 4.55</a>
+        <h1>Aufgabe 4.56 - Fraktale Geometrie</h1>
+        <a href="l4-57.html"> Aufgabe 4.57 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        Das erste Quadrat hat eine Seitenlänge von 3 cm. Jede nächste Figur hat eine Generation neuer Quadrate; deren Seitenlängen betragen noch \( \frac{1}{3} \) der Seitenlängen der vorangehenden Generation.
+        <br>
+        <img src="../pics/lim56.png" alt="Quadrat-Fraktal Skizze" style="max-width: 60%; height: auto; margin: 1rem 0;">
+        <br>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>a)</strong> Zeichnen Sie die nächste Figur.
+                <br>
+                <button class="toggle" onclick="toggleSolution('sol-a')">Lösung anzeigen</button>
+                <div id="sol-a" class="solution is-hidden">
+                    <p>
+                        Die nächste Figur entsteht, indem auf alle freien geraden Streckenabschnitte der vorherigen Figur jeweils ein neues Quadrat (Seitenlänge 1/3 des Abschnitts) mittig aufgesetzt wird.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>b-d)</strong> Umfang \( U_n \)
+                <ul>
+                    <li>Folge der Umfänge</li>
+                    <li>Expliziter Term</li>
+                    <li>Konvergenz?</li>
+                </ul>
+                <button class="toggle" onclick="toggleSolution('sol-bcd')">Lösung anzeigen</button>
+                <div id="sol-bcd" class="solution is-hidden">
+                    <p><strong>Überlegung:</strong> Wenn auf eine Seite der Länge \( s \) mittig ein Quadrat der Seite \( s/3 \) gesetzt wird, wird das mittlere Drittel (\( s/3 \)) durch 3 Seiten à \( s/3 \) ersetzt. Die Strecke wächst von \( s \) auf \( \frac{s}{3} + 3\cdot\frac{s}{3} + \frac{s}{3} = \frac{5}{3}s \).</p>
+                    <p>Der Umfang wächst also in jedem Schritt um den Faktor \( q = \frac{5}{3} \).</p>
+                    
+                    <p><strong>b) Folge:</strong></p>
+                    <ul>
+                        <li>Figur 1: \( 4 \cdot 3 = 12 \)</li>
+                        <li>Figur 2: \( 12 \cdot \frac{5}{3} = 20 \)</li>
+                        <li>Figur 3: \( 20 \cdot \frac{5}{3} = \frac{100}{3} \approx 33.33 \)</li>
+                    </ul>
+                    
+                    <p><strong>c) Term:</strong> \( U_n = 12 \cdot \left(\frac{5}{3}\right)^n \)</p>
+                    
+                    <p><strong>d) Konvergenz:</strong></p>
+                    <p>Da der Faktor \( q = 5/3 > 1 \) ist, wächst der Umfang unendlich. Die Folge ist <strong>divergent</strong>.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>e-g)</strong> Flächeninhalt \( A_n \)
+                <ul>
+                    <li>Folge der Flächeninhalte</li>
+                    <li>Expliziter Term</li>
+                    <li>Konvergenz?</li>
+                </ul>
+
+                <button class="toggle" onclick="toggleSolution('sol-efg')">Lösung anzeigen</button>
+                <div id="sol-efg" class="solution is-hidden">
+                    <p><strong>Überlegung:</strong></p>
+                    <ul>
+                        <li>Start: 1 Quadrat. \( A_1 = 9 \). Anzahl Seiten: 3.</li>
+                        <li>Schritt 1: Auf 3 Seiten kommen Quadrate der Grösse \( 1\times1 \). Zusatzfläche \( 3 \cdot 1 = 3 \). \( A_2 = 12 \). Anzahl neuer Seiten: \( 3 \times 3 = 9 \).</li>
+                        <li>Schritt 2: Auf 9 Seiten kommen Quadrate der Grösse \( (1/3)^2 = 1/9 \). Zusatzfläche \( 9 \cdot 1/9 \).</li>
+                        <li>Allgemein: Die Anzahl der Seiten verdreifacht sich, die Fläche eines einzelnen Quadrats wird durch 9 geteilt. Der Zuwachs verändert sich mit dem Faktor \( q = 3/9 \).</li>
+                    </ul>
+
+                    <p><strong>e) Folge:</strong></p>
+                    <p> \(9; 12; 12 + \frac{9}{9} = 13 ; 13.\overline{3}; ... \)</p>
+
+                    <p><strong>f) Term (Geometrische Reihe für den Zuwachs):</strong></p>
+                    <p>
+                        Dies ist eine geometrische Reihe beginnend nach dem ersten Quadrat:
+                        \( A_n = 9 \cdot \frac{1 - (1/3)^n}{1 - 1/3} \)
+                    </p>
+
+                    <p><strong>g) Konvergenz:</strong></p>
+                    <p>Da \( q = 1/3 < 1 \), ist die Folge <strong>konvergent</strong> (die Fläche bleibt endlich).</p>
+                    <p>Grenzwert für \( n \to \infty \):</p>
+                    $$ A = 9 \cdot \frac{1}{1 - 1/3} = 9 \cdot \frac{1}{2/3} = 9 \cdot \frac{3}{2} = 13.5 \, \text{cm}^2 $$
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
