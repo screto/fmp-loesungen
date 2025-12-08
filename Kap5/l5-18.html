@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 5.18 - Propeller</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+
+<body>
+    <div class="header-nav">
+        <a href="l5-17.html">&laquo; Aufgabe 5.17</a>
+        <h1>Aufgabe 5.18 - Propeller</h1>
+        <a href="l5-19.html">Aufgabe 5.19 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        Berechnen Sie die gerasterte Fläche.
+        <br><small>(Quelle: Kusch und Glocke 2012, S. 221)</small>
+
+        <div style="text-align: center; margin: 2rem 0;">
+            <img src="../pics/aufgabe18.png" alt="Aufgabe 18" style="max-width: 40%;">
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>a)</strong> allgemein mit $a$
+                <br>
+                <button class="toggle" onclick="toggleSolution('sol-18a')">Lösung anzeigen</button>
+                <div id="sol-18a" class="solution is-hidden">
+                    <div class="box">
+                        <strong>Analyse der Figur:</strong><br>
+                        Wir haben ein Quadrat mit der Seitenlänge \( a \).<br>
+                        Die graue Fläche besteht aus vier "Blättern", die sich in der Mitte treffen.<br>
+                        Diese Form entsteht durch vier Halbkreise, die jeweils über den Seiten des Quadrats nach innen
+                        gezeichnet werden.
+                    </div>
+
+                    <div class="step">
+                        <p>Wir nutzen das Prinzip der Überlappung (Inklusion-Exklusion), um die Fläche zu berechnen.</p>
+
+                        <p><strong>1. Fläche des Quadrats:</strong></p>
+                        $$ A_{\text{Quadrat}} = a^2 $$
+
+                        <p><strong>2. Fläche der vier Halbkreise:</strong><br>
+                            Jeder Halbkreis hat den Durchmesser \( a \), also den Radius \( r = a/2 \).<br>
+                            Die Fläche <em>eines</em> Halbkreises ist:
+                            $$ A_{\text{Halb}} = \frac{1}{2} \pi \left(\frac{a}{2}\right)^2 = \frac{\pi a^2}{8} $$
+                            Die Fläche aller <em>vier</em> Halbkreise zusammen ist:
+                            $$ A_{\text{4 Halb}} = 4 \cdot \frac{\pi a^2}{8} = \frac{\pi a^2}{2} $$</p>
+
+                        <p><strong>3. Herleitung der grauen Fläche:</strong><br>
+                            Wenn man die vier Halbkreise addiert, deckt man das gesamte Quadrat ab. Dabei werden die
+                            Bereiche, in denen sich zwei Halbkreise überlappen (die grauen Blätter), <em>doppelt</em>
+                            gezählt, während die weissen Bereiche einfach abgedeckt sind.<br>
+                            Genauer gilt: Die Summe der Flächen der vier Halbkreise entspricht der Fläche des Quadrats
+                            plus der Fläche der Überlappungen (der grauen Blätter).</p>
+
+                        $$ A_{\text{4 Halb}} = A_{\text{Quadrat}} + A_{\text{grau}} $$
+
+                        <p>Umgestellt nach \( A_{\text{grau}} \):</p>
+                        $$ A_{\text{grau}} = A_{\text{4 Halb}} - A_{\text{Quadrat}} $$
+                        $$ A_{\text{grau}} = \frac{\pi a^2}{2} - a^2 $$
+
+                        <div class="result-box" style="margin-top:10px; padding:10px;">
+                            <strong>Endformel:</strong>
+                            $$ A_{\text{grau}} = a^2 \cdot \left( \frac{\pi}{2} - 1 \right) $$
+                        </div>
+                        <p><em>(Der Faktor ist ca. \( 1.5708 - 1 = 0.5708 \))</em></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>b)</strong> für $a = 40 \text{ cm}$
+                <br>
+                <button class="toggle" onclick="toggleSolution('sol-18b')">Lösung anzeigen</button>
+                <div id="sol-18b" class="solution is-hidden">
+                    <div class="step">
+                        <p>Wir setzen \( a = 40 \, \text{cm} \) in die Formel ein:</p>
+                        $$ A_{\text{grau}} = (40 \, \text{cm})^2 \cdot \left( \frac{\pi}{2} - 1 \right) $$
+                        $$ A_{\text{grau}} = 1600 \, \text{cm}^2 \cdot (1.570796... - 1) $$
+                        $$ A_{\text{grau}} = 1600 \, \text{cm}^2 \cdot 0.570796... $$
+                    </div>
+
+                    <div class="result-box">
+                        <span class="result">Ergebnis:</span>
+                        $$ A_{\text{grau}} \approx 913.27 \, \text{cm}^2 $$
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

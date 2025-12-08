@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 5.7 - Masse Vergleich</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l5-6.html">&laquo; Aufgabe 5.6</a>
+        <h1>Aufgabe 5.7 - Masse Vergleich</h1>
+        <a href="l5-8.html">Aufgabe 5.8 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        Hat eine rechteckige ($21 \text{ cm} \times 32 \text{ cm}$) oder eine runde Blechplatte (Durchmesser = $22 \text{ cm}$) mehr Masse, wenn beide aus dem gleichen Material hergestellt wurden?
+        <br><small>(Quelle: Kusch und Glocke 2012, S. 219)</small>
+        <br>
+        <button class="toggle" onclick="toggleSolution('sol-5-7')">Lösung anzeigen</button>
+        <div id="sol-5-7" class="solution is-hidden">
+            <p><strong>Rechteck:</strong><br>
+            $A_R = l \cdot b = 21 \text{ cm} \cdot 32 \text{ cm} = 672 \text{ cm}^2$</p>
+            
+            <p><strong>Kreis:</strong><br>
+            $r = \frac{d}{2} = 11 \text{ cm}$<br>
+            $A_K = r^2 \cdot \pi = 11^2 \cdot \pi \approx 380.13 \text{ cm}^2$</p>
+
+            <p><strong>Antwort:</strong><br>
+            Da $672 > 380.13$, hat die <strong>rechteckige Blechplatte</strong> mehr Masse.</p>
+        </div>
+    </div>
+</body>
+</html>

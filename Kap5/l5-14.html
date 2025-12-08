@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 5.14 - Fläche A</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+
+<body>
+    <div class="header-nav">
+        <a href="l5-13.html">&laquo; Aufgabe 5.13</a>
+        <h1>Aufgabe 5.14 - Fläche A berechnen</h1>
+        <a href="l5-15.html">Aufgabe 5.15 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        Berechnen Sie den Flächeninhalt $A$.
+        <br><small>(Quelle: Kusch und Glocke 2012, S. 221)</small>
+
+        <div style="text-align: center; margin: 2rem 0;">
+            <img src="../pics/aufgabe14.png" alt="Aufgabe 14" style="max-width: 40%;">
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>a)</strong> allgemein mit $a$
+                <br>
+                <button class="toggle" onclick="toggleSolution('sol-14a')">Lösung anzeigen</button>
+                <div id="sol-14a" class="solution is-hidden">
+                    <div class="box">
+                        <strong>Gegeben:</strong><br>
+                        Quadrat mit der Seitenlänge \( a \).<br>
+                        Die weissen Flächen in den Ecken sind vier Viertelkreise.<br>
+                        Diese Viertelkreise berühren sich jeweils in der Mitte der Quadratseiten.
+                    </div>
+                    <div class="step">
+                        <p>Die gesuchte graue Fläche \( A \) ergibt sich, indem man von der gesamten Quadratfläche die
+                            vier weissen Eckflächen abzieht.</p>
+
+                        <p><strong>1. Fläche des Quadrats:</strong></p>
+                        $$ A_{\text{Quadrat}} = a^2 $$
+
+                        <p><strong>2. Fläche der weissen Ecken:</strong><br>
+                            Die vier weissen Ecken sind Viertelkreise. Da sie sich genau in der Mitte der Seitenlänge \(
+                            a \) treffen, beträgt ihr Radius:</p>
+                        $$ r = \frac{a}{2} $$
+
+                        <p>Vier Viertelkreise ergeben zusammen genau einen vollen Kreis:</p>
+                        $$ A_{\text{Weiss}} = \pi \cdot r^2 = \pi \cdot \left(\frac{a}{2}\right)^2 = \pi \cdot
+                        \frac{a^2}{4} = \frac{\pi}{4} a^2 $$
+                    </div>
+
+                    <div class="step">
+                        <p><strong>3. Berechnung der grauen Fläche \( A \):</strong></p>
+                        $$ A = A_{\text{Quadrat}} - A_{\text{Weiss}} $$
+                        $$ A = a^2 - \frac{\pi}{4} a^2 $$
+
+                        <p>Durch Ausklammern von \( a^2 \) erhält man die allgemeine Formel:</p>
+                        $$ A = a^2 \cdot \left( 1 - \frac{\pi}{4} \right) $$
+
+                        <p><em>(Der Faktor in der Klammer ist ca. \( 1 - 0.7854 = 0.2146 \))</em></p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>b)</strong> für $a = 70 \text{ cm}$
+                <br>
+                <button class="toggle" onclick="toggleSolution('sol-14b')">Lösung anzeigen</button>
+                <div id="sol-14b" class="solution is-hidden">
+                    <div class="step">
+                        <p>Wir setzen den Wert \( a = 70 \, \text{cm} \) in unsere Formel ein:</p>
+                        $$ A = (70 \, \text{cm})^2 \cdot \left( 1 - \frac{\pi}{4} \right) $$
+                        $$ A = 4900 \, \text{cm}^2 \cdot (1 - 0.785398) $$
+                        $$ A = 4900 \, \text{cm}^2 \cdot 0.214602 $$
+                    </div>
+
+                    <div class="result-box">
+                        <span class="result">Ergebnis:</span>
+                        $$ A \approx 1051.55 \, \text{cm}^2 $$
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

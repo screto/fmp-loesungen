@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 5.19 - Yin Yang?</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+
+<body>
+    <div class="header-nav">
+        <a href="l5-18.html">&laquo; Aufgabe 5.18</a>
+        <h1>Aufgabe 5.19 - Yin Yang?</h1>
+        <a href="l5-20.html">Aufgabe 5.20 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        Berechnen Sie den Flächeninhalt $A$.
+        <br><small>(Quelle: Kusch und Glocke 2012, S. 221)</small>
+
+        <div style="text-align: center; margin: 2rem 0;">
+            <img src="../pics/aufgabe19.png" alt="Aufgabe 19" style="max-width: 50%;">
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>a)</strong> allgemein mit Variablen
+                <br>
+                <button class="toggle" onclick="toggleSolution('sol-19a')">Lösung anzeigen</button>
+                <div id="sol-19a" class="solution is-hidden">
+
+                    <p>
+                        Die graue Fläche \( A \) setzt sich aus drei Teilen zusammen:
+                    </p>
+                    <ol>
+                        <li>Dem <strong>grossen oberen Halbkreis</strong> mit Radius \( R \).</li>
+                        <li>Abzüglich der zwei <strong>weissen seitlichen Halbkreise</strong>.</li>
+                        <li>Zuzüglich des <strong>unteren mittleren Halbkreises</strong> mit Radius \( r \).</li>
+                    </ol>
+
+                    <p><strong>Radius der weissen Halbkreise:</strong><br>
+                        Der Durchmesser des gesamten grossen Halbkreises ist \( 2R \). Der mittlere Abschnitt ist \( 2r
+                        \). Der verbleibende Platz auf der Durchmesserlinie beträgt \( 2R - 2r \). Da es zwei identische
+                        weisse Halbkreise sind, hat jeder den Durchmesser \( R - r \).<br>
+                        Der Radius \( \rho \) eines weissen Halbkreises ist somit:
+                        $$ \rho = \frac{R - r}{2} $$
+                    </p>
+
+                    <p><strong>Flächenberechnung:</strong><br>
+                        $$ A = A_{\text{gross}} - 2 \cdot A_{\text{weiss}} + A_{\text{klein}} $$
+                        $$ A = \frac{1}{2}\pi R^2 - 2 \cdot \left[ \frac{1}{2}\pi \left(\frac{R-r}{2}\right)^2 \right] +
+                        \frac{1}{2}\pi r^2 $$
+                    </p>
+
+                    <div class="result-box">
+                        <p>Durch algebraische Vereinfachung erhält man die kompakte Formel:</p>
+                        $$ A = \pi \left( \frac{R + r}{2} \right)^2 $$
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>b)</strong> für $R = 24 \text{ cm}$, $r = 8 \text{ cm}$
+                <br>
+                <button class="toggle" onclick="toggleSolution('sol-19b')">Lösung anzeigen</button>
+                <div id="sol-19b" class="solution is-hidden">
+                    <p>Wir setzen die gegebenen Werte in die vereinfachte Formel aus Teil a) ein.</p>
+
+                    <p>1. <strong>Bestimmung des effektiven Radius:</strong></p>
+                    $$ r_{\text{eff}} = \frac{24\,\text{cm} + 8\,\text{cm}}{2} = \frac{32\,\text{cm}}{2} = 16\,\text{cm}
+                    $$
+
+                    <p>2. <strong>Berechnung der Fläche:</strong></p>
+                    $$ A = \pi \cdot (16\,\text{cm})^2 $$
+                    $$ A = 256\pi \,\text{cm}^2 $$
+
+                    <div class="result-box">
+                        <p><strong>Numerisches Ergebnis:</strong></p>
+                        $$ A \approx 804.25\,\text{cm}^2 $$
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>c)</strong> Vergleich mit Kreis um $M$
+                <br>
+                <button class="toggle" onclick="toggleSolution('sol-19c')">Lösung anzeigen</button>
+                <div id="sol-19c" class="solution is-hidden">
+                    <p>Der gestrichelte Kreis in der Abbildung hat den Mittelpunkt \( M \).</p>
+                    <ul>
+                        <li>Der oberste Punkt der Figur liegt im Abstand \( R \) von der Grundlinie.</li>
+                        <li>Der unterste Punkt der Figur liegt im Abstand \( r \) von der Grundlinie (nach unten).</li>
+                        <li>Die gesamte vertikale Ausdehnung (Durchmesser des gestrichelten Kreises) beträgt somit \( R
+                            + r \).</li>
+                    </ul>
+
+                    <p>Daraus folgt für den Radius des Kreises um \( M \):</p>
+                    $$ r_{M} = \frac{R + r}{2} $$
+
+                    <p>Die Fläche dieses Kreises berechnet sich also zu:</p>
+                    $$ A_{\text{Kreis}} = \pi \cdot \left( \frac{R + r}{2} \right)^2 $$
+
+                    <div class="result-box">
+                        <strong>Schlussfolgerung:</strong><br>
+                        Der berechnete Flächeninhalt \( A \) der grauen Figur ist <strong>identisch</strong> mit dem
+                        Flächeninhalt des gestrichelten Kreises um \( M \).
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

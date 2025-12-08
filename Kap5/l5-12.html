@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 5.12 - Vier Möndchen</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+
+<body>
+    <div class="header-nav">
+        <a href="l5-11.html">&laquo; Aufgabe 5.11</a>
+        <h1>Aufgabe 5.12 - Vier Möndchen</h1>
+        <a href="l5-13.html">Aufgabe 5.13 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        Wie gross ist der Flächeninhalt der vier mondsichelähnlichen Figuren? Vergleichen Sie ihn mit dem Flächeninhalt
+        des Quadrates ($r=0.5 \text{ dm}$).
+        <br><small>(Quelle: Kusch und Glocke 2012, S. 220)</small>
+
+        <div style="text-align: center; margin: 2rem 0;">
+            <img src="../pics/aufgabe12.png" alt="Vier Möndchen um Quadrat" style="max-width: 40%;">
+        </div>
+
+
+        <button class="toggle" onclick="toggleSolution('sol-12')">Lösung anzeigen</button>
+        <div id="sol-12" class="solution is-hidden">
+            <div class="box">
+                <strong>Gegeben:</strong><br>
+                Radius des Umkreises (gestrichelter Kreis): \( r = 0.5 \, \text{dm} = 5 \, \text{cm} \)<br>
+                Die Figur besteht aus einem Quadrat, seinem Umkreis und vier Halbkreisen über den Quadratseiten.
+            </div>
+
+            <h3>1. Berechnung der Quadratfläche</h3>
+            <div class="step">
+                <p>Der Durchmesser des grossen Umkreises entspricht der Diagonalen \( d \) des Quadrats.</p>
+                $$ d = 2 \cdot r = 2 \cdot 5 \, \text{cm} = 10 \, \text{cm} $$
+
+                <p>Die Fläche eines Quadrats kann über die Diagonale berechnet werden (\( A = \frac{d^2}{2} \)) oder
+                    über die Seitenlänge \( a \). Wir nutzen den Pythagoras (\( a^2 + a^2 = d^2 \)), um \( a^2 \) zu
+                    finden:</p>
+                $$ 2a^2 = d^2 = (2r)^2 = 4r^2 $$
+                $$ a^2 = 2r^2 $$
+
+                <p>Daraus ergibt sich die Fläche des Quadrats \( A_{\text{Quadrat}} \):</p>
+                $$ A_{\text{Quadrat}} = 2 \cdot (5 \, \text{cm})^2 = 2 \cdot 25 \, \text{cm}^2 = \mathbf{50 \,
+                \text{cm}^2} $$
+                <p><em>(Alternativ: Seitenlänge \( a = \sqrt{50} \approx 7.07 \, \text{cm} \))</em></p>
+            </div>
+
+            <h3>2. Fläche der vier Halbkreise an den Seiten</h3>
+            <div class="step">
+                <p>Über jeder der vier Seiten \( a \) liegt ein Halbkreis. Der Radius dieser kleinen Halbkreise ist \(
+                    r_{\text{klein}} = \frac{a}{2} \).</p>
+                <p>Die Fläche aller vier Halbkreise zusammen entspricht der Fläche von zwei vollen Kreisen mit Radius \(
+                    \frac{a}{2} \):</p>
+                $$ A_{\text{4 Halbkreise}} = 4 \cdot \frac{1}{2} \pi \left(\frac{a}{2}\right)^2 = 2 \pi \frac{a^2}{4} =
+                \frac{\pi a^2}{2} $$
+
+                <p>Da wir wissen, dass \( a^2 = 2r^2 \), setzen wir ein:</p>
+                $$ A_{\text{4 Halbkreise}} = \frac{\pi (2r^2)}{2} = \pi r^2 $$
+
+                <p>Berechnung:</p>
+                $$ A_{\text{4 Halbkreise}} = \pi \cdot (5 \, \text{cm})^2 = 25\pi \approx \mathbf{78.54 \, \text{cm}^2}
+                $$
+            </div>
+
+            <h3>3. Fläche der vier "Möndchen"</h3>
+            <div class="step">
+                <p>Um die Fläche der grauen Möndchen zu erhalten, betrachten wir die Gesamtfläche der Figur auf zwei
+                    Arten:</p>
+                <ol>
+                    <li>Gesamtfläche = Fläche des Quadrats + Fläche der 4 Halbkreise</li>
+                    <li>Gesamtfläche = Fläche des grossen Umkreises + Fläche der 4 Möndchen</li>
+                </ol>
+
+                <p>Wir setzen gleich:</p>
+                $$ A_{\text{Quadrat}} + A_{\text{4 Halbkreise}} = A_{\text{Umkreis}} + A_{\text{Möndchen}} $$
+
+                <p>Die Fläche des grossen Umkreises ist \( A_{\text{Umkreis}} = \pi r^2 \).<br>
+                    Wie oben berechnet, ist \( A_{\text{4 Halbkreise}} \) ebenfalls \( \pi r^2 \).</p>
+
+                <p>Die Gleichung wird also zu:</p>
+                $$ A_{\text{Quadrat}} + \pi r^2 = \pi r^2 + A_{\text{Möndchen}} $$
+
+                <p>Wenn wir \( \pi r^2 \) auf beiden Seiten abziehen, bleibt übrig:</p>
+                $$ A_{\text{Möndchen}} = A_{\text{Quadrat}} $$
+            </div>
+
+            <div class="result-box">
+                <span class="result">Ergebnis & Vergleich:</span>
+                <p><strong>1. Wie gross ist der Flächeninhalt der vier Figuren?</strong><br>
+                    Da sie genau der Quadratfläche entsprechen:</p>
+                $$ A_{\text{Möndchen}} = 50 \, \text{cm}^2 $$
+
+                <p><strong>2. Vergleich mit dem Flächeninhalt des Quadrates:</strong><br>
+                    Der Flächeninhalt der vier mondsichelähnlichen Figuren ist <strong>exakt gleich gross</strong> wie
+                    der Flächeninhalt des Quadrates.</p>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
