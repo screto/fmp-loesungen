@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 6.8 - Turmhöhe mit Augenhöhe</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l6-7.html">&laquo; Aufgabe 6.7</a>
+        <h1>Aufgabe 6.8</h1>
+        <a href="l6-9.html">Aufgabe 6.9 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        Aus einer Entfernung $e = 60 \text{ m}$ erblickt man die Spitze eines Turmes unter dem Erhebungswinkel $\alpha = 27^\circ$. Berechnen Sie die Höhe des Turmes, wenn die Augenhöhe $a = 1.5 \text{ m}$ beträgt.
+        
+        <div class="task-row">
+            <div class="task-left">
+                Berechnung der Gesamthöhe $H$.
+            </div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-6-8')">Lösung anzeigen</button>
+                <div id="sol-6-8" class="solution is-hidden">
+                    Teilhöhe über Augenhöhe $h' = e \cdot \tan(27^\circ) = 60 \text{ m} \cdot \tan(27^\circ) \approx 30.57 \text{ m}$ <br>
+                    Gesamthöhe $H = h' + a = 30.57 \text{ m} + 1.5 \text{ m} = 32.07 \text{ m}$
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

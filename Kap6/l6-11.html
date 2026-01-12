@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 6.11 - Sehwinkel Fluss</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l6-10.html">&laquo; Aufgabe 6.10</a>
+        <h1>Aufgabe 6.11</h1>
+        <a href="l6-12.html">Aufgabe 6.12 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        Von einem Turm ($h = 28.6 \text{ m}$), der $e = 6 \text{ m}$ vom Ufer eines Flusses entfernt ist, erscheint die Flussbreite unter dem Sehwinkel $\alpha = 16.7^\circ$. Berechnen Sie die Breite des Flusses.
+        
+        <div class="task-row">
+            <div class="task-left">
+                Berechnung der Breite $b$.
+            </div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-6-11')">Lösung anzeigen</button>
+                <div id="sol-6-11" class="solution is-hidden">
+                    Winkel zum nahen Ufer: $\tan(\beta) = \frac{h}{e} = \frac{28.6}{6} \Rightarrow \beta \approx 78.14^\circ$ <br>
+                    Winkel zum fernen Ufer: $\gamma = \beta - \alpha = 78.14^\circ - 16.7^\circ = 61.44^\circ$ <br>
+                    Gesamtdistanz: $d = \frac{h}{\tan(\gamma)} = \frac{28.6}{\tan(61.44^\circ)} \approx 15.56 \text{ m}$ <br>
+                    Flussbreite $b = d - e = 15.56 \text{ m} - 6 \text{ m} = 9.56 \text{ m}$
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

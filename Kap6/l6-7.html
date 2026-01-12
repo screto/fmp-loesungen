@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 6.7 - Höhe einer Tanne</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l6-6.html">&laquo; Aufgabe 6.6</a>
+        <h1>Aufgabe 6.7</h1>
+        <a href="l6-8.html">Aufgabe 6.8 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        Wie hoch ist eine Tanne, wenn ihr Schatten $s = 27.5 \text{ m}$ lang ist und die Sonnenstrahlen unter dem Winkel $\alpha = 38^\circ$ einfallen?
+        
+        <div class="task-row">
+            <div class="task-left">
+                Berechnung der Baumhöhe $h$.
+            </div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-6-7')">Lösung anzeigen</button>
+                <div id="sol-6-7" class="solution is-hidden">
+                    $\tan(\alpha) = \frac{h}{s} \Rightarrow h = s \cdot \tan(\alpha)$ <br>
+                    $h = 27.5 \text{ m} \cdot \tan(38^\circ) \approx 21.49 \text{ m}$
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

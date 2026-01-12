@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 6.5 - Neigungswinkel Leiter</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l6-4.html">&laquo; Aufgabe 6.4</a>
+        <h1>Aufgabe 6.5</h1>
+        <a href="l6-6.html">Aufgabe 6.6 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        Eine Leiter mit der Länge $l = 7.5 \text{ m}$ lehnt in der Höhe $h = 6.6 \text{ m}$ an einer Hauswand an. Bestimmen Sie den Neigungswinkel gegen die Horizontale.
+        
+        <div class="task-row">
+            <div class="task-left">
+                Berechnung des Winkels $\alpha$.
+            </div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-6-5')">Lösung anzeigen</button>
+                <div id="sol-6-5" class="solution is-hidden">
+                    $\sin(\alpha) = \frac{\text{Gegenkathete}}{\text{Hypotenuse}} = \frac{h}{l} = \frac{6.6}{7.5} = 0.88$ <br>
+                    $\alpha = \arcsin(0.88) \approx 61.64^\circ$
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
