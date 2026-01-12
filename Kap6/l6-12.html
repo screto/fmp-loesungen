@@ -14,30 +14,40 @@
     <div class="header-nav">
         <a href="l6-11.html">&laquo; Aufgabe 6.11</a>
         <h1>Aufgabe 6.12</h1>
-        <a href="l6-13.html">Aufgabe 6.13 &raquo;</a>
+        <a href="index.html">Übersicht &raquo;</a>
     </div>
 
     <div class="aufgabe">
+        <strong>Auftrag:</strong>
         Gegeben ist das rechtwinklige Dreieck $ABC$ durch die Längen der Katheten $a = 6 \text{ cm}$ und $b = 8 \text{ cm}$. Die Thaleskreise über der Hypotenuse $c$ und über der Kathete $a$ schliessen die schraffierte Fläche ein. Berechnen Sie den Inhalt dieser Fläche.
-        <br>
-        <center>
-            <img src="https://screto.github.io/fmp-loesungen/pics/thales.png" alt="Thaleskreise" style="max-width: 50%; margin-top: 1rem;">
-        </center>
+        
+        <div style="text-align: center; margin: 1.5rem 0;">
+            <img src="https://screto.github.io/fmp-loesungen/pics/thales.png" alt="Thaleskreise Grafik" style="max-width: 50%; height: auto;">
+        </div>
 
         <div class="task-row">
             <div class="task-left">
-                Berechnung der schraffierten Fläche.
+                Berechnen Sie den Flächeninhalt der schraffierten Fläche.
             </div>
             <div class="task-right">
                 <button class="toggle" onclick="toggleSolution('sol-6-12')">Lösung anzeigen</button>
                 <div id="sol-6-12" class="solution is-hidden">
-                    Hypotenuse $c = \sqrt{6^2 + 8^2} = 10 \text{ cm}$. <br>
-                    Fläche Halbkreis über $a$ ($r=3$): $A_{a} = \frac{1}{2} \pi \cdot 3^2 \approx 14.137 \text{ cm}^2$. <br>
-                    Die gesuchte Fläche entspricht der Fläche des Halbkreises über $a$ abzüglich des Kreissegments des grossen Thaleskreises, das über $a$ liegt. <br>
-                    Winkel $\beta$ im Dreieck: $\cos(\beta) = \frac{a}{c} = 0.6 \Rightarrow \beta \approx 53.13^\circ$. <br>
-                    Zentriwinkel im grossen Kreis über $a$: $2\beta = 106.26^\circ$. <br>
-                    Fläche Kreissegment (grosser Kreis, $r=5$): $A_{seg} = \frac{5^2}{2} (\frac{106.26 \cdot \pi}{180} - \sin(106.26^\circ)) \approx 11.195 \text{ cm}^2$. <br>
-                    Schraffierte Fläche: $14.137 - 11.195 \approx 2.94 \text{ cm}^2$.
+                    <strong>1. Hypotenuse und Radien:</strong><br>
+                    $c = \sqrt{6^2 + 8^2} = 10 \text{ cm} \Rightarrow r_c = 5 \text{ cm}$<br>
+                    Kathete $a = 6 \text{ cm} \Rightarrow r_a = 3 \text{ cm}$<br><br>
+
+                    <strong>2. Fläche des kleinen Halbkreises (über $a$):</strong><br>
+                    $A_{HK\_a} = \frac{1}{2} \cdot \pi \cdot 3^2 \approx 14.137 \text{ cm}^2$ <br><br>
+
+                    <strong>3. Korrektur des Kreissegments (Überlappung):</strong><br>
+                    Winkel $\beta$ im Dreieck $ABC$: $\cos(\beta) = \frac{a}{c} = 0.6 \Rightarrow \beta \approx 53.13^\circ$.<br>
+                    Im gleichschenkligen Dreieck innerhalb des grossen Kreises (Schenkel $r=5$, Basis $a=6$) ist der Zentriwinkel $\mu$:<br>
+                    $\mu = 180^\circ - 2 \cdot \beta = 180^\circ - 106.26^\circ = 73.74^\circ$.<br>
+                    Fläche des Segments im grossen Kreis:<br>
+                    $A_{Seg} = \frac{r_c^2}{2} \cdot \left( \frac{\pi \cdot \mu}{180^\circ} - \sin(\mu) \right) = \frac{25}{2} \cdot (1.2870 - 0.96) \approx 4.088 \text{ cm}^2$<br><br>
+
+                    <strong>4. Resultat:</strong><br>
+                    $A_{schraffiert} = A_{HK\_a} - A_{Seg} \approx 14.137 - 4.088 = \mathbf{10.05 \text{ cm}^2}$
                 </div>
             </div>
         </div>
