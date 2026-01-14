@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 6.16 - Vermischte Aufgaben I</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l6-15.html">&laquo; Aufgabe 6.15</a>
+        <h1>Aufgabe 6.16</h1>
+        <a href="l6-17.html">Aufgabe 6.17 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        <strong>Auftrag: Berechnen Sie die fehlenden Grössen:</strong>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>a)</strong> $a = 33.4, b = 17.8, c = 24.7 \text{ cm}$
+            </div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-a')">Lösung anzeigen</button>
+                <div id="sol-a" class="solution is-hidden">
+                    $\alpha = \arccos(\frac{b^2+c^2-a^2}{2bc}) \approx 102.13^\circ$<br>
+                    $\beta = \arcsin(\frac{b \cdot \sin(\alpha)}{a}) \approx 31.42^\circ$<br>
+                    $\gamma = 180^\circ - (\alpha+\beta) = 46.45^\circ$<br>
+                    $F = \frac{1}{2}bc \sin(\alpha) \approx 214.85 \text{ cm}^2$
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>b)</strong> $a = 45.65, b = 67.80, \gamma = 77.6^\circ$
+            </div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-b')">Lösung anzeigen</button>
+                <div id="sol-b" class="solution is-hidden">
+                    $c = \sqrt{a^2+b^2-2ab \cos(\gamma)} \approx 73.18 \text{ cm}$<br>
+                    $\alpha = \arcsin(\frac{a \cdot \sin(\gamma)}{c}) \approx 37.56^\circ$<br>
+                    $\beta = 180^\circ - (\alpha+\gamma) = 64.84^\circ$<br>
+                    $F = \frac{1}{2}ab \sin(\gamma) \approx 1511.45 \text{ cm}^2$
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

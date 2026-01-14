@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 6.13 - Sinussatz im Dreieck</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l6-12.html">&laquo; Aufgabe 6.12</a>
+        <h1>Aufgabe 6.13</h1>
+        <a href="l6-14.html">Aufgabe 6.14 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        <strong>Auftrag: Bestimmen Sie die fehlenden Seiten und Winkel des Dreiecks $ABC$:</strong>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>a)</strong> $a = 5.5 \text{ m}, \alpha = 72^\circ, \beta = 56^\circ$
+            </div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-a')">Lösung anzeigen</button>
+                <div id="sol-a" class="solution is-hidden">
+                    $\gamma = 180^\circ - (72^\circ + 56^\circ) = 52^\circ$<br>
+                    $b = \frac{a \cdot \sin(\beta)}{\sin(\alpha)} = \frac{5.5 \cdot \sin(56^\circ)}{\sin(72^\circ)} \approx 4.80 \text{ m}$<br>
+                    $c = \frac{a \cdot \sin(\gamma)}{\sin(\alpha)} = \frac{5.5 \cdot \sin(52^\circ)}{\sin(72^\circ)} \approx 4.56 \text{ m}$
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>b)</strong> $a = 6 \text{ m}, c = 5 \text{ m}, \alpha = 110^\circ$
+            </div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-b')">Lösung anzeigen</button>
+                <div id="sol-b" class="solution is-hidden">
+                    $\sin(\gamma) = \frac{c \cdot \sin(\alpha)}{a} = \frac{5 \cdot \sin(110^\circ)}{6} \approx 0.7831$<br>
+                    $\gamma \approx 51.55^\circ$<br>
+                    $\beta = 180^\circ - (110^\circ + 51.55^\circ) = 18.45^\circ$<br>
+                    $b = \frac{a \cdot \sin(\beta)}{\sin(\alpha)} = \frac{6 \cdot \sin(18.45^\circ)}{\sin(110^\circ)} \approx 2.02 \text{ m}$
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>c)</strong> $a = 168.5 \text{ m}, b = 196 \text{ m}, \beta = 83^\circ$
+            </div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-c')">Lösung anzeigen</button>
+                <div id="sol-c" class="solution is-hidden">
+                    $\sin(\alpha) = \frac{a \cdot \sin(\beta)}{b} = \frac{168.5 \cdot \sin(83^\circ)}{196} \approx 0.8533$<br>
+                    $\alpha \approx 58.57^\circ$<br>
+                    $\gamma = 180^\circ - (83^\circ + 58.57^\circ) = 38.43^\circ$<br>
+                    $c = \frac{b \cdot \sin(\gamma)}{\sin(\beta)} = \frac{196 \cdot \sin(38.43^\circ)}{\sin(83^\circ)} \approx 122.56 \text{ m}$
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

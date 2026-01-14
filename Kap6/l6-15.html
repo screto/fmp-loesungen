@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 6.15 - Kosinussatz (SWS) und Fläche</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l6-14.html">&laquo; Aufgabe 6.14</a>
+        <h1>Aufgabe 6.15</h1>
+        <a href="l6-16.html">Aufgabe 6.16 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        <strong>Auftrag: Berechnen Sie die fehlenden Seiten, Winkel und den Flächeninhalt:</strong>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>a)</strong> $b = 7 \text{ cm}, c = 5 \text{ cm}, \alpha = 70^\circ$
+            </div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-a')">Lösung anzeigen</button>
+                <div id="sol-a" class="solution is-hidden">
+                    $a = \sqrt{b^2 + c^2 - 2bc \cdot \cos(\alpha)} \approx 7.08 \text{ cm}$<br>
+                    $\sin(\beta) = \frac{b \cdot \sin(\alpha)}{a} \Rightarrow \beta \approx 68.36^\circ$<br>
+                    $\gamma = 180^\circ - (70^\circ + 68.36^\circ) = 41.64^\circ$<br>
+                    $F = \frac{1}{2} \cdot b \cdot c \cdot \sin(\alpha) \approx 16.44 \text{ cm}^2$
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>b)</strong> $a = 226.3 \text{ m}, c = 314.9 \text{ m}, \beta = 80^\circ$
+            </div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-b')">Lösung anzeigen</button>
+                <div id="sol-b" class="solution is-hidden">
+                    $b = \sqrt{a^2 + c^2 - 2ac \cdot \cos(\beta)} \approx 354.34 \text{ m}$<br>
+                    $\sin(\alpha) = \frac{a \cdot \sin(\beta)}{b} \Rightarrow \alpha \approx 38.98^\circ$<br>
+                    $\gamma = 180^\circ - (80^\circ + 38.98^\circ) = 61.02^\circ$<br>
+                    $F = \frac{1}{2} \cdot a \cdot c \cdot \sin(\beta) \approx 35'087.05 \text{ m}^2$
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

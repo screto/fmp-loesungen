@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 6.19 - Regelmässiges 10-Eck</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l6-18.html">&laquo; Aufgabe 6.18</a>
+        <h1>Aufgabe 6.19</h1>
+        <a href="index.html">Übersicht &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        <strong>Auftrag:</strong>
+        Berechnen Sie den Flächeninhalt $F$ eines regelmässigen 10-Ecks, dessen Umfang $U = 20$ beträgt.
+
+        <div class="task-row">
+            <div class="task-left">
+                Berechnung der Fläche $F$.
+            </div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-6-19')">Lösung anzeigen</button>
+                <div id="sol-6-19" class="solution is-hidden">
+                    Seitenlänge $s = U / 10 = 20 / 10 = 2$<br>
+                    Zentralwinkel eines Teildreiecks: $\phi = 360^\circ / 10 = 36^\circ$<br>
+                    Halber Winkel: $18^\circ$<br>
+                    Apothema (Höhe des Teildreiecks): $h = \frac{s/2}{\tan(18^\circ)} = \frac{1}{\tan(18^\circ)} \approx 3.0777$<br>
+                    Fläche eines Teildreiecks: $A_D = \frac{s \cdot h}{2} = h \approx 3.0777$<br>
+                    Gesamtfläche $F = 10 \cdot A_D \approx \mathbf{30.78}$
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

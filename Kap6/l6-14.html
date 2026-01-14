@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 6.14 - Kosinussatz (SSS)</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l6-13.html">&laquo; Aufgabe 6.13</a>
+        <h1>Aufgabe 6.14</h1>
+        <a href="l6-15.html">Aufgabe 6.15 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        <strong>Auftrag: Berechnen Sie die Winkel eines Dreiecks ABC mit:</strong>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>a)</strong> $a = 3 \text{ cm}, b = 6 \text{ cm}, c = 4 \text{ cm}$
+            </div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-a')">Lösung anzeigen</button>
+                <div id="sol-a" class="solution is-hidden">
+                    $\cos(\alpha) = \frac{b^2 + c^2 - a^2}{2bc} = \frac{6^2 + 4^2 - 3^2}{2 \cdot 6 \cdot 4} = \frac{43}{48} \approx 0.8958 \Rightarrow \alpha \approx 26.38^\circ$<br>
+                    $\cos(\beta) = \frac{a^2 + c^2 - b^2}{2ac} = \frac{3^2 + 4^2 - 6^2}{2 \cdot 3 \cdot 4} = \frac{-11}{24} \approx -0.4583 \Rightarrow \beta \approx 117.28^\circ$<br>
+                    $\gamma = 180^\circ - (\alpha + \beta) \approx 36.34^\circ$
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>b)</strong> $a = 50.8 \text{ m}, b = 53.6 \text{ m}, c = 39.4 \text{ m}$
+            </div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-b')">Lösung anzeigen</button>
+                <div id="sol-b" class="solution is-hidden">
+                    $\cos(\alpha) = \frac{b^2 + c^2 - a^2}{2bc} = \frac{53.6^2 + 39.4^2 - 50.8^2}{2 \cdot 53.6 \cdot 39.4} \approx 0.4369 \Rightarrow \alpha \approx 64.09^\circ$<br>
+                    $\cos(\beta) = \frac{a^2 + c^2 - b^2}{2ac} = \frac{50.8^2 + 39.4^2 - 53.6^2}{2 \cdot 50.8 \cdot 39.4} \approx 0.3149 \Rightarrow \beta \approx 71.65^\circ$<br>
+                    $\gamma = 180^\circ - (\alpha + \beta) \approx 44.26^\circ$
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
