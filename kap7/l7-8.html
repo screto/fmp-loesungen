@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 7.8 - Beschleunigung</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l7-7.html">&laquo; Aufgabe 7.7</a>
+        <h1>Aufgabe 7.8 - Beschleunigung</h1>
+        <a href="l7-9.html"> Aufgabe 7.9 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        <strong>Beschleunigung</strong><br>
+        Ein E-Bike beschleunigt aus dem Stand. Die zurückgelegte Strecke $s$ in Metern folgt in den ersten Sekunden der Funktion $s(t) = 0.8 \cdot t^2$.
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>a)</strong> Welche Strecke hat das E-Bike nach $5\text{ s}$ zurückgelegt?
+            </div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-8a')">Lösung anzeigen</button>
+                <div id="sol-8a" class="solution is-hidden">
+                    $s(5) = 0.8 \cdot 5^2 = 0.8 \cdot 25 = 20$<br>
+                    Das E-Bike hat <strong>20 Meter</strong> zurückgelegt.
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>b)</strong> Wie lange dauert es, bis eine Strecke von $125\text{ m}$ erreicht ist?
+            </div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-8b')">Lösung anzeigen</button>
+                <div id="sol-8b" class="solution is-hidden">
+                    $125 = 0.8 \cdot t^2$<br>
+                    $t^2 = 125 : 0.8 = 156.25$<br>
+                    $t = \sqrt{156.25} = 12.5$<br>
+                    Es dauert <strong>12.5 Sekunden</strong>.
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

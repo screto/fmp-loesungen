@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 7.1 - Funktionsbegriff</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="../7index.html">&laquo; Übersicht</a>
+        <h1>Aufgabe 7.1</h1>
+        <a href="l7-2.html"> Aufgabe 7.2 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        <strong>Welche der folgenden Zuordnungen sind Funktionen? Begründen Sie bzw. widerlegen Sie!</strong>
+        
+        <div class="task-row">
+            <div class="task-left"><strong>a)</strong> Person $\to$ Körpergrösse</div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-a')">Lösung anzeigen</button>
+                <div id="sol-a" class="solution is-hidden">
+                    <strong>Funktion.</strong> Jede Person hat zu einem bestimmten Zeitpunkt genau eine eindeutige Körpergrösse.
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left"><strong>b)</strong> Körpergrösse $\to$ Person</div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-b')">Lösung anzeigen</button>
+                <div id="sol-b" class="solution is-hidden">
+                    <strong>Keine Funktion.</strong> Einer Körpergrösse (z.B. 180 cm) können mehrere Personen zugeordnet sein.
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left"><strong>c)</strong> Tag $\to$ Temperatur</div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-c')">Lösung anzeigen</button>
+                <div id="sol-c" class="solution is-hidden">
+                    <strong>Keine Funktion.</strong> An einem Tag gibt es viele verschiedene Temperaturen (Verlauf über 24h). Die Zuordnung ist nicht eindeutig.
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left"><strong>d)</strong> Tag $\to$ Maximaltemperatur</div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-d')">Lösung anzeigen</button>
+                <div id="sol-d" class="solution is-hidden">
+                    <strong>Funktion.</strong> Pro Tag gibt es genau einen Wert, der das Maximum darstellt.
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left"><strong>e)</strong> Temperatur $\to$ Tag</div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-e')">Lösung anzeigen</button>
+                <div id="sol-e" class="solution is-hidden">
+                    <strong>Keine Funktion.</strong> Eine bestimmte Temperatur (z.B. 20°C) kann an vielen verschiedenen Tagen auftreten.
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left"><strong>f)</strong> Schulfach $\to$ Zeugnisnote</div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-f')">Lösung anzeigen</button>
+                <div id="sol-f" class="solution is-hidden">
+                    <strong>Funktion.</strong> Jedem Fach wird in einem Zeugnis genau eine Endnote zugeordnet.
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left"><strong>g)</strong> Zeugnisnote $\to$ Schulfach</div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-g')">Lösung anzeigen</button>
+                <div id="sol-g" class="solution is-hidden">
+                    <strong>Keine Funktion.</strong> Man kann die Note 5.0 in mehreren verschiedenen Fächern haben.
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 7.6 - Strassenbau</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l7-5.html">&laquo; Aufgabe 7.5</a>
+        <h1>Aufgabe 7.6 - Strassenbau</h1>
+        <a href="l7-7.html"> Aufgabe 7.7 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        <strong>Strassenbau</strong><br>
+        Ein Kanton plant den Ausbau von Velowegen. Aktuell gibt es ein Netz von $450\text{ km}$. Jedes Jahr sollen konstant $25\text{ km}$ neue Wege hinzugefügt werden.
+        
+        <div class="task-row">
+            <div class="task-left">
+                <strong>a)</strong> Stellen Sie die Funktionsgleichung $L(t)$ auf.
+            </div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-6a')">Lösung anzeigen</button>
+                <div id="sol-6a" class="solution is-hidden">
+                    $L(t) = 450 + 25 \cdot t$
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>b)</strong> Nach wie vielen Jahren ist das Netz auf eine Länge von $700\text{ km}$ angewachsen?
+            </div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-6b')">Lösung anzeigen</button>
+                <div id="sol-6b" class="solution is-hidden">
+                    $700 = 450 + 25t \Rightarrow 250 = 25t \Rightarrow t = 10$<br>
+                    Das Netz ist nach <strong>10 Jahren</strong> auf $700\text{ km}$ angewachsen.
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
