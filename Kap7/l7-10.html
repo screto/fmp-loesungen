@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 7.10 - Zinseszins</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l7-9.html">&laquo; Aufgabe 7.9</a>
+        <h1>Aufgabe 7.10 - Zinseszins</h1>
+        <a href="l7-11.html"> Aufgabe 7.11 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        <strong>Zinseszins</strong><br>
+        Ein Kapital von $5'000\text{ CHF}$ wird zu einem festen Jahreszins von $1.8\%$ angelegt.
+        
+        <div class="task-row">
+            <div class="task-left">
+                <strong>a)</strong> Berechnen Sie das Kapital nach 12 Jahren.
+            </div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-10a')">Lösung anzeigen</button>
+                <div id="sol-10a" class="solution is-hidden">
+                    $K_{12} = 5'000 \cdot 1.018^{12} \approx 6'193.45\text{ CHF}$
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>b)</strong> Wie hoch ist der Gesamtertrag (Zinsen) nach dieser Zeit?
+            </div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-10b')">Lösung anzeigen</button>
+                <div id="sol-10b" class="solution is-hidden">
+                    $6'193.45 - 5'000 = 1'193.45\text{ CHF}$
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

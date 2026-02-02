@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 7.15 - Netto-Effekt Wald</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l7-14.html">&laquo; Aufgabe 7.14</a>
+        <h1>Aufgabe 7.15 - Netto-Effekt</h1>
+        <a href="index.html">Übersicht &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        <strong>Netto-Effekt</strong><br>
+        Ein Waldgebiet hat einen Holzbestand von $50'000\text{ m}^3$. Das natürliche Wachstum beträgt $3.5\%$ pro Jahr. Gleichzeitig werden jährlich $2.1\%$ des Bestandes durch forstwirtschaftliche Nutzung abgeholzt.
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>a)</strong> Bestimmen Sie den Netto-Wachstumsfaktor $a_{\text{netto}}$.
+            </div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-15a')">Lösung anzeigen</button>
+                <div id="sol-15a" class="solution is-hidden">
+                    Um den kombinierten Effekt zu berechnen, multipliziert man die Einzelfaktoren:<br>
+                    Wachstum: $1.035$<br>
+                    Abholzung: $1 - 0.021 = 0.979$<br>
+                    $a_{\text{netto}} = 1.035 \cdot 0.979 = \mathbf{1.013265}$
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>b)</strong> Berechnen Sie den Holzbestand nach 15 Jahren bei gleichbleibender Nutzung.
+            </div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-15b')">Lösung anzeigen</button>
+                <div id="sol-15b" class="solution is-hidden">
+                    $B(15) = 50'000 \cdot 1.013265^{15}$<br>
+                    $B(15) \approx 50'000 \cdot 1.2187$<br>
+                    $B(15) \approx \mathbf{60'935\text{ m}^3}$<br>
+                    <small>(Hinweis: Bei der vereinfachten Rechnung mit $1.014$ käme man auf ca. $61'595\text{ m}^3$.)</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
