@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 6.3</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l6-2.html">&laquo; Aufgabe 6.2</a>
+        <h1>Aufgabe 6.3</h1>
+        <a href="l6-4.html">Aufgabe 6.4 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        <strong>Berechnen Sie die fehlenden Seitenlängen und Winkel (rechtwinkliges Dreieck, $\gamma = 90^\circ$):</strong>
+
+        <div class="task-row">
+            <div class="task-left"><strong>a)</strong> $c = 68 \text{ m} ; \beta = 57^\circ$</div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-a')">Lösung anzeigen</button>
+                <div id="sol-a" class="solution is-hidden">$\alpha = 33^\circ$; $a = c \cdot \sin(\alpha) \approx 37.03 \text{ m}$; $b = c \cdot \sin(\beta) \approx 57.03 \text{ m}$</div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left"><strong>b)</strong> $b = 3.72 \text{ m} ; c = 11.28 \text{ m}$</div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-b')">Lösung anzeigen</button>
+                <div id="sol-b" class="solution is-hidden">$a = \sqrt{c^2 - b^2} \approx 10.65 \text{ m}$; $\cos(\alpha) = \frac{b}{c} \Rightarrow \alpha \approx 70.74^\circ$; $\beta \approx 19.26^\circ$</div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left"><strong>c)</strong> $a = 43 \text{ m} ; \alpha = 37^\circ$</div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-c')">Lösung anzeigen</button>
+                <div id="sol-c" class="solution is-hidden">$\beta = 53^\circ$; $c = \frac{a}{\sin(\alpha)} \approx 71.45 \text{ m}$; $b = \frac{a}{\tan(\alpha)} \approx 57.06 \text{ m}$</div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left"><strong>d)</strong> $a = 4.650 \text{ km} ; c = 5.250 \text{ km}$</div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-d')">Lösung anzeigen</button>
+                <div id="sol-d" class="solution is-hidden">$b = \sqrt{c^2 - a^2} \approx 2.440 \text{ km}$; $\sin(\alpha) = \frac{a}{c} \Rightarrow \alpha \approx 62.33^\circ$; $\beta \approx 27.67^\circ$</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 6.4 - Gleichschenkliges Dreieck</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l6-3.html">&laquo; Aufgabe 6.3</a>
+        <h1>Aufgabe 6.4</h1>
+        <a href="l6-5.html">Aufgabe 6.5 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        Berechnen Sie die fehlenden Seitenlängen und Winkel im gleichschenkligen Dreieck $ABC$ (Grundseite $c$, Schenkel $a=b$):
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>a)</strong> $b = 58.6 \text{ m} \quad ; \quad \alpha = 62.7^\circ$
+            </div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-a')">Lösung anzeigen</button>
+                <div id="sol-a" class="solution is-hidden">
+                    $a = b = 58.6 \text{ m}$ <br>
+                    $\beta = \alpha = 62.7^\circ$ <br>
+                    $\gamma = 180^\circ - 2 \cdot 62.7^\circ = 54.6^\circ$ <br>
+                    $c = 2 \cdot b \cdot \cos(\alpha) \approx 53.76 \text{ m}$
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>b)</strong> $a = 51.4 \text{ m} \quad ; \quad h_c = 43.8 \text{ m}$
+            </div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-b')">Lösung anzeigen</button>
+                <div id="sol-b" class="solution is-hidden">
+                    $\sin(\alpha) = \frac{h_c}{a} = \frac{43.8}{51.4} \Rightarrow \alpha \approx 58.45^\circ$ <br>
+                    $\beta = \alpha \approx 58.45^\circ$ <br>
+                    $\gamma = 180^\circ - 2 \cdot \alpha \approx 63.10^\circ$ <br>
+                    $c = 2 \cdot \sqrt{a^2 - h_c^2} \approx 53.94 \text{ m}$
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>c)</strong> $c = 86 \text{ m} \quad ; \quad h_a = 78 \text{ m}$
+            </div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-c')">Lösung anzeigen</button>
+                <div id="sol-c" class="solution is-hidden">
+                    $\sin(\beta) = \frac{h_a}{c} = \frac{78}{86} \Rightarrow \beta \approx 65.09^\circ$ <br>
+                    $\alpha = \beta \approx 65.09^\circ$ <br>
+                    $\gamma = 180^\circ - 2 \cdot \beta \approx 49.82^\circ$ <br>
+                    $a = b = \frac{c}{2 \cdot \cos(\beta)} \approx 102.08 \text{ m}$
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>d)</strong> $a = 4.8 \text{ m} \quad ; \quad h_b = 3.4 \text{ m}$
+            </div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-d')">Lösung anzeigen</button>
+                <div id="sol-d" class="solution is-hidden">
+                    $\sin(\gamma) = \frac{h_b}{a} = \frac{3.4}{4.8} \Rightarrow \gamma \approx 45.10^\circ$ <br>
+                    $\alpha = \beta = \frac{180^\circ - \gamma}{2} \approx 67.45^\circ$ <br>
+                    $c = 2 \cdot a \cdot \cos(\alpha) \approx 3.68 \text{ m}$
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

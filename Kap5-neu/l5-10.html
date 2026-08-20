@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 6.10 - Flussbreite</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l6-9.html">&laquo; Aufgabe 6.9</a>
+        <h1>Aufgabe 6.10</h1>
+        <a href="l6-11.html">Aufgabe 6.11 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        Von einem Turm ($h = 48.5 \text{ m}$) erscheinen die beiden Ufer eines Flusses unter den Tiefenwinkeln $\alpha = 62^\circ$ und $\beta = 22^\circ$. Berechnen Sie die Breite des Flusses.
+        
+        <div class="task-row">
+            <div class="task-left">
+                Berechnung der Breite $b$.
+            </div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-6-10')">Lösung anzeigen</button>
+                <div id="sol-6-10" class="solution is-hidden">
+                    Distanz zum nahen Ufer: $x_1 = \frac{h}{\tan(62^\circ)} \approx 25.79 \text{ m}$ <br>
+                    Distanz zum fernen Ufer: $x_2 = \frac{h}{\tan(22^\circ)} \approx 120.04 \text{ m}$ <br>
+                    Flussbreite $b = x_2 - x_1 \approx 94.25 \text{ m}$
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

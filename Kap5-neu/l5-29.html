@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 5.10 - Gerasterte Fläche</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+
+<body>
+    <div class="header-nav">
+        <a href="l5-9.html">&laquo; Aufgabe 5.9</a>
+        <h1>Aufgabe 5.10 - Gerasterte Fläche</h1>
+        <a href="l5-11.html">Aufgabe 5.11 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        Wie gross ist der Flächeninhalt und die grösste Dicke der gerasterten Fläche ($a=5 \text{ cm}$)?
+        <br><small>(Quelle: Kusch und Glocke 2012, S. 220)</small>
+
+        <div style="text-align: center; margin: 2rem 0;">
+            <img src="../pics/aufgabe10a.png" alt="Bild A" style="height: 200px; margin-right: 2rem;">
+            <img src="../pics/aufgabe10b.png" alt="Bild B" style="height: 200px;">
+        </div>
+
+
+        <button class="toggle" onclick="toggleSolution('sol-10')">Lösung anzeigen</button>
+        <div id="sol-10" class="solution is-hidden">
+            <p><strong>Gegeben:</strong> Quadrat mit der Seitenlänge $a = 5 \text{ cm}$.</p>
+
+            <h2>a) Die "Linse" über die Diagonale</h2>
+            <p>Diese Form entsteht durch den Schnitt zweier Viertelkreise um die gegenüberliegenden Ecken des
+                Quadrats.</p>
+
+            <div class="step">
+                <strong>1. Flächeninhalt ($A_a$)</strong><br>
+                Die Fläche besteht aus zwei Kreissegmenten. Ein Segment ist die Fläche eines Viertelkreises
+                abzüglich des Dreiecks (halbes Quadrat).
+                <ul>
+                    <li>Fläche Viertelkreis: $A_v = (π · a^2) / 4$</li>
+                    <li>Fläche Dreieck: $A_d = a^2 / 2$</li>
+                    <li>Fläche eines Segments: $A_{seg} = A_v - A_d = a^2 · (π/4 - 1/2)$
+                    </li>
+                    <li>Gesamtfläche $A_a$: $2 · A_{seg} = a^2 · (π/2 - 1)$</li>
+                </ul>
+                <p>Einsetzen von $a = 5 \text{ cm}$:</p>
+                <p>$A_a = 25 · (1.5708 - 1) ≈ 14.27 \text{ cm}^2$</p>
+            </div>
+
+            <div class="step">
+                <strong>2. Grösste Dicke ($d_a$)</strong><br>
+                Die grösste Dicke befindet sich entlang der Diagonalen des Quadrats. Sie ist die Überlappung der
+                beiden Radien.
+                <ul>
+                    <li>Länge der Diagonale: $D = a · \sqrt{2}$</li>
+                    <li>Die beiden Radien decken zusammen $2a$ ab.</li>
+                    <li>Dicke: $d_a = 2a - a·\sqrt{2} = a · (2 - \sqrt{2})$</li>
+                </ul>
+                <p>Einsetzen von $a = 5 \text{ cm}$:</p>
+                <p>$d_a = 5 · (2 - 1.414) \approx 2.93 \text{ cm}$</p>
+            </div>
+
+            <div class="result-box">
+                <strong>Ergebnis a):</strong><br>
+                Flächeninhalt $A_a \approx 14.27 \text{ cm}^2$<br>
+                Grösste Dicke $d_a \approx 2.93 \text{ cm}$
+            </div>
+
+            <hr>
+
+            <h2>b) Die "liegende" Linse</h2>
+            <p>Hier berühren die Spitzen der Linse die Seitenmitten des Quadrats. Die Kreisbögen haben ihre
+                Mittelpunkte in den Mitten der oberen und unteren Quadratseite. Der Radius entspricht der
+                Strecke von der Seitenmitte zur gegenüberliegenden Seitenmitte (Hypotenuse im rechtwinkligen
+                Dreieck mit Katheten $a/2$ und $a/2$).</p>
+
+            <div class="step">
+                <strong>1. Vorüberlegung Radius</strong><br>
+                Der Radius $r$ ist die Strecke vom Mittelpunkt der Unterseite zum Mittelpunkt der rechten
+                Seite.
+                <br>$r = \sqrt{(a/2)^2 + (a/2)^2} = \sqrt{a^2/2} = a / \sqrt{2}$
+            </div>
+
+            <div class="step">
+                <strong>2. Flächeninhalt ($A_b$)</strong><br>
+                Der Öffnungswinkel des Kreissektors beträgt genau 90° (da das Dreieck aus zwei $a/2$-Schenkeln
+                besteht).
+                <ul>
+                    <li>Fläche des 90°-Sektors: $A_s = (π · r^2) / 4 = (π · a^2/2) / 4 = (π ·
+                            a^2) / 8$</li>
+                    <li>Fläche des Dreiecks unter dem Bogen (Basis $a$, Höhe $a/2$): $A_d = (a · a/2) / 2 = a^2 / 4$</li>
+                    <li>Fläche eines Segments: $A_{seg} = A_s - A_d = a^2 · (π/8 - 1/4)$
+                    </li>
+                    <li>Gesamtfläche $A_b$ (zwei Segmente): $2 · A_{seg} = a^2 · (π/4 - 1/2) =
+                            (a^2/2) · (π/2 - 1)$</li>
+                    <li><em>Hinweis: Das ist genau die Hälfte der Fläche aus Aufgabe a).</em></li>
+                </ul>
+                <p>Einsetzen von $a = 5 \text{ cm}$:</p>
+                <p>$A_2 = 12.5 · (1.5708 - 1) ≈ 7.14 \text{ cm}^2</span></p>
+            </div>
+
+            <div class="step">
+                <strong>3. Grösste Dicke ($d_b$)</strong><br>
+                Die Dicke ist vertikal in der Mitte. Sie ist die Differenz aus zweimal dem Radius und der
+                Quadratseite (Überlappung in der Höhe).
+                <ul>
+                    <li>Höhe zweier Radien: $2r = 2 · (a/\sqrt{2}) = a · \sqrt{2}$</li>
+                    <li>Höhe des Quadrats: $a$</li>
+                    <li>Dicke: $d_b = a·\sqrt{2} - a = a · (\sqrt{2} - 1)$</li>
+                </ul>
+                <p>Einsetzen von $a = 5 \text{ cm}$:</p>
+                <p>$d_b = 5 · (1.414 - 1) ≈ 2.07 \text{ cm}$ </p>
+            </div>
+
+            <div class="result-box">
+                <strong>Ergebnis b):</strong><br>
+                Flächeninhalt $A_b ≈ 7.14 \text{ cm}^2$<br>
+                Grösste Dicke $d_b ≈ 2.07 \text{ cm}$
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

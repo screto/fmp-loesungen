@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 5.16 - Viertelkreise</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+
+<body>
+    <div class="header-nav">
+        <a href="l5-15.html">&laquo; Aufgabe 5.15</a>
+        <h1>Aufgabe 5.16 - Viertelkreise</h1>
+        <a href="l5-17.html">Aufgabe 5.17 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        Berechnen Sie den Flächeninhalt $A$.
+        <br><small>(Quelle: Kusch und Glocke 2012, S. 221)</small>
+
+        <div style="text-align: center; margin: 2rem 0;">
+            <img src="../pics/aufgabe16.png" alt="Aufgabe 16" style="max-width: 50%;">
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>a)</strong> allgemein mit $l$
+                <br>
+                <button class="toggle" onclick="toggleSolution('sol-16a')">Lösung anzeigen</button>
+                <div id="sol-16a" class="solution is-hidden">
+                    <div class="box">
+                        <strong>Analyse der Figur:</strong><br>
+                        Die Figur zeigt ein Rechteck der Länge \( l \).<br>
+                        Zwei weisse Viertelkreise schneiden eine Fläche aus.<br>
+                        Die Viertelkreise berühren sich genau in der Mitte der unteren Seite. Daraus folgt, dass der
+                        Radius \( r \) der Hälfte der Länge \( l \) entspricht: \( r = l/2 \).<br>
+                        Damit die Viertelkreise bis zur oberen Kante reichen, muss auch die Höhe des Rechtecks \( h \)
+                        dem Radius entsprechen: \( h = l/2 \).
+                    </div>
+
+                    <div class="step">
+                        <p>Die graue Fläche \( A \) ist die Differenz aus der Rechtecksfläche und den beiden weissen
+                            Viertelkreisen.</p>
+
+                        <p><strong>1. Fläche des Rechtecks:</strong><br>
+                            Breite \( l \), Höhe \( l/2 \).
+                            $$ A_{\text{Rechteck}} = l \cdot \frac{l}{2} = \frac{l^2}{2} $$</p>
+
+                        <p><strong>2. Fläche der weissen Anteile:</strong><br>
+                            Es handelt sich um zwei identische Viertelkreise mit Radius \( r = l/2 \). Zusammen ergeben
+                            sie einen Halbkreis.
+                            $$ A_{\text{Weiss}} = \frac{1}{2} \pi r^2 = \frac{1}{2} \pi \left(\frac{l}{2}\right)^2 =
+                            \frac{1}{2} \pi \frac{l^2}{4} = \frac{\pi l^2}{8} $$</p>
+                    </div>
+
+                    <div class="step">
+                        <p><strong>3. Berechnung der Fläche \( A \):</strong></p>
+                        $$ A = A_{\text{Rechteck}} - A_{\text{Weiss}} $$
+                        $$ A = \frac{l^2}{2} - \frac{\pi l^2}{8} $$
+
+                        <p>Wir können \( l^2 \) (und optional Brüche) ausklammern, um eine schöne Endformel zu erhalten:
+                        </p>
+
+                        <div class="result-box" style="margin-top:10px; padding:10px;">
+                            <strong>Endformel:</strong>
+                            $$ A = l^2 \cdot \left( \frac{1}{2} - \frac{\pi}{8} \right) $$
+                            oder
+                            $$ A = \frac{l^2}{8} \cdot (4 - \pi) $$
+                        </div>
+                        <p><em>(Der Faktor \( 0.5 - 0.3927 \) ist ca. \( 0.1073 \))</em></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>b)</strong> für $l = 16 \text{ cm}$
+                <br>
+                <button class="toggle" onclick="toggleSolution('sol-16b')">Lösung anzeigen</button>
+                <div id="sol-16b" class="solution is-hidden">
+                    <div class="step">
+                        <p>Wir setzen \( l = 16 \, \text{cm} \) in die zweite Formel ein:</p>
+                        $$ A = \frac{(16 \, \text{cm})^2}{8} \cdot (4 - \pi) $$
+                        $$ A = \frac{256 \, \text{cm}^2}{8} \cdot (4 - \pi) $$
+                        $$ A = 256 \, \text{cm}^2 \cdot (0.5 - 0.3927...) $$
+                        $$ A = 256 \, \text{cm}^2 \cdot 0.1073 $$
+                    </div>
+
+                    <div class="result-box">
+                        <span class="result">Ergebnis:</span>
+                        $$ A \approx 27.47 \, \text{cm}^2 $$
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

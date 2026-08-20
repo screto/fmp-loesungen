@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 5.2 - Formeln</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l5-1.html">&laquo; Aufgabe 5.1</a>
+        <h1>Aufgabe 5.2 - Berechnungsformeln</h1>
+        <a href="l5-3.html">Aufgabe 5.3 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        Schreiben Sie zu den jeweiligen Flächen der vorherigen Aufgabe die Ihnen bekannten Berechnungsformeln für Flächeninhalt ($A$) und Umfang ($u$) nieder.
+        <br><br>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>a)</strong> Trapez
+            </div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-a')">Lösung anzeigen</button>
+                <div id="sol-a" class="solution is-hidden">
+                    $A = \frac{a + c}{2} \cdot h = m \cdot h$<br>
+                    $u = a + b + c + d$
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>b)</strong> Quadrat
+            </div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-b')">Lösung anzeigen</button>
+                <div id="sol-b" class="solution is-hidden">
+                    $A = a^2$<br>
+                    $u = 4 \cdot a$
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>c)</strong> Kreis
+            </div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-c')">Lösung anzeigen</button>
+                <div id="sol-c" class="solution is-hidden">
+                    $A = r^2 \cdot \pi$<br>
+                    $u = 2 \cdot r \cdot \pi = d \cdot \pi$
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>d)</strong> Rechtwinkliges Dreieck<br>
+                <small>(Katheten $a, b$)</small>
+            </div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-d')">Lösung anzeigen</button>
+                <div id="sol-d" class="solution is-hidden">
+                    $A = \frac{a \cdot b}{2}$<br>
+                    $u = a + b + c$
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>e)</strong> Kreissektor
+            </div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-e')">Lösung anzeigen</button>
+                <div id="sol-e" class="solution is-hidden">
+                    $A = \frac{r^2 \cdot \pi \cdot \alpha}{360^{\circ}}$<br>
+                    $u = 2r + b_{Bogen} = 2r + \frac{2r\pi\alpha}{360^{\circ}}$
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>f)</strong> Parallelogramm
+            </div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-f')">Lösung anzeigen</button>
+                <div id="sol-f" class="solution is-hidden">
+                    $A = a \cdot h_a = b \cdot h_b$<br>
+                    $u = 2 \cdot (a + b)$
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>g)</strong> Allgemeines Dreieck
+            </div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-g')">Lösung anzeigen</button>
+                <div id="sol-g" class="solution is-hidden">
+                    $A = \frac{c \cdot h_c}{2}$<br>
+                    $u = a + b + c$
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>h)</strong> Kreissegment
+            </div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-h')">Lösung anzeigen</button>
+                <div id="sol-h" class="solution is-hidden">
+                    $A = A_{Sektor} - A_{Dreieck}$<br>
+                    $u = s + b_{Bogen}$
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

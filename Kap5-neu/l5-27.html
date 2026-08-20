@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 5.8 - Blechstücke</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l5-7.html">&laquo; Aufgabe 5.7</a>
+        <h1>Aufgabe 5.8 - Blechstücke berechnen</h1>
+        <a href="l5-9.html">Aufgabe 5.9 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        Berechnen Sie den Flächeninhalt und den Umfang der folgenden Blechstücke.
+        <br><small>(Quelle: Kusch und Glocke 2012, S. 219)</small>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>a)</strong><br>
+                <img src="../pics/blech_aufgabe8a.png" alt="Blechstück A" style="height: 150px; margin-top: 10px;">
+            </div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-8a')">Lösung anzeigen</button>
+                <div id="sol-8a" class="solution is-hidden">
+                    <strong>Es handelt sich hier um einen Dreiviertelkreis.</strong><br>
+                    $A=\frac{3}{4} \pi r^2 \approx 115.4 \text{ cm}^2$<br>
+                    $U=\frac{3}{4} \pi r + 2r \approx 47 \text{ cm}$
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>b)</strong><br>
+                <img src="../pics/blech_aufgabe8b.png" alt="Blechstück B" style="height: 150px; margin-top: 10px;">
+            </div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-8b')">Lösung anzeigen</button>
+                <div id="sol-8b" class="solution is-hidden">
+                    <strong>Es handelt sich hier um einen Halbkreis und ein Trapez:</strong><br>
+                    $A=\frac{1}{2} \pi r^2 + \frac{(a+c)}{2} \cdot h \approx 100.1 \text{ cm}^2$<br>
+                    $U=\frac{1}{2} \pi r + a + h + d \approx 37.1 \text{ cm}$
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

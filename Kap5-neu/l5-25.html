@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 5.6 - Kreisberechnungen</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l5-5.html">&laquo; Aufgabe 5.5</a>
+        <h1>Aufgabe 5.6 - Kreisberechnungen</h1>
+        <a href="l5-7.html">Aufgabe 5.7 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        Berechnen Sie die fehlenden Grössen des Kreises.
+        <br><small>(Quelle: Kusch und Glocke 2012, S. 218)</small>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>a)</strong> Gegeben: $d = 6 \text{ cm}$.<br>
+                Gesucht: $U$, $A$.
+            </div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-a')">Lösung anzeigen</button>
+                <div id="sol-a" class="solution is-hidden">
+                    $r = 3 \text{ cm}$<br>
+                    $U = d \cdot \pi \approx 18.85 \text{ cm}$<br>
+                    $A = r^2 \cdot \pi \approx 28.27 \text{ cm}^2$
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>b)</strong> Gegeben: $d = 15 \text{ mm}$.<br>
+                Gesucht: $U$, $A$.
+            </div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-b')">Lösung anzeigen</button>
+                <div id="sol-b" class="solution is-hidden">
+                    $r = 7.5 \text{ mm}$<br>
+                    $U = d \cdot \pi \approx 47.12 \text{ mm}$<br>
+                    $A = r^2 \cdot \pi \approx 176.71 \text{ mm}^2$
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>c)</strong> Gegeben: $U = 84.451 \text{ cm}$.<br>
+                Gesucht: $d$, $A$.
+            </div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-c')">Lösung anzeigen</button>
+                <div id="sol-c" class="solution is-hidden">
+                    $d = \frac{U}{\pi} \approx 26.88 \text{ cm}$<br>
+                    $r \approx 13.44 \text{ cm}$<br>
+                    $A = r^2 \cdot \pi \approx 567.58 \text{ cm}^2$
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>d)</strong> Gegeben: $U = 173.42 \text{ cm}$.<br>
+                Gesucht: $d$, $A$.
+            </div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-d')">Lösung anzeigen</button>
+                <div id="sol-d" class="solution is-hidden">
+                    $d = \frac{U}{\pi} \approx 55.20 \text{ cm}$<br>
+                    $r \approx 27.60 \text{ cm}$<br>
+                    $A = r^2 \cdot \pi \approx 2392.74 \text{ cm}^2$
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>e)</strong> Gegeben: $A = 881.41 \text{ cm}^2$.<br>
+                Gesucht: $d$, $U$.
+            </div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-e')">Lösung anzeigen</button>
+                <div id="sol-e" class="solution is-hidden">
+                    $r = \sqrt{\frac{A}{\pi}} \approx 16.75 \text{ cm}$<br>
+                    $d \approx 33.50 \text{ cm}$<br>
+                    $U = d \cdot \pi \approx 105.24 \text{ cm}$
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>f)</strong> Gegeben: $A = 330 \text{ m}^2$.<br>
+                Gesucht: $d$, $U$.
+            </div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-f')">Lösung anzeigen</button>
+                <div id="sol-f" class="solution is-hidden">
+                    $r = \sqrt{\frac{A}{\pi}} \approx 10.25 \text{ m}$<br>
+                    $d \approx 20.50 \text{ m}$<br>
+                    $U = d \cdot \pi \approx 64.40 \text{ m}$
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

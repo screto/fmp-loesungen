@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 5.15 - Fläche A</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+
+<body>
+    <div class="header-nav">
+        <a href="l5-14.html">&laquo; Aufgabe 5.14</a>
+        <h1>Aufgabe 5.15 - Fläche A berechnen</h1>
+        <a href="l5-16.html">Aufgabe 5.16 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        Berechnen Sie den Flächeninhalt $A$.
+        <br><small>(Quelle: Kusch und Glocke 2012, S. 221)</small>
+
+        <div style="text-align: center; margin: 2rem 0;">
+            <img src="../pics/aufgabe15.png" alt="Aufgabe 15" style="max-width: 50%;">
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>a)</strong> allgemein mit $d$
+                <br>
+                <button class="toggle" onclick="toggleSolution('sol-15a')">Lösung anzeigen</button>
+                <div id="sol-15a" class="solution is-hidden">
+                    <div class="box">
+                        <strong>Gegeben:</strong><br>
+                        Ein grosser Halbkreis mit Durchmesser \( d \).<br>
+                        Zwei identische kleine Halbkreise im Inneren, die sich in der Mitte berühren.<br>
+                        Die graue Fläche \( A \) ist die Differenzfläche.
+                    </div>
+
+                    <div class="step">
+                        <p><strong>1. Fläche des grossen Halbkreises:</strong><br>
+                            Der Radius ist \( R = \frac{d}{2} \).<br>
+                            $$ A_{\text{gross}} = \frac{1}{2} \pi R^2 = \frac{1}{2} \pi \left(\frac{d}{2}\right)^2 =
+                            \frac{1}{2} \pi \frac{d^2}{4} = \frac{\pi d^2}{8} $$</p>
+                    </div>
+
+                    <div class="step">
+                        <p><strong>2. Fläche der zwei kleinen Halbkreise:</strong><br>
+                            Da die beiden kleinen Halbkreise den Durchmesser \( d \) exakt ausfüllen und gleich gross
+                            sind, hat jeder den Durchmesser \( \frac{d}{2} \).<br>
+                            Der Radius eines kleinen Halbkreises ist also \( r = \frac{d}{4} \).</p>
+
+                        <p>Fläche <em>eines</em> kleinen Halbkreises:
+                            $$ A_{\text{klein}} = \frac{1}{2} \pi r^2 = \frac{1}{2} \pi \left(\frac{d}{4}\right)^2 =
+                            \frac{1}{2} \pi \frac{d^2}{16} = \frac{\pi d^2}{32} $$</p>
+
+                        <p>Fläche von <em>beiden</em> kleinen Halbkreisen zusammen:
+                            $$ A_{\text{2 klein}} = 2 \cdot \frac{\pi d^2}{32} = \frac{\pi d^2}{16} $$</p>
+                    </div>
+
+                    <div class="step">
+                        <p><strong>3. Berechnung der grauen Fläche \( A \):</strong></p>
+                        $$ A = A_{\text{gross}} - A_{\text{2 klein}} $$
+                        $$ A = \frac{\pi d^2}{8} - \frac{\pi d^2}{16} $$
+
+                        <p>Erweitern des ersten Bruchs auf den Nenner 16:</p>
+                        $$ A = \frac{2\pi d^2}{16} - \frac{\pi d^2}{16} $$
+
+                        <div class="result-box" style="margin-top:10px; padding:10px;">
+                            <strong>Endformel:</strong>
+                            $$ A = \frac{\pi d^2}{16} $$
+                        </div>
+                        <p><em>(Interessant: Das entspricht genau der Fläche eines vollen Kreises mit Durchmesser \( d/2
+                                \).)</em></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>b)</strong> für $d = 50 \text{ cm}$
+                <br>
+                <button class="toggle" onclick="toggleSolution('sol-15b')">Lösung anzeigen</button>
+                <div id="sol-15b" class="solution is-hidden">
+                    <div class="step">
+                        <p>Wir setzen \( d = 50 \, \text{cm} \) in die Formel ein:</p>
+                        $$ A = \frac{\pi \cdot (50 \, \text{cm})^2}{16} $$
+                        $$ A = \frac{\pi \cdot 2500 \, \text{cm}^2}{16} $$
+                        $$ A = \frac{2500}{16} \pi \, \text{cm}^2 $$
+                        $$ A = 156.25 \cdot \pi \, \text{cm}^2 $$
+                    </div>
+
+                    <div class="result-box">
+                        <span class="result">Ergebnis:</span>
+                        $$ A \approx 490.87 \, \text{cm}^2 $$
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
