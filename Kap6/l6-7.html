@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aufgabe 6.7 - Höhe einer Tanne</title>
+    <title>Aufgabe 6.7 - Wassertank</title>
     <link rel="stylesheet" href="../style.css">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script src="../script-math.js"></script>
@@ -12,23 +12,36 @@
 </head>
 <body>
     <div class="header-nav">
-        <a href="l6-6.html">&laquo; Aufgabe 6.6</a>
-        <h1>Aufgabe 6.7</h1>
-        <a href="l6-8.html">Aufgabe 6.8 &raquo;</a>
+        <a href="l7-6.html">&laquo; Aufgabe 6.6</a>
+        <h1>Aufgabe 6.7 - Wassertank</h1>
+        <a href="l7-8.html"> Aufgabe 6.8 &raquo;</a>
     </div>
 
     <div class="aufgabe">
-        Wie hoch ist eine Tanne, wenn ihr Schatten $s = 27.5 \text{ m}$ lang ist und die Sonnenstrahlen unter dem Winkel $\alpha = 38^\circ$ einfallen?
+        <strong>Wassertank</strong><br>
+        Ein Reservoir auf einer Alp enthält zu Beginn des Sommers $12'000\text{ l}$ Wasser. Durch Verdunstung und Entnahme sinkt der Pegel täglich um $150\text{ l}$.
         
         <div class="task-row">
             <div class="task-left">
-                Berechnung der Baumhöhe $h$.
+                <strong>a)</strong> Stellen Sie die Funktionsgleichung $W(t)$ auf.
             </div>
             <div class="task-right">
-                <button class="toggle" onclick="toggleSolution('sol-6-7')">Lösung anzeigen</button>
-                <div id="sol-6-7" class="solution is-hidden">
-                    $\tan(\alpha) = \frac{h}{s} \Rightarrow h = s \cdot \tan(\alpha)$ <br>
-                    $h = 27.5 \text{ m} \cdot \tan(38^\circ) \approx 21.49 \text{ m}$
+                <button class="toggle" onclick="toggleSolution('sol-7a')">Lösung anzeigen</button>
+                <div id="sol-7a" class="solution is-hidden">
+                    $W(t) = 12'000 - 150 \cdot t$
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>b)</strong> Wie viel Wasser ist nach 30 Tagen noch vorhanden?
+            </div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-7b')">Lösung anzeigen</button>
+                <div id="sol-7b" class="solution is-hidden">
+                    $W(30) = 12'000 - 150 \cdot 30 = 12'000 - 4'500 = 7'500$<br>
+                    Nach 30 Tagen sind noch <strong>7'500 Liter</strong> vorhanden.
                 </div>
             </div>
         </div>

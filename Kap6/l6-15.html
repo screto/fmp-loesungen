@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aufgabe 6.15 - Kosinussatz (SWS) und Fläche</title>
+    <title>Aufgabe 6.15 - Netto-Effekt Wald</title>
     <link rel="stylesheet" href="../style.css">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script src="../script-math.js"></script>
@@ -12,40 +12,41 @@
 </head>
 <body>
     <div class="header-nav">
-        <a href="l6-14.html">&laquo; Aufgabe 6.14</a>
-        <h1>Aufgabe 6.15</h1>
-        <a href="l6-16.html">Aufgabe 6.16 &raquo;</a>
+        <a href="l7-14.html">&laquo; Aufgabe 6.14</a>
+        <h1>Aufgabe 6.15 - Netto-Effekt</h1>
+        <a href="l7-16.html">Aufgabe 6.16 &raquo;</a>
     </div>
 
     <div class="aufgabe">
-        Berechnen Sie die fehlenden Seiten, Winkel und den Flächeninhalt:
+        <strong>Netto-Effekt</strong><br>
+        Ein Waldgebiet hat einen Holzbestand von $50'000\text{ m}^3$. Das natürliche Wachstum beträgt $3.5\%$ pro Jahr. Gleichzeitig werden jährlich $2.1\%$ des Bestandes durch forstwirtschaftliche Nutzung abgeholzt.
 
         <div class="task-row">
             <div class="task-left">
-                <strong>a)</strong> $b = 7 \text{ cm}, c = 5 \text{ cm}, \alpha = 70^\circ$
+                <strong>a)</strong> Bestimmen Sie den Netto-Wachstumsfaktor $a_{\text{netto}}$.
             </div>
             <div class="task-right">
-                <button class="toggle" onclick="toggleSolution('sol-a')">Lösung anzeigen</button>
-                <div id="sol-a" class="solution is-hidden">
-                    $a = \sqrt{b^2 + c^2 - 2bc \cdot \cos(\alpha)} \approx 7.08 \text{ cm}$<br>
-                    $\sin(\beta) = \frac{b \cdot \sin(\alpha)}{a} \Rightarrow \beta \approx 68.36^\circ$<br>
-                    $\gamma = 180^\circ - (70^\circ + 68.36^\circ) = 41.64^\circ$<br>
-                    $F = \frac{1}{2} \cdot b \cdot c \cdot \sin(\alpha) \approx 16.44 \text{ cm}^2$
+                <button class="toggle" onclick="toggleSolution('sol-15a')">Lösung anzeigen</button>
+                <div id="sol-15a" class="solution is-hidden">
+                    Um den kombinierten Effekt zu berechnen, multipliziert man die Einzelfaktoren:<br>
+                    Wachstum: $1.035$<br>
+                    Abholzung: $1 - 0.021 = 0.979$<br>
+                    $a_{\text{netto}} = 1.035 \cdot 0.979 = \mathbf{1.013265}$
                 </div>
             </div>
         </div>
 
         <div class="task-row">
             <div class="task-left">
-                <strong>b)</strong> $a = 226.3 \text{ m}, c = 314.9 \text{ m}, \beta = 80^\circ$
+                <strong>b)</strong> Berechnen Sie den Holzbestand nach 15 Jahren bei gleichbleibender Nutzung.
             </div>
             <div class="task-right">
-                <button class="toggle" onclick="toggleSolution('sol-b')">Lösung anzeigen</button>
-                <div id="sol-b" class="solution is-hidden">
-                    $b = \sqrt{a^2 + c^2 - 2ac \cdot \cos(\beta)} \approx 354.34 \text{ m}$<br>
-                    $\sin(\alpha) = \frac{a \cdot \sin(\beta)}{b} \Rightarrow \alpha \approx 38.98^\circ$<br>
-                    $\gamma = 180^\circ - (80^\circ + 38.98^\circ) = 61.02^\circ$<br>
-                    $F = \frac{1}{2} \cdot a \cdot c \cdot \sin(\beta) \approx 35'087.05 \text{ m}^2$
+                <button class="toggle" onclick="toggleSolution('sol-15b')">Lösung anzeigen</button>
+                <div id="sol-15b" class="solution is-hidden">
+                    $B(15) = 50'000 \cdot 1.013265^{15}$<br>
+                    $B(15) \approx 50'000 \cdot 1.2187$<br>
+                    $B(15) \approx \mathbf{60'935\text{ m}^3}$<br>
+                    <small>(Hinweis: Bei der vereinfachten Rechnung mit $1.014$ käme man auf ca. $61'595\text{ m}^3$.)</small>
                 </div>
             </div>
         </div>

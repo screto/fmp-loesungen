@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aufgabe 6.12 - Thaleskreise</title>
+    <title>Aufgabe 6.12 - Bakterienkultur</title>
     <link rel="stylesheet" href="../style.css">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script src="../script-math.js"></script>
@@ -12,41 +12,38 @@
 </head>
 <body>
     <div class="header-nav">
-        <a href="l6-11.html">&laquo; Aufgabe 6.11</a>
-        <h1>Aufgabe 6.12</h1>
-        <a href="l6-13.html">Aufgabe 6.13 &raquo;</a>
+        <a href="l7-11.html">&laquo; Aufgabe 6.11</a>
+        <h1>Aufgabe 6.12 - Bakterienkultur</h1>
+        <a href="l7-13.html"> Aufgabe 6.13 &raquo;</a>
     </div>
 
     <div class="aufgabe">
-        Gegeben ist das rechtwinklige Dreieck $ABC$ durch die Längen der Katheten $a = 6 \text{ cm}$ und $b = 8 \text{ cm}$. Die Thaleskreise über der Hypotenuse $c$ und über der Kathete $a$ schliessen die schraffierte Fläche ein. Berechnen Sie den Inhalt dieser Fläche.
-        
-        <div style="text-align: center; margin: 1.5rem 0;">
-            <img src="https://screto.github.io/fmp-loesungen/pics/thales.png" alt="Thaleskreise Grafik" style="max-width: 50%; height: auto;">
+        <strong>Bakterienkultur</strong><br>
+        Eine Bakterienpopulation verdoppelt sich alle $4\text{ h}$. Zu Beginn sind 150 Bakterien vorhanden.
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>a)</strong> Bestimmen Sie den stündlichen Wachstumsfaktor $a$.
+            </div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-12a')">Lösung anzeigen</button>
+                <div id="sol-12a" class="solution is-hidden">
+                    $a^4 = 2 \Rightarrow a = \sqrt[4]{2} \approx 1.1892$<br>
+                    Der stündliche Wachstumsfaktor beträgt ca. <strong>1.189</strong>.
+                </div>
+            </div>
         </div>
 
         <div class="task-row">
             <div class="task-left">
-                Berechnen Sie den Flächeninhalt der schraffierten Fläche.
+                <strong>b)</strong> Wie viele Bakterien sind nach $24\text{ h}$ vorhanden?
             </div>
             <div class="task-right">
-                <button class="toggle" onclick="toggleSolution('sol-6-12')">Lösung anzeigen</button>
-                <div id="sol-6-12" class="solution is-hidden">
-                    <strong>1. Hypotenuse und Radien:</strong><br>
-                    $c = \sqrt{6^2 + 8^2} = 10 \text{ cm} \Rightarrow r_c = 5 \text{ cm}$<br>
-                    Kathete $a = 6 \text{ cm} \Rightarrow r_a = 3 \text{ cm}$<br><br>
-
-                    <strong>2. Fläche des kleinen Halbkreises (über $a$):</strong><br>
-                    $A_{HK\_a} = \frac{1}{2} \cdot \pi \cdot 3^2 \approx 14.137 \text{ cm}^2$ <br><br>
-
-                    <strong>3. Korrektur des Kreissegments (Überlappung):</strong><br>
-                    Winkel $\beta$ im Dreieck $ABC$: $\cos(\beta) = \frac{a}{c} = 0.6 \Rightarrow \beta \approx 53.13^\circ$.<br>
-                    Im gleichschenkligen Dreieck innerhalb des grossen Kreises (Schenkel $r=5$, Basis $a=6$) ist der Zentriwinkel $\mu$:<br>
-                    $\mu = 180^\circ - 2 \cdot \beta = 180^\circ - 106.26^\circ = 73.74^\circ$.<br>
-                    Fläche des Segments im grossen Kreis:<br>
-                    $A_{Seg} = \frac{r_c^2}{2} \cdot \left( \frac{\pi \cdot \mu}{180^\circ} - \sin(\mu) \right) = \frac{25}{2} \cdot (1.2870 - 0.96) \approx 4.088 \text{ cm}^2$<br><br>
-
-                    <strong>4. Resultat:</strong><br>
-                    $A_{schraffiert} = A_{HK\_a} - A_{Seg} \approx 14.137 - 4.088 = \mathbf{10.05 \text{ cm}^2}$
+                <button class="toggle" onclick="toggleSolution('sol-12b')">Lösung anzeigen</button>
+                <div id="sol-12b" class="solution is-hidden">
+                    Anzahl der Verdoppelungen: $24 : 4 = 6$<br>
+                    $B(24) = 150 \cdot 2^6 = 150 \cdot 64 = 9'600$<br>
+                    Es sind <strong>9'600 Bakterien</strong> vorhanden.
                 </div>
             </div>
         </div>

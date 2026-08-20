@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aufgabe 6.11 - Sehwinkel Fluss</title>
+    <title>Aufgabe 6.11 - Medikamentenabbau</title>
     <link rel="stylesheet" href="../style.css">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script src="../script-math.js"></script>
@@ -12,25 +12,36 @@
 </head>
 <body>
     <div class="header-nav">
-        <a href="l6-10.html">&laquo; Aufgabe 6.10</a>
-        <h1>Aufgabe 6.11</h1>
-        <a href="l6-12.html">Aufgabe 6.12 &raquo;</a>
+        <a href="l7-10.html">&laquo; Aufgabe 6.10</a>
+        <h1>Aufgabe 6.11 - Medikamentenabbau</h1>
+        <a href="l7-12.html"> Aufgabe 6 .12 &raquo;</a>
     </div>
 
     <div class="aufgabe">
-        Von einem Turm ($h = 28.6 \text{ m}$), der $e = 6 \text{ m}$ vom Ufer eines Flusses entfernt ist, erscheint die Flussbreite unter dem Sehwinkel $\alpha = 16.7^\circ$. Berechnen Sie die Breite des Flusses.
-        
+        <strong>Medikamentenabbau</strong><br>
+        Ein Patient nimmt $400\text{ mg}$ eines Wirkstoffs ein. Der Körper baut stündlich $15\%$ des jeweils noch vorhandenen Mittels ab.
+
         <div class="task-row">
             <div class="task-left">
-                Berechnung der Breite $b$.
+                <strong>a)</strong> Stellen Sie die Funktionsgleichung auf.
             </div>
             <div class="task-right">
-                <button class="toggle" onclick="toggleSolution('sol-6-11')">Lösung anzeigen</button>
-                <div id="sol-6-11" class="solution is-hidden">
-                    Winkel zum nahen Ufer: $\tan(\beta) = \frac{h}{e} = \frac{28.6}{6} \Rightarrow \beta \approx 78.14^\circ$ <br>
-                    Winkel zum fernen Ufer: $\gamma = \beta - \alpha = 78.14^\circ - 16.7^\circ = 61.44^\circ$ <br>
-                    Gesamtdistanz: $d = \frac{h}{\tan(\gamma)} = \frac{28.6}{\tan(61.44^\circ)} \approx 15.56 \text{ m}$ <br>
-                    Flussbreite $b = d - e = 15.56 \text{ m} - 6 \text{ m} = 9.56 \text{ m}$
+                <button class="toggle" onclick="toggleSolution('sol-11a')">Lösung anzeigen</button>
+                <div id="sol-11a" class="solution is-hidden">
+                    $f(t) = 400 \cdot (1 - 0.15)^t = 400 \cdot 0.85^t$
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>b)</strong> Wie viel Milligramm sind nach $6\text{ h}$ noch im Blut nachweisbar?
+            </div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-11b')">Lösung anzeigen</button>
+                <div id="sol-11b" class="solution is-hidden">
+                    $f(6) = 400 \cdot 0.85^6 \approx 400 \cdot 0.3771 \approx 150.86$<br>
+                    Es sind noch ca. <strong>150.86 mg</strong> nachweisbar.
                 </div>
             </div>
         </div>
