@@ -3,58 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aufgabe 5.4 - Flächen berechnen</title>
+    <title>Aufgabe 5.4 - Gleichschenkliges Dreieck</title>
     <link rel="stylesheet" href="../style.css">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script src="../script-math.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../script-sol.js"></script>
 </head>
 <body>
     <div class="header-nav">
         <a href="l5-3.html">&laquo; Aufgabe 5.3</a>
-        <h1>Aufgabe 5.4 - Flächen berechnen</h1>
+        <h1>Aufgabe 5.4</h1>
         <a href="l5-5.html">Aufgabe 5.5 &raquo;</a>
     </div>
 
     <div class="aufgabe">
-        Messen Sie die nötigen Längen und berechnen Sie die grauen Flächen in Aufgabe 5.3.
-        <br><small>(Quelle: Affolter et al. 2003, S. 99)</small>
-        
+        Berechnen Sie die fehlenden Seitenlängen und Winkel im gleichschenkligen Dreieck $ABC$ (Grundseite $c$, Schenkel $a=b$):
+
         <div class="task-row">
             <div class="task-left">
-                <strong>Berechnung Figur Links</strong><br>
-                Messen Sie die relevanten Längen im Bild aus Aufgabe 5.3.
+                <strong>a)</strong> $b = 58.6 \text{ m} \quad ; \quad \alpha = 62.7^\circ$
             </div>
             <div class="task-right">
-                <button class="toggle" onclick="toggleSolution('sol-calc-links')">Lösung anzeigen</button>
-                <div id="sol-calc-links" class="solution is-hidden">
-                    <strong>Vorgehen:</strong><br>
-                    1. Berechnen Sie die Gesamtfläche: $A_{gesamt} = \pi \cdot r^2$.<br>
-                    2. Berechnen Sie die weisse Fläche: $A_{weiss} = \pi \cdot r_w^2 =\pi \cdot \frac{r^2}{4}$.<br>
-                    3. $A_{grau} = A_{gesamt} - 2\cdot A_{weiss}= \pi \cdot r^2 - 2\cdot \pi \cdot \frac{r^2}{4} = \frac{\pi r^2}{2}$.
+                <button class="toggle" onclick="toggleSolution('sol-a')">Lösung anzeigen</button>
+                <div id="sol-a" class="solution is-hidden">
+                    $a = b = 58.6 \text{ m}$ <br>
+                    $\beta = \alpha = 62.7^\circ$ <br>
+                    $\gamma = 180^\circ - 2 \cdot 62.7^\circ = 54.6^\circ$ <br>
+                    $c = 2 \cdot b \cdot \cos(\alpha) \approx 53.76 \text{ m}$
                 </div>
             </div>
         </div>
 
         <div class="task-row">
             <div class="task-left">
-                <strong>Berechnung Figur Rechts</strong><br>
-                Messen Sie die relevanten Längen im Bild aus Aufgabe 5.3.
+                <strong>b)</strong> $a = 51.4 \text{ m} \quad ; \quad h_c = 43.8 \text{ m}$
             </div>
             <div class="task-right">
-                <button class="toggle" onclick="toggleSolution('sol-calc-rechts')">Lösung anzeigen</button>
-                <div id="sol-calc-rechts" class="solution is-hidden">
-                    <strong>Vorgehen:</strong><br>
-                    1. Berechnen Sie die Gesamtfläche: $A_{gesamt} = \pi \cdot r^2$.<br>
-                    2. Berechnen Sie die weisse Fläche: $A_{weiss} = \pi \cdot r_w^2 =\pi \cdot \frac{r^2}{9}$.<br>
-                    3. Berechnen Sie die graue Fläche der kleinen Kreise: $A_{grau,klein} = \pi \cdot r_{gk}^2 =  \pi \cdot \frac{r^2}{81}$.<br>
-                    4. $A_{grau} = A_{gesamt} - 7\cdot A_{weiss} + 49\cdot A_{grau,klein}= \pi \cdot r^2 - 7\cdot \pi \cdot \frac{r^2}{9} + 49\cdot \pi \cdot \frac{r^2}{81} = \frac{67\pi r^2}{81}$.
+                <button class="toggle" onclick="toggleSolution('sol-b')">Lösung anzeigen</button>
+                <div id="sol-b" class="solution is-hidden">
+                    $\sin(\alpha) = \frac{h_c}{a} = \frac{43.8}{51.4} \Rightarrow \alpha \approx 58.45^\circ$ <br>
+                    $\beta = \alpha \approx 58.45^\circ$ <br>
+                    $\gamma = 180^\circ - 2 \cdot \alpha \approx 63.10^\circ$ <br>
+                    $c = 2 \cdot \sqrt{a^2 - h_c^2} \approx 53.94 \text{ m}$
                 </div>
             </div>
         </div>
 
+        <div class="task-row">
+            <div class="task-left">
+                <strong>c)</strong> $c = 86 \text{ m} \quad ; \quad h_a = 78 \text{ m}$
+            </div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-c')">Lösung anzeigen</button>
+                <div id="sol-c" class="solution is-hidden">
+                    $\sin(\beta) = \frac{h_a}{c} = \frac{78}{86} \Rightarrow \beta \approx 65.09^\circ$ <br>
+                    $\alpha = \beta \approx 65.09^\circ$ <br>
+                    $\gamma = 180^\circ - 2 \cdot \beta \approx 49.82^\circ$ <br>
+                    $a = b = \frac{c}{2 \cdot \cos(\beta)} \approx 102.08 \text{ m}$
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>d)</strong> $a = 4.8 \text{ m} \quad ; \quad h_b = 3.4 \text{ m}$
+            </div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-d')">Lösung anzeigen</button>
+                <div id="sol-d" class="solution is-hidden">
+                    $\sin(\gamma) = \frac{h_b}{a} = \frac{3.4}{4.8} \Rightarrow \gamma \approx 45.10^\circ$ <br>
+                    $\alpha = \beta = \frac{180^\circ - \gamma}{2} \approx 67.45^\circ$ <br>
+                    $c = 2 \cdot a \cdot \cos(\alpha) \approx 3.68 \text{ m}$
+                </div>
+            </div>
+        </div>
     </div>
-
 </body>
 </html>

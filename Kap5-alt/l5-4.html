@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 5.4 - Flächen berechnen</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+<body>
+    <div class="header-nav">
+        <a href="l5-3.html">&laquo; Aufgabe 5.3</a>
+        <h1>Aufgabe 5.4 - Flächen berechnen</h1>
+        <a href="l5-5.html">Aufgabe 5.5 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        Messen Sie die nötigen Längen und berechnen Sie die grauen Flächen in Aufgabe 5.3.
+        <br><small>(Quelle: Affolter et al. 2003, S. 99)</small>
+        
+        <div class="task-row">
+            <div class="task-left">
+                <strong>Berechnung Figur Links</strong><br>
+                Messen Sie die relevanten Längen im Bild aus Aufgabe 5.3.
+            </div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-calc-links')">Lösung anzeigen</button>
+                <div id="sol-calc-links" class="solution is-hidden">
+                    <strong>Vorgehen:</strong><br>
+                    1. Berechnen Sie die Gesamtfläche: $A_{gesamt} = \pi \cdot r^2$.<br>
+                    2. Berechnen Sie die weisse Fläche: $A_{weiss} = \pi \cdot r_w^2 =\pi \cdot \frac{r^2}{4}$.<br>
+                    3. $A_{grau} = A_{gesamt} - 2\cdot A_{weiss}= \pi \cdot r^2 - 2\cdot \pi \cdot \frac{r^2}{4} = \frac{\pi r^2}{2}$.
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>Berechnung Figur Rechts</strong><br>
+                Messen Sie die relevanten Längen im Bild aus Aufgabe 5.3.
+            </div>
+            <div class="task-right">
+                <button class="toggle" onclick="toggleSolution('sol-calc-rechts')">Lösung anzeigen</button>
+                <div id="sol-calc-rechts" class="solution is-hidden">
+                    <strong>Vorgehen:</strong><br>
+                    1. Berechnen Sie die Gesamtfläche: $A_{gesamt} = \pi \cdot r^2$.<br>
+                    2. Berechnen Sie die weisse Fläche: $A_{weiss} = \pi \cdot r_w^2 =\pi \cdot \frac{r^2}{9}$.<br>
+                    3. Berechnen Sie die graue Fläche der kleinen Kreise: $A_{grau,klein} = \pi \cdot r_{gk}^2 =  \pi \cdot \frac{r^2}{81}$.<br>
+                    4. $A_{grau} = A_{gesamt} - 7\cdot A_{weiss} + 49\cdot A_{grau,klein}= \pi \cdot r^2 - 7\cdot \pi \cdot \frac{r^2}{9} + 49\cdot \pi \cdot \frac{r^2}{81} = \frac{67\pi r^2}{81}$.
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

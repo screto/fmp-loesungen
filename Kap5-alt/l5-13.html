@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 5.13 - Fläche mit Variable</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+
+<body>
+    <div class="header-nav">
+        <a href="l5-12.html">&laquo; Aufgabe 5.12</a>
+        <h1>Aufgabe 5.13 - Fläche berechnen</h1>
+        <a href="l5-14.html">Aufgabe 5.14 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        Berechnen Sie den Flächeninhalt der gerasterten Fläche.
+        <br><small>(Quelle: Kusch und Glocke 2012, S. 220)</small>
+
+        <div style="text-align: center; margin: 2rem 0;">
+            <img src="../pics/aufgabe13.png" alt="Aufgabe 13" style="max-width: 40%;">
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>a)</strong> allgemein mit der Variablen $a$
+                <br>
+                <button class="toggle" onclick="toggleSolution('sol-13a')">Lösung anzeigen</button>
+                <div id="sol-13a" class="solution is-hidden">
+                    <strong>Analyse der Figur:</strong><br>
+                    Wir haben ein Quadrat mit der Seitenlänge \( a \).<br>
+                    Von den beiden unteren Ecken werden Viertelkreise (Bögen) mit dem Radius \( r = a \) gezogen.<br>
+                    Die gerasterte Fläche oben in der Mitte ist der Rest des Quadrats, der nicht von diesen beiden
+                    Viertelkreisen abgedeckt wird.
+
+                    <div class="step">
+                        <p>Um die graue Fläche \( A_{\text{grau}} \) zu erhalten, ziehen wir vom Flächeninhalt des
+                            Quadrats
+                            die "weisse Fläche" ab. Die weisse Fläche entspricht der <strong>Vereinigung</strong> der
+                            beiden
+                            Viertelkreise.</p>
+
+                        <p><strong>1. Fläche des Quadrats:</strong></p>
+                        $$ A_{\text{Quadrat}} = a^2 $$
+
+                        <p><strong>2. Fläche der Vereinigung der beiden Viertelkreise:</strong><br>
+                            Nach dem Prinzip von Inklusion und Exklusion gilt für zwei Flächen \( A_1 \) und \( A_2
+                            \):<br>
+                            \( A_{\text{Vereinigung}} = A_1 + A_2 - A_{\text{Schnittmenge}} \)</p>
+
+                        <ul>
+                            <li>\( A_1 \) und \( A_2 \) sind Viertelkreise mit Radius \( a \):<br>
+                                $$ A_{\text{Viertel}} = \frac{\pi a^2}{4} $$</li>
+
+                            <li>Die <strong>Schnittmenge</strong> ist der Bereich in der Mitte, wo sich die Kreise
+                                überlagern. Da die Zentren der Kreise \( a \) weit auseinander liegen (die unteren
+                                Ecken)
+                                und der Radius ebenfalls \( a \) ist, bildet die Spitze der Schnittmenge mit der
+                                Grundseite
+                                ein <strong>gleichseitiges Dreieck</strong>.</li>
+                        </ul>
+
+                        <p>Die Fläche dieser Schnittmenge setzt sich zusammen aus dem gleichseitigen Dreieck und zwei
+                            Kreissegmenten an den Seiten.<br>
+                            Alternativformel für die Schnittfläche ("Spitzbogen" im Quadrat):</p>
+                        $$ A_{\text{Schnitt}} = \left( \frac{\pi}{3} - \frac{\sqrt{3}}{4} \right) a^2 $$
+
+                        <p>Damit berechnen wir die weisse Fläche (Vereinigung):</p>
+                        $$ A_{\text{Weiss}} = 2 \cdot \frac{\pi a^2}{4} - \left( \frac{\pi}{3} - \frac{\sqrt{3}}{4}
+                        \right)
+                        a^2 $$
+                        $$ A_{\text{Weiss}} = \frac{\pi a^2}{2} - \frac{\pi a^2}{3} + \frac{\sqrt{3}}{4} a^2 $$
+                        $$ A_{\text{Weiss}} = \left( \frac{\pi}{6} + \frac{\sqrt{3}}{4} \right) a^2 $$
+                    </div>
+
+                    <div class="step">
+                        <p><strong>3. Berechnung der gerasterten Fläche:</strong><br>
+                            Nun ziehen wir die weisse Fläche vom Quadrat ab:</p>
+                        $$ A_{\text{grau}} = A_{\text{Quadrat}} - A_{\text{Weiss}} $$
+                        $$ A_{\text{grau}} = a^2 - \left( \frac{\pi}{6} + \frac{\sqrt{3}}{4} \right) a^2 $$
+
+                        <div class="formula-block">
+                            <strong>Endformel:</strong>
+                            $$ A_{\text{grau}} = a^2 \cdot \left( 1 - \frac{\pi}{6} - \frac{\sqrt{3}}{4} \right) $$
+                        </div>
+                        <p><em>(Numerischer Faktor ca.: \( 1 - 0.5236 - 0.4330 = 0.0434 \))</em></p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>b)</strong> für $a = 12 \text{ cm}$
+                <br>
+                <button class="toggle" onclick="toggleSolution('sol-13b')">Lösung anzeigen</button>
+                <div id="sol-13b" class="solution is-hidden">
+                    <div class="step">
+                        <p>Wir setzen \( a = 12 \, \text{cm} \) in die gefundene Formel ein:</p>
+                        $$ A_{\text{grau}} = (12 \, \text{cm})^2 \cdot \left( 1 - \frac{\pi}{6} - \frac{\sqrt{3}}{4}
+                        \right)
+                        $$
+                        $$ A_{\text{grau}} = 144 \, \text{cm}^2 \cdot (1 - 0.523599 - 0.433013) $$
+                        $$ A_{\text{grau}} = 144 \, \text{cm}^2 \cdot 0.043388 $$
+                    </div>
+
+                    <div class="result-box">
+                        <span class="result">Ergebnis:</span>
+                        $$ A_{\text{grau}} \approx 6.25 \, \text{cm}^2 $$
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

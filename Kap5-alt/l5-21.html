@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 5.21 - Schustermesser</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+
+<body>
+    <div class="header-nav">
+        <a href="l5-20.html">&laquo; Aufgabe 5.20</a>
+        <h1>Aufgabe 5.21 - Schustermesser</h1>
+        <a href="../5index.html"> Übersicht &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        Berechnen Sie den Flächeninhalt $A$.
+        <br><small>(Quelle: Kusch und Glocke 2012, S. 222)</small>
+
+        <div style="text-align: center; margin: 2rem 0;">
+            <img src="../pics/aufgabe21.png" alt="Aufgabe 21" style="max-width: 60%;">
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>a)</strong> allgemein mit Variablen
+                <br>
+                <button class="toggle" onclick="toggleSolution('sol-21a')">Lösung anzeigen</button>
+                <div id="sol-21a" class="solution is-hidden">
+                    <p>
+                        Die graue Fläche \( A \) (in der Geometrie als "Arbelos" bekannt) ergibt sich, indem man von der
+                        Fläche des grossen Halbkreises die Flächen der beiden kleinen inneren Halbkreise abzieht.
+                    </p>
+                    <p><strong>Gegebene Grössen:</strong></p>
+                    <ul>
+                        <li>Durchmesser grosser Halbkreis: \( d \) &rightarrow; Radius \( R_{\text{gross}} = \frac{d}{2}
+                            \)</li>
+                        <li>Radius linker kleiner Halbkreis: \( r \)</li>
+                        <li>Der Durchmesser des rechten kleinen Halbkreises ist der Rest der Strecke: \( d - 2r \).<br>
+                            Sein Radius ist also: \( R_{\text{rechts}} = \frac{d - 2r}{2} = \frac{d}{2} - r \)</li>
+                    </ul>
+
+                    <p><strong>Rechnung:</strong></p>
+                    $$ A = A_{\text{gross}} - A_{\text{links}} - A_{\text{rechts}} $$
+                    $$ A = \frac{1}{2}\pi \left(\frac{d}{2}\right)^2 - \frac{1}{2}\pi r^2 - \frac{1}{2}\pi
+                    \left(\frac{d}{2} - r\right)^2 $$
+
+                    <p>Wir klammern \( \frac{\pi}{2} \) aus und vereinfachen den Term in der Klammer:</p>
+                    $$ A = \frac{\pi}{2} \left[ \frac{d^2}{4} - r^2 - \left( \frac{d^2}{4} - dr + r^2 \right) \right] $$
+                    $$ A = \frac{\pi}{2} \left[ \frac{d^2}{4} - r^2 - \frac{d^2}{4} + dr - r^2 \right] $$
+                    $$ A = \frac{\pi}{2} \left[ dr - 2r^2 \right] $$
+
+                    <p>Nun klammern wir \( 2r \) innerhalb der Klammer aus (oder multiplizieren den Faktor \(
+                        \frac{1}{2} \) hinein):</p>
+                    $$ A = \pi \left( \frac{dr}{2} - r^2 \right) = \pi r \left( \frac{d}{2} - r \right) $$
+
+                    <div class="result-box">
+                        <p><strong>Ergebnisformel:</strong></p>
+                        $$ A = \pi \cdot r \cdot \left( \frac{d}{2} - r \right) $$
+                        <p><em>(Alternativ mit dem Radius des rechten Kreises \( R_{\text{rechts}} \): \( A = \pi \cdot
+                                r \cdot R_{\text{rechts}} \))</em></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>b)</strong> für $d = 10 \text{ cm}$, $r = 2 \text{ cm}$
+                <br>
+                <button class="toggle" onclick="toggleSolution('sol-21b')">Lösung anzeigen</button>
+                <div id="sol-21b" class="solution is-hidden">
+                    <p>Wir setzen die Werte in die vereinfachte Formel ein.</p>
+
+                    <p>Zuerst berechnen wir den Radius des rechten kleinen Halbkreises:</p>
+                    $$ \frac{d}{2} - r = \frac{10\,\text{cm}}{2} - 2\,\text{cm} = 5\,\text{cm} - 2\,\text{cm} =
+                    3\,\text{cm} $$
+
+                    <p>Nun in die Flächenformel:</p>
+                    $$ A = \pi \cdot 2\,\text{cm} \cdot 3\,\text{cm} $$
+                    $$ A = 6\pi \,\text{cm}^2 $$
+
+                    <div class="result-box">
+                        <p><strong>Numerisches Ergebnis:</strong></p>
+                        $$ A \approx 18.85\,\text{cm}^2 $$
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>c)</strong> Vergleich mit Kreis um $M$
+                <br>
+                <button class="toggle" onclick="toggleSolution('sol-21c')">Lösung anzeigen</button>
+                <div id="sol-21c" class="solution is-hidden">
+                    <p>
+                        In der Skizze ist ein gestrichelter Kreis um den Mittelpunkt \( M \) eingezeichnet. Der
+                        Durchmesser dieses Kreises entspricht der vertikalen Strecke (Höhe \( h \)), die vom Berührpunkt
+                        der beiden kleinen Halbkreise senkrecht nach oben zum grossen Halbkreis verläuft.
+                    </p>
+
+                    <p><strong>Geometrischer Zusammenhang (Höhensatz):</strong></p>
+                    <p>Im Halbkreis ist das Quadrat dieser Höhe gleich dem Produkt der Hypotenusenabschnitte (hier die
+                        Durchmesser der kleinen Halbkreise).</p>
+                    $$ h^2 = (2r) \cdot (d - 2r) $$
+
+                    <p>Die Fläche des Kreises um \( M \) (mit Durchmesser \( h \) bzw. Radius \( \frac{h}{2} \)) ist:
+                    </p>
+                    $$ A_{\text{Kreis\_M}} = \pi \left( \frac{h}{2} \right)^2 = \pi \frac{h^2}{4} $$
+
+                    <p>Setzen wir \( h^2 \) ein:</p>
+                    $$ A_{\text{Kreis\_M}} = \pi \frac{2r(d-2r)}{4} = \pi \frac{r(d-2r)}{2} = \pi r \left( \frac{d}{2} -
+                    r \right) $$
+
+                    <div class="result-box">
+                        <strong>Schlussfolgerung:</strong><br>
+                        Der Flächeninhalt \( A \) des Arbelos ist <strong>identisch</strong> mit dem Flächeninhalt des
+                        Kreises um \( M \), dessen Durchmesser der vertikalen Höhe an der Schnittstelle entspricht.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

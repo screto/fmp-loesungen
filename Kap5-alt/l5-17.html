@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 5.17 - Halbkreis im Viertelkreis</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+
+<body>
+    <div class="header-nav">
+        <a href="l5-16.html">&laquo; Aufgabe 5.16</a>
+        <h1>Aufgabe 5.17 - Halbkreis im Viertelkreis</h1>
+        <a href="l5-18.html">Aufgabe 5.18 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        Berechnen Sie den Flächeninhalt $A$.
+        <br><small>(Quelle: Kusch und Glocke 2012, S. 221)</small>
+
+        <div style="text-align: center; margin: 2rem 0;">
+            <img src="../pics/aufgabe17.png" alt="Aufgabe 17" style="max-width: 30%;">
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>a)</strong> allgemein mit $r$
+                <br>
+                <button class="toggle" onclick="toggleSolution('sol-17a')">Lösung anzeigen</button>
+                <div id="sol-17a" class="solution is-hidden">
+                    <div class="box">
+                        <strong>Analyse der Figur:</strong><br>
+                        Die Figur zeigt einen grossen Viertelkreis mit dem Radius \( r \).<br>
+                        Im Inneren liegt ein weisser Halbkreis. Der Durchmesser dieses Halbkreises liegt auf dem unteren
+                        Radius des Viertelkreises.<br>
+                        Daraus folgt: Der Durchmesser des Halbkreises ist \( d = r \), sein Radius ist also \(
+                        r_{\text{halb}} = r/2 \).
+                    </div>
+
+                    <div class="step">
+                        <p>Die graue Fläche \( A \) berechnet sich als Differenz zwischen dem Viertelkreis und dem
+                            Halbkreis.</p>
+
+                        <p><strong>1. Fläche des Viertelkreises:</strong><br>
+                            Radius \( r \).
+                            $$ A_{\text{Viertel}} = \frac{1}{4} \pi r^2 $$</p>
+
+                        <p><strong>2. Fläche des Halbkreises:</strong><br>
+                            Radius \( r/2 \).
+                            $$ A_{\text{Halb}} = \frac{1}{2} \pi \left( \frac{r}{2} \right)^2 = \frac{1}{2} \pi
+                            \frac{r^2}{4} = \frac{1}{8} \pi r^2 $$</p>
+                    </div>
+
+                    <div class="step">
+                        <p><strong>3. Berechnung der Differenzfläche \( A \):</strong></p>
+                        $$ A = A_{\text{Viertel}} - A_{\text{Halb}} $$
+                        $$ A = \frac{1}{4} \pi r^2 - \frac{1}{8} \pi r^2 $$
+
+                        <p>Wir erweitern den ersten Bruch auf Achtel:</p>
+                        $$ A = \frac{2}{8} \pi r^2 - \frac{1}{8} \pi r^2 $$
+
+                        <div class="result-box" style="margin-top:10px; padding:10px;">
+                            <strong>Endformel:</strong>
+                            $$ A = \frac{1}{8} \pi r^2 $$
+                        </div>
+                        <p><em>(Das bedeutet, die graue Fläche ist genau so gross wie die weisse Fläche des
+                                Halbkreises.)</em></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>b)</strong> für $r = 32 \text{ cm}$
+                <br>
+                <button class="toggle" onclick="toggleSolution('sol-17b')">Lösung anzeigen</button>
+                <div id="sol-17b" class="solution is-hidden">
+                    <div class="step">
+                        <p>Wir setzen \( r = 32 \, \text{cm} \) in die Formel ein:</p>
+                        $$ A = \frac{1}{8} \pi \cdot (32 \, \text{cm})^2 $$
+                        $$ A = \frac{1}{8} \pi \cdot 1024 \, \text{cm}^2 $$
+
+                        <p>Kürzen von 1024 durch 8:</p>
+                        $$ A = 128 \pi \, \text{cm}^2 $$
+                        $$ A = 128 \cdot 3.14159... \, \text{cm}^2 $$
+                    </div>
+
+                    <div class="result-box">
+                        <span class="result">Ergebnis:</span>
+                        $$ A \approx 402.12 \, \text{cm}^2 $$
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

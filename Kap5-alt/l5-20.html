@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 5.20 - Yin Yang</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+
+<body>
+    <div class="header-nav">
+        <a href="l5-19.html">&laquo; Aufgabe 5.19</a>
+        <h1>Aufgabe 5.20 - Yin Yang</h1>
+        <a href="l5-21.html">Aufgabe 5.21 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        Berechnen Sie den Flächeninhalt $A$.
+        <br><small>(Quelle: Kusch und Glocke 2012, S. 222)</small>
+
+        <div style="text-align: center; margin: 2rem 0;">
+            <img src="../pics/aufgabe20.png" alt="Aufgabe 20" style="max-width: 40%;">
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>a)</strong> allgemein mit $d$
+                <br>
+                <button class="toggle" onclick="toggleSolution('sol-20a')">Lösung anzeigen</button>
+                <div id="sol-20a" class="solution is-hidden">
+                    <p>
+                        Um den Flächeninhalt \( A \) der grauen Fläche zu berechnen, betrachten wir die Zusammensetzung
+                        der Figur.
+                        Der grosse Kreis hat den Durchmesser \( d \), also den Radius \( R = \frac{d}{2} \).
+                    </p>
+                    <p>Die Fläche setzt sich wie folgt zusammen:</p>
+                    <ul>
+                        <li>Wir nehmen den <strong>halben grossen Kreis</strong> (rechte Seite).</li>
+                        <li>Wir <strong>subtrahieren</strong> den oberen kleinen weissen Halbkreis.</li>
+                        <li>Wir <strong>addieren</strong> den unteren kleinen grauen Halbkreis.</li>
+                    </ul>
+
+                    <p>
+                        Aus der Symmetrie der Figur erkennen wir: Der obere kleine weisse Halbkreis und der untere
+                        kleine graue Halbkreis sind deckungsgleich (kongruent). Ihr Radius beträgt jeweils \(
+                        \frac{d}{4} \).
+                    </p>
+                    <p>
+                        Das bedeutet: Die Fläche, die oben "fehlt", wird unten exakt wieder hinzugefügt.
+                    </p>
+
+                    <p><strong>Mathematische Herleitung:</strong><br>
+                        $$ A = A_{\text{Halbkreis\_gross}} - A_{\text{klein\_oben}} + A_{\text{klein\_unten}} $$
+                        Da \( A_{\text{klein\_oben}} = A_{\text{klein\_unten}} \), heben sich diese Terme auf:
+                        $$ A = A_{\text{Halbkreis\_gross}} $$
+                    </p>
+
+                    <p>Die Fläche entspricht also genau der Hälfte des grossen Kreises:</p>
+                    $$ A = \frac{1}{2} \cdot \pi \cdot \left(\frac{d}{2}\right)^2 $$
+                    $$ A = \frac{1}{2} \cdot \pi \cdot \frac{d^2}{4} $$
+
+                    <div class="result-box">
+                        <p><strong>Vereinfachte Formel:</strong></p>
+                        $$ A = \frac{\pi d^2}{8} $$
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="task-row">
+            <div class="task-left">
+                <strong>b)</strong> für $d = 56 \text{ cm}$
+                <br>
+                <button class="toggle" onclick="toggleSolution('sol-20b')">Lösung anzeigen</button>
+                <div id="sol-20b" class="solution is-hidden">
+                    <p>Wir setzen den Wert \( d = 56\,\text{cm} \) in die hergeleitete Formel ein.</p>
+
+                    $$ A = \frac{\pi \cdot (56\,\text{cm})^2}{8} $$
+
+                    <p>Berechnung des Quadrats:</p>
+                    $$ 56^2 = 3136 $$
+
+                    <p>Einsetzen:</p>
+                    $$ A = \frac{3136\,\pi}{8}\,\text{cm}^2 $$
+                    $$ A = 392\pi\,\text{cm}^2 $$
+
+                    <div class="result-box">
+                        <p><strong>Numerisches Ergebnis:</strong></p>
+                        $$ A \approx 1231.50\,\text{cm}^2 $$
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabe 5.11 - Möndchen am Dreieck</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="../script-math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../script-sol.js"></script>
+</head>
+
+<body>
+    <div class="header-nav">
+        <a href="l5-10.html">&laquo; Aufgabe 5.10</a>
+        <h1>Aufgabe 5.11 - Möndchen am Dreieck</h1>
+        <a href="l5-12.html">Aufgabe 5.12 &raquo;</a>
+    </div>
+
+    <div class="aufgabe">
+        Berechnen Sie die Flächeninhalte $A_2$ und $A_3$ der beiden mondsichelähnlichen
+        Figuren. Vergleichen Sie ihn mit dem Flächeninhalt $A_1$ des Dreiecks ($a = 36 \text{ cm}$, $c = 85 \text{
+        cm}$).
+        <br><small>(Quelle: Kusch und Glocke 2012, S. 220)</small>
+
+        <div style="text-align: center; margin: 2rem 0;">
+            <img src="../pics/aufgabe11.png" alt="Möndchen des Hippokrates" style="max-width: 60%;">
+        </div>
+
+
+        <button class="toggle" onclick="toggleSolution('sol-11')">Lösung anzeigen</button>
+        <div id="sol-11" class="solution is-hidden">
+            <h3>1. Berechnung der fehlenden Kathete \( b \)</h3>
+            <p>Da das Dreieck rechtwinklig ist, gilt der Satz des Pythagoras \( a^2 + b^2 = c^2 \). Wir stellen
+                nach \( b \) um:</p>
+
+            $$ b = \sqrt{c^2 - a^2} $$
+            $$ b = \sqrt{(85 \, \text{cm})^2 - (36 \, \text{cm})^2} $$
+            $$ b = \sqrt{7225 \, \text{cm}^2 - 1296 \, \text{cm}^2} $$
+            $$ b = \sqrt{5929 \, \text{cm}^2} $$
+            $$ b = 77 \, \text{cm} $$
+
+            <h3>2. Berechnung der Dreiecksfläche \( A_1 \)</h3>
+            <p>Der Flächeninhalt eines rechtwinkligen Dreiecks berechnet sich aus dem halben Produkt der
+                Katheten:</p>
+
+            $$ A_1 = \frac{a \cdot b}{2} $$
+            $$ A_1 = \frac{36 \, \text{cm} \cdot 77 \, \text{cm}}{2} $$
+            $$ A_1 = 1386 \, \text{cm}^2 $$
+
+            <h3>3. Berechnung der Möndchenflächen \( A_2 \) und \( A_3 \)</h3>
+            <h4>a. Berechnung von \( A_3 \) (über Seite \( a = 36 \, \text{cm} \))</h4>
+            <div class="step">
+                <p><strong>Schritt A: Halbkreis über \( a \)</strong><br>
+                    Radius \( r_a = 18 \, \text{cm} \).<br>
+                    $$ A_{\text{Halb } a} = \frac{1}{2} \pi \cdot 18^2 \approx 508.94 \, \text{cm}^2 $$</p>
+
+                <p><strong>Schritt B: Kreissegment des grossen Kreises</strong><br>
+                    Wir berechnen den Winkel \( \alpha \) im grossen Kreis, der zur Sehne \( a \) gehört.<br>
+                    $$ \sin(\alpha/2) = \frac{a/2}{R} = \frac{18}{42.5} \Rightarrow \alpha \approx 50.12^\circ $$
+                    Fläche des Sektors:
+                    $$ A_{\text{Sektor}} = \frac{50.12^\circ}{360^\circ} \cdot \pi \cdot 42.5^2 \approx 789.78 \,
+                    \text{cm}^2 $$
+                    Fläche des Segments (Sektor minus Teildreieck):
+                    $$ A_{\text{Segment}} = 789.78 - 693 = 96.78 \, \text{cm}^2 $$</p>
+
+                <p><strong>Ergebnis \( A_3 \):</strong><br>
+                    $$ A_3 = A_{\text{Halb } a} - A_{\text{Segment}} $$
+                    $$ A_3 = 508.94 - 96.78 = \mathbf{412.16 \, \text{cm}^2} $$</p>
+            </div>
+
+            <h4>b. Berechnung von \( A_2 \) (über Seite \( b = 77 \, \text{cm} \))</h4>
+            <div class="step">
+                <p><strong>Schritt A: Halbkreis über \( b \)</strong><br>
+                    Radius \( r_b = 38.5 \, \text{cm} \).<br>
+                    $$ A_{\text{Halb } b} = \frac{1}{2} \pi \cdot 38.5^2 \approx 2328.30 \, \text{cm}^2 $$</p>
+
+                <p><strong>Schritt B: Kreissegment des grossen Kreises</strong><br>
+                    Winkel \( \beta \) zur Sehne \( b \):<br>
+                    $$ \sin(\beta/2) = \frac{38.5}{42.5} \Rightarrow \beta \approx 129.88^\circ $$
+                    Fläche des Sektors:
+                    $$ A_{\text{Sektor}} = \frac{129.88^\circ}{360^\circ} \cdot \pi \cdot 42.5^2 \approx 2047.45 \,
+                    \text{cm}^2 $$
+                    Fläche des Segments (Sektor minus Teildreieck):
+                    $$ A_{\text{Segment}} = 2047.45 - 693 = 1354.45 \, \text{cm}^2 $$</p>
+
+                <p><strong>Ergebnis \( A_2 \):</strong><br>
+                    $$ A_2 = A_{\text{Halb } b} - A_{\text{Segment}} $$
+                    $$ A_2 = 2328.30 - 1354.45 = \mathbf{973.85 \, \text{cm}^2} $$</p>
+            </div>
+
+            <div class="box">
+                <span class="result">Kontrolle:</span><br>
+                $$ A_2 + A_3 = 973.85 + 412.16 = 1386.01 \, \text{cm}^2 $$
+                Dies stimmt (bis auf Rundungsfehler) exakt mit der Dreiecksfläche \( A_1 \) überein.
+            </div>
+
+
+            <p>Hier wenden wir den <strong>Satz des Hippokrates</strong> an. Dieser besagt, dass die Summe der
+                Flächeninhalte der beiden sichelförmigen Figuren (Möndchen) über den Katheten genau dem
+                Flächeninhalt des rechtwinkligen Dreiecks entspricht.</p>
+
+            <p>Mathematischer Hintergrund:</p>
+            <ul>
+                <li>Nach Pythagoras gilt für die Halbkreise: \( A_{\text{Halb } a} + A_{\text{Halb } b} =
+                    A_{\text{Halb } c} \).</li>
+                <li>Die Gesamtfigur setzt sich zusammen aus: \( A_{\text{Halb } a} + A_{\text{Halb } b} +
+                    A_{\text{Dreieck}} \).</li>
+                <li>Gleichzeitig besteht sie aus: \( A_{\text{Halb } c} + A_2 + A_3 \).</li>
+                <li>Daraus folgt direkt: \( A_2 + A_3 = A_1 \).</li>
+            </ul>
+
+            <div class="result-box">
+                <span class="result-title">Ergebnis & Vergleich</span>
+                <p>Der Flächeninhalt des Dreiecks beträgt:</p>
+                $$ A_1 = 1386 \, \text{cm}^2 $$
+
+                <p>Die Summe der Flächeninhalte der beiden Möndchen beträgt:</p>
+                $$ A_2 + A_3 = 1386 \, \text{cm}^2 $$
+
+                <p><strong>Fazit:</strong> Der Flächeninhalt der beiden mondsichelähnlichen Figuren ist exakt
+                    gleich gross wie der Flächeninhalt des Dreiecks.</p>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
